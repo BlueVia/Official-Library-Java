@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Release Date: May, 11 2010-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:tns="http://www.telefonica.com/schemas/UNICA/RPC/definition/v1" 
+            targetNamespace="http://www.telefonica.com/schemas/UNICA/RPC/definition/v1" 
+            elementFormDefault="qualified">
+            
+    <xsd:complexType name="MethodCallType">
+        <xsd:annotation>
+            <xsd:documentation>Generic Call Object structure for requests. To be extended by RPC APIs</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="version">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="v([0-9]){1}"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="MethodResponseType">
+        <xsd:annotation>
+            <xsd:documentation>Generic Call Object structure for responses. Either result or error element must be present. To be extended by RPC APIs.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="version">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="v([0-9]){1}"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="error" type="tns:ErrorType" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ErrorType">
+        <xsd:annotation>
+            <xsd:documentation>Structure to hold fault information returned in RPC operations.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="code">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="(SVC|POL|SEC|SVR)([0-9]){4}"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="data" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+</xsd:schema>

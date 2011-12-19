@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- October 30, 2009 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			xmlns:tns="http://www.telefonica.com/schemas/UNICA/REST/directory/v1/" 
+			xmlns:uctr="http://www.telefonica.com/schemas/UNICA/REST/common/v1"
+			targetNamespace="http://www.telefonica.com/schemas/UNICA/REST/directory/v1/" 
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xsd:import namespace="http://www.telefonica.com/schemas/UNICA/REST/common/v1" schemaLocation="UNICA_API_REST_common_types_v1_0.xsd"/>
+
+
+<xsd:annotation>
+	<xsd:documentation>The following are the resources to be included in HTTP requests or responses</xsd:documentation>
+</xsd:annotation>		
+
+	<xsd:element name="userInfo" type="tns:UserInfoType"/>
+	<xsd:element name="userIdentities" type="tns:UserIdentitiesType"/>
+	<xsd:element name="userPersonalInfo" type="tns:UserPersonalInfoType"/>
+	<xsd:element name="userProfile" type="tns:UserProfileType"/>
+	<xsd:element name="userAccessInfo" type="tns:UserAccessInfoType"/>
+	<xsd:element name="userTerminalInfo" type="tns:UserTerminalInfoType"/>	
+
+
+<xsd:annotation>
+	<xsd:documentation>The following are the types defined for each used resource</xsd:documentation>
+</xsd:annotation>	
+
+	<xsd:complexType name="UserInfoType">
+		<xsd:sequence>
+			<xsd:element name="userIdentities" type="tns:UserIdentitiesType" nillable="true" minOccurs="0"/>
+			<xsd:element name="userPersonalInfo" type="tns:UserPersonalInfoType" nillable="true" minOccurs="0"/>
+			<xsd:element name="userProfile" type="tns:UserProfileType" nillable="true" minOccurs="0"/>
+			<xsd:element name="userAccessInfo" type="tns:UserAccessInfoType" nillable="true" minOccurs="0"/>
+			<xsd:element name="userTerminalInfo" type="tns:UserTerminalInfoType" nillable="true" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="UserIdentitiesType">
+		<xsd:sequence>
+			<xsd:element name="phoneNumber" type="uctr:E164Type" nillable="true" minOccurs="0"/>
+			<xsd:element name="telUri" type="uctr:TelUriType" nillable="true" minOccurs="0"/>
+			<xsd:element name="sipUri" type="uctr:SipUriType" nillable="true" minOccurs="0"/>
+			<xsd:element name="email" type="uctr:EmailAddressType" nillable="true" minOccurs="0"/>
+			<xsd:element name="ipAddress" type="uctr:IpAddressType" nillable="true" minOccurs="0"/>
+			<xsd:element name="alias" type="uctr:AliasType" nillable="true" minOccurs="0"/>
+			<xsd:element name="otherId" type="uctr:OtherIdType" nillable="true" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>	
+
+	<xsd:complexType name="UserPersonalInfoType">
+		<xsd:sequence>
+			<xsd:element name="displayName" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="name" type="tns:NameType" nillable="true" minOccurs="0"/>
+			<xsd:element name="namePrefix" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="nameSufix" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="birthday" type="xsd:date" nillable="true" minOccurs="0"/>
+			<xsd:element name="gender" type="uctr:GenderType" nillable="true" minOccurs="0"/>
+			<xsd:element name="address" type="uctr:AddressType" nillable="true" minOccurs="0"/>
+           	<xsd:element name="lastUpdated" type="uctr:TimestampType" nillable="true" minOccurs="0"/>
+			<xsd:element name="extension" type="uctr:ExtensionType" minOccurs="0"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="UserProfileType">
+		<xsd:sequence>
+			<xsd:element name="userType" type="tns:UserTypeType" nillable="true" minOccurs="0"/>
+			<xsd:element name="imsi" type="uctr:ImsiType" nillable="true" minOccurs="0"/>
+			<xsd:element name="icb" type="tns:IcbType" nillable="true" minOccurs="0"/>
+			<xsd:element name="ocb" type="tns:OcbType" nillable="true" minOccurs="0"/>
+			<xsd:element name="language" type="tns:LanguageType" nillable="true" minOccurs="0"/>
+			<xsd:element name="simType" type="tns:SimTypeType" nillable="true" minOccurs="0"/>
+			<xsd:element name="parentalControl" type="tns:ParentalControlType" nillable="true" minOccurs="0"/>
+			<xsd:element name="creditControl" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="diversionMsisdn" type="uctr:E164Type" nillable="true" minOccurs="0"/>
+			<xsd:element name="enterpriseName" type="tns:EnterpriseNameType" nillable="true" minOccurs="0"/>
+			<xsd:element name="roaming" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="operatorId" type="tns:OperatorIdType" nillable="true" minOccurs="0"/>
+			<xsd:element name="mmsStatus" type="tns:MmsStatusType" nillable="true" minOccurs="0"/>
+			<xsd:element name="segment" type="tns:SegmentType" nillable="true" minOccurs="0"/>
+			<xsd:element name="subsegment" type="tns:SubsegmentType" nillable="true" minOccurs="0"/>
+			<xsd:element name="subscribedService" type="tns:SubscribedServiceType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+            		<xsd:element name="lastUpdated" type="uctr:TimestampType" nillable="true" minOccurs="0"/>
+			<xsd:element name="extension" type="uctr:ExtensionType" minOccurs="0"/>			
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="icc" type="tns:IccType" nillable="true" minOccurs="0"/>
+			<xsd:element name="restMens" type="tns:RestMensType" nillable="true" minOccurs="0"/>			
+		</xsd:sequence>
+	</xsd:complexType>	
+
+	<xsd:complexType name="UserAccessInfoType">
+		<xsd:sequence>
+			<xsd:element name="connected" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="ipAddress" type="uctr:IpAddressType" nillable="true" minOccurs="0"/>
+			<xsd:element name="accessType" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="connectionTime" type="xsd:unsignedInt" nillable="true" minOccurs="0"/>
+			<xsd:element name="apn" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="roaming" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="extension" type="uctr:ExtensionType" minOccurs="0"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>	
+		
+	<xsd:complexType name="UserTerminalInfoType">
+		<xsd:sequence>
+			<xsd:element name="brand" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="model" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="version" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="screenResolution" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="imei" type="uctr:ImeiType" nillable="true" minOccurs="0"/>
+			<xsd:element name="mms" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="ems" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="smartMessaging" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="wap" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="ussdPhase" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="syncMl" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="syncMlVersion" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="emsMaxNumber" type="xsd:string" nillable="true" minOccurs="0"/>			
+			<xsd:element name="email" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="emn" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="adc_OTA" type="uctr:FlagType" nillable="true" minOccurs="0"/>		
+			<xsd:element name="status" type="tns:StatusType" nillable="true" minOccurs="0"/>
+			<xsd:element name="lastUpdated" type="uctr:TimestampType" nillable="true" minOccurs="0"/>
+			<xsd:element name="extension" type="uctr:ExtensionType" minOccurs="0"/>	
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="wapPush" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="mmsVideo" type="uctr:FlagType" nillable="true" minOccurs="0"/>
+			<xsd:element name="videoStreaming" type="uctr:FlagType" nillable="true" minOccurs="0"/>	
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+<xsd:annotation>
+	<xsd:documentation>The following are the rest of types used in the API</xsd:documentation>
+</xsd:annotation>
+
+	<xsd:complexType name="NameType">
+		<xsd:sequence>
+			<xsd:element name="firstName" type="xsd:string"/>
+			<xsd:element name="lastName" type="xsd:string"/>
+			<xsd:element name="middleName" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SubscribedServiceType">
+		<xsd:sequence>
+			<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="UserTypeType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="StatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="approved"/>
+			<xsd:enumeration value="not approved"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="SimTypeType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="SegmentType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="SubsegmentType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="ParentalControlType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="OperatorIdType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="OcbType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="MmsStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="activated"/>
+			<xsd:enumeration value="deactivated"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="LanguageType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="IcbType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="EnterpriseNameType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="IccType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RestMensType">
+		<xsd:union memberTypes="tns:RestsMensType xsd:string" />
+	</xsd:simpleType>
+	<xsd:simpleType name="RestsMensType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="AD" />
+			<xsd:enumeration value="STA" />
+			<xsd:enumeration value="NR" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

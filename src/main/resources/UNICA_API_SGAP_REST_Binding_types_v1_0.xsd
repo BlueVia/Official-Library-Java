@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Release Date: May 21, 2010 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.telefonica.com/schemas/UNICA/REST/sgap/v1/" xmlns:uctr="http://www.telefonica.com/schemas/UNICA/REST/common/v1" targetNamespace="http://www.telefonica.com/schemas/UNICA/REST/sgap/v1/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xsd:import namespace="http://www.telefonica.com/schemas/UNICA/REST/common/v1" schemaLocation="UNICA_API_REST_common_types_v1_0.xsd"/>
+
+    <xsd:element name="adRequest" type="tns:SimpleAdRequestType"/>
+    <xsd:element name="adResponse" type="tns:SimpleAdResponseType"/>
+
+	
+    <xsd:complexType name="SimpleAdRequestType">
+        <xsd:sequence>
+            <xsd:element name="ad_request_id" type="xsd:string"/>
+            <xsd:element name="ad_presentation" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="ad_space" type="xsd:string"/>
+            <xsd:element name="user_agent" type="xsd:string"/>
+            <xsd:element name="keywords" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="protecion_policy" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="country" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="target_user_id" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+	
+    <xsd:complexType name="SimpleAdResponseType">
+        <xsd:sequence>
+            <xsd:element name="ad" type="tns:AdType" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:string" use="required"/>
+        <xsd:attribute name="version" type="xsd:integer" use="required"/>
+    </xsd:complexType>
+    
+    <xsd:complexType name="AdType">
+        <xsd:sequence>
+            <xsd:element name="resource" type="tns:ResourceType"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:string"/>
+        <xsd:attribute name="campaign" type="xsd:string"/>
+        <xsd:attribute name="flight" type="xsd:string"/>
+        <xsd:attribute name="ad_placement" type="xsd:integer"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="ResourceType">
+        <xsd:sequence>
+            <xsd:element name="creative_element" type="tns:CreativeElementType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="ad_presentation" type="xsd:string" use="required"/>
+    </xsd:complexType>
+    
+    <xsd:complexType name="CreativeElementType">
+        <xsd:sequence>
+            <xsd:element name="attribute" type="tns:AttributeType" maxOccurs="unbounded"/>
+            <xsd:element name="interaction" type="tns:InteractionType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="type" type="xsd:string" use="required"/>
+    </xsd:complexType>
+   
+    <xsd:complexType name="AttributeType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="type" type="xsd:string" use="required"/>        
+			</xsd:extension>
+		</xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="InteractionType">
+        <xsd:sequence>
+            <xsd:element name="attribute" type="tns:AttributeType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="type" use="required" type="xsd:string"/>
+    </xsd:complexType>
+
+</xsd:schema>

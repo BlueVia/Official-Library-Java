@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--December 11, 2009 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.telefonica.com/schemas/UNICA/REST/common/v1" targetNamespace="http://www.telefonica.com/schemas/UNICA/REST/common/v1" elementFormDefault="qualified">
+
+    <xsd:complexType name="UserIdType">
+        <xsd:choice>
+            <xsd:element name="phoneNumber" type="tns:E164Type"/>
+            <xsd:element name="anyUri" type="xsd:anyURI"/>
+            <xsd:element name="ipAddress" type="tns:IpAddressType"/>
+            <xsd:element name="alias" type="tns:AliasType"/>
+            <xsd:element name="otherId" type="tns:OtherIdType"/>
+        </xsd:choice>
+    </xsd:complexType>
+
+    <xsd:simpleType name="E164Type">
+        <xsd:annotation>
+            <xsd:documentation>A phone number, is a maximum of 15 digits following the E164 format</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="AliasType">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:complexType name="SimpleReferenceType">
+        <xsd:annotation>
+            <xsd:documentation>Allows client to provide their URL to have asynchronous notifications in REST</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="endpoint" type="xsd:anyURI"/>
+            <xsd:element name="correlator" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+    <xsd:simpleType name="FlagType">
+        <xsd:annotation>
+            <xsd:documentation>Generic yes/no flag</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="yes"/>
+            <xsd:enumeration value="no"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="GenderType">
+        <xsd:annotation>
+            <xsd:documentation>Gender type: male/female</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="male"/>
+            <xsd:enumeration value="female"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:element name="ClientException" type="tns:ClientExceptionType">
+        <xsd:annotation>
+            <xsd:documentation>Object for returned client related faults</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	
+    <xsd:complexType name="ClientExceptionType">
+        <xsd:annotation>
+            <xsd:documentation>Object returned by server in case of Client related faults</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="exceptionCategory">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="SVC"/>
+                        <xsd:enumeration value="POL"/>
+                        <xsd:enumeration value="SEC"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="exceptionId">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:int">
+                        <xsd:minInclusive value="0000"/>
+                        <xsd:maxInclusive value="9999"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="text" type="xsd:string"/>
+            <xsd:element name="variables" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="ServerException" type="tns:ServerExceptionType">
+        <xsd:annotation>
+            <xsd:documentation>Object for returned server related faults</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	
+    <xsd:complexType name="ServerExceptionType">
+        <xsd:annotation>
+            <xsd:documentation>Object returned by server in case of Server related faults</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="exceptionCategory">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="SVR"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="exceptionId" type="xsd:int"/>
+            <xsd:element name="text" type="xsd:string"/>
+            <xsd:element name="variables" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+
+    <xsd:complexType name="AddressType">
+        <xsd:annotation>
+            <xsd:documentation>Address</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="street" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="streetNumber" type="xsd:unsignedInt" minOccurs="0"/>
+            <xsd:element name="locality" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="region" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="postalCode" type="xsd:unsignedInt" minOccurs="0"/>
+            <xsd:element name="country" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="ext" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+    <xsd:simpleType name="EmailAddressType">
+        <xsd:annotation>
+            <xsd:documentation>e-mail</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value=".+@.+\..+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+	
+    <xsd:simpleType name="ImeiType">
+        <xsd:annotation>
+            <xsd:documentation>IMEI and IMEI/SV format
+	    	</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{2}-[0-9]{6}-[0-9]{6}-[0-9]{1,2}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+	
+    <xsd:simpleType name="ImsiType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+	
+    <xsd:simpleType name="SipUriType">
+        <xsd:annotation>
+            <xsd:documentation>SIP URI format according to RFC 3261
+	    	</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="sip:.+@.+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+	
+    <xsd:simpleType name="TimestampType">
+        <xsd:restriction base="xsd:dateTime"/>
+    </xsd:simpleType>
+	
+    <xsd:simpleType name="TelUriType">
+        <xsd:annotation>
+            <xsd:documentation>Tel URI for Telephone Numbers according to RFC 3966, based on a simplified regular expression. 
+A complete regular expression matching Tel URI format is too complicated and probably is difficult 
+to be matched during automatic schema checking.
+A possible complete regular expression for Tel URI may be the following one (in Perl style):
+	    	^tel:((?:\+[\d().-]*\d[\d().-]*|[0-9A-F*#().-]*[0-9A-F*#][0-9A-F*#().-]*(?:;[a-z\d-]+(?:=(?:[a-z\d\[\]\/:&amp;+$_!~*'().-]|%[\dA-F]{2})+)?)*;phone-context=(?:\+[\d().-]*\d[\d().-]*|(?:[a-z0-9]\.|[a-z0-9][a-z0-9-]*[a-z0-9]\.)*(?:[a-z]|[a-z][a-z0-9-]*[a-z0-9])))(?:;[a-z\d-]+(?:=(?:[a-z\d\[\]\/:&amp;+$_!~*'().-]|%[\dA-F]{2})+)?)*(?:,(?:\+[\d().-]*\d[\d().-]*|[0-9A-F*#().-]*[0-9A-F*#][0-9A-F*#().-]*(?:;[a-z\d-]+(?:=(?:[a-z\d\[\]\/:&amp;+$_!~*'().-]|%[\dA-F]{2})+)?)*;phone-context=\+[\d().-]*\d[\d().-]*)(?:;[a-z\d-]+(?:=(?:[a-z\d\[\]\/:&amp;+$_!~*'().-]|%[\dA-F]{2})+)?)*)*)$
+	    	</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="tel:.+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+			
+    <xsd:complexType name="IpAddressType">
+        <xsd:annotation>
+            <xsd:documentation>A generic IP address, including both v4 and v6 address formats</xsd:documentation>
+        </xsd:annotation>
+        <xsd:choice>
+            <xsd:element name="ipv4" type="tns:Ipv4AddressType"/>
+            <xsd:element name="ipv6" type="tns:Ipv6AddressType"/>
+        </xsd:choice>
+    </xsd:complexType>
+	
+    <xsd:simpleType name="Ipv4AddressType">
+        <xsd:annotation>
+            <xsd:documentation>An IPv4 address</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="((0|(1[0-9]{0,2})|(2(([0-4][0-9]?)|(5[0-5]?)|([6-9]?)))|([3-9][0-9]?))\.){3}(0|(1[0-9]{0,2})|(2(([0-4][0-9]?)|(5[0-5]?)|([6-9]?)))|([3-9][0-9]?))"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+	
+    <xsd:simpleType name="Ipv6AddressType">
+        <xsd:annotation>
+            <xsd:documentation>An IPv6 address</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="(([0-9a-fA-F]+:){7}[0-9a-fA-F]+)|(([0-9a-fA-F]+:)*[0-9a-fA-F]+)?::(([0-9a-fA-F]+:)*[0-9a-fA-F]+)?"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+	
+    <xsd:complexType name="OtherIdType">
+        <xsd:annotation>
+            <xsd:documentation>Extended type for additional user identifiers</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="type" type="xsd:string"/>
+            <xsd:element name="value" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+    <xsd:complexType name="ExtensionType">
+        <xsd:annotation>
+            <xsd:documentation>Allows client to provide their URL to have asynchronous notifications</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:any namespace="##any" processContents="lax" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:anyAttribute/>
+    </xsd:complexType>
+		
+</xsd:schema>

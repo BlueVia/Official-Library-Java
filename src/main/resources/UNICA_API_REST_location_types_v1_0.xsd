@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- November 25, 2010 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			xmlns:tns="http://www.telefonica.com/schemas/UNICA/REST/location/v1/" 
+			xmlns:uctr="http://www.telefonica.com/schemas/UNICA/REST/common/v1"
+			targetNamespace="http://www.telefonica.com/schemas/UNICA/REST/location/v1/" 
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xsd:import namespace="http://www.telefonica.com/schemas/UNICA/REST/common/v1" schemaLocation="UNICA_API_REST_common_types_v1_0.xsd"/>
+
+
+<xsd:annotation>
+	<xsd:documentation>The following are the resources to be included in HTTP requests or responses</xsd:documentation>
+</xsd:annotation>		
+
+	<xsd:element name="terminalLocation" type="tns:LocationDataType"/>
+	
+
+<xsd:annotation>
+	<xsd:documentation>The following are the rest of types used in the API</xsd:documentation>
+</xsd:annotation>
+	
+	<xsd:complexType name="LocationDataType">
+		<xsd:sequence>
+			<xsd:element name="locatedParty" type="uctr:UserIdType"/>
+			<xsd:element name="reportStatus" type="tns:RetrievalStatusType"/>
+			<xsd:element name="currentLocation" type="tns:LocationInfoType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+	<xsd:simpleType name="RetrievalStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Retrieved" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Item retrieved successfully
+    				</xsd:documentation>
+				</xsd:annotation>	
+			</xsd:enumeration>	
+			<xsd:enumeration value="NotRetrieved" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Item not retrieved, Information is not provided (does not indicate an error, no attempt may have been made).
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+			<xsd:enumeration value="Error" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Error retrieving item.
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	
+	<xsd:complexType name="LocationInfoType">
+		<xsd:sequence>
+			<xsd:element name="coordinates" type="tns:CoordinatesType"/>
+			<xsd:element name="altitude" type="xsd:float" minOccurs="0"/>
+			<xsd:element name="accuracy" type="xsd:int"/>
+			<xsd:element name="timestamp" type="xsd:dateTime"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+   	<xsd:complexType name="CoordinatesType">
+		<xsd:sequence>
+				<xsd:element name="latitude" type="xsd:float"/>
+				<xsd:element name="longitude" type="xsd:float"/>
+		</xsd:sequence>
+	</xsd:complexType>
+		
+</xsd:schema>
