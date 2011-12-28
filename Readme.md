@@ -21,7 +21,7 @@ It is not strictly necessary to use Eclipse and Maven as your development enviro
 
 Depending on whether or not you are using Maven, you will have to add library dependencies to the project classpath or just edit your pom.xml to enable Maven to manage them:
 
-## Eclipse standalone project ##
+### Eclipse standalone project ###
 
 
 You have to include the library in your Eclipse project and configure the dependencies:
@@ -38,7 +38,7 @@ You have to include the library in your Eclipse project and configure the depend
         - Click on Add folder and select the path of the source.
 4. Finally, include the JAR dependencies of Bluevia SDK in Libraries tab clicking on Add External JARs (The JAR files are included in "dependency" folder). 
 
-## Maven project ##
+### Maven project ###
 
 1. Download Bluevia Library and save it in your hard disk: Bluevia Java SDK
 2. Create your Project in Eclipse: select File > New > Maven Project.
