@@ -21,15 +21,18 @@ public abstract class AbstractClient {
 	/**
 	 * Working mode
 	 * 
-	 * - Live: In the Live environment your application uses the real network, 
-	 * which means that you will be able to send real transactions through Bluevia.
+	 * - Live: In the Live environment your application uses the real network, which means 
+	 * that you will be able to send real transactions to real Movistar, 
+	 * O2 and Vivo customers in the applicable country.
 	 * 
-	 * - Sandbox: The Sandbox environment offers you the exact same experience as 
-	 * the Live environment except that no traffic is generated on the live network, 
-	 * in order to test applications. 
+	 * - Test: The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. 
+	 * You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits.
+	 * 
+	 * - Sandbox: The Sandbox environment offers you the exact same experience as the Live environment except 
+	 * that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
 	 *
 	 */
-	public enum Mode {LIVE, SANDBOX}
+	public enum Mode {LIVE, TEST, SANDBOX}
 	
 	public static final String BASE_ENDPOINT = "https://api.bluevia.com/services";
 	
@@ -37,5 +40,21 @@ public abstract class AbstractClient {
     protected Unmarshaller u;
     protected Marshaller m;
     protected String uri;
+    
+    public AbstractClient(Mode mode, String pathLive, String pathSandbox){
+    	
+    	if (mode == null)
+    		throw new IllegalArgumentException("Invalid parameter: mode cannot be null");
+    	
+        switch (mode){
+        case LIVE:
+        case TEST:
+        	this.uri = BASE_ENDPOINT + pathLive;
+        	break;
+        case SANDBOX:
+        	this.uri = BASE_ENDPOINT + pathSandbox;
+        	break;
+        }
+    }
 
 }

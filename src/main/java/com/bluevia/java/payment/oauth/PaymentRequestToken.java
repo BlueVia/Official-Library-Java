@@ -14,8 +14,6 @@ import com.bluevia.java.Utils;
 import com.bluevia.java.oauth.OAuthToken;
 import com.bluevia.java.oauth.RequestToken;
 import com.bluevia.java.payment.ServiceInfo;
-import com.telefonica.schemas.unica.rpc.payment.v1.PaymentInfoType;
-import com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType;
 
 public class PaymentRequestToken extends RequestToken {
 
@@ -33,8 +31,6 @@ public class PaymentRequestToken extends RequestToken {
 
 	private byte[] data;
 	
-	private Mode apiMode;
-	
 	/**
 	 * 
 	 * @param consumer 
@@ -42,8 +38,7 @@ public class PaymentRequestToken extends RequestToken {
 	 * @throws JAXBException
 	 */
 	public PaymentRequestToken(OAuthToken consumer, Mode mode) throws JAXBException {
-		super(consumer);
-		apiMode = mode;
+		super(consumer, mode);
 	}
 	
 	/**
@@ -53,28 +48,34 @@ public class PaymentRequestToken extends RequestToken {
      * 	<li>An url: if your app can receive callbacks and you want to get informed about the result of the authorization process</li>
      * 	<li>NULL: if your app cannot receive callbacks</li>
      * </ul>
-	 * @param params the Payment parameters of the operation (amount and currency)
+	 * @param amount  the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). 
+	 * @param currency the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.). 
 	 * @param serviceInfo the info of the service or product to be paid
-	 * 
 	 * @return the request token
 	 */
-	public OAuthToken getPaymentRequestToken(String callback, PaymentParamsType params,
-			ServiceInfo serviceInfo) {
+	public OAuthToken getPaymentRequestToken(String callback, int amount,
+			String currency, ServiceInfo serviceInfo) {
 		
-		if (params == null || params.getPaymentInfo() == null)
-			throw new IllegalArgumentException("Payment params cannot be null");
+		if (amount <= 0)
+			throw new IllegalArgumentException("Invalid parameter: amount");
+
+		if (Utils.isEmpty(currency))
+			throw new IllegalArgumentException("Invalid parameter: currency");
 
 		if (serviceInfo == null)
 			throw new IllegalArgumentException("Service info cannot be null");
 		
-    	//Callback validation
-    	if (!Utils.isEmpty(callback)){
+		//Callback validation
+    	if (!Utils.isEmpty(callback)){	//Null and empty are valid (changed by "oob")
+    		
+    		//Other values than URLs and "oob" and are invalid
+    		//Phone number are not allowed for Payment
     		if (!Utils.isUrl(callback) && !callback.equals(OAuth.OUT_OF_BAND)){
         		throw new IllegalArgumentException("Invalid parameter: callback.");
     		}
     	}
 		
-		data = prepareBodyParameters(params.getPaymentInfo(), serviceInfo);
+		data = prepareBodyParameters(amount, currency, serviceInfo);
 		
 		OAuthProviderListener listener = new OAuthProviderListener() {
 			
@@ -86,8 +87,9 @@ public class PaymentRequestToken extends RequestToken {
 				
 				//Include apiName header
 				String apiName = "";
-				switch (apiMode){
+				switch (mode){
 				case LIVE:
+				case TEST:
 					apiName = API_NAME;
 					break;
 				case SANDBOX:
@@ -110,7 +112,7 @@ public class PaymentRequestToken extends RequestToken {
         return getRequestToken(callback, data, listener);
 	}
 	
-	private byte[] prepareBodyParameters(PaymentInfoType paymentInfo, ServiceInfo serviceInfo){
+	private byte[] prepareBodyParameters(int amount, String currency, ServiceInfo serviceInfo){
 		
 		Hashtable<String, String> params = new Hashtable<String, String>();
 		
@@ -122,8 +124,8 @@ public class PaymentRequestToken extends RequestToken {
 		}
 		
 		//Mandatory params
-		params.put(PINFO_AMOUNT, String.valueOf(paymentInfo.getAmount()));
-		params.put(PINFO_CURRENCY, paymentInfo.getCurrency());
+		params.put(PINFO_AMOUNT, String.valueOf(amount));
+		params.put(PINFO_CURRENCY, currency);
 		
 		return Utils.toHttpQueryString(params).getBytes();
 	}

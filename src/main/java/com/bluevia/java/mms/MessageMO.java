@@ -14,15 +14,13 @@
 package com.bluevia.java.mms;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import javax.mail.BodyPart;
 import javax.mail.MessagingException;
@@ -37,6 +35,7 @@ import com.bluevia.java.exception.BlueviaException;
 import com.bluevia.java.mms.data.MimeContent;
 import com.bluevia.java.mms.data.ReceivedMMS;
 import com.bluevia.java.oauth.OAuthToken;
+import com.telefonica.schemas.unica.rest.mms.v1.MessageReferenceType;
 import com.telefonica.schemas.unica.rest.mms.v1.MessageType;
 import com.telefonica.schemas.unica.rest.mms.v1.ReceivedMessagesType;
 
@@ -47,29 +46,56 @@ public class MessageMO extends MMSClient {
 	/**
 	 * 
 	 * @param consumer
-	 * @param token
 	 * @param mode
 	 * @throws JAXBException
 	 */
-    public MessageMO(OAuthToken consumer, OAuthToken token, Mode mode) throws JAXBException {
-        super(consumer, token, mode);
+    public MessageMO(OAuthToken consumer, Mode mode) throws JAXBException {
+        super(consumer, mode);
     }
 
     /**
-     * Retrieves the list of received messages
+     * Retrieves the list of received messages without attachment ids.
+     * 
+     * @see getMessages(String registrationId, boolean useAttachmentsIds)
+     * 
      * Note: the origin address of the received MMS will contain an alias, not a phone number.
      * 
      * @param registrationId the registration id (short number) that receives the messages
-     * @return a ReceivedMessagesType containing the list of messages.
+     * @return the list of messages.
      * @throws JAXBException
      * @throws BlueviaException
      */
-    public ReceivedMessagesType getMessages(String registrationId) throws JAXBException, BlueviaException {
+    public List<MessageReferenceType> getMessages(String registrationId) throws JAXBException, BlueviaException {
+    	return getMessages(registrationId, false);
+    }
+
+    /**
+     * Retrieves the list of received messages. Depending on the value of the useAttachmentsIds parameter, the response will
+     * include the IDs of the attachments or not. 
+     * If the ids are retrieved, the function 'getAttachment' can be used; otherwise, the attachments must be obtained throught the getMessage function.
+     * 
+     * @see getMessage(String registrationId, String messageId)
+     * @see getAttachment(String registrationId, String messageId, String attachmentId)
+     * 
+     * Note: the origin address of the received MMS will contain an alias, not a phone number.
+     * 
+     * @param registrationId the registration id (short number) that receives the messages
+     * @param useAttachmentIds the boolean parameter to retrieve the IDs of the attachments or not
+     * @return the list of messages.
+     * @throws JAXBException
+     * @throws BlueviaException
+     */
+    public List<MessageReferenceType> getMessages(String registrationId, boolean useAttachmentIds) throws JAXBException, BlueviaException {
 
     	if (Utils.isEmpty(registrationId))
     		throw new IllegalArgumentException("Invalid parameter: registrationId");
     	
-        String url = this.uri + MESSAGE_MO_PATH + "/" + registrationId + "/messages?version=v1";
+        String url = this.uri + MESSAGE_MO_PATH + "/" + registrationId + "/messages?";
+        
+        if (useAttachmentIds)
+        	url += "useAttachmentURLs=true&";
+         
+        url += "version=v1";
 
         String res = this.restConnector.get(url);
 
@@ -77,9 +103,25 @@ public class MessageMO extends MMSClient {
         	return null;
         
         JAXBElement<ReceivedMessagesType> e = this.u.unmarshal(new StreamSource(new StringReader(res)), ReceivedMessagesType.class);
-        return e.getValue();
+        
+        if (e.getValue() != null)
+        	return e.getValue().getReceivedMessages();
+        else return null;
     }
 
+    /**
+     * Gets a MMS as a ReceivedMMS object, which includes the metadata of the MMS and the list of the attachments.
+     * 
+     * @param registrationId the registration id (short number) that receives the messages
+     * @param messageId the message id (obtained in getMessages function)
+     * 
+     * @see getMessages(String registrationId)
+     * @see getMessages(String registrationId, boolean useAttachmentsIds)
+     * 
+     * @return the MMS with id 'messageId' received in the 'registrationId' inbox
+     * @throws JAXBException
+     * @throws BlueviaException
+     */
     public ReceivedMMS getMessage(String registrationId, String messageId) throws JAXBException, BlueviaException {
 
     	if (Utils.isEmpty(registrationId))
@@ -90,9 +132,37 @@ public class MessageMO extends MMSClient {
     	
         String url = this.uri + MESSAGE_MO_PATH + "/" + registrationId + "/messages/" + messageId + "?version=v1";
 
-        MimeMultipart mime = restConnector.getMms(url, "GET");
+        MimeMultipart mime = restConnector.getMms(url);
         
         return parseMultipart(mime);
+    }
+    
+    /**
+     * 
+     * Gets the attachment with the specified id of the received message.
+     * 
+     * @param registrationId the registration id (short number) that receives the messages
+     * @param messageId the message id (obtained in getMessages function)
+     * @param attachmentId the attachment id (obtained in getMessages function)
+     * @return the attachment of the received MMS.
+     * @throws JAXBException
+     * @throws BlueviaException
+     */
+    public MimeContent getAttachment(String registrationId, String messageId, String attachmentId) throws JAXBException, BlueviaException {
+    	
+    	if (Utils.isEmpty(registrationId))
+    		throw new IllegalArgumentException("Invalid parameter: registrationId");
+
+    	if (Utils.isEmpty(messageId))
+    		throw new IllegalArgumentException("Invalid parameter: messageId");
+    	
+    	if (Utils.isEmpty(attachmentId))
+    		throw new IllegalArgumentException("Invalid parameter: attachment Id");
+    	
+    	String url = this.uri + MESSAGE_MO_PATH + "/" + registrationId + "/messages/" +
+    			messageId + "/attachments/" + attachmentId + "?version=v1";
+    	
+    	return restConnector.getAttachment(url);
     }
     
     private ReceivedMMS parseMultipart(MimeMultipart multipart) throws BlueviaException{
@@ -145,7 +215,18 @@ public class MessageMO extends MMSClient {
         				if (attachments != null){
             				for (int i=0; i<attachments.getCount(); i++){
         						BodyPart part = attachments.getBodyPart(i);
-        						attachList.add(parseBodyPart(part));
+        						
+        						String contentType = part.getContentType();
+        				    	
+        						String contentDisp = null;
+        						String[] cte = part.getHeader("Content-Transfer-Encoding");
+        				    	if (cte != null && cte.length > 0)
+        				    		contentDisp = cte[0];
+        						Object content = part.getContent();
+        						
+        						MimeContent mime = Utils.buildMimeContent(contentType, contentDisp, content, false);
+        						
+        						attachList.add(mime);
         					}
         				}
         			}
@@ -168,45 +249,4 @@ public class MessageMO extends MMSClient {
     	return result;
     }
 
-    private MimeContent parseBodyPart(BodyPart part) throws MessagingException, IOException{
-    	MimeContent content = new MimeContent();
-
-    	String contentType = part.getContentType();
-    	
-    	//Content-Type
-    	Pattern p = Pattern.compile("(.*);(.*)");
-    	Matcher m = p.matcher(contentType);
-    	if (m.matches()){
-    		content.setContentType(m.group(1));
-    	} else content.setContentType(contentType);
-    	
-    	//Content-Transfer-Encoding
-    	String[] cte = part.getHeader("Content-Transfer-Encoding");
-    	if (cte != null && cte.length > 0)
-    		content.setContentEncoding(cte[0]);
-    	
-    	//Filename
-    	Pattern pattern = Pattern.compile("(.*)ame=(.*)");
-    	Matcher matcher = pattern.matcher(contentType);
-    	if (matcher.matches()){
-    		content.setFileName(matcher.group(2));
-    	}
-    	
-    	//Content
-    	if (part.getContent() instanceof String){
-    		content.setContent(part.getContent());
-    	} else if (part.getContent() instanceof InputStream){
-    		
-    		InputStream is = (InputStream) part.getContent();
-    		ByteArrayOutputStream os = new ByteArrayOutputStream();
-    		byte[] buf = new byte[1024];
-    		int read = 0;
-    		while ((read = is.read(buf)) != -1) {
-    			os.write(buf, 0, read);
-    		}
-    		content.setContent(os.toByteArray());
-    		is.close();
-    	} 
-    	return content;
-    }
 }

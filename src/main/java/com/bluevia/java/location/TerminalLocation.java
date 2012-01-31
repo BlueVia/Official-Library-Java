@@ -61,6 +61,9 @@ public class TerminalLocation extends LocationClient {
 	 */
 	public LocationDataType getLocation(Integer acceptableAccuracy) throws JAXBException, BlueviaException {
 
+		if (acceptableAccuracy != null && acceptableAccuracy < 0)
+    		throw new IllegalArgumentException("Invalid parameter: acceptable accuracy");
+    	
 		String url = this.uri + "?version=v1";
 
 		String data = toHttpQueryString(acceptableAccuracy);

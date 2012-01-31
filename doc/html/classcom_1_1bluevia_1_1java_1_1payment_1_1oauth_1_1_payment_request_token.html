@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -79,7 +79,7 @@ Inheritance diagram for com.bluevia.java.payment.oauth.PaymentRequestToken:</div
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1oauth_1_1_payment_request_token.html#af9a0444a4ff3097326fc098b36f8697d">PaymentRequestToken</a> (<a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a> consumer, Mode mode)  throws JAXBException </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1oauth_1_1_payment_request_token.html#a381e4b3d90549a437fac0b66ebeec420">getPaymentRequestToken</a> (String callback, <a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_params_type.html">PaymentParamsType</a> params, <a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_service_info.html">ServiceInfo</a> serviceInfo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1oauth_1_1_payment_request_token.html#ad4a58a33ea85f6cc6a427e2f277ed2ee">getPaymentRequestToken</a> (String callback, int amount, String currency, <a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_service_info.html">ServiceInfo</a> serviceInfo)</td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af9a0444a4ff3097326fc098b36f8697d"></a><!-- doxytag: member="com::bluevia::java::payment::oauth::PaymentRequestToken::PaymentRequestToken" ref="af9a0444a4ff3097326fc098b36f8697d" args="(OAuthToken consumer, Mode mode)" -->
@@ -123,7 +123,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a381e4b3d90549a437fac0b66ebeec420"></a><!-- doxytag: member="com::bluevia::java::payment::oauth::PaymentRequestToken::getPaymentRequestToken" ref="a381e4b3d90549a437fac0b66ebeec420" args="(String callback, PaymentParamsType params, ServiceInfo serviceInfo)" -->
+<a class="anchor" id="ad4a58a33ea85f6cc6a427e2f277ed2ee"></a><!-- doxytag: member="com::bluevia::java::payment::oauth::PaymentRequestToken::getPaymentRequestToken" ref="ad4a58a33ea85f6cc6a427e2f277ed2ee" args="(String callback, int amount, String currency, ServiceInfo serviceInfo)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -136,8 +136,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_params_type.html">PaymentParamsType</a>&#160;</td>
-          <td class="paramname"><em>params</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>currency</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -164,8 +170,9 @@ An url: if your app can receive callbacks and you want to get informed about the
 NULL: if your app cannot receive callbacks </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">params</td><td>the Payment parameters of the operation (amount and currency) </td></tr>
-    <tr><td class="paramname">serviceInfo</td><td>the info of the service or product to be paid</td></tr>
+    <tr><td class="paramname">amount</td><td>the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). </td></tr>
+    <tr><td class="paramname">currency</td><td>the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.). </td></tr>
+    <tr><td class="paramname">serviceInfo</td><td>the info of the service or product to be paid </td></tr>
   </table>
   </dd>
 </dl>
@@ -183,7 +190,7 @@ NULL: if your app cannot receive callbacks </li>
       <li class="navelem"><b>payment</b>      </li>
       <li class="navelem"><b>oauth</b>      </li>
       <li class="navelem"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1oauth_1_1_payment_request_token.html">PaymentRequestToken</a>      </li>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:51 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:29 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

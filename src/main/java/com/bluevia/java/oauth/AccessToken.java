@@ -42,7 +42,9 @@ import com.bluevia.java.Utils;
 
 public class AccessToken {
 
-    private String access_endpoint;
+	public static final String PATH = "/REST/Oauth/getAccessToken";
+	
+    private String endpoint;
     
 	protected OAuthToken consumer;
 	protected OAuthToken token;
@@ -64,7 +66,7 @@ public class AccessToken {
         this.consumer = consumer;
         this.token = requestToken;
 
-    	this.access_endpoint = AbstractClient.BASE_ENDPOINT + "/REST/Oauth/getAccessToken";
+    	this.endpoint = AbstractClient.BASE_ENDPOINT + PATH;
     }
 
     /**
@@ -77,7 +79,7 @@ public class AccessToken {
         OAuthConsumer client = new DefaultOAuthConsumer(consumer.getToken(), consumer.getSecret());
         client.setMessageSigner(new HmacSha1MessageSigner());
         client.setTokenWithSecret(token.getToken(), token.getSecret());
-        OAuthProvider provider = new DefaultOAuthProvider("", access_endpoint, "");
+        OAuthProvider provider = new DefaultOAuthProvider("", endpoint, "");
         provider.setOAuth10a(true);       
         try {
             provider.retrieveAccessToken(client,verification);

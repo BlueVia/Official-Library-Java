@@ -14,6 +14,7 @@
 package com.bluevia.java;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,11 +28,15 @@ import java.util.Enumeration;
 import java.util.GregorianCalendar;
 import java.util.Hashtable;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import javax.mail.MessagingException;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.bluevia.java.mms.data.MimeContent;
 import com.bluevia.java.oauth.OAuthToken;
 import com.telefonica.schemas.unica.rest.common.v1.UserIdType;
 
@@ -104,7 +109,7 @@ public class Utils {
 			out.writeBytes("Content-Type: " + contentType);
 			out.writeBytes(";charset=\"UTF-8\"");
 			out.writeBytes("\r\n");
-			out.writeBytes("Content-Transfer-Encoding: 8bit");
+			out.writeBytes("Content-Transfer-Encoding: binary");
 			out.writeBytes("\r\n");
 			out.writeBytes("\r\n");
 			out.write(content);
@@ -112,7 +117,7 @@ public class Utils {
 			out.writeBytes("Content-Type: ");
 			out.writeBytes(contentType);
 			out.writeBytes("\r\n");
-			out.writeBytes("Content-Transfer-Encoding: 8bit");
+			out.writeBytes("Content-Transfer-Encoding: binary");
 			//out.writeBytes("Content-Transfer-Encoding: base64");
 			out.writeBytes("\r\n");
 			out.writeBytes("\r\n");
@@ -136,7 +141,7 @@ public class Utils {
 	
 	public static boolean isNumber(String value){
 		try {
-            Integer.parseInt(value);
+            Long.parseLong(value);
         } catch (NumberFormatException ex) {
             return false;
         }
@@ -225,4 +230,50 @@ public class Utils {
 	public static long xmlGregorianCalendarToTimestamp(XMLGregorianCalendar calendar){
 		return calendar.toGregorianCalendar().getTimeInMillis()/1000;
 	}
+	
+	public static MimeContent buildMimeContent(String contentType, String contentDisp, Object content, boolean useAttachments) 
+			throws MessagingException, IOException{
+    	MimeContent mimeContent = new MimeContent();
+
+    	//Content-Type
+    	Pattern p = null;
+    	if (useAttachments)
+    		p = Pattern.compile("(.*);(.*);(.*)");
+    	else p = Pattern.compile("(.*);(.*)");
+    	Matcher m = p.matcher(contentType);
+    	if (m.matches()){
+    		mimeContent.setContentType(m.group(1));
+    	} else mimeContent.setContentType(contentType);
+    	
+    	//Content-Transfer-Encoding
+    	mimeContent.setContentEncoding(contentDisp);
+    	
+    	//Filename
+    	Pattern pattern;
+    	if (useAttachments)
+    		pattern = Pattern.compile("(.*)ame=(.*);(.*)");
+    	else pattern = Pattern.compile("(.*)ame=(.*)");
+    	Matcher matcher = pattern.matcher(contentType);
+    	if (matcher.matches()){
+    		mimeContent.setFileName(matcher.group(2));
+    	}
+    	
+    	//Content
+    	if (content instanceof String){
+    		mimeContent.setContent(content);
+    	} else if (content instanceof InputStream){
+    		
+    		InputStream is = (InputStream) content;
+    		ByteArrayOutputStream os = new ByteArrayOutputStream();
+    		byte[] buf = new byte[1024];
+    		int read = 0;
+    		while ((read = is.read(buf)) != -1) {
+    			os.write(buf, 0, read);
+    		}
+    		mimeContent.setContent(os.toByteArray());
+    		is.close();
+    	} 
+    	return mimeContent;
+    }
+	
 }

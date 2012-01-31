@@ -40,8 +40,18 @@ public class MessageMT extends MMSClient {
 	private static final String MESSAGE_MT_PATH = "/outbound/requests";
 	private static final String MESSAGE_DELIVERY_STATUS = "/deliverystatus";
 
+	/**
+	 * 
+	 * @param consumer
+	 * @param token
+	 * @param mode
+	 * @throws JAXBException
+	 */
     public MessageMT(OAuthToken consumer, OAuthToken token, Mode mode) throws JAXBException {
         super(consumer, token, mode);
+        
+        if (!Utils.validateToken(token))
+    		throw new IllegalArgumentException("Invalid parameter: oauth token");
     }
 
     /**
@@ -93,6 +103,10 @@ public class MessageMT extends MMSClient {
         // Destination Number
         if (destinationNumber != null && destinationNumber.length > 0) {
             for (String number : destinationNumber) {
+            	
+            	if (Utils.isEmpty(number))
+            		throw new IllegalArgumentException("Invalid parameter: destination number");
+            	
                 UserIdType user1 = new UserIdType();
                 user1.setPhoneNumber(number);
                 message.getAddress().add(user1);
@@ -123,8 +137,8 @@ public class MessageMT extends MMSClient {
         String boundary = "asdfa487";
         dos.writeBytes("--" + boundary + "\r\n");
         dos.writeBytes("Content-Disposition: form-data; name=\"root-fields\"\r\n");
-        dos.writeBytes("Content-Type:application/xml\r\n");
-        dos.writeBytes("Content-Transfer-Encoding: 8bit\r\n");
+        dos.writeBytes("Content-Type:application/xml; charset=UTF-8\r\n");
+        dos.writeBytes("Content-Transfer-Encoding: binary\r\n");
         dos.writeBytes("\r\n");
 
         //Write message

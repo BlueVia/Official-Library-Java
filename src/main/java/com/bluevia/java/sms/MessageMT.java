@@ -22,6 +22,7 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.transform.stream.StreamSource;
 
+import com.bluevia.java.Utils;
 import com.bluevia.java.exception.BlueviaException;
 import com.bluevia.java.oauth.OAuthToken;
 import com.telefonica.schemas.unica.rest.common.v1.SimpleReferenceType;
@@ -55,20 +56,23 @@ public class MessageMT extends SMSClient {
      */
     public MessageMT(OAuthToken tokenConsumer, OAuthToken token, Mode mode) throws JAXBException {
         super(tokenConsumer, token, mode);
+        
+        if (!Utils.validateToken(token))
+    		throw new IllegalArgumentException("Invalid parameter: oauth token");
     }
 
     /**
      * Get Deliverty Status from sms send
      * 
-     * @param id the url containing the SMS id
+     * @param id the SMS id
      * @return the SMS delivery status
      * @throws JAXBException
      * @throws BlueviaException
      */
     public SMSDeliveryStatusType getStatus(String id) throws JAXBException, BlueviaException {
     	
-    	if (id == null || id.trim().length() == 0)
-    		throw new IllegalArgumentException("Invalid parameter: url");
+    	if (Utils.isEmpty(id))
+    		throw new IllegalArgumentException("Invalid parameter: id");
     	
     	String url = this.uri + MESSAGE_MT_PATH + "/" + id + MESSAGE_DELIVERY_STATUS + "?version=v1";
 
@@ -107,7 +111,7 @@ public class MessageMT extends SMSClient {
     	if (destinationNumber == null || destinationNumber.length == 0)
     		throw new IllegalArgumentException("Invalid parameter: destination number");
     	
-    	if (smsMessage == null || smsMessage.trim().length() == 0)
+    	if (Utils.isEmpty(smsMessage))
     		throw new IllegalArgumentException("Invalid parameter: sms message");
     	
         SMSTextType message = new SMSTextType();
@@ -123,6 +127,10 @@ public class MessageMT extends SMSClient {
 
         // Destination Number
         for (String number : destinationNumber) {
+        	
+        	if (Utils.isEmpty(number))
+        		throw new IllegalArgumentException("Invalid parameter: destination number");
+        	
             UserIdType user1 = new UserIdType();
             user1.setPhoneNumber(number);
             message.getAddress().add(user1);

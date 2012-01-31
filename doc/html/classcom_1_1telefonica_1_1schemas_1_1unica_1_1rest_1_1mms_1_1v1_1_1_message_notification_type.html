@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -75,6 +75,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1_user_id_type.html">UserIdType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1_message_notification_type.html#a4f10fdca0d122d548a68b03eb224e8b2">getDestinationAddress</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1_message_notification_type.html#a78e69d195ead17a2c5b8896f98ad6bca">getCriteria</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1_message_notification_type.html#ab933a7024e90ff648cf52425bb102305">setCriteria</a> (String value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1_message_notification_type.html#a3019e41baa188497bdbcb09ea64f9863">isUseAttachmentURLs</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1_message_notification_type.html#acfe0d31cd6db70c6d5b1897489503c1e">setUseAttachmentURLs</a> (Boolean value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1_message_notification_type.html#a38d5fac61a56c63917f63d59a602ddaf">setDestinationAddress</a> (List&lt; <a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1_user_id_type.html">UserIdType</a> &gt; destinationAddress)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -84,6 +86,8 @@ Protected Attributes</h2></td></tr>
 List&lt; <a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1_user_id_type.html">UserIdType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>destinationAddress</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7491d9deb0f536acfa3981af78e95a57"></a><!-- doxytag: member="com::telefonica::schemas::unica::rest::mms::v1::MessageNotificationType::criteria" ref="a7491d9deb0f536acfa3981af78e95a57" args="" -->
 String&#160;</td><td class="memItemRight" valign="bottom"><b>criteria</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc7a1efb38efa039d2ae1f0ee6aff716"></a><!-- doxytag: member="com::telefonica::schemas::unica::rest::mms::v1::MessageNotificationType::useAttachmentURLs" ref="abc7a1efb38efa039d2ae1f0ee6aff716" args="" -->
+Boolean&#160;</td><td class="memItemRight" valign="bottom"><b>useAttachmentURLs</b></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Java class for <a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1_message_notification_type.html">MessageNotificationType</a> complex type.</p>
@@ -95,7 +99,8 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>criteria</b></td></
        &lt;sequence&gt;
          &lt;element name="reference" type="{http://www.telefonica.com/schemas/UNICA/REST/common/v1}SimpleReferenceType"/&gt;
          &lt;element name="destinationAddress" type="{http://www.telefonica.com/schemas/UNICA/REST/common/v1}UserIdType" maxOccurs="unbounded"/&gt;
-         &lt;element name="criteria" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         &lt;element name="criteria" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+         &lt;element name="useAttachmentURLs" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
        &lt;/sequence&gt;
      &lt;/restriction&gt;
    &lt;/complexContent&gt;
@@ -156,6 +161,24 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>criteria</b></td></
 <div class="memdoc">
 <p>Gets the value of the reference property.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>possible object is <a class="el" href="">SimpleReferenceType</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3019e41baa188497bdbcb09ea64f9863"></a><!-- doxytag: member="com::telefonica::schemas::unica::rest::mms::v1::MessageNotificationType::isUseAttachmentURLs" ref="a3019e41baa188497bdbcb09ea64f9863" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Boolean com.telefonica.schemas.unica.rest.mms.v1.MessageNotificationType.isUseAttachmentURLs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Gets the value of the useAttachmentURLs property.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>possible object is <a class="el" href="">Boolean</a> </dd></dl>
 
 </div>
 </div>
@@ -231,6 +254,30 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>criteria</b></td></
 
 </div>
 </div>
+<a class="anchor" id="acfe0d31cd6db70c6d5b1897489503c1e"></a><!-- doxytag: member="com::telefonica::schemas::unica::rest::mms::v1::MessageNotificationType::setUseAttachmentURLs" ref="acfe0d31cd6db70c6d5b1897489503c1e" args="(Boolean value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.telefonica.schemas.unica.rest.mms.v1.MessageNotificationType.setUseAttachmentURLs </td>
+          <td>(</td>
+          <td class="paramtype">Boolean&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Sets the value of the useAttachmentURLs property.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>allowed object is <a class="el" href="">Boolean</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div>
 </div>
   <div id="nav-path" class="navpath">
@@ -243,7 +290,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>criteria</b></td></
       <li class="navelem"><b>mms</b>      </li>
       <li class="navelem"><b>v1</b>      </li>
       <li class="navelem"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1_message_notification_type.html">MessageNotificationType</a>      </li>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:53 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:30 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

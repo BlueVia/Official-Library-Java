@@ -49,6 +49,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import com.bluevia.java.exception.BlueviaException;
 import com.bluevia.java.exception.ClientException;
 import com.bluevia.java.exception.ServerException;
+import com.bluevia.java.mms.data.MimeContent;
 import com.bluevia.java.oauth.OAuthToken;
 import com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType;
 import com.telefonica.schemas.unica.rest.common.v1.ServerExceptionType;
@@ -98,10 +99,11 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 
 	public String get(String url, String method) throws JAXBException, BlueviaException {
 
+		HttpURLConnection conn = null;
 		String res = "";
 		try {
 
-			HttpURLConnection conn = this.getConnection(url);
+			conn = this.getConnection(url);
 			conn.setRequestMethod(method);
 			conn.setRequestProperty("Accept", "application/xml");
 			consumer.sign(conn);
@@ -113,8 +115,6 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 			if (res_code != 204) {
 				res = Utils.convertStreamToString(conn.getInputStream());
 			}
-
-			conn.disconnect();
 
 			return res;
 
@@ -129,17 +129,21 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 
 		} catch (IOException ex) {
 			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, ex);
+		} finally {
+			if (conn != null)
+				conn.disconnect();
 		}
 		return null;
 	}
 
-	public MimeMultipart getMms(String url, String method) throws JAXBException, BlueviaException {
+	public MimeMultipart getMms(String url) throws JAXBException, BlueviaException {
 
+		HttpURLConnection conn = null;
 		MimeMultipart mime = null;
 		try {
 
-			HttpURLConnection conn = this.getConnection(url);
-			conn.setRequestMethod(method);
+			conn = this.getConnection(url);
+			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/xml");
 			consumer.sign(conn);
 			int res_code = conn.getResponseCode();
@@ -151,8 +155,6 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 				InputStream is = conn.getInputStream();
 				mime = new MimeMultipart(new ByteArrayDataSource(is, conn.getContentType()));
 			}
-
-			conn.disconnect();
 
 			return mime;
 
@@ -169,6 +171,52 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (MessagingException ex) {
 			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, ex);
+		} finally {
+			if (conn != null)
+				conn.disconnect();
+		}
+		return null;
+	}
+	
+	public MimeContent getAttachment(String url) throws JAXBException, BlueviaException {
+
+		HttpURLConnection conn = null;
+		
+		try {
+			
+			conn = this.getConnection(url);
+			
+			conn.setRequestMethod("GET");
+			conn.setRequestProperty("Accept", "application/xml");
+			consumer.sign(conn);
+			int res_code = conn.getResponseCode();
+
+			//Handle error responses
+			handleErrors(res_code, conn.getErrorStream());
+
+			if (res_code != 204) {
+				String ct = conn.getContentType();
+				String cte = conn.getHeaderField("Content-Transfer-Encoding");
+				InputStream is = conn.getInputStream();
+				
+				if (ct.contains("xml") || ct.contains("smil") || ct.contains("text"))
+					return Utils.buildMimeContent(ct, cte, Utils.convertStreamToString(is), true);
+				else return Utils.buildMimeContent(ct, cte, is, true);
+			}
+
+		} catch (IOException e) {
+			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, e);
+		} catch (OAuthMessageSignerException e) {
+			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, e);
+		} catch (OAuthExpectationFailedException e) {
+			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, e);
+		} catch (OAuthCommunicationException e) {
+			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, e);
+		} catch (MessagingException e) {
+			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, e);
+		} finally {
+			if (conn != null)
+				conn.disconnect();
 		}
 		return null;
 	}
@@ -180,13 +228,13 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 	 * @param data allowed object is {@link byte[] }
 	 * @throws JAXBException,BlueviaException
 	 */
-
 	public String post(String url, byte[] data) throws JAXBException, BlueviaException {
-
+		
+		HttpURLConnection conn = null;
 		String response = null;
 		try {
 
-			HttpURLConnection conn = this.getConnection(url);
+			conn = this.getConnection(url);
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Content-Type", "application/xml");
@@ -204,7 +252,6 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 			//Handle error responses
 			handleErrors(res_code, conn.getErrorStream());
 
-			conn.disconnect();
 			return response;
 		} catch (OAuthMessageSignerException ex) {
 			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, ex);
@@ -217,6 +264,9 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 		} catch (IOException ex) {
 			ex.printStackTrace();
 			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, ex);
+		} finally {
+			if (conn != null)
+				conn.disconnect();
 		}
 
 		return null;
@@ -281,10 +331,11 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 
 	public String postMMS(String url, byte[] data) throws JAXBException, BlueviaException {
 
+		HttpURLConnection conn = null;
 		String response = null;
 		try {
 
-			HttpURLConnection conn = this.getConnection(url);
+			conn = this.getConnection(url);
 
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
@@ -303,8 +354,6 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 			//Handle error responses
 			handleErrors(res_code, conn.getErrorStream());
 			
-			conn.disconnect();
-		
 		} catch (OAuthMessageSignerException ex) {
 			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (OAuthExpectationFailedException ex) {
@@ -316,6 +365,9 @@ public class OauthRESTConnector extends AbstractOauthConnector {
 		} catch (IOException ex) {
 			ex.printStackTrace();
 			Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, ex);
+		} finally {
+			if (conn != null)
+				conn.disconnect();
 		}
 		return response;
 	}

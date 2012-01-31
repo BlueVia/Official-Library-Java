@@ -17,6 +17,7 @@ import java.util.Scanner;
 
 import javax.xml.bind.JAXBException;
 
+import com.bluevia.java.AbstractClient.Mode;
 import com.bluevia.java.oauth.AccessToken;
 import com.bluevia.java.oauth.OAuthToken;
 import com.bluevia.java.oauth.RequestToken;
@@ -28,11 +29,14 @@ import com.bluevia.java.oauth.RequestToken;
  */
 public class OAuthExample {
 
+	// API path (Mode Live/Sandbox)
+	public static Mode mode = Mode.SANDBOX;
+
     // CREDENTIALS: 
     // User must DEFINE VALID VALUES FOR consumer token & access token
     
     // Consumer Key - Consumer Token
-	public static OAuthToken consumer = new OAuthToken("", "");
+    public static OAuthToken consumer = new OAuthToken("vw12012654505986", "WpOl66570544");
 
     public static void main(String[] args) throws JAXBException {
 
@@ -44,7 +48,7 @@ public class OAuthExample {
 
         System.out.println("***** OAuthExample getRequestToken");
         
-        RequestToken rt = new RequestToken(consumer);
+        RequestToken rt = new RequestToken(consumer, mode);
 
         /*
          * Define your callback URL

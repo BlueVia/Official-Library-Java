@@ -20,6 +20,7 @@ import java.util.regex.Pattern;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 
+import com.bluevia.java.Utils;
 import com.bluevia.java.exception.BlueviaException;
 import com.bluevia.java.oauth.OAuthToken;
 import com.telefonica.schemas.unica.rest.mms.v1.MessageNotificationType;
@@ -29,30 +30,49 @@ public class NotificationManager extends MMSClient {
 	
 	private static final String SUBSCRIPTION_PATH = "/inbound/subscriptions";
 
-	/**
-	 * 
-	 * @param consumer
-	 * @param token
-	 * @param mode
-	 * @throws JAXBException
-	 */
-    public NotificationManager(OAuthToken consumer, OAuthToken token, Mode mode) throws JAXBException {
-        super(consumer, token, mode);
+    /**
+     * Constructor
+     * 
+     * @param consumer
+     * @param mode
+     * @throws JAXBException
+     */
+    public NotificationManager(OAuthToken consumer, Mode mode) throws JAXBException {
+        super(consumer, null, mode);
     }
 
     /**
      * 
+     * Subscribes to notifications of sent messages in the endpoint passed in parameters.
      * 
-     * @param snt
-     * @return
+     * @param params MMS Notification type parameters
+     * @return the id of the subscription
      * @throws JAXBException
      * @throws BlueviaException
      */
-    public String subscribe(MessageNotificationType snt) throws JAXBException, BlueviaException {
+    public String subscribe(MessageNotificationType params) throws JAXBException, BlueviaException {
 
+    	if (params == null)
+    		throw new IllegalArgumentException("Invalid parameter: params cannot be null");
+    	
+    	if (params.getReference() == null)
+    		throw new IllegalArgumentException("Invalid parameter: reference cannot be null");
+    	
+    	if (Utils.isEmpty(params.getReference().getEndpoint()))
+    		throw new IllegalArgumentException("Invalid parameter: endpoint");
+    	
+    	if (Utils.isEmpty(params.getReference().getCorrelator()))
+    		throw new IllegalArgumentException("Invalid parameter: correlator");
+    	
+    	if (Utils.isEmpty(params.getCriteria()))
+    		throw new IllegalArgumentException("Invalid parameter: criteria");
+    	
+    	if (params.getDestinationAddress() == null || params.getDestinationAddress().size() == 0)
+    		throw new IllegalArgumentException("Invalid parameter: destination adresses");
+    	
         ByteArrayOutputStream os = new ByteArrayOutputStream();
         ObjectFactory of = new ObjectFactory();
-        JAXBElement<MessageNotificationType> e = of.createMessageNotification(snt);
+        JAXBElement<MessageNotificationType> e = of.createMessageNotification(params);
         this.m.marshal(e, os);
 
         String url = this.uri + SUBSCRIPTION_PATH + "?version=v1";
@@ -67,13 +87,17 @@ public class NotificationManager extends MMSClient {
     }
 
     /**
+     * Unsuscribes notifications of the corresponding notification id.
      * 
      * @param notifId the notifId returned by subscribe function
      * @throws JAXBException
      * @throws BlueviaException
      */
     public void unsubscribeNotification(String notifId) throws JAXBException, BlueviaException {
-
+    	
+    	if (Utils.isEmpty(notifId))
+    		throw new IllegalArgumentException("Invalid parameter: notification id");
+    	
         String url = this.uri + SUBSCRIPTION_PATH + "/" + notifId + "?version=v1";
         this.restConnector.get(url, "DELETE");
         return;

@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -204,6 +204,18 @@ Click on <b>Add folder</b> and select the path of the source. </li>
 API Authentication</h3>
 <p>BlueVia requires both the user and your application to be identified and authenticated to allow applications use its APIs. BlueVia supports OAuth Protocol, a token-passing mechanims where users never have to reveal their passwords or credentials to the application. Bluevia library implements an OAuth client to supply developers an easy access to authentication procedure: <a class="el" href="blv_oauth_guide.html">Oauth reference</a>.</p>
 <p>For more information visit the <a href="https://bluevia.com/en/knowledge/getStarted.Authentication" target="blank">API authentication</a> section of BlueVia reference.</p>
+<h3><a class="anchor" id="programming_guidelines_environments"></a>
+API Environments</h3>
+<p>BlueVia has three environments: live, test and sandbox. Live environment is connected to Movistar and O2 network, and testing and sandbox are used just on development stage to verify application behavior.</p>
+<ul>
+<li>
+<b>Live:</b> In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country. </li>
+<li>
+<b>Test:</b> The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits. </li>
+<li>
+<b>Sandbox:</b> The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. </li>
+</ul>
+<p>For more information visit the <a href="https://bluevia.com/en/knowledge/getStarted.Sandbox-and-Live-environments" target="blank">Live, Test and Sandbox</a> section of BlueVia reference.</p>
 <h3><a class="anchor" id="api_guides_sec"></a>
 API examples</h3>
 <p>The following guides explain the behavior of each Bluevia API, including code samples to start developing a simple application in an easy way:</p>
@@ -216,12 +228,16 @@ API examples</h3>
 <a class="el" href="blv_directory_guide.html">Directory API</a> </li>
 <li>
 <a class="el" href="blv_ad_guide.html">Advertising API</a> </li>
+<li>
+<a class="el" href="blv_location_guide.html">Location API</a> </li>
+<li>
+<a class="el" href="blv_payment_guide.html">Payment API</a> </li>
 </ul>
 </div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:50 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:27 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

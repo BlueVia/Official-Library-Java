@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -75,17 +75,14 @@ String callBackUrl = <span class="stringliteral">&quot;https://www.example.com&q
 <span class="comment">/*</span>
 <span class="comment"> Define Payment parameters</span>
 <span class="comment"> */</span>
-PaymentParamsType params = <span class="keyword">new</span> PaymentParamsType();
-PaymentInfoType paymentInfo = <span class="keyword">new</span> PaymentInfoType();
-paymentInfo.setAmount(100);
-paymentInfo.setCurrency(<span class="stringliteral">&quot;GBP&quot;</span>);
-params.setPaymentInfo(paymentInfo);
+<span class="keywordtype">int</span> amount = 177;
+String currency = <span class="stringliteral">&quot;EUR&quot;</span>;
 
 <span class="comment">// NOTE: fake values, user must fill correct data</span>
 ServiceInfo serviceInfo = <span class="keyword">new</span> ServiceInfo(<span class="stringliteral">&quot;service_id&quot;</span>, <span class="stringliteral">&quot;bluevia&quot;</span>);
 
 PaymentRequestToken rt = <span class="keyword">new</span> PaymentRequestToken(consumer, mode);
-OAuthToken requestToken = rt.getPaymentRequestToken(callBackUrl, params, serviceInfo);
+OAuthToken requestToken = rt.getPaymentRequestToken(null, amount, currency, serviceInfo);
 </pre></div><p>Note that the callBackUrl is an optional value, you can set it to null if your application is not able to recieve request from BlueVia. Typically websites set a callBackURL and desktop or mobile applications don't. For a more detailed description please see the API Reference.</p>
 <h4><a class="anchor" id="retrieving_payment_verification_sec"></a>
 Step 2: Take the user to BlueVia Connect</h4>
@@ -100,29 +97,24 @@ Make a Payment</h2>
 <p>Once the user has requested the access token it is possible to make the payment. The Payment info included in this request must agree with the info supplied when the token was requested.</p>
 <div class="fragment"><pre class="fragment">PaymentOperation op = <span class="keyword">new</span> PaymentOperation(consumer, accesstoken, mode);
 
-PaymentParamsType params = <span class="keyword">new</span> PaymentParamsType();
+<span class="keywordtype">int</span> amount = 177;
+String currency = <span class="stringliteral">&quot;EUR&quot;</span>;
 
-PaymentInfoType pInfo = <span class="keyword">new</span> PaymentInfoType();
-pInfo.setAmount(100);
-pInfo.setCurrency(<span class="stringliteral">&quot;GBP&quot;</span>);
-params.setPaymentInfo(pInfo);
-
-PaymentResultType result = op.payment(params);
+PaymentResultType result = op.payment(amount, currency);
 
 System.out.println(<span class="stringliteral">&quot;Transaction id: &quot;</span> + result.getTransactionId());
 System.out.println(<span class="stringliteral">&quot;Transaction status: &quot;</span> + result.getTransactionStatus());
 System.out.println(<span class="stringliteral">&quot;Description: &quot;</span> + result.getTransactionStatusDescription());
 </pre></div><h2><a class="anchor" id="make_payment_receipt_req_sec"></a>
 Make a Payment with status notification</h2>
-<p>It is possible to receive status notifications by providing BlueVia with an URI where notifications must be sent. This URI is provided during the Payment operation, including a SimpleReferenceType in params:</p>
-<div class="fragment"><pre class="fragment">SimpleReferenceType receiptRequest = <span class="keyword">new</span> SimpleReferenceType();
-receiptRequest.setEndpoint(<span class="stringliteral">&quot;https://www.example.com&quot;</span>);
-receiptRequest.setCorrelator(<span class="stringliteral">&quot;1234&quot;</span>);
-params.setReceiptRequest(receiptRequest);
+<p>It is possible to receive status notifications by providing BlueVia with an URI where notifications must be sent. This URI is provided during the Payment operation, including the endpoint and correlator parameters:</p>
+<div class="fragment"><pre class="fragment">String endpoint = <span class="stringliteral">&quot;https://www.example.com&quot;</span>;
+String correlator = <span class="stringliteral">&quot;1234&quot;</span>;
+op.payment(amount, currency, endpoint, correlator);
 </pre></div><h2><a class="anchor" id="payment_status_sec"></a>
 Get payment status</h2>
 <p>The function getPaymentStatus allows to request the status of a previous payment operation:</p>
-<div class="fragment"><pre class="fragment">PaymentResultType result = op.payment(params);
+<div class="fragment"><pre class="fragment">PaymentResultType result = op.payment(endpoint, correlator);
 
 GetPaymentStatusResultType status = op.getStatus(result.getTransactionId());
 
@@ -138,18 +130,15 @@ Bluevia Payment API: Code example</h2>
 <div class="fragment"><pre class="fragment">System.out.println(<span class="stringliteral">&quot;***** PaymentExample getRequestToken&quot;</span>);
 
 <span class="keywordflow">try</span> {
-        PaymentRequestToken rt = <span class="keyword">new</span> PaymentRequestToken();
-        
-        PaymentParamsType params = <span class="keyword">new</span> PaymentParamsType();
-        PaymentInfoType paymentInfo = <span class="keyword">new</span> PaymentInfoType();
-        paymentInfo.setAmount(100);     
-        paymentInfo.setCurrency(<span class="stringliteral">&quot;EUR&quot;</span>);
-        params.setPaymentInfo(paymentInfo);
+        PaymentRequestToken rt = <span class="keyword">new</span> PaymentRequestToken(consumer, mode);
 
+        <span class="keywordtype">int</span> amount = 177;
+        String currency = <span class="stringliteral">&quot;EUR&quot;</span>;
+
+        <span class="comment">// NOTE: fake values, user must fill correct data</span>
         ServiceInfo serviceInfo = <span class="keyword">new</span> ServiceInfo(<span class="stringliteral">&quot;service_id&quot;</span>, <span class="stringliteral">&quot;bluevia&quot;</span>);
-
-        PaymentRequestToken rt = <span class="keyword">new</span> PaymentRequestToken();
-        OAuthToken requestToken = rt.getPaymentRequestToken(consumer, mode, callBackUrl, params, serviceInfo);
+                        
+        OAuthToken requestToken = rt.getPaymentRequestToken(null, amount, currency, serviceInfo);
 
         System.out.println(<span class="stringliteral">&quot;Token: &quot;</span> + requestToken.getToken());
         System.out.println(<span class="stringliteral">&quot;Secret: &quot;</span> + requestToken.getSecret());
@@ -169,15 +158,7 @@ Bluevia Payment API: Code example</h2>
         System.out.println(<span class="stringliteral">&quot;***** PaymentExample payment operation&quot;</span>);
 
         PaymentOperation op = <span class="keyword">new</span> PaymentOperation(consumer, accesstoken, mode);
-
-        PaymentParamsType params = <span class="keyword">new</span> PaymentParamsType();
-
-        PaymentInfoType pInfo = <span class="keyword">new</span> PaymentInfoType();
-        pInfo.setAmount(100);
-        pInfo.setCurrency(<span class="stringliteral">&quot;GBP&quot;</span>);
-        params.setPaymentInfo(pInfo);
-
-        PaymentResultType result = op.payment(params);
+        PaymentResultType result = op.payment(amount, currency);
 
         System.out.println(<span class="stringliteral">&quot;Transaction id: &quot;</span> + result.getTransactionId());
         System.out.println(<span class="stringliteral">&quot;Transaction status: &quot;</span> + result.getTransactionStatus());
@@ -197,7 +178,7 @@ Bluevia Payment API: Code example</h2>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:50 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:27 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

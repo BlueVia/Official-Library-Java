@@ -38,10 +38,10 @@ public class LocationExample {
     // User must DEFINE VALID VALUES FOR consumer token & access token
     
     // Consumer Key - Consumer Token
-    public static OAuthToken consumer = new OAuthToken("", "");
-
+    public static OAuthToken consumer = new OAuthToken("vw12012654505986", "WpOl66570544");
+    
     // Access Token - Access Token Secret
-    public static OAuthToken accesstoken = new OAuthToken("", "");
+    public static OAuthToken accesstoken = new OAuthToken("ad3f0f598ffbc660fbad9035122eae74", "4340b28da39ec36acb4a205d3955a853");
 
     public static void main(String[] args) {
         getLocation();

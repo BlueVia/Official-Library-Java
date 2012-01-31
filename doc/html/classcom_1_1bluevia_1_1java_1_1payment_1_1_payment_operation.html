@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -81,7 +81,8 @@ Inheritance diagram for com.bluevia.java.payment.PaymentOperation:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#ab3d27ddb239ecd13da23587164dc2cc4">PaymentOperation</a> (<a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a> consumer, <a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a> token, <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html#ada108115e502ba702cbb64e95579e10a">Mode</a> mode)  throws JAXBException </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#aa73704a1f796e30c24ae1b13f288da7e">payment</a> (<a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_params_type.html">PaymentParamsType</a> params)  throws JAXBException, BlueviaException </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#a908ef370939e4d01ae36ca5e559b49c0">payment</a> (int amount, String currency)  throws JAXBException, BlueviaException </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#ae0b08c545f28c513889ddea89357ccd8">payment</a> (int amount, String currency, String endpoint, String correlator)  throws JAXBException, BlueviaException </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#aafe8b5c75a8382eeed282477afbe1d03">cancelAuthorization</a> ()  throws JAXBException, BlueviaException </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_get_payment_status_result_type.html">GetPaymentStatusResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#ace0162c50f0746abea0cd11d7e5e8a2b">getStatus</a> (String transactionId)  throws JAXBException, BlueviaException </td></tr>
 </table>
@@ -191,24 +192,92 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa73704a1f796e30c24ae1b13f288da7e"></a><!-- doxytag: member="com::bluevia::java::payment::PaymentOperation::payment" ref="aa73704a1f796e30c24ae1b13f288da7e" args="(PaymentParamsType params)" -->
+<a class="anchor" id="a908ef370939e4d01ae36ca5e559b49c0"></a><!-- doxytag: member="com::bluevia::java::payment::PaymentOperation::payment" ref="a908ef370939e4d01ae36ca5e559b49c0" args="(int amount, String currency)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a> com.bluevia.java.payment.PaymentOperation.payment </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_params_type.html">PaymentParamsType</a>&#160;</td>
-          <td class="paramname"><em>params</em></td><td>)</td>
-          <td>  throws JAXBException, <a class="el" href="classcom_1_1bluevia_1_1java_1_1exception_1_1_bluevia_exception.html">BlueviaException</a> </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>currency</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throws JAXBException, <a class="el" href="classcom_1_1bluevia_1_1java_1_1exception_1_1_bluevia_exception.html">BlueviaException</a> </td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Makes a payment operation. The payment parameters must fill the parameters included in the getPaymentRequestToken call.</p>
+<p>Makes a payment operation. The payment parameters must fill the parameters included in the getPaymentRequestToken call. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">params</td><td>the Payment parameters of the operation (amount and currency) </td></tr>
+    <tr><td class="paramname">amount</td><td>the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). </td></tr>
+    <tr><td class="paramname">currency</td><td>the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the result of the payment. </dd></dl>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">JAXBException</td><td></td></tr>
+    <tr><td class="paramname">BlueviaException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae0b08c545f28c513889ddea89357ccd8"></a><!-- doxytag: member="com::bluevia::java::payment::PaymentOperation::payment" ref="ae0b08c545f28c513889ddea89357ccd8" args="(int amount, String currency, String endpoint, String correlator)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a> com.bluevia.java.payment.PaymentOperation.payment </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>currency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>endpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>correlator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throws JAXBException, <a class="el" href="classcom_1_1bluevia_1_1java_1_1exception_1_1_bluevia_exception.html">BlueviaException</a> </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Makes a payment operation, with payment status notification. The payment parameters must fill the parameters included in the getPaymentRequestToken call. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). </td></tr>
+    <tr><td class="paramname">currency</td><td>the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.). </td></tr>
+    <tr><td class="paramname">endpoint</td><td>The URI where your application is expecting to receive the payment status notifications. </td></tr>
+    <tr><td class="paramname">correlator</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -232,7 +301,7 @@ Public Member Functions</h2></td></tr>
       <li class="navelem"><a class="el" href="namespacecom_1_1bluevia_1_1java.html">java</a>      </li>
       <li class="navelem"><b>payment</b>      </li>
       <li class="navelem"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html">PaymentOperation</a>      </li>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:51 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:28 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

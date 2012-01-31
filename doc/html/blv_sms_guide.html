@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -91,11 +91,11 @@ String <span class="keywordtype">id</span> = mt.send(dest, MESSAGE_TEXT, <span c
 </pre></div><p>Note that although your are requesting delivery status notifications, you still are able to use the Location header to ask for delivery status following the polling strategy. Your application must reply with a 204 No Content HTTP status and no body.</p>
 <h3><a class="anchor" id="receive_sms_sec"></a>
 Receiving SMS Example</h3>
+<p>This API uses Oauth 2-legged, so access token is not mandatory and applications does not need user's permissions.</p>
 <div class="fragment"><pre class="fragment">OAuthToken consumer = <span class="keyword">new</span> OAuthToken(<span class="stringliteral">&quot;consumer_key&quot;</span>, <span class="stringliteral">&quot;consumer_secret&quot;</span>);
-OAuthToken accesstoken = <span class="keyword">new</span> OAuthToken(<span class="stringliteral">&quot;token&quot;</span>, <span class="stringliteral">&quot;token_secret&quot;</span>);
 
 <span class="comment">// Create the sms receiver</span>
-MessageMO smsReceiver = <span class="keyword">new</span> MessageMO(consumer, accesstoken, Mode.LIVE);
+MessageMO smsReceiver = <span class="keyword">new</span> MessageMO(consumer, Mode.LIVE);
 
 <span class="comment">// Prepare params</span>
 String registrationId = <span class="stringliteral">&quot;546780&quot;</span>;
@@ -111,9 +111,9 @@ List&lt;SMSMessageType&gt; list = response.getReceivedSMS();
 }
 </pre></div><h3><a class="anchor" id="notifications_sec"></a>
 Received SMSs Notifications Example</h3>
-<p>Your application can receive SMSs by providing BlueVia with an URI where notifications must be sent:</p>
+<p>This API uses Oauth 2-legged, so access token is not mandatory and applications does not need user's permissions. Your application can receive SMSs by providing BlueVia with an URI where notifications must be sent:</p>
 <div class="fragment"><pre class="fragment"><span class="comment">// Create Notification type to subscribe or unsusbcribe</span>
-NotificationManager nm = <span class="keyword">new</span> NotificationManager(consumer, accesstoken, Mode.LIVE);
+NotificationManager nm = <span class="keyword">new</span> NotificationManager(consumer, Mode.LIVE);
 SMSNotificationType snt = <span class="keyword">new</span> SMSNotificationType();
 
 <span class="comment">// Create a SimpleReferenceType with an endpoint and a correlator identifier</span>
@@ -132,7 +132,7 @@ String criteriaValue = <span class="stringliteral">&quot;MYKEYWORD&quot;</span>;
 snt.setCriteria(criteriaValue);
 
 <span class="comment">// Start notifications</span>
-String res = nm.subscribe(snt);
+String notifId = nm.subscribe(snt);
 </pre></div><p>If you want to unsubscribe and stop reveiving notifications you should call the unsusbscribe function where the notificiation id is the string returned by the subscribe function.</p>
 <div class="fragment"><pre class="fragment"><span class="comment">// Stop notifications</span>
 nm.unsubscribeNotification(notifId);
@@ -140,7 +140,7 @@ nm.unsubscribeNotification(notifId);
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:50 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:27 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

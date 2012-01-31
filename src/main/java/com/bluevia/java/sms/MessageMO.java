@@ -46,8 +46,8 @@ public class MessageMO extends SMSClient {
      * @param mode
      * @throws JAXBException
      */
-    public MessageMO(OAuthToken tokenConsumer, OAuthToken token, Mode mode) throws JAXBException {
-        super(tokenConsumer, token, mode);
+    public MessageMO(OAuthToken tokenConsumer, Mode mode) throws JAXBException {
+        super(tokenConsumer, mode);
     }
 
     /**
@@ -68,7 +68,7 @@ public class MessageMO extends SMSClient {
         String res = this.restConnector.get(url);
 
         if (Utils.isEmpty(res))
-        	return null;
+        	return new ReceivedSMSType();
         
         JAXBElement<ReceivedSMSType> e = this.u.unmarshal(new StreamSource(new StringReader(res)), ReceivedSMSType.class);
         return e.getValue();

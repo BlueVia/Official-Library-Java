@@ -21,8 +21,8 @@ import javax.xml.bind.JAXBException;
 import com.bluevia.java.AbstractClient.Mode;
 import com.bluevia.java.exception.BlueviaException;
 import com.bluevia.java.gap.Advertisement;
-import com.bluevia.java.gap.Creative_Element;
-import com.bluevia.java.gap.Creative_Elements;
+import com.bluevia.java.gap.CreativeElement;
+import com.bluevia.java.gap.CreativeElements;
 import com.bluevia.java.gap.SimpleAd;
 import com.bluevia.java.oauth.OAuthToken;
 
@@ -40,10 +40,10 @@ public class AdvertisingExample {
     // User must DEFINE VALID VALUES FOR consumer token & access token
     
     // Consumer Key - Consumer Token
-    public static OAuthToken consumer = new OAuthToken("", "");
-
+    public static OAuthToken consumer = new OAuthToken("vw12012654505986", "WpOl66570544");
+    
     // Access Token - Access Token Secret
-    public static OAuthToken accesstoken = new OAuthToken("", "");
+    public static OAuthToken accesstoken = new OAuthToken("ad3f0f598ffbc660fbad9035122eae74", "4340b28da39ec36acb4a205d3955a853");
 
     public static void main(String[] args) {
         getAvertising();
@@ -67,9 +67,9 @@ public class AdvertisingExample {
             request.setCountry("UK");
             Advertisement ad = new Advertisement(consumer, accesstoken, mode);
 
-            Creative_Elements response = ad.send(request);
+            CreativeElements response = ad.send(request);
             if (response != null) {
-                for (Creative_Element e : response.getCreative_elements()) {
+                for (CreativeElement e : response.getCreative_elements()) {
                     System.out.println("creative_element_type_id: " + e.getType_id());
                     System.out.println("creative_element_type_name: " + e.getType_name());
                     System.out.println("creative_element_value: " + e.getValue());

@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -59,7 +59,8 @@ $(document).ready(initResizable);
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <h1>com.bluevia.java.payment.TrustedPayment Class Reference</h1>  </div>
 </div>
@@ -80,10 +81,13 @@ Inheritance diagram for com.bluevia.java.payment.TrustedPayment:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_trusted_payment.html#a3f26838fffe8ebd05124cb3e922b0027">TrustedPayment</a> (<a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a> consumer, <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html#ada108115e502ba702cbb64e95579e10a">Mode</a> mode)  throws JAXBException </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecbcf9cb1ab82f23aabdd56c5f90190c"></a><!-- doxytag: member="com::bluevia::java::payment::TrustedPayment::payment" ref="aecbcf9cb1ab82f23aabdd56c5f90190c" args="(PaymentParamsType params)" -->
-<a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>payment</b> (<a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_params_type.html">PaymentParamsType</a> params)  throws JAXBException, BlueviaException </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affaa265facd95aaaf094df4726b3e427"></a><!-- doxytag: member="com::bluevia::java::payment::TrustedPayment::refund" ref="affaa265facd95aaaf094df4726b3e427" args="(RefundParamsType params)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>refund</b> (<a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1trusted__payment_1_1v1_1_1_refund_params_type.html">RefundParamsType</a> params)  throws JAXBException, BlueviaException</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_trusted_payment.html#adc71443a9c0787ae7e523b8497a17251">payment</a> (String endUserIdentifier, String code, String referenceCode, String description)  throws JAXBException, BlueviaException </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_trusted_payment.html#a4c53cdc2a82ae0fdc74ea41195cc36bc">payment</a> (String endUserIdentifier, Double amount, String currency, String referenceCode, String description, Double taxes)  throws JAXBException, BlueviaException </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_trusted_payment.html#a6e93064f157c1c495638104a817be8d6">refund</a> (String endUserIdentifier, String transactionId)  throws JAXBException, BlueviaException</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af59250b8a34b350dc03392c76885cb89"></a><!-- doxytag: member="com::bluevia::java::payment::TrustedPayment::TRUSTED_BASE_ENDPOINT" ref="af59250b8a34b350dc03392c76885cb89" args="" -->
+static final String&#160;</td><td class="memItemRight" valign="bottom"><b>TRUSTED_BASE_ENDPOINT</b> = &quot;https://api.bluevia.com:4443/services&quot;</td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3f26838fffe8ebd05124cb3e922b0027"></a><!-- doxytag: member="com::bluevia::java::payment::TrustedPayment::TrustedPayment" ref="a3f26838fffe8ebd05124cb3e922b0027" args="(OAuthToken consumer, Mode mode)" -->
@@ -128,6 +132,177 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refund</b> (<a class=
 
 </div>
 </div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="adc71443a9c0787ae7e523b8497a17251"></a><!-- doxytag: member="com::bluevia::java::payment::TrustedPayment::payment" ref="adc71443a9c0787ae7e523b8497a17251" args="(String endUserIdentifier, String code, String referenceCode, String description)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a> com.bluevia.java.payment.TrustedPayment.payment </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>endUserIdentifier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>referenceCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throws JAXBException, <a class="el" href="classcom_1_1bluevia_1_1java_1_1exception_1_1_bluevia_exception.html">BlueviaException</a> </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Makes a payment operation supplying the information of the payment as a code</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">endUserIdentifier</td><td>the phone number of the user who is making the payment </td></tr>
+    <tr><td class="paramname">code</td><td>the code of the price point </td></tr>
+    <tr><td class="paramname">referenceCode</td><td>the reference code of the payment item </td></tr>
+    <tr><td class="paramname">description</td><td>the description of the payment item </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a PaymentResultType with the status info of the payment </dd></dl>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">JAXBException</td><td></td></tr>
+    <tr><td class="paramname">BlueviaException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c53cdc2a82ae0fdc74ea41195cc36bc"></a><!-- doxytag: member="com::bluevia::java::payment::TrustedPayment::payment" ref="a4c53cdc2a82ae0fdc74ea41195cc36bc" args="(String endUserIdentifier, Double amount, String currency, String referenceCode, String description, Double taxes)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1_payment_result_type.html">PaymentResultType</a> com.bluevia.java.payment.TrustedPayment.payment </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>endUserIdentifier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Double&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>currency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>referenceCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Double&#160;</td>
+          <td class="paramname"><em>taxes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throws JAXBException, <a class="el" href="classcom_1_1bluevia_1_1java_1_1exception_1_1_bluevia_exception.html">BlueviaException</a> </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Makes a payment operation supplying the information of the payment explicitly (amount and currency)</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">endUserIdentifier</td><td>the phone number of the user who is making the payment </td></tr>
+    <tr><td class="paramname">amount</td><td>the amount of the payment </td></tr>
+    <tr><td class="paramname">currency</td><td>the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc). </td></tr>
+    <tr><td class="paramname">referenceCode</td><td>the reference code of the payment item </td></tr>
+    <tr><td class="paramname">description</td><td>the description of the payment item </td></tr>
+    <tr><td class="paramname">taxes</td><td>the taxes of the payment (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a PaymentResultType with the status info of the payment </dd></dl>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">JAXBException</td><td></td></tr>
+    <tr><td class="paramname">BlueviaException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6e93064f157c1c495638104a817be8d6"></a><!-- doxytag: member="com::bluevia::java::payment::TrustedPayment::refund" ref="a6e93064f157c1c495638104a817be8d6" args="(String endUserIdentifier, String transactionId)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.bluevia.java.payment.TrustedPayment.refund </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>endUserIdentifier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>transactionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throws JAXBException, <a class="el" href="classcom_1_1bluevia_1_1java_1_1exception_1_1_bluevia_exception.html">BlueviaException</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Refunds the amount of a previous payment operation</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">endUserIdentifier</td><td>the phone number of the user who made the payment </td></tr>
+    <tr><td class="paramname">transactionId</td><td>the transaction id of the payment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">JAXBException</td><td></td></tr>
+    <tr><td class="paramname">BlueviaException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div>
 </div>
   <div id="nav-path" class="navpath">
@@ -137,7 +312,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refund</b> (<a class=
       <li class="navelem"><a class="el" href="namespacecom_1_1bluevia_1_1java.html">java</a>      </li>
       <li class="navelem"><b>payment</b>      </li>
       <li class="navelem"><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_trusted_payment.html">TrustedPayment</a>      </li>
-      <li class="footer">Generated on Mon Nov 21 2011 16:22:44 for Bluevia by&#160;
+      <li class="footer">Generated on Fri Jan 13 2012 12:18:58 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

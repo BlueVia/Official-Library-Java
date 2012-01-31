@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -82,71 +82,72 @@ the password protecting the store </li>
 <span class="stringliteral">                     -Djavax.net.debug=ssl&quot;</span> \
 </pre></div><h2><a class="anchor" id="make_payment_trusted_sec"></a>
 Make a Payment</h2>
-<p>Once the user has requested the access token it is possible to make the payment. The Payment info included in this request must agree with the info supplied when the token was requested.</p>
+<p>There are two ways to make a payment. You can describe it using the code of any of the available price points, or you can supply the amount and the currency (ISO 4217 format) explicitly.</p>
 <div class="fragment"><pre class="fragment">TrustedPayment op = <span class="keyword">new</span> TrustedPayment(consumer, mode);
 
-PaymentParamsType params = <span class="keyword">new</span> PaymentParamsType();
+String endUserIdentifier = <span class="stringliteral">&quot;phone_number&quot;</span>;
+String code = <span class="stringliteral">&quot;code&quot;</span>;
+String referenceCode = <span class="stringliteral">&quot;reference_code&quot;</span>;
+String description = <span class="stringliteral">&quot;description&quot;</span>;
 
-PaymentInfoType pInfo = <span class="keyword">new</span> PaymentInfoType();
-UserIdType user = <span class="keyword">new</span> UserIdType();
-user.setPhoneNumber(<span class="stringliteral">&quot;34666223344&quot;</span>);
-pInfo.setEndUserIdentifier(user);
-pInfo.setCode(<span class="stringliteral">&quot;code&quot;</span>);
-pInfo.setReferencecode(<span class="stringliteral">&quot;referenceCode&quot;</span>);
-pInfo.setDescription(<span class="stringliteral">&quot;description&quot;</span>);
-params.setPaymentInfo(pInfo);
-
-PaymentResultType result = op.payment(params);
+PaymentResultType result = op.payment(endUserIdentifier, code, referenceCode, description);
 
 System.out.println(<span class="stringliteral">&quot;Transaction id: &quot;</span> + result.getTransactionId());
 System.out.println(<span class="stringliteral">&quot;Transaction status: &quot;</span> + result.getTransactionStatus());
+System.out.println(<span class="stringliteral">&quot;Description: &quot;</span> + result.getTransactionStatusDescription());
+</pre></div><div class="fragment"><pre class="fragment">TrustedPayment op = <span class="keyword">new</span> TrustedPayment(consumer, mode);
+
+String endUserIdentifier = <span class="stringliteral">&quot;phone_number&quot;</span>;
+Double amount = 100;
+String currency = <span class="stringliteral">&quot;GBP&quot;</span>
+String referenceCode = <span class="stringliteral">&quot;reference_code&quot;</span>;
+String description = <span class="stringliteral">&quot;description&quot;</span>;
+
+PaymentResultType result = op.payment(endUserIdentifier, amount, currency, referenceCode, description, null);
+
+System.out.println(<span class="stringliteral">&quot;Transaction id: &quot;</span> + result.getTransactionId());
+System.out.println(<span class="stringliteral">&quot;Transaction status: &quot;</span> + result.getTransactionStatus());
+System.out.println(<span class="stringliteral">&quot;Description: &quot;</span> + result.getTransactionStatusDescription());
 </pre></div><h2><a class="anchor" id="refund_sec"></a>
 Refund a payment</h2>
 <p>Payment can be refunded using the received transaction id:</p>
-<div class="fragment"><pre class="fragment">RefundParamsType refundParams = <span class="keyword">new</span> RefundParamsType();
-
-UserIdType user = <span class="keyword">new</span> UserIdType();
-user.setPhoneNumber(<span class="stringliteral">&quot;34666223344&quot;</span>);
-refundParams.setEndUserIdentifier(user);
-
-refundParams.setTransactionId(result.getTransactionId());
-op.refund(refundParams);
+<div class="fragment"><pre class="fragment">String endUserIdentifier = <span class="stringliteral">&quot;phone_number&quot;</span>;
+String transactionId = result.getTransactionId();
+op.refund(endUserIdentifier, transactionId);
 </pre></div><h2><a class="anchor" id="payment_code_example_sec"></a>
 Bluevia Payment API: Code example</h2>
 <div class="fragment"><pre class="fragment">System.out.println(<span class="stringliteral">&quot;***** PaymentExample&quot;</span>);
 
 <span class="keywordflow">try</span> {
+
         TrustedPayment op = <span class="keyword">new</span> TrustedPayment(consumer, mode);
 
-        PaymentParamsType params = <span class="keyword">new</span> PaymentParamsType();
+        String endUserIdentifier = <span class="stringliteral">&quot;phone_number&quot;</span>;
+        String code = <span class="stringliteral">&quot;code&quot;</span>;
+        String referenceCode = <span class="stringliteral">&quot;reference_code&quot;</span>;
+        String description = <span class="stringliteral">&quot;description&quot;</span>;
 
-        PaymentInfoType pInfo = <span class="keyword">new</span> PaymentInfoType();
-        UserIdType user = <span class="keyword">new</span> UserIdType();
-        user.setPhoneNumber(<span class="stringliteral">&quot;34666223344&quot;</span>);
-        pInfo.setEndUserIdentifier(user);
-        pInfo.setCode(<span class="stringliteral">&quot;code&quot;</span>);
-        pInfo.setReferencecode(<span class="stringliteral">&quot;referenceCode&quot;</span>);
-        pInfo.setDescription(<span class="stringliteral">&quot;description&quot;</span>);
-        params.setPaymentInfo(pInfo);
-
-        PaymentResultType result = op.payment(params);
+        PaymentResultType result = op.payment(endUserIdentifier, code, referenceCode, description);
 
         System.out.println(<span class="stringliteral">&quot;Transaction id: &quot;</span> + result.getTransactionId());
         System.out.println(<span class="stringliteral">&quot;Transaction status: &quot;</span> + result.getTransactionStatus());
-
-        RefundParamsType refundParams = <span class="keyword">new</span> RefundParamsType();
-        refundParams.setEndUserIdentifier(user);
-        refundParams.setTransactionId(result.getTransactionId());
-        op.refund(refundParams);
-
-} <span class="keywordflow">catch</span> (JAXBException ex) {
-        Logger.getLogger(PaymentExample.class.getName()).log(Level.SEVERE, null, ex);
+        System.out.println(<span class="stringliteral">&quot;Description: &quot;</span> + result.getTransactionStatusDescription());
+                        
+                        
+        System.out.println(<span class="stringliteral">&quot;***** TrustedPaymentExample refund operation&quot;</span>);
+                        
+        op.refund(endUserIdentifier, result.getTransactionId());
+                        
+        System.out.println(<span class="stringliteral">&quot;Refund operation completed&quot;</span>);
+                        
+} <span class="keywordflow">catch</span> (BlueviaException ex) {
+        System.err.println(ex.getMessage());
 } 
 </pre></div> </div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Mon Nov 21 2011 16:22:43 for Bluevia by&#160;
+      <li class="footer">Generated on Fri Jan 13 2012 12:18:57 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

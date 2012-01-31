@@ -23,6 +23,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.transform.stream.StreamSource;
 
 import com.bluevia.java.OauthRESTConnector;
+import com.bluevia.java.Utils;
 import com.bluevia.java.exception.BlueviaException;
 import com.bluevia.java.oauth.OAuthToken;
 import com.telefonica.schemas.unica.rest.sgap.v1.AdType;
@@ -54,6 +55,9 @@ public class Advertisement extends AdClient {
      */
     public Advertisement(OAuthToken consumer, OAuthToken token, Mode mode) throws JAXBException {
         super(consumer, token, mode);
+
+        if (!Utils.validateToken(token))
+    		throw new IllegalArgumentException("Invalid parameter: oauth token");
     }
     
     /**
@@ -77,12 +81,12 @@ public class Advertisement extends AdClient {
      * @throws JAXBException
      * @throws BlueviaException
      */
-    public Creative_Elements send(SimpleAd sa) throws JAXBException, BlueviaException {
+    public CreativeElements send(SimpleAd sa) throws JAXBException, BlueviaException {
 
         String url = this.uri + "?version=v1";
         
         //Set adRequestId if it has not been set before
-    	if (sa.getAdreqId() == null || sa.getAdreqId().trim().length() == 0)
+    	if (Utils.isEmpty(sa.getAdreqId()))
     		sa.composeAdRequestId(sa.getAdSpace(), restConnector.getAccessToken());
         
     	String data = sa.toHttpQueryString();
@@ -106,11 +110,11 @@ public class Advertisement extends AdClient {
 
             AdType adType = e.getValue().getAd();
 
-            Creative_Elements creative_elements = new Creative_Elements();
+            CreativeElements creative_elements = new CreativeElements();
             if (adType.getResource() != null && adType.getResource().getCreativeElement() != null) {
 
                 for (CreativeElementType c : adType.getResource().getCreativeElement()) {
-                    Creative_Element creative_element = new Creative_Element();
+                    CreativeElement creative_element = new CreativeElement();
                     creative_element.setType_id(adType.getResource().getAdPresentation());
                     creative_element.setType_name(c.getType());
                     if (c.getAttribute() != null) {
@@ -143,7 +147,6 @@ public class Advertisement extends AdClient {
 
             return creative_elements;
         } catch (IOException e1) {
-            // TODO Auto-generated catch block
             Logger.getLogger(OauthRESTConnector.class.getName()).log(Level.SEVERE, null, e1);
         };
         return null;

@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -127,29 +127,65 @@ String res = mt.send(dest, attachments, <span class="stringliteral">&quot;subjec
 </pre></div><p>Note that although your are requesting delivery status notifications, you still are able to use the Location header to ask for delivery status following the polling strategy. Your application must reply with a 204 No Content HTTP status and no body.</p>
 <h3><a class="anchor" id="receive_mms_sec"></a>
 Receiving MMS Example</h3>
+<p>This API uses Oauth 2-legged, so access token is not mandatory and applications does not need user's permissions.</p>
+<p>The operation to get received messages has to be done in two steps. First you have to use the getMessages function to retreive the messages info, including a message identifier. Depending on the value of the useAttachmentIds parameter, the second step would be done in two different ways. If the parameter is true, the ids of the attachments will be retreived in order to use the getAttachment operation; otherwise the attachments would have to be obtained throught the getMessage function.</p>
 <div class="fragment"><pre class="fragment">OAuthToken consumer = <span class="keyword">new</span> OAuthToken(<span class="stringliteral">&quot;consumer_key&quot;</span>, <span class="stringliteral">&quot;consumer_secret&quot;</span>);
-OAuthToken accesstoken = <span class="keyword">new</span> OAuthToken(<span class="stringliteral">&quot;token&quot;</span>, <span class="stringliteral">&quot;token_secret&quot;</span>);
 
 <span class="comment">// Create mms receiver</span>
-MessageMO mmsReceiver = <span class="keyword">new</span> MessageMO(consumer, accesstoken, Mode.LIVE);
+MessageMO mmsReceiver = <span class="keyword">new</span> MessageMO(consumer, Mode.LIVE);
+<span class="keywordtype">boolean</span> useAttachmentIds = <span class="keyword">true</span>; <span class="comment">//</span>
 
 <span class="comment">// Prepare params</span>
 String registrationId = <span class="stringliteral">&quot;546780&quot;</span>;
 
 <span class="comment">// Get messages info</span>
-ReceivedMessagesType response = mmsReceiver.getMessages(registrationId);
+ReceivedMessagesType response = mmsReceiver.getMessages(registrationId, useAttachmentIds);
 List&lt;MessageReferenceType&gt; list = response.getReceivedMessages();
 
 <span class="keywordflow">for</span> (MessageReferenceType messageReference : list){
-        <span class="comment">// Get message</span>
-        ReceivedMMS message = mmsReceiver.getMessage(registrationId, messageReference.getMessageIdentifier());
+
         <span class="comment">// Do stuff</span>
+}
+</pre></div><p>Using getAttachment:</p>
+<div class="fragment"><pre class="fragment"><span class="keywordflow">for</span> (MessageReferenceType messageReference : list){
+
+        System.out.println(<span class="stringliteral">&quot;Message from: &quot;</span> + messageReference.getOriginAddress().getPhoneNumber());
+        System.out.println(<span class="stringliteral">&quot; &gt; Subject: &quot;</span> + messageReference.getSubject());
+
+        List&lt;MessageURIType&gt; atts = messageReference.getAttachmentURL();
+        <span class="keywordflow">for</span> (MessageURIType uri : atts){
+                System.out.println(<span class="stringliteral">&quot;Attachment:&quot;</span>);
+                System.out.println(<span class="stringliteral">&quot;Id: &quot;</span> + uri.getHref());
+                System.out.println(<span class="stringliteral">&quot;Content-type: &quot;</span> + uri.getContentType());
+
+                <span class="comment">//Get attachments</span>
+                MimeContent attachment = mmsReceiver.getAttachment(registrationId, 
+                        messageReference.getMessageIdentifier(), uri.getHref());
+
+                <span class="comment">//Do stuff...</span>
+                System.out.println(attachment.getFileName());
+        }
+}
+</pre></div><p>Using getMessage:</p>
+<div class="fragment"><pre class="fragment"><span class="keywordflow">for</span> (MessageReferenceType messageReference : list){
+        
+        ReceivedMMS mms = mmsReceiver.getMessage(registrationId, messageReference.getMessageIdentifier());
+        System.out.println(<span class="stringliteral">&quot;Message from: &quot;</span> + mms.getMessage().getOriginAddress().getPhoneNumber());
+        System.out.println(<span class="stringliteral">&quot; &gt; Subject: &quot;</span> + mms.getMessage().getSubject());
+
+
+        <span class="comment">// Get attachments...</span>
+        ArrayList&lt;MimeContent&gt; contents = mms.getAttachments();
+        <span class="keywordflow">for</span> (MimeContent content : contents){
+                <span class="comment">//Do stuff...</span>
+                System.out.println(content.getFileName());
+        }
 }
 </pre></div><h3><a class="anchor" id="notifications_sec"></a>
 Received SMSs Notifications Example</h3>
-<p>To receive notifications about MMS sent to your applications you must provide an endpoint whit the URI where notifications must be sent and a correlator element with and identifier to correlate notifications with subscriptions</p>
+<p>To receive notifications about MMS sent to your applications you must provide an endpoint whit the URI where notifications must be sent and a correlator element with and identifier to correlate notifications with subscriptions This API uses Oauth 2-legged, so access token is not mandatory and applications does not need user's permissions.</p>
 <div class="fragment"><pre class="fragment"><span class="comment">// Create Notification type to subscribe or unsusbcribe</span>
-NotificationManager nm = <span class="keyword">new</span> NotificationManager(consumer, accesstoken, Mode.LIVE);
+NotificationManager nm = <span class="keyword">new</span> NotificatdionManager(consumer, Mode.LIVE);
 MessageNotificationType mnt = <span class="keyword">new</span> MessageNotificationType();
 
 <span class="comment">// Create a SimpleReferenceType with an endpoint and a correlator identifier</span>
@@ -168,7 +204,7 @@ String criteriaValue = <span class="stringliteral">&quot;MYKEYWORD&quot;</span>;
 snt.setCriteria(criteriaValue);
 
 <span class="comment">// Start notifications</span>
-String res = nm.subscribe(snt);
+String notifId = nm.subscribe(snt);
 </pre></div><p>If you want to unsubscribe and stop reveiving notifications you should call the unsusbscribe function where the nofitication id is the string returned by the subscribe function.</p>
 <div class="fragment"><pre class="fragment"><span class="comment">// Stop notifications</span>
 nm.unsubscribeNotification(notifId);
@@ -176,7 +212,7 @@ nm.unsubscribeNotification(notifId);
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:50 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:27 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

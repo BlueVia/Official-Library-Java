@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -80,7 +80,7 @@ Creative_Elements response = ad.send(request);
     }
 }
 </pre></div><h2><a class="anchor" id="get_ad_sec_2l"></a>
-get_ad_sec_2l</h2>
+Oauth 2-legged Advertising</h2>
 <p>Some applications will only use the Advertising API, which does not need to be given permissions by the final user. Bluevia supports Oauth authentication without oauth token, which is called 2-legged version. In this case the client just need the Consumer key and Consumer secret credentials:</p>
 <div class="fragment"><pre class="fragment">OAuthToken consumer = <span class="keyword">new</span> OAuthToken(<span class="stringliteral">&quot;consumer_key&quot;</span>, <span class="stringliteral">&quot;consumer_secret&quot;</span>);
 Advertisement ad = <span class="keyword">new</span> Advertisement(consumer, Mode.LIVE);
@@ -88,7 +88,7 @@ Advertisement ad = <span class="keyword">new</span> Advertisement(consumer, Mode
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:50 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:27 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -80,8 +80,7 @@ Inheritance diagram for com.bluevia.java.mms.MessageMT:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a9767745ab4b5a1f0f71595ed64a446"></a><!-- doxytag: member="com::bluevia::java::mms::MessageMT::MessageMT" ref="a8a9767745ab4b5a1f0f71595ed64a446" args="(OAuthToken consumer, OAuthToken token, Mode mode)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>MessageMT</b> (<a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a> consumer, <a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a> token, <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html#ada108115e502ba702cbb64e95579e10a">Mode</a> mode)  throws JAXBException </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1mms_1_1_message_m_t.html#a8a9767745ab4b5a1f0f71595ed64a446">MessageMT</a> (<a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a> consumer, <a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a> token, <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html#ada108115e502ba702cbb64e95579e10a">Mode</a> mode)  throws JAXBException </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1_message_delivery_status_type.html">MessageDeliveryStatusType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1mms_1_1_message_m_t.html#a093984287969d4eced95e0dbd47aa098">getStatus</a> (String id)  throws JAXBException, BlueviaException </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1java_1_1mms_1_1_message_m_t.html#a7d1c7242e24a7732ff88d5fdb9c38ed3">send</a> (String[] destinationNumber, <a class="el" href="classcom_1_1bluevia_1_1java_1_1mms_1_1data_1_1_attachment.html">Attachment</a>[] attachments, String subject)  throws JAXBException, IOException, BlueviaException </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a484e9e7e53b375629ddd99ce17e0b248"></a><!-- doxytag: member="com::bluevia::java::mms::MessageMT::send" ref="a484e9e7e53b375629ddd99ce17e0b248" args="(String[] destinationNumber, Attachment[] attachments, String subject, String endPoint, String correlator)" -->
@@ -89,6 +88,54 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (String[] 
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3cb216dfd7e50a927f3b7638bb733db"></a><!-- doxytag: member="com::bluevia::java::mms::MessageMT::generic_send" ref="ab3cb216dfd7e50a927f3b7638bb733db" args="(byte[] data)" -->
 String&#160;</td><td class="memItemRight" valign="bottom"><b>generic_send</b> (byte[] data)  throws BlueviaException, JAXBException </td></tr>
 </table>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a8a9767745ab4b5a1f0f71595ed64a446"></a><!-- doxytag: member="com::bluevia::java::mms::MessageMT::MessageMT" ref="a8a9767745ab4b5a1f0f71595ed64a446" args="(OAuthToken consumer, OAuthToken token, Mode mode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.bluevia.java.mms.MessageMT.MessageMT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a>&#160;</td>
+          <td class="paramname"><em>consumer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1bluevia_1_1java_1_1oauth_1_1_o_auth_token.html">OAuthToken</a>&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html#ada108115e502ba702cbb64e95579e10a">Mode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throws JAXBException </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">consumer</td><td></td></tr>
+    <tr><td class="paramname">token</td><td></td></tr>
+    <tr><td class="paramname">mode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">JAXBException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a093984287969d4eced95e0dbd47aa098"></a><!-- doxytag: member="com::bluevia::java::mms::MessageMT::getStatus" ref="a093984287969d4eced95e0dbd47aa098" args="(String id)" -->
 <div class="memitem">
@@ -182,7 +229,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>generic_send</b> (b
       <li class="navelem"><a class="el" href="namespacecom_1_1bluevia_1_1java.html">java</a>      </li>
       <li class="navelem"><a class="el" href="namespacecom_1_1bluevia_1_1java_1_1mms.html">mms</a>      </li>
       <li class="navelem"><a class="el" href="classcom_1_1bluevia_1_1java_1_1mms_1_1_message_m_t.html">MessageMT</a>      </li>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:51 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:28 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

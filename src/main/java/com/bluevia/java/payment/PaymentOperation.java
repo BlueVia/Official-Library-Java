@@ -15,6 +15,7 @@ package com.bluevia.java.payment;
 
 import java.io.ByteArrayOutputStream;
 import java.io.StringReader;
+import java.math.BigDecimal;
 import java.util.Random;
 
 import javax.xml.bind.JAXBContext;
@@ -30,6 +31,7 @@ import oauth.signpost.http.HttpParameters;
 import com.bluevia.java.Utils;
 import com.bluevia.java.exception.BlueviaException;
 import com.bluevia.java.oauth.OAuthToken;
+import com.telefonica.schemas.unica.rpc.common.v1.SimpleReferenceType;
 import com.telefonica.schemas.unica.rpc.payment.v1.GetPaymentStatusParamsType;
 import com.telefonica.schemas.unica.rpc.payment.v1.GetPaymentStatusResultType;
 import com.telefonica.schemas.unica.rpc.payment.v1.MethodCallType;
@@ -37,6 +39,7 @@ import com.telefonica.schemas.unica.rpc.payment.v1.MethodCallType.Params;
 import com.telefonica.schemas.unica.rpc.payment.v1.MethodResponseType;
 import com.telefonica.schemas.unica.rpc.payment.v1.MethodType;
 import com.telefonica.schemas.unica.rpc.payment.v1.ObjectFactory;
+import com.telefonica.schemas.unica.rpc.payment.v1.PaymentInfoType;
 import com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType;
 import com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType;
 
@@ -63,16 +66,64 @@ public class PaymentOperation extends PaymentClient {
     }
 
     /**
+     * 
      * Makes a payment operation. 
      * The payment parameters must fill the parameters included in the getPaymentRequestToken call.
+	 * @param amount  the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). 
+	 * @param currency the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.). 
      * 
-     * @param params the Payment parameters of the operation (amount and currency)
      * @return the result of the payment.
      * @throws JAXBException
      * @throws BlueviaException
      */
-    public PaymentResultType payment(PaymentParamsType params) throws JAXBException, BlueviaException {
+    public PaymentResultType payment(int amount, String currency) throws JAXBException, BlueviaException {
+    	return payment(amount, currency, null, null);
+    }
+    
+    /**
+     * 
+     * Makes a payment operation, with payment status notification. 
+     * The payment parameters must fill the parameters included in the getPaymentRequestToken call.
+	 * @param amount  the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). 
+	 * @param currency the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.). 
+     * @param endpoint The URI where your application is expecting to receive the payment status notifications.
+     * @param correlator
+     * 
+     * @return the result of the payment.
+     * @throws JAXBException
+     * @throws BlueviaException
+     */
+    public PaymentResultType payment(int amount, String currency, String endpoint, String correlator) throws JAXBException, BlueviaException {
 
+    	if (amount <= 0)
+    		throw new IllegalArgumentException("Invalid parameter: amount. Must be a positive value");
+    	
+    	if (Utils.isEmpty(currency))
+    		throw new IllegalArgumentException("Invalid parameter: currency");
+    	
+    	//Create PaymentParams
+    	PaymentParamsType params = new PaymentParamsType();
+    	
+    	//PaymentInfo
+    	PaymentInfoType pInfo = new PaymentInfoType();
+    	pInfo.setAmount(new BigDecimal(amount));
+    	pInfo.setCurrency(currency);
+    	params.setPaymentInfo(pInfo);
+    	
+    	//Reference code
+    	if (!Utils.isEmpty(endpoint) && !Utils.isEmpty(correlator)){
+    		SimpleReferenceType reference = new SimpleReferenceType();
+    		reference.setEndpoint(endpoint);
+    		reference.setCorrelator(correlator);
+        	params.setReceiptRequest(reference);
+    	}
+    	
+    	//Timestamp
+        if (params.getTimestamp() == null){
+            XMLGregorianCalendar timestamp = Utils.generateTimestamp();
+            params.setTimestamp(timestamp);
+        }
+    	
         // build the RPC call
         ObjectFactory objectFactory = new ObjectFactory();
         MethodCallType mct = objectFactory.createMethodCallType();
@@ -80,11 +131,6 @@ public class PaymentOperation extends PaymentClient {
         mct.setMethod(MethodType.PAYMENT);
         mct.setId(generateRandomId());
         Params p = new Params();
-        
-        if (params.getTimestamp() == null){
-            XMLGregorianCalendar timestamp = Utils.generateTimestamp();
-            params.setTimestamp(timestamp);
-        }
         
         p.setPaymentParams(params);
         mct.setParams(p);
@@ -145,6 +191,9 @@ public class PaymentOperation extends PaymentClient {
      */
     public GetPaymentStatusResultType getStatus(String transactionId) throws JAXBException, BlueviaException {
 
+    	if (Utils.isEmpty(transactionId))
+    		throw new IllegalArgumentException("Invalid parameter: transactionId");
+    	
     	GetPaymentStatusParamsType params = new GetPaymentStatusParamsType();
     	params.setTransactionId(transactionId);
     	

@@ -21,7 +21,7 @@ $(document).ready(initResizable);
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.1.2</span></div>
+   <div id="projectname">Bluevia&#160;<span id="projectnumber">1.5</span></div>
   </td>
  </tr>
  </tbody>
@@ -63,14 +63,16 @@ $(document).ready(initResizable);
 </div>
 <div class="contents">
 This is the complete list of members for <a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html">com.bluevia.java.payment.PaymentOperation</a>, including all inherited members.<table>
-  <tr bgcolor="#f0f0f0"><td><b>AbstractRPCClient</b>(OAuthToken tokenConsumer, OAuthToken token) (defined in <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_r_p_c_client.html">com.bluevia.java.AbstractRPCClient</a>)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_r_p_c_client.html">com.bluevia.java.AbstractRPCClient</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>AbstractClient</b>(Mode mode, String pathLive, String pathSandbox) (defined in <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html">com.bluevia.java.AbstractClient</a>)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html">com.bluevia.java.AbstractClient</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>AbstractRPCClient</b>(OAuthToken tokenConsumer, OAuthToken token, Mode mode, String pathLive, String pathSandbox) (defined in <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_r_p_c_client.html">com.bluevia.java.AbstractRPCClient</a>)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_r_p_c_client.html">com.bluevia.java.AbstractRPCClient</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>BASE_ENDPOINT</b> (defined in <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html">com.bluevia.java.AbstractClient</a>)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html">com.bluevia.java.AbstractClient</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#aafe8b5c75a8382eeed282477afbe1d03">cancelAuthorization</a>()</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html">com.bluevia.java.payment.PaymentOperation</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#ace0162c50f0746abea0cd11d7e5e8a2b">getStatus</a>(String transactionId)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html">com.bluevia.java.payment.PaymentOperation</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>jc</b> (defined in <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html">com.bluevia.java.AbstractClient</a>)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html">com.bluevia.java.AbstractClient</a></td><td><code> [protected]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>m</b> (defined in <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html">com.bluevia.java.AbstractClient</a>)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html">com.bluevia.java.AbstractClient</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html#ada108115e502ba702cbb64e95579e10a">Mode</a> enum name</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_client.html">com.bluevia.java.AbstractClient</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#aa73704a1f796e30c24ae1b13f288da7e">payment</a>(PaymentParamsType params)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html">com.bluevia.java.payment.PaymentOperation</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#a908ef370939e4d01ae36ca5e559b49c0">payment</a>(int amount, String currency)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html">com.bluevia.java.payment.PaymentOperation</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#ae0b08c545f28c513889ddea89357ccd8">payment</a>(int amount, String currency, String endpoint, String correlator)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html">com.bluevia.java.payment.PaymentOperation</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_client.html#ad6e3f6ee861a94ca38ae8f1561d80774">PaymentClient</a>(OAuthToken consumer, OAuthToken token, Mode mode)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_client.html">com.bluevia.java.payment.PaymentClient</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html#ab3d27ddb239ecd13da23587164dc2cc4">PaymentOperation</a>(OAuthToken consumer, OAuthToken token, Mode mode)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1payment_1_1_payment_operation.html">com.bluevia.java.payment.PaymentOperation</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>rpcConnector</b> (defined in <a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_r_p_c_client.html">com.bluevia.java.AbstractRPCClient</a>)</td><td><a class="el" href="classcom_1_1bluevia_1_1java_1_1_abstract_r_p_c_client.html">com.bluevia.java.AbstractRPCClient</a></td><td><code> [protected]</code></td></tr>
@@ -80,7 +82,7 @@ This is the complete list of members for <a class="el" href="classcom_1_1bluevia
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Tue Nov 22 2011 16:02:51 for Bluevia by&#160;
+      <li class="footer">Generated on Thu Jan 26 2012 12:33:28 for Bluevia by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

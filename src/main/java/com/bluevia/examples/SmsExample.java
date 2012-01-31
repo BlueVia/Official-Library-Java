@@ -48,18 +48,21 @@ public class SmsExample {
     // User must DEFINE VALID VALUES FOR consumer token & access token
     
     // Consumer Key - Consumer Token
-    public static OAuthToken consumer = new OAuthToken("", "");
-
+    public static OAuthToken consumer = new OAuthToken("vw12012654505986", "WpOl66570544");
+    
     // Access Token - Access Token Secret
-    public static OAuthToken accesstoken = new OAuthToken("", "");
+    public static OAuthToken accesstoken = new OAuthToken("ad3f0f598ffbc660fbad9035122eae74", "4340b28da39ec36acb4a205d3955a853");
 
+    //Keyword
+    public static final String KEYWORD = "SANDBLUEDEMOS";
+    
     public static void main(String[] args) {
     	sendSms();
     	//getSms();
     	//notifications();
     }
 
-    /**n
+    /**
      * SMS API - SMS MT EXAMPLE (SEND SMS TEXT MESSAGE)
      * 
      */
@@ -73,7 +76,7 @@ public class SmsExample {
             MessageMT messageSender = new MessageMT(consumer, accesstoken, mode);
             
             // Prepare SMS parameters
-            String addresses[] = { "5421100001" };
+            String addresses[] = { "546780" };
             String message = "Hello Bluevia!";
 
             // Sending SMS
@@ -104,7 +107,7 @@ public class SmsExample {
             System.out.println("***** Get SMSs Example");
             
             // Create the sms receiver
-            MessageMO smsReceiver = new MessageMO(consumer, accesstoken, mode);
+            MessageMO smsReceiver = new MessageMO(consumer, mode);
             
             // Prepare params
             String registrationId = "546780";
@@ -113,10 +116,14 @@ public class SmsExample {
             ReceivedSMSType response = smsReceiver.getMessages(registrationId);
             List<SMSMessageType> list = response.getReceivedSMS();
             
-            for (SMSMessageType sms : list){
-            	System.out.println("Received SMS from '" + 
-            			sms.getOriginAddress().getPhoneNumber() + 
-            			"' > '" + sms.getMessage() + "'");
+            if (list == null || list.isEmpty()){
+            	System.out.println("No messages");
+            } else {
+            	for (SMSMessageType sms : list){
+                	System.out.println("Received SMS from '" + 
+                			sms.getOriginAddress().getPhoneNumber() + 
+                			"' > '" + sms.getMessage() + "'");
+                }
             }
             
         } catch (BlueviaException ex) {
@@ -132,7 +139,7 @@ public class SmsExample {
 
             System.out.println("***** Subscribe to Notificacions Example");
             
-            NotificationManager nm = new NotificationManager(consumer, accesstoken, mode);
+            NotificationManager nm = new NotificationManager(consumer, mode);
 
             SMSNotificationType snt = new SMSNotificationType();
             
@@ -153,10 +160,11 @@ public class SmsExample {
             snt.setCriteria("MO_key");
             
             //Susbscribe
-            nm.subscribe(snt);
+            String response = nm.subscribe(snt);
+            System.out.println("Suscribed with correlator: " + response);
             
             //Unsubscribe
-            nm.unsubscribeNotification("https://www.example.com");
+            nm.unsubscribeNotification(response);
             
         } catch (BlueviaException ex) {
             Logger.getLogger(SmsExample.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);

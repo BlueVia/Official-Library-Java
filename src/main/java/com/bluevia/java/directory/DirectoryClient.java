@@ -17,6 +17,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
 import com.bluevia.java.AbstractRESTClient;
+import com.bluevia.java.Utils;
 import com.bluevia.java.oauth.OAuthToken;
 
 /**
@@ -42,18 +43,14 @@ public class DirectoryClient extends AbstractRESTClient {
      * @throws JAXBException
      */
     public DirectoryClient(OAuthToken tokenConsumer,OAuthToken token, Mode mode) throws JAXBException {
-        super(tokenConsumer, token);
+        super(tokenConsumer, token, mode, PATH_LIVE, PATH_SANDBOX);
+        
+        if (!Utils.validateToken(token))
+    		throw new IllegalArgumentException("Invalid parameter: oauth token");
+        
     	this.jc = JAXBContext.newInstance("com.telefonica.schemas.unica.rest.directory.v1");
         this.u = jc.createUnmarshaller();
         
-        switch (mode){
-        case LIVE:
-        	this.uri = BASE_ENDPOINT + PATH_LIVE;
-        	break;
-        case SANDBOX:
-        	this.uri = BASE_ENDPOINT + PATH_SANDBOX;
-        	break;
-        }
     }
 }
 

@@ -42,18 +42,20 @@ public class SMSClient extends AbstractRESTClient {
      * @throws JAXBException
      */
     public SMSClient(OAuthToken consumer, OAuthToken token,  Mode mode) throws JAXBException {
-        super(consumer, token);
+        super(consumer, token, mode, PATH_LIVE, PATH_SANDBOX);
         this.jc = JAXBContext.newInstance("com.telefonica.schemas.unica.rest.sms.v1");
         this.u = jc.createUnmarshaller();
         this.m=jc.createMarshaller();
         
-        switch (mode){
-        case LIVE:
-        	this.uri = BASE_ENDPOINT + PATH_LIVE;
-        	break;
-        case SANDBOX:
-        	this.uri = BASE_ENDPOINT + PATH_SANDBOX;
-        	break;
-        }
+    }
+    
+    /**
+     * 
+     * @param consumer
+     * @param mode
+     * @throws JAXBException
+     */
+    public SMSClient(OAuthToken consumer, Mode mode) throws JAXBException {
+    	this(consumer, null, mode);
     }
 }

@@ -27,8 +27,6 @@ import com.bluevia.java.payment.PaymentOperation;
 import com.bluevia.java.payment.ServiceInfo;
 import com.bluevia.java.payment.oauth.PaymentRequestToken;
 import com.telefonica.schemas.unica.rpc.payment.v1.GetPaymentStatusResultType;
-import com.telefonica.schemas.unica.rpc.payment.v1.PaymentInfoType;
-import com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType;
 import com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType;
 
 /**
@@ -44,9 +42,9 @@ public class PaymentExample {
 	// CREDENTIALS: 
 	// User must DEFINE VALID VALUES FOR consumer token & access token
 
-	// Consumer Key - Consumer Token
-	public static OAuthToken consumer = new OAuthToken("", "");
-
+    // Consumer Key - Consumer Token
+    public static OAuthToken consumer = new OAuthToken("vw12012654505986", "WpOl66570544");
+    
 	// Access Token - Access Token Secret
 	// Must be obtained for each Payment operation
 	public static OAuthToken accesstoken = null;
@@ -68,16 +66,13 @@ public class PaymentExample {
 
 			PaymentRequestToken rt = new PaymentRequestToken(consumer, mode);
 
-			PaymentParamsType params = new PaymentParamsType();
-			PaymentInfoType paymentInfo = new PaymentInfoType();
-			paymentInfo.setAmount(177);
-			paymentInfo.setCurrency("EUR");
-			params.setPaymentInfo(paymentInfo);
+			int amount = 177;
+			String currency = "EUR";
 
 			// NOTE: fake values, user must fill correct data
 			ServiceInfo serviceInfo = new ServiceInfo("service_id", "bluevia");
 			
-			OAuthToken requestToken = rt.getPaymentRequestToken(null, params, serviceInfo);
+			OAuthToken requestToken = rt.getPaymentRequestToken(null, amount, currency, serviceInfo);
 
 			System.out.println("Token: " + requestToken.getToken());
 			System.out.println("Secret: " + requestToken.getSecret());
@@ -116,14 +111,10 @@ public class PaymentExample {
 
 			PaymentOperation op = new PaymentOperation(consumer, accesstoken, mode);
 
-			PaymentParamsType params = new PaymentParamsType();
+			int amount = 177;
+			String currency = "EUR";
 
-			PaymentInfoType pInfo = new PaymentInfoType();
-			pInfo.setAmount(177);
-			pInfo.setCurrency("EUR");
-			params.setPaymentInfo(pInfo);
-
-			PaymentResultType result = op.payment(params);
+			PaymentResultType result = op.payment(amount, currency);
 
 			System.out.println("Transaction id: " + result.getTransactionId());
 			System.out.println("Transaction status: " + result.getTransactionStatus());
