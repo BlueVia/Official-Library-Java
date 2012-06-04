@@ -1,0 +1,157 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage}{
+\section{com.bluevia.messagery.mo.sms.data.SmsMessage Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage}\index{com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}}
+}
+Inheritance diagram for com.bluevia.messagery.mo.sms.data.SmsMessage:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_a6cb604a2dee076984860853a9fc930bf}{SmsMessage} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_a41017793cddf985cfe48ef6e699663f8}{SmsMessage} (String message, ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} $>$ addressList, String dateTime)  throws BlueviaException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_a18f92d1e8f48a882a52e29ba0fb885a3}{SmsMessage} (String message, \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address, String dateTime)  throws BlueviaException 
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_ae5862ce0ac9c8ea10b543e7674c1bd75}{setMessage} (String message)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_afacfda0c2ef243315bf42dad818828c2}{getMessage} ()
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_ae949c68532b88c61c3f92aeabae19983}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing the \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage}{SmsMessage} elements that will be received in ReceivedSmsList using the SMS Client API This type is composed of the following fields: 
+\begin{DoxyItemize}
+\item mDate; String 
+\end{DoxyItemize}
+
+This implementation is not synchronized
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_a6cb604a2dee076984860853a9fc930bf}{
+\index{com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}!SmsMessage@{SmsMessage}}
+\index{SmsMessage@{SmsMessage}!com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}}
+\subsubsection[{SmsMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mo.sms.data.SmsMessage.SmsMessage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_a6cb604a2dee076984860853a9fc930bf}
+Instantiates a new empty ReceivedSMS message. \hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_a41017793cddf985cfe48ef6e699663f8}{
+\index{com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}!SmsMessage@{SmsMessage}}
+\index{SmsMessage@{SmsMessage}!com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}}
+\subsubsection[{SmsMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mo.sms.data.SmsMessage.SmsMessage (
+\begin{DoxyParamCaption}
+\item[{String}]{message, }
+\item[{ArrayList$<$ {\bf UserId} $>$}]{addressList, }
+\item[{String}]{dateTime}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_a41017793cddf985cfe48ef6e699663f8}
+Instantiates a new ReceivedSMS message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The body of the received message \\
+\hline
+{\em addressList} & The list of recipients to whom the message will be sent. Allowed UserId instances are those such as: 
+\begin{DoxyItemize}
+\item UserId type is UserId.PHONE\_\-NUMBER and has a phone number -\/following the E164 format-\/ as 'userIdValue'. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Any other UserId instance type will cause this function throws an BlueviaException. 
+\begin{DoxyParams}{Parameters}
+{\em dateTime} & The date and time when the message was sent \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_a18f92d1e8f48a882a52e29ba0fb885a3}{
+\index{com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}!SmsMessage@{SmsMessage}}
+\index{SmsMessage@{SmsMessage}!com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}}
+\subsubsection[{SmsMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mo.sms.data.SmsMessage.SmsMessage (
+\begin{DoxyParamCaption}
+\item[{String}]{message, }
+\item[{{\bf UserId}}]{address, }
+\item[{String}]{dateTime}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_a18f92d1e8f48a882a52e29ba0fb885a3}
+Instantiates a new ReceivedSMS message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The body of the received message \\
+\hline
+{\em address} & The recipient to whom the message will be sent. Allowed UserId instances are those such as: 
+\begin{DoxyItemize}
+\item UserId type is UserId.PHONE\_\-NUMBER and has a phone number -\/following the E164 format-\/ as 'userIdValue'. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Any other UserId instance type will cause this function throws an BlueviaException. 
+\begin{DoxyParams}{Parameters}
+{\em dateTime} & The date and time when the message was sent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_afacfda0c2ef243315bf42dad818828c2}{
+\index{com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}}
+\subsubsection[{getMessage}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.sms.data.SmsMessage.getMessage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_afacfda0c2ef243315bf42dad818828c2}
+Gets the message.
+
+\begin{DoxyReturn}{Returns}
+the message 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_ae949c68532b88c61c3f92aeabae19983}{
+\index{com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.messagery.mo.sms.data.SmsMessage.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_ae949c68532b88c61c3f92aeabae19983}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a54794afbe03b26ec95a10150563bf901}{com.bluevia.messagery.mo.data.AbstractReceivedMessage}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_ae5862ce0ac9c8ea10b543e7674c1bd75}{
+\index{com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}!setMessage@{setMessage}}
+\index{setMessage@{setMessage}!com::bluevia::messagery::mo::sms::data::SmsMessage@{com::bluevia::messagery::mo::sms::data::SmsMessage}}
+\subsubsection[{setMessage}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mo.sms.data.SmsMessage.setMessage (
+\begin{DoxyParamCaption}
+\item[{String}]{message}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_ae5862ce0ac9c8ea10b543e7674c1bd75}
+Sets the message
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}

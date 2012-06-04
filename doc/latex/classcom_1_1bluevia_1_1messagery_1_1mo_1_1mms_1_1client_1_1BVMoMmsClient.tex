@@ -1,0 +1,348 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient}{
+\section{com.bluevia.messagery.mo.mms.client.BVMoMmsClient Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient}\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+}
+Inheritance diagram for com.bluevia.messagery.mo.mms.client.BVMoMmsClient:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessageInfo}{MmsMessageInfo} $>$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_af6402ed5c4664aa9de87622361a92395}{getAllMessages} (String registrationId)  throws BlueviaException, IOException
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessageInfo}{MmsMessageInfo} $>$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_afc5433dbb07fd3e5a73879bc3b3e5815}{getAllMessages} (String registrationId, boolean attachUrl)  throws BlueviaException, IOException
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage}{MmsMessage} \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a4f0e855fc51ba756891e18627cd555ec}{getMessage} (String registrationId, String messageId)  throws BlueviaException, IOException
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MimeContent}{MimeContent} \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_af0c03c6f616acd671f95a584fcb787d9}{getAttachment} (String registrationId, String messageId, String attachmentId)  throws BlueviaException, IOException 
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a85016ae61d419ae9c23bf1356d1909be}{startNotification} (String phoneNumber, String endpoint, String criteria)  throws IOException, BlueviaException
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a5ab2006379e28659650fa33f7e194d2b}{startNotification} (String phoneNumber, String endpoint, String criteria, String correlator)  throws IOException, BlueviaException
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a798b0295afeafad3e6a612a021ad2dc1}{stopNotification} (String correlator)  throws BlueviaException, IOException 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_adfd24d810053fb362c062eace4d701f1}{init} ()
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a0bda94aa77d27e95c74343c0813d21cc}{retrieve} (String feedUri, HashMap$<$ String, String $>$ parameters)  throws IOException, BlueviaException 
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_abe0ec7cf94a529ede9553ee17c834e8f}{startNotification} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1MessageNotificationType}{MessageNotificationType} notification)  throws IOException, BlueviaException
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract client interface for the REST binding of the Bluevia MMS MO Service.
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_af6402ed5c4664aa9de87622361a92395}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!getAllMessages@{getAllMessages}}
+\index{getAllMessages@{getAllMessages}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{getAllMessages}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf MmsMessageInfo}$>$ com.bluevia.messagery.mo.mms.client.BVMoMmsClient.getAllMessages (
+\begin{DoxyParamCaption}
+\item[{String}]{registrationId}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_af6402ed5c4664aa9de87622361a92395}
+Retrieves the list of received messages without attachment ids.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_afc5433dbb07fd3e5a73879bc3b3e5815}{getAllMessages(String registrationId, boolean attachUrl)}
+\end{DoxySeeAlso}
+Note: the origin address of the received MMS will contain an alias, not a phone number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrationId} & the registration id (short number) that receives the messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of messages. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_afc5433dbb07fd3e5a73879bc3b3e5815}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!getAllMessages@{getAllMessages}}
+\index{getAllMessages@{getAllMessages}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{getAllMessages}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf MmsMessageInfo}$>$ com.bluevia.messagery.mo.mms.client.BVMoMmsClient.getAllMessages (
+\begin{DoxyParamCaption}
+\item[{String}]{registrationId, }
+\item[{boolean}]{attachUrl}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_afc5433dbb07fd3e5a73879bc3b3e5815}
+Retrieves the list of received messages. Depending on the value of the useAttachmentsIds parameter, the response will include the IDs of the attachments or not. If the ids are retrieved, the function 'getAttachment' can be used; otherwise, the attachments must be obtained throught the getMessage function.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a4f0e855fc51ba756891e18627cd555ec}{getMessage(String registrationId, String messageId)} 
+
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_af0c03c6f616acd671f95a584fcb787d9}{getAttachment(String registrationId, String messageId, String attachmentId)}
+\end{DoxySeeAlso}
+Note: the origin address of the received MMS will contain an alias, not a phone number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrationId} & the registration id (short number) that receives the messages \\
+\hline
+{\em attachUrl} & the boolean parameter to retrieve the IDs of the attachments or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of Received MMSs (list will be empty if the are no messages) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_af0c03c6f616acd671f95a584fcb787d9}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!getAttachment@{getAttachment}}
+\index{getAttachment@{getAttachment}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{getAttachment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MimeContent} com.bluevia.messagery.mo.mms.client.BVMoMmsClient.getAttachment (
+\begin{DoxyParamCaption}
+\item[{String}]{registrationId, }
+\item[{String}]{messageId, }
+\item[{String}]{attachmentId}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_af0c03c6f616acd671f95a584fcb787d9}
+Gets the attachment with the specified id of the received message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrationId} & the registration id (short number) that receives the messages \\
+\hline
+{\em messageId} & the message id (obtained in getAllMessages function) \\
+\hline
+{\em attachmentId} & the attachment id (obtained in getAllMessages function) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the attachment of the received MMS. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a4f0e855fc51ba756891e18627cd555ec}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{getMessage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MmsMessage} com.bluevia.messagery.mo.mms.client.BVMoMmsClient.getMessage (
+\begin{DoxyParamCaption}
+\item[{String}]{registrationId, }
+\item[{String}]{messageId}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a4f0e855fc51ba756891e18627cd555ec}
+Gets the content of a message with a 'messageId' sent to the 'registrationId'
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrationId} & the registration id (short number) that receives the messages \\
+\hline
+{\em messageId} & the message id (obtained in getAllMessages function) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the MmsMessage the complete MmsMessage (including attachments) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_adfd24d810053fb362c062eace4d701f1}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!init@{init}}
+\index{init@{init}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mo.mms.client.BVMoMmsClient.init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_adfd24d810053fb362c062eace4d701f1}
+Initializer of common attributes \hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a0bda94aa77d27e95c74343c0813d21cc}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.messagery.mo.mms.client.BVMoMmsClient.retrieve (
+\begin{DoxyParamCaption}
+\item[{String}]{feedUri, }
+\item[{HashMap$<$ String, String $>$}]{parameters}
+\end{DoxyParamCaption}
+)  throws IOException, {\bf BlueviaException} \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a0bda94aa77d27e95c74343c0813d21cc}
+Creates a request using REST to the server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedUri} & the REST URI of the entity to get \\
+\hline
+{\em parameters} & the parameters to be added to the URI \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response entity object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ae9b81cbb4072a9fd44a5c5118fc723c9}{com.bluevia.commons.client.BVBaseClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_abe0ec7cf94a529ede9553ee17c834e8f}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!startNotification@{startNotification}}
+\index{startNotification@{startNotification}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{startNotification}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.mms.client.BVMoMmsClient.startNotification (
+\begin{DoxyParamCaption}
+\item[{{\bf MessageNotificationType}}]{notification}
+\end{DoxyParamCaption}
+)  throws IOException, {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_abe0ec7cf94a529ede9553ee17c834e8f}
+Subscribe notifications
+
+
+\begin{DoxyParams}{Parameters}
+{\em notification} & the messageNotificationType with all data to subscribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the correlator from the response. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & if the response or the result are not valid. \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a5ab2006379e28659650fa33f7e194d2b}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!startNotification@{startNotification}}
+\index{startNotification@{startNotification}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{startNotification}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.mms.client.BVMoMmsClient.startNotification (
+\begin{DoxyParamCaption}
+\item[{String}]{phoneNumber, }
+\item[{String}]{endpoint, }
+\item[{String}]{criteria, }
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)  throws IOException, {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a5ab2006379e28659650fa33f7e194d2b}
+Subscribe notifications
+
+
+\begin{DoxyParams}{Parameters}
+{\em phoneNumber} & the phoneNumber \\
+\hline
+{\em endpoint} & the uri to receive notifications \\
+\hline
+{\em criteria} & field with keyword with criteria notifications \\
+\hline
+{\em correlator} & field with correlator to identify subscriptions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the correlator from the response. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & if the response or the result are not valid. \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient}{com.bluevia.messagery.mo.client.BVMoClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a85016ae61d419ae9c23bf1356d1909be}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!startNotification@{startNotification}}
+\index{startNotification@{startNotification}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{startNotification}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.mms.client.BVMoMmsClient.startNotification (
+\begin{DoxyParamCaption}
+\item[{String}]{phoneNumber, }
+\item[{String}]{endpoint, }
+\item[{String}]{criteria}
+\end{DoxyParamCaption}
+)  throws IOException, {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a85016ae61d419ae9c23bf1356d1909be}
+Subscribe notifications
+
+
+\begin{DoxyParams}{Parameters}
+{\em phoneNumber} & the phoneNumber \\
+\hline
+{\em endpoint} & the uri to receive notifications \\
+\hline
+{\em criteria} & field with keyword with criteria notifications \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the correlator from the response. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & if the response or the result are not valid. \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient}{com.bluevia.messagery.mo.client.BVMoClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a798b0295afeafad3e6a612a021ad2dc1}{
+\index{com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}!stopNotification@{stopNotification}}
+\index{stopNotification@{stopNotification}!com::bluevia::messagery::mo::mms::client::BVMoMmsClient@{com::bluevia::messagery::mo::mms::client::BVMoMmsClient}}
+\subsubsection[{stopNotification}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.messagery.mo.mms.client.BVMoMmsClient.stopNotification (
+\begin{DoxyParamCaption}
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a798b0295afeafad3e6a612a021ad2dc1}
+Unsubscribe notifications
+
+
+\begin{DoxyParams}{Parameters}
+{\em correlator} & the correlator to unsubscribe notification \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean with result of operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & if the response or the result are not valid. \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient}{com.bluevia.messagery.mo.client.BVMoClient}.
+

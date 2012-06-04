@@ -1,0 +1,215 @@
+\hypertarget{blv_mms_mt_guide_mms_mt_abstract_sec}{}\section{Abstract}\label{blv_mms_mt_guide_mms_mt_abstract_sec}
+The Bluevia MMS API is a set of functions which allows users to send MMS messages and to request the status of those previously sent MMS messages. This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia MMS functionality.\hypertarget{blv_mms_mt_guide_blv_mms_mt_api_sending_mms_messages_sec}{}\section{Bluevia MMS MT API: Sending MMS messages}\label{blv_mms_mt_guide_blv_mms_mt_api_sending_mms_messages_sec}
+The Bluevia MMS API is a set of functions which allows users to send MMS messages and to request the status of those previously sent MMS messages. This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia MMS functionality.\hypertarget{blv_mms_mt_guide_mms_mt_client_basics_sec}{}\subsection{MMS MT client basics}\label{blv_mms_mt_guide_mms_mt_client_basics_sec}
+A MMS client represents the client side in a classic client-\/server schema. This object wraps up the underlying REST client side functionality needed to perform requests against a REST server.
+
+Any Bluevia client performs requests and receives responses in a secure mode. Clients are authorized following the OAuth protocol. This security protocol enables users to grant third-\/party access to their resources without sharing their passwords. So clients store the authorization data -\/called security credentials-\/ to grant access to the server. Following sections describe what security credentials we are talking about.\hypertarget{blv_mms_mt_guide_creating_a_mms_mt_client_sec}{}\subsection{Creating a MMS MT client: BVMtMms class}\label{blv_mms_mt_guide_creating_a_mms_mt_client_sec}
+The first step in using the MMS client is to create a BVMtMms object. As we mentioned earlier this object could have three different working modes: i) as a client which sends requests to a real server, ii) a client working with a real server in testing mode, or iii) as a client which sends requests and receives responses to/from a sandbox server.\hypertarget{blv_mms_mt_guide_mms_mt_client_features_working_modes_sec}{}\subsubsection{MMS MT client features: working modes}\label{blv_mms_mt_guide_mms_mt_client_features_working_modes_sec}
+When you create the client, you can specify various working modes: 
+\begin{DoxyItemize}
+\item BVBaseClient.Mode.LIVE \par
+In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country.
+
+
+\item BVBaseClient.Mode.TEST \par
+The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits.
+
+
+\item BVBaseClient.Mode.SANDBOX \par
+The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
+\end{DoxyItemize}\hypertarget{blv_mms_mt_guide_mms_mt_client_features_security_credentials}{}\subsubsection{MMS MT client features: security credentials}\label{blv_mms_mt_guide_mms_mt_client_features_security_credentials}
+Bluevia uses OAuth as its authentication mechanism which enables websites and applications to access the Bluevia API's without end users disclosing their personal credentials. In order to grant access to the server any client has to be created passing the security credential as parameter in its constructor. These security credentials are managed internally and added as a HTTP header in every request sent to the server. Such Oauth security credentials are: 
+\begin{DoxyItemize}
+\item {\bfseries Consumer key} \par
+The string identifying the application-\/ you obtained when you registered your application within the provisioning portal.
+
+
+\item {\bfseries Consumer secret} \par
+A secret -\/a string-\/ used by the consumer to establish ownership of the consumer key.
+
+
+\item {\bfseries Access token} \par
+The token -\/a string-\/ used by the client for granting access permissions to the server.
+
+
+\item {\bfseries Access token secret} \par
+The secret of the access token. 
+\end{DoxyItemize}\hypertarget{blv_mms_mt_guide_mms_mt_client_features_code_examples_sec}{}\subsubsection{MMS MT client features: code example}\label{blv_mms_mt_guide_mms_mt_client_features_code_examples_sec}
+Find below an example about how to create a Mms client object taking into account all information previously given. This snippet shows how to access a Bluevia server using OAuth security credentials
+
+
+\begin{DoxyCode}
+// Mode.LIVE indicating the client works against a real Bluevia server.
+try {
+        BVMtMms mmsClient = new BVMtMms(Mode.LIVE, "consumer_key", "consumer_secr
+      et", "access_token", "access_token_secret");
+} catch (BlueviaException e){
+        log.error( e.getMessage());
+}
+\end{DoxyCode}
+\hypertarget{blv_mms_mt_guide_mms_mt_client_features_freeing_resources_sec}{}\subsubsection{MMS MT client features: freeing resources}\label{blv_mms_mt_guide_mms_mt_client_features_freeing_resources_sec}
+It is very important to free the resources that the client instantiates to work. To do this call the close method after finishing using the client:
+
+
+\begin{DoxyCode}
+mmsClient.close();
+\end{DoxyCode}
+\hypertarget{blv_mms_mt_guide_sending_mms_messages_sec}{}\subsection{Sending MMS messages}\label{blv_mms_mt_guide_sending_mms_messages_sec}
+The BVMtMms object has different ways for sending MMS messages. A subject and at least one destination has to be defined to send the message. Other destinations, a text, and multimedia attachemtns can be included also. In addition, an endpoint and a correlator can be defined in order to receive delivery status notifications.
+
+Take a look at these three functions:
+
+
+\begin{DoxyCode}
+ String send(String destination, String subject, String message) throws BlueviaEx
+      ception, IOException
+\end{DoxyCode}
+
+
+It sends a MMS message to one recipient including a subject and a text message.
+
+
+\begin{DoxyCode}
+ String send(String destination, String subject, String message, ArrayList<Attach
+      ment> attachments) throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+It sends a MMS message to one recipient including a subject, a text message and any number of multimedia attachments.
+
+
+\begin{DoxyCode}
+ String send(String destination, String subject, String message, ArrayList<Attach
+      ment> attachments, 
+        String endpoint, String correlator) throws BlueviaException, IOException 
+      
+\end{DoxyCode}
+
+
+It sends a MMS message to one recipient including a subject, a text message and any number of multimedia attachments, and includes the endpoint and correlator to receive delivery notifications.
+
+There are additional versions of these functions where you can pass a list of destinations instead of just one. All functions return the MMS Id which indentifies that sending operation. This identification is useful to retrieve the delivery status of that MMS message using a polling strategy.
+
+For a more detailed description see the API Reference.\hypertarget{blv_mms_mt_guide_mms_mt_message_features_adding_attachments_sec}{}\subsubsection{Attachments of the MMS message}\label{blv_mms_mt_guide_mms_mt_message_features_adding_attachments_sec}
+Several attachments could be attached to the MMS message. The class that represent multipart attachment is Attachment, which specifies the path of the attachment and its Content-\/type:
+
+
+\begin{DoxyCode}
+Attachment(String path, ContentType contentType)
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+Attachment(String path, String contentType)
+\end{DoxyCode}
+\hypertarget{blv_mms_mt_guide_mms_message_features_content}{}\subsubsection{MMS message features: available content types}\label{blv_mms_mt_guide_mms_message_features_content}
+The following list contains the available content-\/types in Bluevia:
+
+
+\begin{DoxyItemize}
+\item text/plain 
+\item image/jpeg 
+\item image/bmp 
+\item image/gif 
+\item image/png 
+\item audio/amr 
+\item audio/midi 
+\item audio/mp3 
+\item audio/mpeg 
+\item audio/wav 
+\item video/mp4 
+\item video/avi 
+\item video/3gpp 
+\end{DoxyItemize}\hypertarget{blv_mms_mt_guide_mms_sending_notification}{}\subsection{Sending MMS with status notification}\label{blv_mms_mt_guide_mms_sending_notification}
+It is possible to receive status notifications by providing BlueVia with an URI where notifications must be sent. This URI is provided during the MMS sending, including the optional parameters endpoint and correlator: 
+\begin{DoxyCode}
+try {
+        // 1. Configure data
+        String phoneNumber = "123456789";
+        String endpoint= "https://www.myendpoint.com";
+        String criteria= "criteria";
+
+        // 2. Create the client
+        BVMoMms mmsClient = new BVMoMms(mode, token, secret);
+        
+        // 3. Subscribe to notifications with configured data
+        String correlator= mmsClient.startNotification(phoneNumber, endpoint, cri
+      teria);
+        System.out.println("Correlator: ["+ correlator +"]");
+
+        /* ... */
+        // 4. Unsubscribe from notification
+        mmsClient.stopNotification(correlator);
+                                          
+} catch (BlueviaException e) {
+        log.error(e.getMessage());
+}
+\end{DoxyCode}
+ Note that although your are requesting delivery status notifications, you still are able to use the Location header to ask for delivery status following the polling strategy. Your application must reply with a 204 No Content HTTP status and no body.
+
+For a more detailed description see the API Reference.\hypertarget{blv_mms_mt_guide_requesting_status_sec}{}\subsection{Requesting the status of a previously sent MMS messages}\label{blv_mms_mt_guide_requesting_status_sec}
+Once the MMS message is sent successfully the user may want to know the delivery status of that MMS message. The Mms client allows a user to determine if the MMS message reaches the destination or not. For this matter we use the getDeliveryStatus function. Just pass the MMS Id -\/returned by the send function-\/ and retrieve the delivery status of that message, that easy!.
+
+Take a look at this function: 
+\begin{DoxyCode}
+ArrayList<DeliveryInfo> getDeliveryStatus(String messageId) throws BlueviaExcepti
+      on, IOException 
+\end{DoxyCode}
+ It obtains the delivery status of a previously sent MMS message.
+
+Possible delivery statuses are: 
+\begin{DoxyItemize}
+\item DeliveredToNetwork. 
+\item DeliveryUncertain. 
+\item DeliveryImpossible. 
+\item MessageWaiting. 
+\item DeliveredToTerminal. 
+\item DeliveryNotificationNotSupported. 
+\end{DoxyItemize}
+
+For a more detailed description see the API Reference.\hypertarget{blv_mms_mo_guide_mms_api_code_example_sec}{}\subsection{Bluevia MMS MT API: code example}\label{blv_mms_mo_guide_mms_api_code_example_sec}
+
+\begin{DoxyCode}
+// Send an MMS
+        
+BVMtMms mmsClient = null;
+
+try {
+        // 1. Create the client (you have to choose the mode and include the OAut
+      h authorization values)
+        mmsClient = new BVMtMms(Mode.LIVE, "consumer_key", "consumer_secret", "ac
+      cess_token", "access_token_secret");
+
+
+        // 2. Prepare the attachments (in this example we assume it is a file loc
+      ated at the sdcard)
+        // To create the FilePart we need the name of the file, the file descript
+      or and the file content-type
+        ArrayList<Attachment> attachments = new ArrayList<Attachment>();
+        attachments.add(new Attachment("/sdcard/image.gif", ContentType.IMAGE_GIF
+      ));
+
+
+        // 3. Send the message. 
+        String mmsId = mmsClient.send("600010101", "This is a MMS", "This is the 
+      text of the MMS to be sent using Bluevia API", attachments);
+
+        // 4. Retrieve the delivery status of the sent MMS.
+        ArrayList<DeliveryInfo> mmsStatusList = client.getDeliveryStatus(mmsId);
+        for (DeliveryInfo status : mmsStatusList) {
+                System.out.println("Delivery status: " + status.getStatus());
+        }
+
+} catch (BlueviaException e) {
+        log.error("Error sending MMS", e);
+} catch (IOException e) {
+        log.error("Error sending MMS", e);
+} finally {
+
+        // 5. Remember to close the client to free resources
+        if (mmsClient != null)
+                mmsClient.close();
+} 
+\end{DoxyCode}
+ 

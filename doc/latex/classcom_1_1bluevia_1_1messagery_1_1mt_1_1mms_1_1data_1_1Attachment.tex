@@ -1,0 +1,146 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment}{
+\section{com.bluevia.messagery.mt.mms.data.Attachment Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment}\index{com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a8f358da00c8e4c63375fdd64eb698ff2}{ContentType} \{ \par
+{\bfseries TEXT\_\-PLAIN}, 
+{\bfseries IMAGE\_\-JPEG}, 
+{\bfseries IMAGE\_\-BMP}, 
+{\bfseries IMAGE\_\-GIF}, 
+\par
+{\bfseries IMAGE\_\-PNG}, 
+{\bfseries AUDIO\_\-AMR}, 
+{\bfseries AUDIO\_\-MIDI}, 
+{\bfseries AUDIO\_\-MP3}, 
+\par
+{\bfseries AUDIO\_\-MPEG}, 
+{\bfseries AUDIO\_\-WAV}, 
+{\bfseries VIDEO\_\-MP4}, 
+{\bfseries VIDEO\_\-AVI}, 
+\par
+{\bfseries VIDEO\_\-3GPP}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_af77fb3163037a88d822aa04b0419e10d}{Attachment} (String path, \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a8f358da00c8e4c63375fdd64eb698ff2}{ContentType} contentType)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a8f358da00c8e4c63375fdd64eb698ff2}{ContentType} \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a788ce692234713666613382ff1258ac1}{getContentType} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a1044014f13473ec55789195dfe2bee0e}{setContentType} (\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a8f358da00c8e4c63375fdd64eb698ff2}{ContentType} contentType)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_af810beabe8eb20d54fb32e8ff2332b42}{getFilePath} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a43f80f40e8bb851243964d386cc371e9}{setFilePath} (String filePath)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a89222bc26b62502253791e24382776c1}{getStringContentType} ()  throws BlueviaException
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a mms attachment information. It includes the path of the file and the Content-\/type.
+
+The value of the Content-\/type must be chosen from the valid content-\/type enum list 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a8f358da00c8e4c63375fdd64eb698ff2}{
+\index{com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}!ContentType@{ContentType}}
+\index{ContentType@{ContentType}!com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}}
+\subsubsection[{ContentType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf com::bluevia::messagery::mt::mms::data::Attachment::ContentType}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a8f358da00c8e4c63375fdd64eb698ff2}
+Availables Content-\/type values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_af77fb3163037a88d822aa04b0419e10d}{
+\index{com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}!Attachment@{Attachment}}
+\index{Attachment@{Attachment}!com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}}
+\subsubsection[{Attachment}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.mms.data.Attachment.Attachment (
+\begin{DoxyParamCaption}
+\item[{String}]{path, }
+\item[{{\bf ContentType}}]{contentType}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_af77fb3163037a88d822aa04b0419e10d}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the path of the file \\
+\hline
+{\em contentType} & the content-\/type of the file \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a788ce692234713666613382ff1258ac1}{
+\index{com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}!getContentType@{getContentType}}
+\index{getContentType@{getContentType}!com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}}
+\subsubsection[{getContentType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ContentType} com.bluevia.messagery.mt.mms.data.Attachment.getContentType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a788ce692234713666613382ff1258ac1}
+\begin{DoxyReturn}{Returns}
+the contentType 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_af810beabe8eb20d54fb32e8ff2332b42}{
+\index{com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}!getFilePath@{getFilePath}}
+\index{getFilePath@{getFilePath}!com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}}
+\subsubsection[{getFilePath}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mt.mms.data.Attachment.getFilePath (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_af810beabe8eb20d54fb32e8ff2332b42}
+\begin{DoxyReturn}{Returns}
+the filePath 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a89222bc26b62502253791e24382776c1}{
+\index{com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}!getStringContentType@{getStringContentType}}
+\index{getStringContentType@{getStringContentType}!com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}}
+\subsubsection[{getStringContentType}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mt.mms.data.Attachment.getStringContentType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a89222bc26b62502253791e24382776c1}
+\begin{DoxyReturn}{Returns}
+returns the content-\/type of the attachment as a String 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a1044014f13473ec55789195dfe2bee0e}{
+\index{com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}!setContentType@{setContentType}}
+\index{setContentType@{setContentType}!com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}}
+\subsubsection[{setContentType}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mt.mms.data.Attachment.setContentType (
+\begin{DoxyParamCaption}
+\item[{{\bf ContentType}}]{contentType}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a1044014f13473ec55789195dfe2bee0e}
+
+\begin{DoxyParams}{Parameters}
+{\em contentType} & the contentType to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a43f80f40e8bb851243964d386cc371e9}{
+\index{com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}!setFilePath@{setFilePath}}
+\index{setFilePath@{setFilePath}!com::bluevia::messagery::mt::mms::data::Attachment@{com::bluevia::messagery::mt::mms::data::Attachment}}
+\subsubsection[{setFilePath}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mt.mms.data.Attachment.setFilePath (
+\begin{DoxyParamCaption}
+\item[{String}]{filePath}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment_a43f80f40e8bb851243964d386cc371e9}
+
+\begin{DoxyParams}{Parameters}
+{\em filePath} & the filePath to set \\
+\hline
+\end{DoxyParams}

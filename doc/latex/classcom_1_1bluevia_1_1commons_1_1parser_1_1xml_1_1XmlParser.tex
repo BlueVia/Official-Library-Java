@@ -1,0 +1,70 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser}{
+\section{com.bluevia.commons.parser.xml.XmlParser Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser}\index{com::bluevia::commons::parser::xml::XmlParser@{com::bluevia::commons::parser::xml::XmlParser}}
+}
+Inheritance diagram for com.bluevia.commons.parser.xml.XmlParser:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_ae7181e4e5613afbb4545dd167ce9dd83}{
+Class$<$?$>$ {\bfseries getParseClass} ()}
+\label{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_ae7181e4e5613afbb4545dd167ce9dd83}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_a239b8847f407e79af6b72442c4a92b2c}{
+void {\bfseries setParseClass} (Class$<$?$>$ c)}
+\label{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_a239b8847f407e79af6b72442c4a92b2c}
+
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_a40b67f6e8d70d841ee3a07e0d41c5050}{parse} (InputStream is)  throws ParseException 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_a2785524ca69f70285c67391d53a25e57}{
+static String {\bfseries convertStreamToString} (InputStream is)  throws Exception }
+\label{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_a2785524ca69f70285c67391d53a25e57}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+XML implementation of \hyperlink{}{IParser} Class that represents the parser object for any XML entity. Using this class you will be able to parse XML documents containing a representation of any Jaxb entity into an instance object of this entity related to parseClass parameter set
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_a40b67f6e8d70d841ee3a07e0d41c5050}{
+\index{com::bluevia::commons::parser::xml::XmlParser@{com::bluevia::commons::parser::xml::XmlParser}!parse@{parse}}
+\index{parse@{parse}!com::bluevia::commons::parser::xml::XmlParser@{com::bluevia::commons::parser::xml::XmlParser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.parser.xml.XmlParser.parse (
+\begin{DoxyParamCaption}
+\item[{InputStream}]{is}
+\end{DoxyParamCaption}
+)  throws {\bf ParseException} }}
+\label{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_a40b67f6e8d70d841ee3a07e0d41c5050}
+
+\begin{DoxyParams}{Parameters}
+{\em is} & the InputStream containing the stream with the entity information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classcom_1_1bluevia_1_1commons_1_1parser_1_1ParseException}{ParseException}} & when an error occurs converting the stream into an object \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1IParser_a671ee122b6c20cc9869a74ce9074065c}{com.bluevia.commons.parser.IParser}.
+

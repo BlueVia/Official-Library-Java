@@ -1,0 +1,147 @@
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction}{
+\section{com.bluevia.ad.data.Interaction Class Reference}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction}\index{com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}}
+}
+Inheritance diagram for com.bluevia.ad.data.Interaction:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ae54ba32a2f1d9d40a450ace53828a2ee}{Type} \{ {\bfseries CLICK\_\-2\_\-WAP}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_a9e872e831a8bdf928abad16da7010cf2}{Interaction} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ae54ba32a2f1d9d40a450ace53828a2ee}{Type} \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_a3f4d28571d05c534fc52c3ad02e4cc7a}{getType} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_a05217fbc8d8a8138a361a23982d17866}{setType} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ae54ba32a2f1d9d40a450ace53828a2ee}{Type} type)
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute}{AdsAttribute} $>$ \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ab4336e71f7d27bc6ea8636409020bc5f}{getAttribute} ()
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ac221713cde644ca796da93112b2bd508}{addAttribute} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute}{AdsAttribute} a)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ad1037318f64a0cd8f5d45dbf587d3bea}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Object used to hold creative element invoke events, e.g: it contains the locator of click through URI. When using isOfflineClient, there would be as many interaction elements as needed in order to receive all the information the offline client will need (without ad-\/server connectivity) for performing the interaction It includes the following attributes: 
+\begin{DoxyItemize}
+\item Type: Category of interactivity. Values include: Click2wap. 
+\item Attributes: An ad interaction may have different attributes (such as URL in click2wap). 
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ae54ba32a2f1d9d40a450ace53828a2ee}{
+\index{com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}!Type@{Type}}
+\index{Type@{Type}!com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf com::bluevia::ad::data::Interaction::Type}}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ae54ba32a2f1d9d40a450ace53828a2ee}
+Type that contains the possible interaction type elements that can be received. Values includes: Click2wap interaction, so when the user clicks over the ad, it should open an Url via the device browser $\backslash$ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_a9e872e831a8bdf928abad16da7010cf2}{
+\index{com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}!Interaction@{Interaction}}
+\index{Interaction@{Interaction}!com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}}
+\subsubsection[{Interaction}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.ad.data.Interaction.Interaction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_a9e872e831a8bdf928abad16da7010cf2}
+Instantiates a new empty \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction}{Interaction} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ac221713cde644ca796da93112b2bd508}{
+\index{com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}!addAttribute@{addAttribute}}
+\index{addAttribute@{addAttribute}!com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}}
+\subsubsection[{addAttribute}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.ad.data.Interaction.addAttribute (
+\begin{DoxyParamCaption}
+\item[{{\bf AdsAttribute}}]{a}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ac221713cde644ca796da93112b2bd508}
+Adds an attribute for the interaction
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The attribute for the interaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ab4336e71f7d27bc6ea8636409020bc5f}{
+\index{com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}!getAttribute@{getAttribute}}
+\index{getAttribute@{getAttribute}!com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}}
+\subsubsection[{getAttribute}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf AdsAttribute}$>$ com.bluevia.ad.data.Interaction.getAttribute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ab4336e71f7d27bc6ea8636409020bc5f}
+Gets the attributes for the interaction
+
+\begin{DoxyReturn}{Returns}
+the attribute list for the interaction 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_a3f4d28571d05c534fc52c3ad02e4cc7a}{
+\index{com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}!getType@{getType}}
+\index{getType@{getType}!com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} com.bluevia.ad.data.Interaction.getType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_a3f4d28571d05c534fc52c3ad02e4cc7a}
+Gets the type of interactivity. Values include: Click2wap
+
+\begin{DoxyReturn}{Returns}
+the type of interactivity 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ad1037318f64a0cd8f5d45dbf587d3bea}{
+\index{com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.ad.data.Interaction.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_ad1037318f64a0cd8f5d45dbf587d3bea}
+check if the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction}{Interaction} entity is valid
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_a05217fbc8d8a8138a361a23982d17866}{
+\index{com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}!setType@{setType}}
+\index{setType@{setType}!com::bluevia::ad::data::Interaction@{com::bluevia::ad::data::Interaction}}
+\subsubsection[{setType}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.Interaction.setType (
+\begin{DoxyParamCaption}
+\item[{{\bf Type}}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction_a05217fbc8d8a8138a361a23982d17866}
+Sets the type of interactivity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the type of interactivity \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,643 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient}{
+\section{com.bluevia.commons.client.BVBaseClient Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient}\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+}
+Inheritance diagram for com.bluevia.commons.client.BVBaseClient:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.749665cm]{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} \{ {\bfseries LIVE}, 
+{\bfseries TEST}, 
+{\bfseries SANDBOX}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a3a49486d53ab64d1a21db764f5b562c3}{close} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_aa6d73f00d722c07cc5c77feee9c0be63}{initCommon} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} mode)  throws BlueviaException
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a643da17fba6a72bd43fec08c6888dbff}{initTrusted} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} mode, String consumerKey, String consumerSecret, String cert, String certFilePass)  throws BlueviaException
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a3509212e3cbd81a56e4de3df75bcebdb}{initUntrusted} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} mode, String consumerKey, String consumerSecret)  throws BlueviaException
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_adb8c7a9e60a2700c5b552b211dab28ac}{initUntrusted} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} mode, String consumerKey, String consumerSecret, String token, String tokenSecret)  throws BlueviaException
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_aadc6f63134b4ed1fde26186130f025c4}{buildUri} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} mode, String uri)
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a7a76492352a25fcedbebc5aa29b9be7e}{create} (String feedUri, \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} entity, HashMap$<$ String, String $>$ parameters, HashMap$<$ String, String $>$ headers)  throws BlueviaException, SerializeException, IOException 
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a4f777f58dcb633915f3fbee4fc16b002}{retrieve} (String feedUri)  throws BlueviaException, IOException 
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ae9b81cbb4072a9fd44a5c5118fc723c9}{retrieve} (String feedUri, HashMap$<$ String, String $>$ parameters)  throws BlueviaException, IOException 
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a7eff5b7868b55350cc09d1d2aad51812}{retrieve} (String feedUri, HashMap$<$ String, String $>$ parameters, HashMap$<$ String, String $>$ headers)  throws BlueviaException, IOException 
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a604e63350d646d80324cf4b19e24af24}{update} (String feedUri, \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} entity, HashMap$<$ String, String $>$ parameters, HashMap$<$ String, String $>$ headers)  throws BlueviaException, IOException 
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a967cae5af853619a86b1e63c0db7d503}{delete} (String feedUri)  throws BlueviaException, IOException 
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a226580299b21a59fabdb5c3e6758b46f}{delete} (String feedUri, HashMap$<$ String, String $>$ parameters)  throws BlueviaException, IOException 
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a49b348860f63dfdbfb4cdeb98469addd}{delete} (String feedUri, HashMap$<$ String, String $>$ parameters, HashMap$<$ String, String $>$ headers)  throws BlueviaException, IOException 
+\item 
+byte\mbox{[}$\,$\mbox{]} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a7999572e9b282714fc622d5145a926b2}{serializeEntity} (\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} entity)  throws SerializeException 
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a1890d00576caefd957998abadc21c0ca}{parseEntity} (InputStream is)  throws ParseException 
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ae9db53301966dc75f76d713e7814f672}{parseError} (InputStream is)  throws ParseException 
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_adb99b65fc347618835d39804987b558a}{closeStream} (InputStream is)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ad9de9adb8d3e131a932e29118c505c9a}{getEncoding} (Encoding encoding)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ac5317f34c5d1db5bdd74ac1351db1f7e}{mMode}
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector}{IConnector} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ade6229b64e834d37ac7abadb1a13dbbd}{mConnector}
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1IParser}{IParser} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a8a0cf4418292e19e112fadd545eb6845}{mParser}
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer}{ISerializer} \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_aed01ee968cac635b250b9c3dece84648}{mSerializer}
+\item 
+Encoding \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a8498a310d0ac85b785d08b9e4a4a2fd3}{mEncoding}
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a2527dcdb00803098408979b43ed394d6}{mBaseUri}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract representation of an HTTP REST Client for the Bluevia API
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!Mode@{Mode}}
+\index{Mode@{Mode}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf com::bluevia::commons::client::BVBaseClient::Mode}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}
+The possible values to determinate the instantiated connector for the client.
+
+Available values may be 
+\begin{DoxyItemize}
+\item LIVE: In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country. 
+\item TEST: The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits. 
+\item SANDBOX: The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_aadc6f63134b4ed1fde26186130f025c4}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!buildUri@{buildUri}}
+\index{buildUri@{buildUri}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{buildUri}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.commons.client.BVBaseClient.buildUri (
+\begin{DoxyParamCaption}
+\item[{{\bf Mode}}]{mode, }
+\item[{String}]{uri}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_aadc6f63134b4ed1fde26186130f025c4}
+Builds the uri depending on the mode used
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & the mode \\
+\hline
+{\em uri} & the uri path from the API \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a3a49486d53ab64d1a21db764f5b562c3}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!close@{close}}
+\index{close@{close}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.client.BVBaseClient.close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a3a49486d53ab64d1a21db764f5b562c3}
+Closes the client and frees all the resources it might have used. \hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_adb99b65fc347618835d39804987b558a}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!closeStream@{closeStream}}
+\index{closeStream@{closeStream}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{closeStream}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.client.BVBaseClient.closeStream (
+\begin{DoxyParamCaption}
+\item[{InputStream}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_adb99b65fc347618835d39804987b558a}
+Closes an input stream
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a7a76492352a25fcedbebc5aa29b9be7e}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!create@{create}}
+\index{create@{create}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.client.BVBaseClient.create (
+\begin{DoxyParamCaption}
+\item[{String}]{feedUri, }
+\item[{{\bf Entity}}]{entity, }
+\item[{HashMap$<$ String, String $>$}]{parameters, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, {\bf SerializeException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a7a76492352a25fcedbebc5aa29b9be7e}
+Creates a request using REST to the server in order to create an entity
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedUri} & the REST URI of the entity to create \\
+\hline
+{\em entity} & the entity to create using REST into the server \\
+\hline
+{\em parameters} & Parameters to be added to the request \\
+\hline
+{\em headers} & headers of the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response entity object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+{\em SerializeException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a967cae5af853619a86b1e63c0db7d503}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!delete@{delete}}
+\index{delete@{delete}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.client.BVBaseClient.delete (
+\begin{DoxyParamCaption}
+\item[{String}]{feedUri}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a967cae5af853619a86b1e63c0db7d503}
+Creates a request using REST to the server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedUri} & the REST URI of the entity to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response entity object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a226580299b21a59fabdb5c3e6758b46f}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!delete@{delete}}
+\index{delete@{delete}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.client.BVBaseClient.delete (
+\begin{DoxyParamCaption}
+\item[{String}]{feedUri, }
+\item[{HashMap$<$ String, String $>$}]{parameters}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a226580299b21a59fabdb5c3e6758b46f}
+Creates a request using REST to the server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedUri} & the REST URI of the entity to get \\
+\hline
+{\em parameters} & the parameters to be added to the URI \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response entity object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a49b348860f63dfdbfb4cdeb98469addd}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!delete@{delete}}
+\index{delete@{delete}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.client.BVBaseClient.delete (
+\begin{DoxyParamCaption}
+\item[{String}]{feedUri, }
+\item[{HashMap$<$ String, String $>$}]{parameters, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a49b348860f63dfdbfb4cdeb98469addd}
+Creates a request using REST to the server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedUri} & the REST URI of the entity to get \\
+\hline
+{\em parameters} & the parameters to be added to the URI \\
+\hline
+{\em headers} & headers of the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response entity object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ad9de9adb8d3e131a932e29118c505c9a}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!getEncoding@{getEncoding}}
+\index{getEncoding@{getEncoding}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{getEncoding}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.commons.client.BVBaseClient.getEncoding (
+\begin{DoxyParamCaption}
+\item[{Encoding}]{encoding}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ad9de9adb8d3e131a932e29118c505c9a}
+Translates the Encoding enum into the string representation for the request
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoding} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the string representation of the Encoding enum 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_aa6d73f00d722c07cc5c77feee9c0be63}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!initCommon@{initCommon}}
+\index{initCommon@{initCommon}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{initCommon}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.client.BVBaseClient.initCommon (
+\begin{DoxyParamCaption}
+\item[{{\bf Mode}}]{mode}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_aa6d73f00d722c07cc5c77feee9c0be63}
+Common function to initialize trusted and untrusted common attributes: 
+\begin{DoxyItemize}
+\item Base URI 
+\item Mode 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a643da17fba6a72bd43fec08c6888dbff}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!initTrusted@{initTrusted}}
+\index{initTrusted@{initTrusted}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{initTrusted}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.client.BVBaseClient.initTrusted (
+\begin{DoxyParamCaption}
+\item[{{\bf Mode}}]{mode, }
+\item[{String}]{consumerKey, }
+\item[{String}]{consumerSecret, }
+\item[{String}]{cert, }
+\item[{String}]{certFilePass}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a643da17fba6a72bd43fec08c6888dbff}
+Function to initialize trusted clients
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+{\em consumerKey} & \\
+\hline
+{\em consumerSecret} & \\
+\hline
+{\em cert} & the path to client certificate \\
+\hline
+{\em certFilePass} & the password of client certificate \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a3509212e3cbd81a56e4de3df75bcebdb}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!initUntrusted@{initUntrusted}}
+\index{initUntrusted@{initUntrusted}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{initUntrusted}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.client.BVBaseClient.initUntrusted (
+\begin{DoxyParamCaption}
+\item[{{\bf Mode}}]{mode, }
+\item[{String}]{consumerKey, }
+\item[{String}]{consumerSecret}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a3509212e3cbd81a56e4de3df75bcebdb}
+Function to initialize 2-\/legged untrusted clients
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+{\em consumerKey} & \\
+\hline
+{\em consumerSecret} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_adb8c7a9e60a2700c5b552b211dab28ac}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!initUntrusted@{initUntrusted}}
+\index{initUntrusted@{initUntrusted}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{initUntrusted}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.client.BVBaseClient.initUntrusted (
+\begin{DoxyParamCaption}
+\item[{{\bf Mode}}]{mode, }
+\item[{String}]{consumerKey, }
+\item[{String}]{consumerSecret, }
+\item[{String}]{token, }
+\item[{String}]{tokenSecret}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_adb8c7a9e60a2700c5b552b211dab28ac}
+Function to initialize untrusted clients
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+{\em consumerKey} & \\
+\hline
+{\em consumerSecret} & \\
+\hline
+{\em token} & \\
+\hline
+{\em tokenSecret} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a1890d00576caefd957998abadc21c0ca}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!parseEntity@{parseEntity}}
+\index{parseEntity@{parseEntity}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{parseEntity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.client.BVBaseClient.parseEntity (
+\begin{DoxyParamCaption}
+\item[{InputStream}]{is}
+\end{DoxyParamCaption}
+)  throws {\bf ParseException} \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a1890d00576caefd957998abadc21c0ca}
+Parses the response into an \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity}
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & the InputStream containing the stream with the entity information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em ParseException} & when an error occurs converting the stream into an object \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ae9db53301966dc75f76d713e7814f672}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!parseError@{parseError}}
+\index{parseError@{parseError}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{parseError}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.commons.client.BVBaseClient.parseError (
+\begin{DoxyParamCaption}
+\item[{InputStream}]{is}
+\end{DoxyParamCaption}
+)  throws {\bf ParseException} \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ae9db53301966dc75f76d713e7814f672}
+Parses the error message
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & the InputStream containing the stream with the entity information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em ParseException} & when an error occurs converting the stream into an object \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ae9b81cbb4072a9fd44a5c5118fc723c9}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.client.BVBaseClient.retrieve (
+\begin{DoxyParamCaption}
+\item[{String}]{feedUri, }
+\item[{HashMap$<$ String, String $>$}]{parameters}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ae9b81cbb4072a9fd44a5c5118fc723c9}
+Creates a request using REST to the server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedUri} & the REST URI of the entity to get \\
+\hline
+{\em parameters} & the parameters to be added to the URI \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response entity object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1client_1_1BVMoMmsClient_a0bda94aa77d27e95c74343c0813d21cc}{com.bluevia.messagery.mo.mms.client.BVMoMmsClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a4f777f58dcb633915f3fbee4fc16b002}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.client.BVBaseClient.retrieve (
+\begin{DoxyParamCaption}
+\item[{String}]{feedUri}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a4f777f58dcb633915f3fbee4fc16b002}
+Creates a request using REST to the server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedUri} & the REST URI of the entity to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response entity object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a7eff5b7868b55350cc09d1d2aad51812}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.client.BVBaseClient.retrieve (
+\begin{DoxyParamCaption}
+\item[{String}]{feedUri, }
+\item[{HashMap$<$ String, String $>$}]{parameters, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a7eff5b7868b55350cc09d1d2aad51812}
+Creates a request using REST to the server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedUri} & the REST URI of the entity to get \\
+\hline
+{\em parameters} & the parameters to be added to the URI \\
+\hline
+{\em headers} & headers of the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response entity object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a7999572e9b282714fc622d5145a926b2}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!serializeEntity@{serializeEntity}}
+\index{serializeEntity@{serializeEntity}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{serializeEntity}]{\setlength{\rightskip}{0pt plus 5cm}byte \mbox{[}$\,$\mbox{]} com.bluevia.commons.client.BVBaseClient.serializeEntity (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity}}]{entity}
+\end{DoxyParamCaption}
+)  throws {\bf SerializeException} \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a7999572e9b282714fc622d5145a926b2}
+Serializes an \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity}
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & the entity to serialize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the contents of the \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} in a byte array 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em SerializeException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a604e63350d646d80324cf4b19e24af24}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!update@{update}}
+\index{update@{update}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.client.BVBaseClient.update (
+\begin{DoxyParamCaption}
+\item[{String}]{feedUri, }
+\item[{{\bf Entity}}]{entity, }
+\item[{HashMap$<$ String, String $>$}]{parameters, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a604e63350d646d80324cf4b19e24af24}
+Creates a request using REST to the server in order to create an entity
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedUri} & the REST URI of the entity to create \\
+\hline
+{\em entity} & the entity to create using REST into the server \\
+\hline
+{\em parameters} & Parameters to be added to the request \\
+\hline
+{\em headers} & headers of the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response entity object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a2527dcdb00803098408979b43ed394d6}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!mBaseUri@{mBaseUri}}
+\index{mBaseUri@{mBaseUri}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{mBaseUri}]{\setlength{\rightskip}{0pt plus 5cm}String {\bf com.bluevia.commons.client.BVBaseClient.mBaseUri}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a2527dcdb00803098408979b43ed394d6}
+The base uri for the client \hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ade6229b64e834d37ac7abadb1a13dbbd}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!mConnector@{mConnector}}
+\index{mConnector@{mConnector}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{mConnector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IConnector} {\bf com.bluevia.commons.client.BVBaseClient.mConnector}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ade6229b64e834d37ac7abadb1a13dbbd}
+The Connector to communicate and transmit the streams via REST \hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a8498a310d0ac85b785d08b9e4a4a2fd3}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!mEncoding@{mEncoding}}
+\index{mEncoding@{mEncoding}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{mEncoding}]{\setlength{\rightskip}{0pt plus 5cm}Encoding {\bf com.bluevia.commons.client.BVBaseClient.mEncoding}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a8498a310d0ac85b785d08b9e4a4a2fd3}
+The default enconding for requests used by the client \hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ac5317f34c5d1db5bdd74ac1351db1f7e}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!mMode@{mMode}}
+\index{mMode@{mMode}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{mMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mode} {\bf com.bluevia.commons.client.BVBaseClient.mMode}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_ac5317f34c5d1db5bdd74ac1351db1f7e}
+The working mode for the client \hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a8a0cf4418292e19e112fadd545eb6845}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!mParser@{mParser}}
+\index{mParser@{mParser}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{mParser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IParser} {\bf com.bluevia.commons.client.BVBaseClient.mParser}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a8a0cf4418292e19e112fadd545eb6845}
+The parser to parse the responses from the connector \hypertarget{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_aed01ee968cac635b250b9c3dece84648}{
+\index{com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}!mSerializer@{mSerializer}}
+\index{mSerializer@{mSerializer}!com::bluevia::commons::client::BVBaseClient@{com::bluevia::commons::client::BVBaseClient}}
+\subsubsection[{mSerializer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ISerializer} {\bf com.bluevia.commons.client.BVBaseClient.mSerializer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_aed01ee968cac635b250b9c3dece84648}
+The serializer to serialize the requests to the connector 

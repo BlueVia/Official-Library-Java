@@ -1,0 +1,213 @@
+\hypertarget{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth}{
+\section{com.bluevia.oauth.client.BVOauth Class Reference}
+\label{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth}\index{com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}}
+}
+Inheritance diagram for com.bluevia.oauth.client.BVOauth:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_aebbab9a6126885108237b8ab706af15f}{BVOauth} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} mode, String consumerToken, String consumerSecret)  throws BlueviaException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken}{RequestToken} \hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_a44e719ff1c39463036f3f4a27ccf235a}{getRequestToken} (String callback)  throws BlueviaException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken}{RequestToken} \hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_ade519920fd49023170b97938c1ff2d4e}{getRequestToken} ()  throws BlueviaException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken}{RequestToken} \hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_aaf60f095a181cf17396b43c735565d34}{getRequestTokenSmsHandshake} (String phoneNumber)  throws BlueviaException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken}{OAuthToken} \hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_a6f083c5cae0b88e3baa822867db60362}{getAccessToken} (String oauthVerifier)  throws BlueviaException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken}{OAuthToken} \hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_a8d2990a0d62918c320bbf37abc6fb520}{getAccessToken} (String oauthVerifier, String token, String secret)  throws BlueviaException 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides access to the set of functions to complete the OAuth workflow to retrieve the OAuth credentials for Bluevia applications
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_aebbab9a6126885108237b8ab706af15f}{
+\index{com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}!BVOauth@{BVOauth}}
+\index{BVOauth@{BVOauth}!com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}}
+\subsubsection[{BVOauth}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.oauth.client.BVOauth.BVOauth (
+\begin{DoxyParamCaption}
+\item[{{\bf Mode}}]{mode, }
+\item[{String}]{consumerToken, }
+\item[{String}]{consumerSecret}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_aebbab9a6126885108237b8ab706af15f}
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & mode \\
+\hline
+{\em consumerToken} & the consumer token \\
+\hline
+{\em consumerSecret} & the consumer secret \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_a6f083c5cae0b88e3baa822867db60362}{
+\index{com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}!getAccessToken@{getAccessToken}}
+\index{getAccessToken@{getAccessToken}!com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}}
+\subsubsection[{getAccessToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf OAuthToken} com.bluevia.oauth.client.BVOauth.getAccessToken (
+\begin{DoxyParamCaption}
+\item[{String}]{oauthVerifier}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_a6f083c5cae0b88e3baa822867db60362}
+Retrieves the access token corresponding to request token parameter
+
+
+\begin{DoxyParams}{Parameters}
+{\em oauthVerifier} & the OAuth verifier for the token\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the access token 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauthClient_a39d19282945b281a33a1478d5dbf5073}{com.bluevia.oauth.client.BVOauthClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_a8d2990a0d62918c320bbf37abc6fb520}{
+\index{com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}!getAccessToken@{getAccessToken}}
+\index{getAccessToken@{getAccessToken}!com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}}
+\subsubsection[{getAccessToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf OAuthToken} com.bluevia.oauth.client.BVOauth.getAccessToken (
+\begin{DoxyParamCaption}
+\item[{String}]{oauthVerifier, }
+\item[{String}]{token, }
+\item[{String}]{secret}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_a8d2990a0d62918c320bbf37abc6fb520}
+Retrieves the access token corresponding to request token parameter
+
+
+\begin{DoxyParams}{Parameters}
+{\em oauthVerifier} & the OAuth verifier for the token \\
+\hline
+{\em token} & the request token received previously \\
+\hline
+{\em secret} & request token secret\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the access token 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauthClient_afcd5ef6a1fe62b36c34c8d6b23777aa1}{com.bluevia.oauth.client.BVOauthClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_ade519920fd49023170b97938c1ff2d4e}{
+\index{com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}!getRequestToken@{getRequestToken}}
+\index{getRequestToken@{getRequestToken}!com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}}
+\subsubsection[{getRequestToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RequestToken} com.bluevia.oauth.client.BVOauth.getRequestToken (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_ade519920fd49023170b97938c1ff2d4e}
+Retrieves a request token (Out of Band mode)
+
+\begin{DoxyReturn}{Returns}
+the request token 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauthClient_afdcb62994e20e75f977c23d667e65624}{com.bluevia.oauth.client.BVOauthClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_a44e719ff1c39463036f3f4a27ccf235a}{
+\index{com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}!getRequestToken@{getRequestToken}}
+\index{getRequestToken@{getRequestToken}!com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}}
+\subsubsection[{getRequestToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RequestToken} com.bluevia.oauth.client.BVOauth.getRequestToken (
+\begin{DoxyParamCaption}
+\item[{String}]{callback}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_a44e719ff1c39463036f3f4a27ccf235a}
+Retrieves a request token (redirect to callback)
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & the string of callback address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the request token 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauthClient_abfae01d89a48f9d82ae31f2ee8e8ee20}{com.bluevia.oauth.client.BVOauthClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_aaf60f095a181cf17396b43c735565d34}{
+\index{com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}!getRequestTokenSmsHandshake@{getRequestTokenSmsHandshake}}
+\index{getRequestTokenSmsHandshake@{getRequestTokenSmsHandshake}!com::bluevia::oauth::client::BVOauth@{com::bluevia::oauth::client::BVOauth}}
+\subsubsection[{getRequestTokenSmsHandshake}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RequestToken} com.bluevia.oauth.client.BVOauth.getRequestTokenSmsHandshake (
+\begin{DoxyParamCaption}
+\item[{String}]{phoneNumber}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1oauth_1_1client_1_1BVOauth_aaf60f095a181cf17396b43c735565d34}
+Retrieves a request token using the Bluevia SMS handshake The oauth verifier will be received vía SMS in the phone number specified as a parameter, instead of getting a verification url.
+
+
+\begin{DoxyParams}{Parameters}
+{\em phoneNumber} & the phone number to receive the SMS with the oauth verifier (PIN code) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the request token 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}

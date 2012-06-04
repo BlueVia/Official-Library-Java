@@ -1,0 +1,133 @@
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource}{
+\section{com.bluevia.ad.data.Resource Class Reference}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource}\index{com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}}
+}
+Inheritance diagram for com.bluevia.ad.data.Resource:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_ae1eee7c892b7690655fe9e4f7d082792}{Resource} ()
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_abdc9b8b0f09360188b3412bd1e1cb45d}{getAdRepresentation} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_aa2013b9b7a5585e9aa4efd5ec7972aa3}{setAdRepresentation} (String adRepresentation)
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement}{FullCreativeElement} $>$ \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_a55583fd5df2bcc884b43e07e58c0b0d1}{getCreativeElement} ()
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_a8553db131a6d66258a2e7dcfb445d3fd}{addCreativeElement} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement}{FullCreativeElement} c)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_ad6b54fa4245854cc434525be45cc231d}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Object that represents ad resource information associated It includes the following attributes: 
+\begin{DoxyItemize}
+\item \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement}{FullCreativeElement}: An ad object describes the different elements that shape the adsource. For instance an small banner link in line, could have two objects (image \& text). 
+\item AdRepresentation: Tag used by clients to get ad sources. The kind of an ad sources such as banner, sponsored links, interstitials, image\&link, small banner link inline, top banner link, below,... Represented as in numeric form (same as on the request AD\_\-PRESENTATION). 
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_ae1eee7c892b7690655fe9e4f7d082792}{
+\index{com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}!Resource@{Resource}}
+\index{Resource@{Resource}!com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}}
+\subsubsection[{Resource}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.ad.data.Resource.Resource (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_ae1eee7c892b7690655fe9e4f7d082792}
+Instantiates a new empty \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource}{Resource} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_a8553db131a6d66258a2e7dcfb445d3fd}{
+\index{com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}!addCreativeElement@{addCreativeElement}}
+\index{addCreativeElement@{addCreativeElement}!com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}}
+\subsubsection[{addCreativeElement}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.ad.data.Resource.addCreativeElement (
+\begin{DoxyParamCaption}
+\item[{{\bf FullCreativeElement}}]{c}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_a8553db131a6d66258a2e7dcfb445d3fd}
+Adds a \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement}{FullCreativeElement} for the ad representation
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the creative element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_abdc9b8b0f09360188b3412bd1e1cb45d}{
+\index{com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}!getAdRepresentation@{getAdRepresentation}}
+\index{getAdRepresentation@{getAdRepresentation}!com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}}
+\subsubsection[{getAdRepresentation}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.ad.data.Resource.getAdRepresentation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_abdc9b8b0f09360188b3412bd1e1cb45d}
+Gets the ad representation
+
+\begin{DoxyReturn}{Returns}
+the ad representation 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_a55583fd5df2bcc884b43e07e58c0b0d1}{
+\index{com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}!getCreativeElement@{getCreativeElement}}
+\index{getCreativeElement@{getCreativeElement}!com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}}
+\subsubsection[{getCreativeElement}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf FullCreativeElement}$>$ com.bluevia.ad.data.Resource.getCreativeElement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_a55583fd5df2bcc884b43e07e58c0b0d1}
+Gets the creative elements associated the the ad
+
+\begin{DoxyReturn}{Returns}
+the creative elements list 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_ad6b54fa4245854cc434525be45cc231d}{
+\index{com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.ad.data.Resource.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_ad6b54fa4245854cc434525be45cc231d}
+check if the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource}{Resource} entity is valid
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_aa2013b9b7a5585e9aa4efd5ec7972aa3}{
+\index{com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}!setAdRepresentation@{setAdRepresentation}}
+\index{setAdRepresentation@{setAdRepresentation}!com::bluevia::ad::data::Resource@{com::bluevia::ad::data::Resource}}
+\subsubsection[{setAdRepresentation}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.Resource.setAdRepresentation (
+\begin{DoxyParamCaption}
+\item[{String}]{adRepresentation}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource_aa2013b9b7a5585e9aa4efd5ec7972aa3}
+Sets the ad representation
+
+
+\begin{DoxyParams}{Parameters}
+{\em adRepresentation} & the ad representation \\
+\hline
+\end{DoxyParams}

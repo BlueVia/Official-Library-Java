@@ -1,0 +1,137 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory}{
+\section{com.bluevia.commons.connector.http.SSL2wayForNonValidCertsSocketFactory Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory}\index{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}}
+}
+
+
+Inherits LayeredSchemeSocketFactory.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a0ee435899f8fb4de7664fd67ca63d778}{
+{\bfseries SSL2wayForNonValidCertsSocketFactory} (String path, String pass)}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a0ee435899f8fb4de7664fd67ca63d778}
+
+\item 
+Socket \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_af06c0cc98a3bc78b0f18d558df35a28c}{connectSocket} (Socket sock, String host, int port, InetSocketAddress localAddress, HttpParams params)  throws IOException, UnknownHostException,             ConnectTimeoutException 
+\item 
+Socket \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a125620c3da8bae5cbd41c3ce90382415}{createSocket} ()  throws IOException 
+\item 
+Socket \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a7773188423bfc19979785635dc638b4d}{createSocket} (HttpParams params)  throws IOException 
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a080bcca6b6b5fc8a064c7947cc2efc84}{isSecure} (Socket socket)  throws IllegalArgumentException 
+\item 
+Socket \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_ab4ba61e6bb73afaa7839d5390a2c08bc}{createSocket} (Socket socket, String host, int port, boolean autoClose)  throws IOException, UnknownHostException 
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_ab804f0bc5d94e6aba368dce22f32dd6c}{
+Socket {\bfseries connectSocket} (Socket sock, InetSocketAddress remoteAddress, InetSocketAddress localAddress, HttpParams params)  throws IOException, UnknownHostException, ConnectTimeoutException }
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_ab804f0bc5d94e6aba368dce22f32dd6c}
+
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a68f0e3854158cbb39ab5619941fc8305}{equals} (Object obj)
+\item 
+int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_ab193741d3ccc5ef07a3a2d1b1c657d72}{hashCode} ()
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a500881b8f8eb8449375cd74273c7a17b}{
+Socket {\bfseries createLayeredSocket} (Socket socket, String target, int port, boolean autoClose)  throws IOException, UnknownHostException }
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a500881b8f8eb8449375cd74273c7a17b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to create a Socket Factory that do not do the validation of the certificate This class is done in order to test HTTPS connections without validating the test certificates. This class should not be used in a production environment 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_af06c0cc98a3bc78b0f18d558df35a28c}{
+\index{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}!connectSocket@{connectSocket}}
+\index{connectSocket@{connectSocket}!com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}}
+\subsubsection[{connectSocket}]{\setlength{\rightskip}{0pt plus 5cm}Socket com.bluevia.commons.connector.http.SSL2wayForNonValidCertsSocketFactory.connectSocket (
+\begin{DoxyParamCaption}
+\item[{Socket}]{sock, }
+\item[{String}]{host, }
+\item[{int}]{port, }
+\item[{InetSocketAddress}]{localAddress, }
+\item[{HttpParams}]{params}
+\end{DoxyParamCaption}
+)  throws IOException, UnknownHostException,             ConnectTimeoutException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_af06c0cc98a3bc78b0f18d558df35a28c}
+\begin{DoxySeeAlso}{See also}
+org.apache.http.conn.scheme.SocketFactory.connectSocket(java.net.Socket, java.lang.String, int, java.net.InetAddress, int, org.apache.http.params.HttpParams) 
+\end{DoxySeeAlso}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a125620c3da8bae5cbd41c3ce90382415}{
+\index{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}!createSocket@{createSocket}}
+\index{createSocket@{createSocket}!com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}}
+\subsubsection[{createSocket}]{\setlength{\rightskip}{0pt plus 5cm}Socket com.bluevia.commons.connector.http.SSL2wayForNonValidCertsSocketFactory.createSocket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a125620c3da8bae5cbd41c3ce90382415}
+\begin{DoxySeeAlso}{See also}
+org.apache.http.conn.scheme.SocketFactory.createSocket() 
+\end{DoxySeeAlso}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_ab4ba61e6bb73afaa7839d5390a2c08bc}{
+\index{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}!createSocket@{createSocket}}
+\index{createSocket@{createSocket}!com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}}
+\subsubsection[{createSocket}]{\setlength{\rightskip}{0pt plus 5cm}Socket com.bluevia.commons.connector.http.SSL2wayForNonValidCertsSocketFactory.createSocket (
+\begin{DoxyParamCaption}
+\item[{Socket}]{socket, }
+\item[{String}]{host, }
+\item[{int}]{port, }
+\item[{boolean}]{autoClose}
+\end{DoxyParamCaption}
+)  throws IOException, UnknownHostException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_ab4ba61e6bb73afaa7839d5390a2c08bc}
+\begin{DoxySeeAlso}{See also}
+org.apache.http.conn.scheme.LayeredSocketFactory.createSocket(java.net.Socket, java.lang.String, int, boolean) 
+\end{DoxySeeAlso}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a7773188423bfc19979785635dc638b4d}{
+\index{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}!createSocket@{createSocket}}
+\index{createSocket@{createSocket}!com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}}
+\subsubsection[{createSocket}]{\setlength{\rightskip}{0pt plus 5cm}Socket com.bluevia.commons.connector.http.SSL2wayForNonValidCertsSocketFactory.createSocket (
+\begin{DoxyParamCaption}
+\item[{HttpParams}]{params}
+\end{DoxyParamCaption}
+)  throws IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a7773188423bfc19979785635dc638b4d}
+\begin{DoxySeeAlso}{See also}
+org.apache.http.conn.scheme.SocketFactory.createSocket() 
+\end{DoxySeeAlso}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a68f0e3854158cbb39ab5619941fc8305}{
+\index{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}!equals@{equals}}
+\index{equals@{equals}!com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.commons.connector.http.SSL2wayForNonValidCertsSocketFactory.equals (
+\begin{DoxyParamCaption}
+\item[{Object}]{obj}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a68f0e3854158cbb39ab5619941fc8305}
+\begin{DoxySeeAlso}{See also}
+java.lang.Object.equals(java.lang.Object) 
+\end{DoxySeeAlso}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_ab193741d3ccc5ef07a3a2d1b1c657d72}{
+\index{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}}
+\subsubsection[{hashCode}]{\setlength{\rightskip}{0pt plus 5cm}int com.bluevia.commons.connector.http.SSL2wayForNonValidCertsSocketFactory.hashCode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_ab193741d3ccc5ef07a3a2d1b1c657d72}
+\begin{DoxySeeAlso}{See also}
+java.lang.Object.hashCode() 
+\end{DoxySeeAlso}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a080bcca6b6b5fc8a064c7947cc2efc84}{
+\index{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}!isSecure@{isSecure}}
+\index{isSecure@{isSecure}!com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory@{com::bluevia::commons::connector::http::SSL2wayForNonValidCertsSocketFactory}}
+\subsubsection[{isSecure}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.commons.connector.http.SSL2wayForNonValidCertsSocketFactory.isSecure (
+\begin{DoxyParamCaption}
+\item[{Socket}]{socket}
+\end{DoxyParamCaption}
+)  throws IllegalArgumentException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1SSL2wayForNonValidCertsSocketFactory_a080bcca6b6b5fc8a064c7947cc2efc84}
+\begin{DoxySeeAlso}{See also}
+org.apache.http.conn.scheme.SocketFactory.isSecure(java.net.Socket) 
+\end{DoxySeeAlso}

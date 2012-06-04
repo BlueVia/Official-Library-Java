@@ -1,0 +1,299 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart}{
+\section{com.bluevia.commons.connector.http.multipart.FilePart Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart}\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+}
+Inheritance diagram for com.bluevia.commons.connector.http.multipart.FilePart:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a9121a5b9fe8df09d252542c5d7021f51}{FilePart} (String name, File file, String contentType)  throws FileNotFoundException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a999aebc53bbf5b78952c9579792035db}{FilePart} (String name, PartSource partSource, String contentType)  throws FileNotFoundException 
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a26da4d2cd7a601b16d138abd05428a75}{isAvailable} (String contentType)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a3e87723a63417218fccdacb0959b6217}{isAvailable} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_acb902bd4273c47c862a713f482e00e7e}{DEFAULT\_\-CHARSET} = \char`\"{}ISO-\/8859-\/1\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a8af46da7bcd44774a2926fcabd1935d5}{DEFAULT\_\-TRANSFER\_\-ENCODING} = \char`\"{}binary\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_ac52ebc02335ce4807ce5db983e42908b}{sendDispositionHeader} (OutputStream out)  throws IOException 
+\item 
+long \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_addeceb95d953faf55f7ad6640f72c17f}{lengthOfData} ()  throws IOException 
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a07bc26c67e8ca2a25142234860afa036}{sendData} (OutputStream outputStream)  throws IOException 
+\item 
+PartSource \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_ac329bf5d92ac0a53832d45c05c575f01}{getSource} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static HashMap$<$ String, String $>$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a9899cc3c8467b5ac76040a8f4260f46d}{TEXT\_\-CONTENT\_\-TYPES\_\-TABLE} = new HashMap$<$String, String$>$()
+\item 
+static HashMap$<$ String, String $>$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a2f89f61e068eb660946ba7a28ad09a5b}{BINARY\_\-CONTENT\_\-TYPES\_\-TABLE} = new HashMap$<$String, String$>$()
+\item 
+static final String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a181342379932cfacadee5b1f8c0113c7}{FILE\_\-NAME} = \char`\"{}; filename=\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Static Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_ae87c6f588873f20d0ea80fede1994240}{\mbox{[}static initializer\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a part of a Multipart post object that consists of a file. Two different types of files are supported: 
+\begin{DoxyItemize}
+\item text files, for the following content types: 
+\begin{DoxyItemize}
+\item text/plain 
+\item application/xml 
+\item application/json 
+\end{DoxyItemize}
+\item binary files, for the following content types: 
+\begin{DoxyItemize}
+\item image/jpeg 
+\item image/bmp 
+\item image/gif 
+\item image/png 
+\item audio/midi 
+\item audio/wav 
+\item audio/mpeg 
+\item audio/amr 
+\item video/avi 
+\item video/x-\/ms-\/asf 
+\item video/mpeg 
+\item video/mpeg4 
+\item video/3gpp 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a9121a5b9fe8df09d252542c5d7021f51}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!FilePart@{FilePart}}
+\index{FilePart@{FilePart}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{FilePart}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.multipart.FilePart.FilePart (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{File}]{file, }
+\item[{String}]{contentType}
+\end{DoxyParamCaption}
+)  throws FileNotFoundException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a9121a5b9fe8df09d252542c5d7021f51}
+Main constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the part. \\
+\hline
+{\em file} & the file to be sent. \\
+\hline
+{\em contentType} & the content type.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em FileNotFoundException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a999aebc53bbf5b78952c9579792035db}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!FilePart@{FilePart}}
+\index{FilePart@{FilePart}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{FilePart}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.multipart.FilePart.FilePart (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{PartSource}]{partSource, }
+\item[{String}]{contentType}
+\end{DoxyParamCaption}
+)  throws FileNotFoundException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a999aebc53bbf5b78952c9579792035db}
+Main constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the part. \\
+\hline
+{\em partSource} & the part source \\
+\hline
+{\em contentType} & the content type. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em FileNotFoundException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_ae87c6f588873f20d0ea80fede1994240}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!\mbox{[}static initializer\mbox{]}@{[static initializer]}}
+\index{\mbox{[}static initializer\mbox{]}@{[static initializer]}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{[static initializer]}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.multipart.FilePart.\mbox{[}static initializer\mbox{]} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, package\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_ae87c6f588873f20d0ea80fede1994240}
+Fill the content types conversion table (content type to charsets) \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_ac329bf5d92ac0a53832d45c05c575f01}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!getSource@{getSource}}
+\index{getSource@{getSource}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{getSource}]{\setlength{\rightskip}{0pt plus 5cm}PartSource com.bluevia.commons.connector.http.multipart.FilePart.getSource (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_ac329bf5d92ac0a53832d45c05c575f01}
+Returns the source of the file part.
+
+\begin{DoxyReturn}{Returns}
+The source. 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a26da4d2cd7a601b16d138abd05428a75}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{isAvailable}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.commons.connector.http.multipart.FilePart.isAvailable (
+\begin{DoxyParamCaption}
+\item[{String}]{contentType}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a26da4d2cd7a601b16d138abd05428a75}
+Returns if the content type is available by gSDP
+
+
+\begin{DoxyParams}{Parameters}
+{\em contentType} & the content type to be analyzed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the content type is available; {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a3e87723a63417218fccdacb0959b6217}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{isAvailable}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.commons.connector.http.multipart.FilePart.isAvailable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a3e87723a63417218fccdacb0959b6217}
+Returns if the content type is available by gSDP
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the content type is available; {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_addeceb95d953faf55f7ad6640f72c17f}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!lengthOfData@{lengthOfData}}
+\index{lengthOfData@{lengthOfData}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{lengthOfData}]{\setlength{\rightskip}{0pt plus 5cm}long com.bluevia.commons.connector.http.multipart.FilePart.lengthOfData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_addeceb95d953faf55f7ad6640f72c17f}
+Return the length of the data.
+
+\begin{DoxyReturn}{Returns}
+The length. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & if an IO problem occurs \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1BlueviaPartBase}{com.bluevia.commons.connector.http.multipart.BlueviaPartBase}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a07bc26c67e8ca2a25142234860afa036}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!sendData@{sendData}}
+\index{sendData@{sendData}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{sendData}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.multipart.FilePart.sendData (
+\begin{DoxyParamCaption}
+\item[{OutputStream}]{outputStream}
+\end{DoxyParamCaption}
+)  throws IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a07bc26c67e8ca2a25142234860afa036}
+Write the data in \char`\"{}source\char`\"{} to the specified stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em outputStream} & The output stream. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & if an IO problem occurs. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1BlueviaPartBase}{com.bluevia.commons.connector.http.multipart.BlueviaPartBase}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_ac52ebc02335ce4807ce5db983e42908b}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!sendDispositionHeader@{sendDispositionHeader}}
+\index{sendDispositionHeader@{sendDispositionHeader}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{sendDispositionHeader}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.multipart.FilePart.sendDispositionHeader (
+\begin{DoxyParamCaption}
+\item[{OutputStream}]{out}
+\end{DoxyParamCaption}
+)  throws IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_ac52ebc02335ce4807ce5db983e42908b}
+Write the disposition header to the output stream 
+\begin{DoxyParams}{Parameters}
+{\em out} & The output stream \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & If an IO problem occurs \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+Part.sendDispositionHeader(OutputStream) 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1BlueviaPartBase}{com.bluevia.commons.connector.http.multipart.BlueviaPartBase}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a2f89f61e068eb660946ba7a28ad09a5b}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!BINARY\_\-CONTENT\_\-TYPES\_\-TABLE@{BINARY\_\-CONTENT\_\-TYPES\_\-TABLE}}
+\index{BINARY\_\-CONTENT\_\-TYPES\_\-TABLE@{BINARY\_\-CONTENT\_\-TYPES\_\-TABLE}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{BINARY\_\-CONTENT\_\-TYPES\_\-TABLE}]{\setlength{\rightskip}{0pt plus 5cm}HashMap$<$String, String$>$ {\bf com.bluevia.commons.connector.http.multipart.FilePart.BINARY\_\-CONTENT\_\-TYPES\_\-TABLE} = new HashMap$<$String, String$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a2f89f61e068eb660946ba7a28ad09a5b}
+Table containing supported binary type content types and their corresponding charsets. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_acb902bd4273c47c862a713f482e00e7e}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!DEFAULT\_\-CHARSET@{DEFAULT\_\-CHARSET}}
+\index{DEFAULT\_\-CHARSET@{DEFAULT\_\-CHARSET}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{DEFAULT\_\-CHARSET}]{\setlength{\rightskip}{0pt plus 5cm}final String {\bf com.bluevia.commons.connector.http.multipart.FilePart.DEFAULT\_\-CHARSET} = \char`\"{}ISO-\/8859-\/1\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_acb902bd4273c47c862a713f482e00e7e}
+Default content encoding of file attachments. Default charset of file attachments. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a8af46da7bcd44774a2926fcabd1935d5}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!DEFAULT\_\-TRANSFER\_\-ENCODING@{DEFAULT\_\-TRANSFER\_\-ENCODING}}
+\index{DEFAULT\_\-TRANSFER\_\-ENCODING@{DEFAULT\_\-TRANSFER\_\-ENCODING}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{DEFAULT\_\-TRANSFER\_\-ENCODING}]{\setlength{\rightskip}{0pt plus 5cm}final String {\bf com.bluevia.commons.connector.http.multipart.FilePart.DEFAULT\_\-TRANSFER\_\-ENCODING} = \char`\"{}binary\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a8af46da7bcd44774a2926fcabd1935d5}
+Default transfer encoding of file attachments. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a181342379932cfacadee5b1f8c0113c7}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!FILE\_\-NAME@{FILE\_\-NAME}}
+\index{FILE\_\-NAME@{FILE\_\-NAME}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{FILE\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}final String {\bf com.bluevia.commons.connector.http.multipart.FilePart.FILE\_\-NAME} = \char`\"{}; filename=\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a181342379932cfacadee5b1f8c0113c7}
+Attachment's file name. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a9899cc3c8467b5ac76040a8f4260f46d}{
+\index{com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}!TEXT\_\-CONTENT\_\-TYPES\_\-TABLE@{TEXT\_\-CONTENT\_\-TYPES\_\-TABLE}}
+\index{TEXT\_\-CONTENT\_\-TYPES\_\-TABLE@{TEXT\_\-CONTENT\_\-TYPES\_\-TABLE}!com::bluevia::commons::connector::http::multipart::FilePart@{com::bluevia::commons::connector::http::multipart::FilePart}}
+\subsubsection[{TEXT\_\-CONTENT\_\-TYPES\_\-TABLE}]{\setlength{\rightskip}{0pt plus 5cm}HashMap$<$String, String$>$ {\bf com.bluevia.commons.connector.http.multipart.FilePart.TEXT\_\-CONTENT\_\-TYPES\_\-TABLE} = new HashMap$<$String, String$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart_a9899cc3c8467b5ac76040a8f4260f46d}
+Table containing supported text type content types and their corresponding charsets. 

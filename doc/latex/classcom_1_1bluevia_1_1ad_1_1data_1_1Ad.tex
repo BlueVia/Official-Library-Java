@@ -1,0 +1,221 @@
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}{
+\section{com.bluevia.ad.data.Ad Class Reference}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+}
+Inheritance diagram for com.bluevia.ad.data.Ad:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource}{Resource} \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_af2c9881982bc884e387dab9d75f5f72e}{getResource} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_ad93de5b76d88e053b8ce89eb0b9b17c5}{setResource} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource}{Resource} resource)
+\item 
+int \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a145fce538292452d8e00924002a1d8d9}{getAdPlacement} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a2772fa698541f4f8834f7257fe611f49}{setAdPlacement} (int adPlacement)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a85c7ad2e6e978b11e1db603664a467b9}{getCampaign} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a511c3b4883a8de41994838d25bff838a}{setCampaign} (String campaign)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a8bd822d5487b8d5ed97e1e42a0f100e6}{getFlight} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a63009a0d86583fd9deeb959ba0f307cd}{setFlight} (String flight)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a234310b78e2dbad8099ed9dcc4b69ea2}{getId} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a448c1373ae7365b945c82b1b4339790c}{setId} (String id)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a30b6952e1715fb192a884e2f5f01f06d}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Object that represents an advertisement received from the gSDP It includes the following attributes: 
+\begin{DoxyItemize}
+\item \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Resource}{Resource}: the returned ad resource information. It contains the meta-\/data related to the ad resources (images, text, etc.) 
+\item Id: Identifier of the ad selected and served by the Ad-\/Server. This id is used for asynchronous event notification and identifies univocally the ad whose associated event is reported. 
+\item Campaign: Id of a campaign associated. 
+\item Flight: Id of the flight that ad is associated. 
+\item AdPlacement: Identifier of the specific place of an ad. If several ads share a WAP/screen page, the ad\_\-placement identifies the specific place of each one (at the top, at the bottom, at the middle). Its aim is to help the showing of ads in the same page, or area (competitor brands must not share ads in the same WP page, for instance). This parameter should be a running number. First ad on the page=1, second=2, etc. 
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a145fce538292452d8e00924002a1d8d9}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!getAdPlacement@{getAdPlacement}}
+\index{getAdPlacement@{getAdPlacement}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{getAdPlacement}]{\setlength{\rightskip}{0pt plus 5cm}int com.bluevia.ad.data.Ad.getAdPlacement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a145fce538292452d8e00924002a1d8d9}
+Gets the ad placement info
+
+\begin{DoxyReturn}{Returns}
+the ad placement info 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a85c7ad2e6e978b11e1db603664a467b9}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!getCampaign@{getCampaign}}
+\index{getCampaign@{getCampaign}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{getCampaign}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.ad.data.Ad.getCampaign (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a85c7ad2e6e978b11e1db603664a467b9}
+Gets the ad campaign
+
+\begin{DoxyReturn}{Returns}
+the ad campaign 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a8bd822d5487b8d5ed97e1e42a0f100e6}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!getFlight@{getFlight}}
+\index{getFlight@{getFlight}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{getFlight}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.ad.data.Ad.getFlight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a8bd822d5487b8d5ed97e1e42a0f100e6}
+Gets the ad flight
+
+\begin{DoxyReturn}{Returns}
+the ad flight 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a234310b78e2dbad8099ed9dcc4b69ea2}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!getId@{getId}}
+\index{getId@{getId}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{getId}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.ad.data.Ad.getId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a234310b78e2dbad8099ed9dcc4b69ea2}
+Gets the ad id in the Ad-\/Server
+
+\begin{DoxyReturn}{Returns}
+the ad id 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_af2c9881982bc884e387dab9d75f5f72e}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!getResource@{getResource}}
+\index{getResource@{getResource}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{getResource}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource} com.bluevia.ad.data.Ad.getResource (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_af2c9881982bc884e387dab9d75f5f72e}
+Gets the ad resource
+
+\begin{DoxyReturn}{Returns}
+the ad resource 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a30b6952e1715fb192a884e2f5f01f06d}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.ad.data.Ad.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a30b6952e1715fb192a884e2f5f01f06d}
+check if the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}{Ad} entity is valid
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a2772fa698541f4f8834f7257fe611f49}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!setAdPlacement@{setAdPlacement}}
+\index{setAdPlacement@{setAdPlacement}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{setAdPlacement}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.Ad.setAdPlacement (
+\begin{DoxyParamCaption}
+\item[{int}]{adPlacement}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a2772fa698541f4f8834f7257fe611f49}
+Sets the ad placement info
+
+
+\begin{DoxyParams}{Parameters}
+{\em adPlacement} & the ad placement info \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a511c3b4883a8de41994838d25bff838a}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!setCampaign@{setCampaign}}
+\index{setCampaign@{setCampaign}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{setCampaign}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.Ad.setCampaign (
+\begin{DoxyParamCaption}
+\item[{String}]{campaign}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a511c3b4883a8de41994838d25bff838a}
+Sets the ad campaign
+
+
+\begin{DoxyParams}{Parameters}
+{\em campaign} & the ad campaign \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a63009a0d86583fd9deeb959ba0f307cd}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!setFlight@{setFlight}}
+\index{setFlight@{setFlight}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{setFlight}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.Ad.setFlight (
+\begin{DoxyParamCaption}
+\item[{String}]{flight}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a63009a0d86583fd9deeb959ba0f307cd}
+Sets the ad flight
+
+
+\begin{DoxyParams}{Parameters}
+{\em flight} & the ad flight \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a448c1373ae7365b945c82b1b4339790c}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!setId@{setId}}
+\index{setId@{setId}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{setId}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.Ad.setId (
+\begin{DoxyParamCaption}
+\item[{String}]{id}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_a448c1373ae7365b945c82b1b4339790c}
+Sets the ad id in the Ad-\/server
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the ad id \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_ad93de5b76d88e053b8ce89eb0b9b17c5}{
+\index{com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}!setResource@{setResource}}
+\index{setResource@{setResource}!com::bluevia::ad::data::Ad@{com::bluevia::ad::data::Ad}}
+\subsubsection[{setResource}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.Ad.setResource (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource}}]{resource}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad_ad93de5b76d88e053b8ce89eb0b9b17c5}
+Sets the ad resource
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & the ad resource \\
+\hline
+\end{DoxyParams}

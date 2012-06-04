@@ -1,0 +1,102 @@
+\hypertarget{blv_location_guide_location_abstract_sec}{}\section{Abstract}\label{blv_location_guide_location_abstract_sec}
+The Bluevia Location API is a set of functions which allows users to retrieve the geographical coordinates of a terminal where Location is expressed through a latitude, longitude, altitude and accuracy. Such operation covers the requesting for the location of a terminal.\hypertarget{blv_location_guide_blv_location_api_retrieving_location_information_sec}{}\section{Bluevia Location API: Retrieving location information}\label{blv_location_guide_blv_location_api_retrieving_location_information_sec}
+The Bluevia Location API is a set of functions which allows users to retrieve the geographical coordinates of a terminal where Location is expressed through a latitude, longitude, altitude and accuracy. Such operation covers the requesting for the location of a terminal.\hypertarget{blv_location_guide_location_client_basics_sec}{}\subsection{Location Client Basics}\label{blv_location_guide_location_client_basics_sec}
+A Location client represents the client side in a classic client-\/server schema. This object wraps up the underlying REST client side functionality needed to perform requests against a REST server.
+
+Any Bluevia client performs requests and receives responses in a secure mode. Clients are authorized following the OAuth protocol. This security protocol enables users to grant third-\/party access to their resources without sharing their passwords. So clients store the authorization data -\/called security credentials-\/ to grant access to the server. The following sections describe what security credentials we are talking about.\hypertarget{blv_location_guide_creating_a_location_client_sec}{}\subsection{Creating a Location client: BVLocation class}\label{blv_location_guide_creating_a_location_client_sec}
+The first step in using the Location client is to create an BVLocation object. As we mentioned earlier this object could have three different working modes: i) as a client which sends requests to a real server, ii) a client working with a real server in testing mode, or iii) as a client which sends requests and receives responses to/from a sandbox server.\hypertarget{blv_location_guide_locationclient_features_working_modes_sec}{}\subsubsection{LocationClient features: working modes}\label{blv_location_guide_locationclient_features_working_modes_sec}
+When you create the client, you can specify various working modes: 
+\begin{DoxyItemize}
+\item BVBaseClient.Mode.LIVE \par
+In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country.
+
+
+\item BVBaseClient.Mode.TEST \par
+The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits.
+
+
+\item BVBaseClient.Mode.SANDBOX \par
+The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
+\end{DoxyItemize}\hypertarget{blv_location_guide_locationclient_features_security_credentials_sec}{}\subsubsection{Location client features: security credentials}\label{blv_location_guide_locationclient_features_security_credentials_sec}
+Bluevia uses OAuth as its authentication mechanism which enables websites and applications to access the Bluevia API's without end users disclosing their personal credentials. In order to grant access to the server any client has to be created passing the security credential as parameter in its constructor. These security credentials are managed internally and added as a HTTP header in every request sent to the server. Such Oauth security credentials are: 
+\begin{DoxyItemize}
+\item {\bfseries Consumer key} \par
+The string identifying the application-\/ you obtained when you registered your application within the provisioning portal.
+
+
+\item {\bfseries Consumer secret} \par
+A secret -\/a string-\/ used by the consumer to establish ownership of the consumer key.
+
+
+\item {\bfseries Access token} \par
+The token -\/a string-\/ used by the client for granting access permissions to the server.
+
+
+\item {\bfseries Access token secret} \par
+The secret of the access token. 
+\end{DoxyItemize}\hypertarget{blv_location_guide_locationclient_features_code_example}{}\subsubsection{Location client features: code example}\label{blv_location_guide_locationclient_features_code_example}
+Find below an example about how to create a Location client taking into account all information previously given. This snippet shows how to access a Bluevia server using OAuth security credentials
+
+
+\begin{DoxyCode}
+// Mode.LIVE indicating the client works against a real Bluevia server.
+try {
+        BVLocation locationClient = new BVLocation(Mode.LIVE, "consumer_key", "co
+      nsumer_secret", "access_token", "access_token_secret");
+} catch (BlueviaException e){
+        log.error(e.getMessage());
+}
+\end{DoxyCode}
+\hypertarget{blv_location_guide_locationclient_features_freeing_resources_sec}{}\subsubsection{Location client features: freeing resources}\label{blv_location_guide_locationclient_features_freeing_resources_sec}
+It is very important to free the resources that the client instantiates to work. To do this call the close method after finishing using the client:
+
+
+\begin{DoxyCode}
+locationClient.close();
+\end{DoxyCode}
+\hypertarget{blv_location_guide_retrieving_the_geographical_coordinates_of_a_terminal_sec}{}\subsection{Retrieving the geographical coordinates of a terminal}\label{blv_location_guide_retrieving_the_geographical_coordinates_of_a_terminal_sec}
+The {\bfseries getLocation} function allows an user to retrieve the geographical coordinates of a terminal. These geographical coordinates are expressed through a latitude, longitude, altitude and accuracy.
+
+Take a look at the getLocation function signature:
+
+
+\begin{DoxyCode}
+LocationInfo getLocation(Integer accuracy) throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+The {\bfseries accuracy} (optional) parameter expresses the range in meters that the application considers useful. If the location cannot be determined within this range, then the application would prefer not to receive the information.
+
+Once the server responds the user have to retrieve the location information from the returned LocationInfo instance. The LocationInfo includes the status of the client request and the the location information.
+
+For a more detailed description please see the API Reference.\hypertarget{blv_location_guide_blv_location_api_code_example}{}\subsection{Bluevia Location API: code example}\label{blv_location_guide_blv_location_api_code_example}
+
+\begin{DoxyCode}
+// Get Location
+BVLocation locationClient = null;
+
+try {
+
+        // 1. Create the client (you have to choose the mode and include the OAut
+      h authorization values)
+        locationClient = new BVLocation(Mode.LIVE, "consumer_key", "consumer_secr
+      et", "access_token", "access_token_secret");
+
+        // 2. Retrieve location info
+        LocationInfo info = locationClient.getLocation(100);
+
+        float latitude = info.getLatitude();
+        float longitude = info.getLongitude();
+                
+} catch (BlueviaException e) {
+        log.error("Error getting location", e);
+} catch (IOException e) {
+        log.error("Error getting location", e);
+} finally {
+
+        // 3. Remember to close the client to free resources
+        if (locationClient != null)
+                locationClient.close();
+} 
+\end{DoxyCode}
+ 

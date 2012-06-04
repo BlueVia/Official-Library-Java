@@ -1,0 +1,113 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType}{
+\section{com.telefonica.schemas.unica.rest.common.v1.IpAddressType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType}\index{com::telefonica::schemas::unica::rest::common::v1::IpAddressType@{com::telefonica::schemas::unica::rest::common::v1::IpAddressType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_ac5aa46a50cccbe90e5bbf9ffd3ce2f55}{getIpv4} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_ae241a19a0ddef84b2a55fac925a58e80}{setIpv4} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_addd2560dc811565e15e313f8f666530d}{getIpv6} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_aea733413a1dd41d99786de54197b34ae}{setIpv6} (String value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_a7e967bed7c1253837c9fa4912df5c1c8}{
+String {\bfseries ipv4}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_a7e967bed7c1253837c9fa4912df5c1c8}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_ab5354b81a4498a244f2bfd115d8c509f}{
+String {\bfseries ipv6}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_ab5354b81a4498a244f2bfd115d8c509f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A generic IP address, including both v4 and v6 address formats
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType}{IpAddressType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="IpAddressType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <choice>
+         <element name="ipv4" type="\{http://www.telefonica.com/schemas/UNICA/REST/common/v1\}Ipv4AddressType"/>
+         <element name="ipv6" type="\{http://www.telefonica.com/schemas/UNICA/REST/common/v1\}Ipv6AddressType"/>
+       </choice>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_ac5aa46a50cccbe90e5bbf9ffd3ce2f55}{
+\index{com::telefonica::schemas::unica::rest::common::v1::IpAddressType@{com::telefonica::schemas::unica::rest::common::v1::IpAddressType}!getIpv4@{getIpv4}}
+\index{getIpv4@{getIpv4}!com::telefonica::schemas::unica::rest::common::v1::IpAddressType@{com::telefonica::schemas::unica::rest::common::v1::IpAddressType}}
+\subsubsection[{getIpv4}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rest.common.v1.IpAddressType.getIpv4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_ac5aa46a50cccbe90e5bbf9ffd3ce2f55}
+Gets the value of the ipv4 property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_addd2560dc811565e15e313f8f666530d}{
+\index{com::telefonica::schemas::unica::rest::common::v1::IpAddressType@{com::telefonica::schemas::unica::rest::common::v1::IpAddressType}!getIpv6@{getIpv6}}
+\index{getIpv6@{getIpv6}!com::telefonica::schemas::unica::rest::common::v1::IpAddressType@{com::telefonica::schemas::unica::rest::common::v1::IpAddressType}}
+\subsubsection[{getIpv6}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rest.common.v1.IpAddressType.getIpv6 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_addd2560dc811565e15e313f8f666530d}
+Gets the value of the ipv6 property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_ae241a19a0ddef84b2a55fac925a58e80}{
+\index{com::telefonica::schemas::unica::rest::common::v1::IpAddressType@{com::telefonica::schemas::unica::rest::common::v1::IpAddressType}!setIpv4@{setIpv4}}
+\index{setIpv4@{setIpv4}!com::telefonica::schemas::unica::rest::common::v1::IpAddressType@{com::telefonica::schemas::unica::rest::common::v1::IpAddressType}}
+\subsubsection[{setIpv4}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.common.v1.IpAddressType.setIpv4 (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_ae241a19a0ddef84b2a55fac925a58e80}
+Sets the value of the ipv4 property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_aea733413a1dd41d99786de54197b34ae}{
+\index{com::telefonica::schemas::unica::rest::common::v1::IpAddressType@{com::telefonica::schemas::unica::rest::common::v1::IpAddressType}!setIpv6@{setIpv6}}
+\index{setIpv6@{setIpv6}!com::telefonica::schemas::unica::rest::common::v1::IpAddressType@{com::telefonica::schemas::unica::rest::common::v1::IpAddressType}}
+\subsubsection[{setIpv6}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.common.v1.IpAddressType.setIpv6 (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1IpAddressType_aea733413a1dd41d99786de54197b34ae}
+Sets the value of the ipv6 property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}

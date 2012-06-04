@@ -1,0 +1,123 @@
+\hypertarget{blv_mms_mo_guide_mms_mo_abstract_sec}{}\section{Abstract}\label{blv_mms_mo_guide_mms_mo_abstract_sec}
+The Bluevia MMS API is a set of functions which allows users to receive MMS messages sent from a mobile phone. This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia MMS functionality.\hypertarget{blv_mms_mo_guide_blv_mms_mo_api_receiving_mms_messages_sec}{}\section{Bluevia MMS MO API: Receiving MMS messages}\label{blv_mms_mo_guide_blv_mms_mo_api_receiving_mms_messages_sec}
+The Bluevia MMS API is a set of functions which allows users to receive MMS messages sent from a mobile phone. This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia MMS functionality.\hypertarget{blv_mms_mo_guide_mms_mo_client_basics_sec}{}\subsection{MMS MO client basics}\label{blv_mms_mo_guide_mms_mo_client_basics_sec}
+A MMS client represents the client side in a classic client-\/server schema. This object wraps up the underlying REST client side functionality needed to perform requests against a REST server.
+
+Any Bluevia client performs requests and receives responses in a secure mode. Clients are authorized following the OAuth protocol. This security protocol enables users to grant third-\/party access to their resources without sharing their passwords. So clients store the authorization data -\/called security credentials-\/ to grant access to the server. Following sections describe what security credentials we are talking about.\hypertarget{blv_mms_mo_guide_creating_a_mms_mo_client_sec}{}\subsection{Creating a MMS MO client: BVMoMms class}\label{blv_mms_mo_guide_creating_a_mms_mo_client_sec}
+The first step in using the MMS client is to create a BVMoMms object. As we mentioned earlier this object could have three different working modes: i) as a client which sends requests to a real server, ii) a client working with a real server in testing mode, or iii) as a client which sends requests and receives responses to/from a sandbox server.\hypertarget{blv_mms_mo_guide_mms_mo_client_features_working_modes_sec}{}\subsubsection{MMS MO client features: working modes}\label{blv_mms_mo_guide_mms_mo_client_features_working_modes_sec}
+When you create the client, you can specify various working modes: 
+\begin{DoxyItemize}
+\item BVBaseClient.Mode.LIVE \par
+In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country.
+
+
+\item BVBaseClient.Mode.TEST \par
+The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits.
+
+
+\item BVBaseClient.Mode.SANDBOX \par
+The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
+\end{DoxyItemize}\hypertarget{blv_mms_mo_guide_mms_mo_client_features_security_credentials}{}\subsubsection{MMS MO client features: security credentials}\label{blv_mms_mo_guide_mms_mo_client_features_security_credentials}
+Bluevia uses OAuth as its authentication mechanism which enables websites and applications to access the Bluevia API's without end users disclosing their personal credentials. In order to grant access to the server any client has to be created passing the security credential as parameter in its constructor. These security credentials are managed internally and added as a HTTP header in every request sent to the server.
+
+Bluevia MMS MO API uses OAuth-\/2-\/legged since user's authorization is not required to received MMSs. Then, it is not neccessary for the user to pass through the OAuth process and there is no need of an access token. Mandatory Oauth security credentials for 2-\/legged mode are:
+
+
+\begin{DoxyItemize}
+\item {\bfseries Consumer key} \par
+The string identifying the application-\/ you obtained when you registered your application within the provisioning portal.
+
+
+\item {\bfseries Consumer Secret} \par
+A secret -\/a string-\/ used by the consumer to establish ownership of the consumer key. 
+\end{DoxyItemize}\hypertarget{blv_mms_mo_guide_mms_mo_client_features_code_examples_sec}{}\subsubsection{MMS MO client features: code example}\label{blv_mms_mo_guide_mms_mo_client_features_code_examples_sec}
+Find below an example about how to create a Mms client object taking into account all information previously given. This snippet shows how to access a Bluevia server using OAuth security credentials
+
+
+\begin{DoxyCode}
+// Mode.LIVE indicating the client works against a real Bluevia server.
+try {
+        BVMoMms mmsClient = new BVMoMms(Mode.LIVE, "consumer_key", "consumer_secr
+      et");
+} catch (BlueviaException e){
+        Log.e(TAG, e.getMessage());
+}
+\end{DoxyCode}
+\hypertarget{blv_mms_mo_guide_mms_mo_client_features_freeing_resources_sec}{}\subsubsection{MMS MO client features: freeing resources}\label{blv_mms_mo_guide_mms_mo_client_features_freeing_resources_sec}
+It is very important to free the resources that the client instantiates to work. To do this call the close method after finishing using the client:
+
+
+\begin{DoxyCode}
+mmsClient.close();
+\end{DoxyCode}
+\hypertarget{blv_mms_mo_guide_receiving_mmsmessages}{}\subsection{Receiving MMS messages}\label{blv_mms_mo_guide_receiving_mmsmessages}
+Your application can receive MMS from users sent to Bluevia shortcodes including your application keyword. The parameter 'registrationId' corresponds to the shortcode of the country whose messages are being retrieved. The operation to get received messages has to be done in two steps. First you have to use the getAllMessages function to retreive the messages info, including the short number. Depending on the value of the 'attachUrl' parameter (false by default), the second step would be done in two different ways. If the parameter is true, the ids of the attachments will be retreived in order to use the getAttachment operation; otherwise the attachments would have to be obtained throught the getMessage function. The function signature is:
+
+
+\begin{DoxyCode}
+ArrayList<MmsMessageInfo> getAllMessages(String registrationId, boolean attachUrl
+      ) throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+The MmsMessageInfo object contains the information of the sent MMS, but the attachments. In order to retreive attached documents in the MMS you have to use the following function. The 'messageId' can be obtained in the MmsMessageInfo object returned by the previous function. The resultant MmsMessage object contains the info of the Mms and a list of MimeContent objects representing the attachments:
+
+
+\begin{DoxyCode}
+MmsMessage getMessage(String registrationId, String messageId) throws BlueviaExce
+      ption, IOException
+\end{DoxyCode}
+
+
+Using the getAttachment function you will receive the MimeContent object corresponding to he attachment identifier:
+
+
+\begin{DoxyCode}
+MimeContent getAttachment(String registrationId, String messageId, String attachm
+      entId) throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+For a more detailed description see the API Reference.\hypertarget{blv_mms_mo_guide_mms_api_code_example_sec}{}\subsection{Bluevia MMS MT API: code example}\label{blv_mms_mo_guide_mms_api_code_example_sec}
+
+\begin{DoxyCode}
+// Receiving MMSs:
+
+BVMoMms mmsMoClient = null;
+
+try {
+
+        // 1. Create the client (you have to choose the mode and include the OAut
+      h authorization values. No access token is needed)
+        mmsMoClient = new BVMoMms(Mode.LIVE, "consumer_key", "consumer_secret");
+
+        // 2. Retrieve sent MMS list:
+        // We set the a 'attachUrl' to false, so we will use the getMessage funct
+      ion instead of the getAttachment function later.
+        String registrationId = "546780"
+        ArrayList<MmsMessageInfo> list = mmsMoClient.getAllMessages(registrationI
+      d, false); 
+        
+        // 3. For each MMS info object, retrieve 
+        for (MmsMessageInfo info : list){
+                MmsMessage message = mmsMoClient.getMessage(registrationId, info.
+      getMessageId());
+        
+                for (MimeContent attachment : message.getAttachments()){
+                        //Do stuff
+                }
+        
+        }
+
+} catch (BlueviaException e) {
+        Log.e(TAG,"Error receiving MMS", e);
+} catch (IOException e) {
+        Log.e(TAG,"Error receiving MMS", e);
+} finally {
+
+        // 3. Remember to close the client to free resources
+        if (mmsMoClient != null)
+                mmsMoClient.close();
+} 
+\end{DoxyCode}
+ 

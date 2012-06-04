@@ -1,0 +1,156 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient}{
+\section{com.bluevia.messagery.mt.client.BVMtClient Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient}\index{com::bluevia::messagery::mt::client::BVMtClient@{com::bluevia::messagery::mt::client::BVMtClient}}
+}
+Inheritance diagram for com.bluevia.messagery.mt.client.BVMtClient:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.456790cm]{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo}{DeliveryInfo} $>$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_a8f6f5161ebda540dd0d5e6b47951f6b5}{getDeliveryStatus} (String messageId)  throws BlueviaException, IOException
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} $>$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_ae3b7203ee517e87e092bd524255446c1}{buildUserIdList} (ArrayList$<$ String $>$ addresses)  throws BlueviaException
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_ad7c48e90d23d1986cb5871b0ed87d271}{checkMessage} (\hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage}{AbstractMessage} message)  throws BlueviaException 
+\item 
+static String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_a07bd79cdd74c1e15f5b19c50ff7708bb}{getMesageIdFromResponse} (HashMap$<$ String, String $>$ responseHeaders, String feed)  throws BlueviaException
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_a0b7fed825889e62a18400ef4b76f1d5f}{
+static final String {\bfseries FEED\_\-OUTBOUND\_\-REQUESTS} = \char`\"{}/outbound/requests\char`\"{}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_a0b7fed825889e62a18400ef4b76f1d5f}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_af2c806d767dbd27479ac5a72aadc8001}{
+static final String {\bfseries DELIVERY\_\-STATUS\_\-PATH} = \char`\"{}/deliverystatus\char`\"{}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_af2c806d767dbd27479ac5a72aadc8001}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_ac02050090b337bbd5de022fe13a29300}{
+static final String {\bfseries HEADER\_\-X\_\-CHARGED\_\-ID} = \char`\"{}X-\/ChargedId\char`\"{}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_ac02050090b337bbd5de022fe13a29300}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract client interface for the REST binding of the Bluevia Messagery MT Service.
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_ae3b7203ee517e87e092bd524255446c1}{
+\index{com::bluevia::messagery::mt::client::BVMtClient@{com::bluevia::messagery::mt::client::BVMtClient}!buildUserIdList@{buildUserIdList}}
+\index{buildUserIdList@{buildUserIdList}!com::bluevia::messagery::mt::client::BVMtClient@{com::bluevia::messagery::mt::client::BVMtClient}}
+\subsubsection[{buildUserIdList}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf UserId}$>$ com.bluevia.messagery.mt.client.BVMtClient.buildUserIdList (
+\begin{DoxyParamCaption}
+\item[{ArrayList$<$ String $>$}]{addresses}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_ae3b7203ee517e87e092bd524255446c1}
+
+\begin{DoxyParams}{Parameters}
+{\em addresses} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_ad7c48e90d23d1986cb5871b0ed87d271}{
+\index{com::bluevia::messagery::mt::client::BVMtClient@{com::bluevia::messagery::mt::client::BVMtClient}!checkMessage@{checkMessage}}
+\index{checkMessage@{checkMessage}!com::bluevia::messagery::mt::client::BVMtClient@{com::bluevia::messagery::mt::client::BVMtClient}}
+\subsubsection[{checkMessage}]{\setlength{\rightskip}{0pt plus 5cm}static void com.bluevia.messagery.mt.client.BVMtClient.checkMessage (
+\begin{DoxyParamCaption}
+\item[{{\bf AbstractMessage}}]{message}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} \hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_ad7c48e90d23d1986cb5871b0ed87d271}
+Check if the message passed as parameter is valid and throws an BlueviaException if not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & message to check. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & if the message parameter is not valid. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_a8f6f5161ebda540dd0d5e6b47951f6b5}{
+\index{com::bluevia::messagery::mt::client::BVMtClient@{com::bluevia::messagery::mt::client::BVMtClient}!getDeliveryStatus@{getDeliveryStatus}}
+\index{getDeliveryStatus@{getDeliveryStatus}!com::bluevia::messagery::mt::client::BVMtClient@{com::bluevia::messagery::mt::client::BVMtClient}}
+\subsubsection[{getDeliveryStatus}]{\setlength{\rightskip}{0pt plus 5cm}abstract ArrayList$<${\bf DeliveryInfo}$>$ com.bluevia.messagery.mt.client.BVMtClient.getDeliveryStatus (
+\begin{DoxyParamCaption}
+\item[{String}]{messageId}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_a8f6f5161ebda540dd0d5e6b47951f6b5}
+Allows to know the delivery status of a previous sent message using Bluevia API
+
+
+\begin{DoxyParams}{Parameters}
+{\em messageId} & the id of the message previously sent using this API \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an arrayList containing the DeliveryInfo for each destination address from the sent message. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_aa57d8a5c364299801600dc7f09ed84e7}{com.bluevia.messagery.mt.mms.client.BVMtMmsClient}, and \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSmsClient_a2854d84100f987e9c69a0425badbc058}{com.bluevia.messagery.mt.sms.client.BVMtSmsClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_a07bd79cdd74c1e15f5b19c50ff7708bb}{
+\index{com::bluevia::messagery::mt::client::BVMtClient@{com::bluevia::messagery::mt::client::BVMtClient}!getMesageIdFromResponse@{getMesageIdFromResponse}}
+\index{getMesageIdFromResponse@{getMesageIdFromResponse}!com::bluevia::messagery::mt::client::BVMtClient@{com::bluevia::messagery::mt::client::BVMtClient}}
+\subsubsection[{getMesageIdFromResponse}]{\setlength{\rightskip}{0pt plus 5cm}static String com.bluevia.messagery.mt.client.BVMtClient.getMesageIdFromResponse (
+\begin{DoxyParamCaption}
+\item[{HashMap$<$ String, String $>$}]{responseHeaders, }
+\item[{String}]{feed}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_a07bd79cdd74c1e15f5b19c50ff7708bb}
+Gets the messageId from the response headers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em responseHeaders} & headers containing the messageId. \\
+\hline
+{\em feed} & field of the uri to distinguish SMS and MMS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the messageId from the response. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & if the response or the result are not valid. \\
+\hline
+\end{DoxyExceptions}

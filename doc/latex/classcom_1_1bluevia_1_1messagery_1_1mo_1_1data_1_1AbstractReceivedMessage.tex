@@ -1,0 +1,165 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage}{
+\section{com.bluevia.messagery.mo.data.AbstractReceivedMessage Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage}\index{com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}}
+}
+Inheritance diagram for com.bluevia.messagery.mo.data.AbstractReceivedMessage:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.359551cm]{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a465f44fba12ca330e91bfe60c9e814b3}{setDate} (String date)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a43d1de21c5a5fef126d2dcc4123d3846}{getDate} ()
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ab50f0da03aadb3dff47d6f4ccc6330ed}{getOriginAddress} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ac89281d1a1a87e379a36340b795e69c3}{setUserIdOriginAddress} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} originAddress)
+\item 
+ArrayList$<$ String $>$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ad1df097a24da45112e80a9030dc1da42}{getDestinationList} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_af17d50fe41ca56cde74aca9bfbf8fc78}{addAddress} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a54794afbe03b26ec95a10150563bf901}{isValid} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a6df7251ce6d54ac03fca4681bb8c70eb}{
+String {\bfseries mDate}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a6df7251ce6d54ac03fca4681bb8c70eb}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ae0fcdb4ed69d591ff1c0b265aabc0da1}{
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage}{AbstractMessage} {\bfseries mMessage}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ae0fcdb4ed69d591ff1c0b265aabc0da1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing the \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage}{AbstractReceivedMessage} that will be received using the SMS/MMS Client API This type is composed of the following fields: 
+\begin{DoxyItemize}
+\item Message: the basic info of the message. 
+\item Date 
+\end{DoxyItemize}
+
+This implementation is not synchronized
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_af17d50fe41ca56cde74aca9bfbf8fc78}{
+\index{com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}!addAddress@{addAddress}}
+\index{addAddress@{addAddress}!com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}}
+\subsubsection[{addAddress}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mo.data.AbstractReceivedMessage.addAddress (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_af17d50fe41ca56cde74aca9bfbf8fc78}
+Adds the address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the address for this message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a43d1de21c5a5fef126d2dcc4123d3846}{
+\index{com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}!getDate@{getDate}}
+\index{getDate@{getDate}!com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}}
+\subsubsection[{getDate}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.data.AbstractReceivedMessage.getDate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a43d1de21c5a5fef126d2dcc4123d3846}
+\begin{DoxyReturn}{Returns}
+the date-\/time stamp 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ad1df097a24da45112e80a9030dc1da42}{
+\index{com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}!getDestinationList@{getDestinationList}}
+\index{getDestinationList@{getDestinationList}!com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}}
+\subsubsection[{getDestinationList}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<$String$>$ com.bluevia.messagery.mo.data.AbstractReceivedMessage.getDestinationList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ad1df097a24da45112e80a9030dc1da42}
+Gets the destination
+
+\begin{DoxyReturn}{Returns}
+the destination 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ab50f0da03aadb3dff47d6f4ccc6330ed}{
+\index{com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}!getOriginAddress@{getOriginAddress}}
+\index{getOriginAddress@{getOriginAddress}!com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}}
+\subsubsection[{getOriginAddress}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.data.AbstractReceivedMessage.getOriginAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ab50f0da03aadb3dff47d6f4ccc6330ed}
+Gets the origin address.
+
+\begin{DoxyReturn}{Returns}
+the origin address 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a54794afbe03b26ec95a10150563bf901}{
+\index{com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.messagery.mo.data.AbstractReceivedMessage.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a54794afbe03b26ec95a10150563bf901}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+
+
+Reimplemented in \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessageInfo_ae1acda88d6cb6fddd46602eb752c470c}{com.bluevia.messagery.mo.mms.data.MmsMessageInfo}, and \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1data_1_1SmsMessage_ae949c68532b88c61c3f92aeabae19983}{com.bluevia.messagery.mo.sms.data.SmsMessage}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a465f44fba12ca330e91bfe60c9e814b3}{
+\index{com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}!setDate@{setDate}}
+\index{setDate@{setDate}!com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}}
+\subsubsection[{setDate}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mo.data.AbstractReceivedMessage.setDate (
+\begin{DoxyParamCaption}
+\item[{String}]{date}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_a465f44fba12ca330e91bfe60c9e814b3}
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ac89281d1a1a87e379a36340b795e69c3}{
+\index{com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}!setUserIdOriginAddress@{setUserIdOriginAddress}}
+\index{setUserIdOriginAddress@{setUserIdOriginAddress}!com::bluevia::messagery::mo::data::AbstractReceivedMessage@{com::bluevia::messagery::mo::data::AbstractReceivedMessage}}
+\subsubsection[{setUserIdOriginAddress}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mo.data.AbstractReceivedMessage.setUserIdOriginAddress (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{originAddress}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1data_1_1AbstractReceivedMessage_ac89281d1a1a87e379a36340b795e69c3}
+Sets the origin address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em originAddress} & the origin address to set \\
+\hline
+\end{DoxyParams}

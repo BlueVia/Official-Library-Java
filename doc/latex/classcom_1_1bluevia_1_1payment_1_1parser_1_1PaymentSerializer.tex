@@ -1,0 +1,46 @@
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1parser_1_1PaymentSerializer}{
+\section{com.bluevia.payment.parser.PaymentSerializer Class Reference}
+\label{classcom_1_1bluevia_1_1payment_1_1parser_1_1PaymentSerializer}\index{com::bluevia::payment::parser::PaymentSerializer@{com::bluevia::payment::parser::PaymentSerializer}}
+}
+Inheritance diagram for com.bluevia.payment.parser.PaymentSerializer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1payment_1_1parser_1_1PaymentSerializer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+ByteArrayOutputStream \hyperlink{classcom_1_1bluevia_1_1payment_1_1parser_1_1PaymentSerializer_ab1f15847cca41f48841e3f2175a552b3}{serialize} (\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} entity)  throws SerializeException 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1parser_1_1PaymentSerializer_ab1f15847cca41f48841e3f2175a552b3}{
+\index{com::bluevia::payment::parser::PaymentSerializer@{com::bluevia::payment::parser::PaymentSerializer}!serialize@{serialize}}
+\index{serialize@{serialize}!com::bluevia::payment::parser::PaymentSerializer@{com::bluevia::payment::parser::PaymentSerializer}}
+\subsubsection[{serialize}]{\setlength{\rightskip}{0pt plus 5cm}ByteArrayOutputStream com.bluevia.payment.parser.PaymentSerializer.serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity}}]{entity}
+\end{DoxyParamCaption}
+)  throws {\bf SerializeException} }}
+\label{classcom_1_1bluevia_1_1payment_1_1parser_1_1PaymentSerializer_ab1f15847cca41f48841e3f2175a552b3}
+Class to serialize an entity into an OutputStream 
+\begin{DoxyParams}{Parameters}
+{\em entity} & Entity to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OutputStream containing the serialized content 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & thrown in the event of an I/O error during serialization \\
+\hline
+{\em SerializeException} & thrown if the entity or output stream are unfit for serialization or in the event of any other serialization error \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer_ad5554da8b85ab32d46d60e46bc563349}{com.bluevia.commons.parser.ISerializer}.
+

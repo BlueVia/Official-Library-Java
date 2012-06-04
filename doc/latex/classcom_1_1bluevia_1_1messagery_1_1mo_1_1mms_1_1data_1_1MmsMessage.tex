@@ -1,0 +1,189 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage}{
+\section{com.bluevia.messagery.mo.mms.data.MmsMessage Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage}\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+}
+Inheritance diagram for com.bluevia.messagery.mo.mms.data.MmsMessage:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a0492a5a0ab3c4c14bfc910b54ea4c5e5}{MmsMessage} ()
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a991a671324233c7377f8435648fabd7b}{
+void {\bfseries setMessageInfo} (\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessageInfo}{MmsMessageInfo} message)}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a991a671324233c7377f8435648fabd7b}
+
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_afa86a7b57d8d635d900eef811ff97758}{getMessageId} ()
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a8b52ce649676ee03939c91ca40ea999e}{getSubject} ()
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a1e8d34a02d0423efdd1fae931f1b2094}{getDate} ()
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a88c0f3d97d7e6736b88254971e7fcee5}{getOriginAddress} ()
+\item 
+ArrayList$<$ String $>$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a98d21f1d354494317f35e3bfe1c9f6a5}{getDestinationList} ()
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MimeContent}{MimeContent} $>$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_af7a8b3b9a40745354e1df583409d0164}{getAttachments} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a56d656a96106d8a49d2e5452e08f3a37}{setAttachments} (ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MimeContent}{MimeContent} $>$ attachments)
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_ab8beb45dd2e80463df4d8341a2326548}{addAttachment} (\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MimeContent}{MimeContent} attachment)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a34ab8b22a04b8a255f6163c55f570add}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a received MMS message This type is composed of the following fields: 
+\begin{DoxyItemize}
+\item MessageInfo: the object containing the metadata of the MMS 
+\item Attachments: list of the attachemnts (\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MimeContent}{MimeContent} object) 
+\end{DoxyItemize}
+
+This implementation is not synchronized
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a0492a5a0ab3c4c14bfc910b54ea4c5e5}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!MmsMessage@{MmsMessage}}
+\index{MmsMessage@{MmsMessage}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{MmsMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mo.mms.data.MmsMessage.MmsMessage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a0492a5a0ab3c4c14bfc910b54ea4c5e5}
+Constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_ab8beb45dd2e80463df4d8341a2326548}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!addAttachment@{addAttachment}}
+\index{addAttachment@{addAttachment}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{addAttachment}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mo.mms.data.MmsMessage.addAttachment (
+\begin{DoxyParamCaption}
+\item[{{\bf MimeContent}}]{attachment}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_ab8beb45dd2e80463df4d8341a2326548}
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & the attachment to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_af7a8b3b9a40745354e1df583409d0164}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!getAttachments@{getAttachments}}
+\index{getAttachments@{getAttachments}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{getAttachments}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf MimeContent}$>$ com.bluevia.messagery.mo.mms.data.MmsMessage.getAttachments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_af7a8b3b9a40745354e1df583409d0164}
+\begin{DoxyReturn}{Returns}
+the mAttachments 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a1e8d34a02d0423efdd1fae931f1b2094}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!getDate@{getDate}}
+\index{getDate@{getDate}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{getDate}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.mms.data.MmsMessage.getDate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a1e8d34a02d0423efdd1fae931f1b2094}
+\begin{DoxyReturn}{Returns}
+the date-\/time stamp 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a98d21f1d354494317f35e3bfe1c9f6a5}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!getDestinationList@{getDestinationList}}
+\index{getDestinationList@{getDestinationList}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{getDestinationList}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<$String$>$ com.bluevia.messagery.mo.mms.data.MmsMessage.getDestinationList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a98d21f1d354494317f35e3bfe1c9f6a5}
+Gets the destination
+
+\begin{DoxyReturn}{Returns}
+the destination 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_afa86a7b57d8d635d900eef811ff97758}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!getMessageId@{getMessageId}}
+\index{getMessageId@{getMessageId}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{getMessageId}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.mms.data.MmsMessage.getMessageId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_afa86a7b57d8d635d900eef811ff97758}
+\begin{DoxyReturn}{Returns}
+the messageIdentifier 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a88c0f3d97d7e6736b88254971e7fcee5}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!getOriginAddress@{getOriginAddress}}
+\index{getOriginAddress@{getOriginAddress}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{getOriginAddress}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.mms.data.MmsMessage.getOriginAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a88c0f3d97d7e6736b88254971e7fcee5}
+Gets the origin address.
+
+\begin{DoxyReturn}{Returns}
+the origin address 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a8b52ce649676ee03939c91ca40ea999e}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!getSubject@{getSubject}}
+\index{getSubject@{getSubject}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{getSubject}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mo.mms.data.MmsMessage.getSubject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a8b52ce649676ee03939c91ca40ea999e}
+\begin{DoxyReturn}{Returns}
+the subject 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a34ab8b22a04b8a255f6163c55f570add}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.messagery.mo.mms.data.MmsMessage.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a34ab8b22a04b8a255f6163c55f570add}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a56d656a96106d8a49d2e5452e08f3a37}{
+\index{com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}!setAttachments@{setAttachments}}
+\index{setAttachments@{setAttachments}!com::bluevia::messagery::mo::mms::data::MmsMessage@{com::bluevia::messagery::mo::mms::data::MmsMessage}}
+\subsubsection[{setAttachments}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mo.mms.data.MmsMessage.setAttachments (
+\begin{DoxyParamCaption}
+\item[{ArrayList$<$ {\bf MimeContent} $>$}]{attachments}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1mms_1_1data_1_1MmsMessage_a56d656a96106d8a49d2e5452e08f3a37}
+
+\begin{DoxyParams}{Parameters}
+{\em mAttachments} & the list of mAttachments to set \\
+\hline
+\end{DoxyParams}

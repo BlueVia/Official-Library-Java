@@ -1,0 +1,198 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms}{
+\section{com.bluevia.messagery.mt.sms.client.BVMtSms Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms}\index{com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}}
+}
+Inheritance diagram for com.bluevia.messagery.mt.sms.client.BVMtSms:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_afd6e6b82ee89d2878ae5c04fc56453ea}{BVMtSms} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} mode, String consumerKey, String consumerSecret, String token, String tokenSecret)  throws BlueviaException
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a2346d6939234a1fd35f0027164848cf0}{send} (String destination, String text)  throws BlueviaException, IOException 
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a0ca2c8174a4b4e42a1c33ffb86128ab0}{send} (String destination, String text, String endpoint, String correlator)  throws BlueviaException, IOException 
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a81105e01c27ee51593c611353e4f4ec1}{send} (ArrayList$<$ String $>$ destination, String text)  throws BlueviaException, IOException 
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a2ec5b9c551a697cd55db9359d6796817}{send} (ArrayList$<$ String $>$ destination, String text, String endpoint, String correlator)  throws BlueviaException, IOException 
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_ae99307b13084bb183bd5a75812582525}{
+static final String {\bfseries FEED\_\-SMS\_\-BASE\_\-URI} = \char`\"{}/REST/SMS\char`\"{}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_ae99307b13084bb183bd5a75812582525}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Client interface for the REST binding of the Bluevia SMS MT Service.
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_afd6e6b82ee89d2878ae5c04fc56453ea}{
+\index{com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}!BVMtSms@{BVMtSms}}
+\index{BVMtSms@{BVMtSms}!com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}}
+\subsubsection[{BVMtSms}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.sms.client.BVMtSms.BVMtSms (
+\begin{DoxyParamCaption}
+\item[{{\bf Mode}}]{mode, }
+\item[{String}]{consumerKey, }
+\item[{String}]{consumerSecret, }
+\item[{String}]{token, }
+\item[{String}]{tokenSecret}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_afd6e6b82ee89d2878ae5c04fc56453ea}
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+{\em consumerKey} & \\
+\hline
+{\em consumerSecret} & \\
+\hline
+{\em token} & \\
+\hline
+{\em tokenSecret} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a2346d6939234a1fd35f0027164848cf0}{
+\index{com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}!send@{send}}
+\index{send@{send}!com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mt.sms.client.BVMtSms.send (
+\begin{DoxyParamCaption}
+\item[{String}]{destination, }
+\item[{String}]{text}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a2346d6939234a1fd35f0027164848cf0}
+Allows to send and SMS to the gSDP. It returns a String containing the SMSID of the sent SMS, in order to ask later for the status of the message. The max length of the message must be less than 160 characters. 
+\begin{DoxyParams}{Parameters}
+{\em destination} & the address of the recipient of the message \\
+\hline
+{\em text} & the text of the message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sent SMS ID 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a2ec5b9c551a697cd55db9359d6796817}{
+\index{com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}!send@{send}}
+\index{send@{send}!com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mt.sms.client.BVMtSms.send (
+\begin{DoxyParamCaption}
+\item[{ArrayList$<$ String $>$}]{destination, }
+\item[{String}]{text, }
+\item[{String}]{endpoint, }
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a2ec5b9c551a697cd55db9359d6796817}
+Allows to send and SMS to the gSDP. Sent SMS notifications will be received in the endpoint. The SMSID of the sent SMS is returned in order to ask later for the status of the message as well. The max length of the message must be less than 160 characters. 
+\begin{DoxyParams}{Parameters}
+{\em destination} & the addresses of the recipients of the message \\
+\hline
+{\em text} & the text of the message \\
+\hline
+{\em endpoint} & the endpoint to receive notifications of sent SMSs \\
+\hline
+{\em correlator} & the correlator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sent SMS ID 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a81105e01c27ee51593c611353e4f4ec1}{
+\index{com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}!send@{send}}
+\index{send@{send}!com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mt.sms.client.BVMtSms.send (
+\begin{DoxyParamCaption}
+\item[{ArrayList$<$ String $>$}]{destination, }
+\item[{String}]{text}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a81105e01c27ee51593c611353e4f4ec1}
+Allows to send and SMS to the gSDP. It returns a String containing the SMSID of the sent SMS, in order to ask later for the status of the message. The max length of the message must be less than 160 characters. 
+\begin{DoxyParams}{Parameters}
+{\em destination} & the addresses of the recipients of the message \\
+\hline
+{\em text} & the text of the message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sent SMS ID 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a0ca2c8174a4b4e42a1c33ffb86128ab0}{
+\index{com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}!send@{send}}
+\index{send@{send}!com::bluevia::messagery::mt::sms::client::BVMtSms@{com::bluevia::messagery::mt::sms::client::BVMtSms}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mt.sms.client.BVMtSms.send (
+\begin{DoxyParamCaption}
+\item[{String}]{destination, }
+\item[{String}]{text, }
+\item[{String}]{endpoint, }
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1client_1_1BVMtSms_a0ca2c8174a4b4e42a1c33ffb86128ab0}
+Allows to send and SMS to the gSDP. Sent SMS notifications will be received in the endpoint The SMSID of the sent SMS is returned in order to ask later for the status of the message as well. The max length of the message must be less than 160 characters. 
+\begin{DoxyParams}{Parameters}
+{\em destination} & the address of the recipient of the message \\
+\hline
+{\em text} & the text of the message \\
+\hline
+{\em endpoint} & the endpoint to receive notifications of sent SMSs \\
+\hline
+{\em correlator} & the correlator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sent SMS ID 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}

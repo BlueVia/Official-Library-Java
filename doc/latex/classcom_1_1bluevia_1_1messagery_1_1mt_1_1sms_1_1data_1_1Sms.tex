@@ -1,0 +1,163 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms}{
+\section{com.bluevia.messagery.mt.sms.data.Sms Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms}\index{com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}}
+}
+Inheritance diagram for com.bluevia.messagery.mt.sms.data.Sms:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_ac0c19da99a0281e088f8eac81ed4efbe}{SmsFormat} \{ {\bfseries EMS}, 
+{\bfseries SMART\_\-MESSAGING}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a91a46f487f6b0050eaf28953490c7359}{Sms} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_ab9eb53d7c5c13f6e7ece218cfcd24f01}{Sms} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a144cdaaea7d32e8109e6e62e5ac46fbc}{Sms} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address, String endpoint, String correlator)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_af0b7b4ae5d02037c5e758b634d993c4c}{Sms} (ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} $>$ addressList)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a8d0809d986356afcbeea9516c18edcb1}{Sms} (ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} $>$ addressList, String endpoint, String correlator)
+\item 
+abstract boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a0358ec0edbe7b82978d2bd49a8c96022}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing abstract SMS class that represents the different SMS messages that will be send using the SMS Client API This type is composed of the following fields:
+
+This implementation is not synchronized
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_ac0c19da99a0281e088f8eac81ed4efbe}{
+\index{com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}!SmsFormat@{SmsFormat}}
+\index{SmsFormat@{SmsFormat}!com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}}
+\subsubsection[{SmsFormat}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf com::bluevia::messagery::mt::sms::data::Sms::SmsFormat}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_ac0c19da99a0281e088f8eac81ed4efbe}
+Enum class to implement sms format attribute 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a91a46f487f6b0050eaf28953490c7359}{
+\index{com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}!Sms@{Sms}}
+\index{Sms@{Sms}!com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}}
+\subsubsection[{Sms}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.sms.data.Sms.Sms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a91a46f487f6b0050eaf28953490c7359}
+Instantiates a new SMS message type. \hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_ab9eb53d7c5c13f6e7ece218cfcd24f01}{
+\index{com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}!Sms@{Sms}}
+\index{Sms@{Sms}!com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}}
+\subsubsection[{Sms}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.sms.data.Sms.Sms (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_ab9eb53d7c5c13f6e7ece218cfcd24f01}
+Instantiates a new SMS message type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & Destination address \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a144cdaaea7d32e8109e6e62e5ac46fbc}{
+\index{com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}!Sms@{Sms}}
+\index{Sms@{Sms}!com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}}
+\subsubsection[{Sms}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.sms.data.Sms.Sms (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address, }
+\item[{String}]{endpoint, }
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a144cdaaea7d32e8109e6e62e5ac46fbc}
+Instantiates a new SMS message type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & Destination address \\
+\hline
+{\em endpoint} & Endpoint \\
+\hline
+{\em correlator} & Correlator \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_af0b7b4ae5d02037c5e758b634d993c4c}{
+\index{com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}!Sms@{Sms}}
+\index{Sms@{Sms}!com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}}
+\subsubsection[{Sms}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.sms.data.Sms.Sms (
+\begin{DoxyParamCaption}
+\item[{ArrayList$<$ {\bf UserId} $>$}]{addressList}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_af0b7b4ae5d02037c5e758b634d993c4c}
+Instantiates a new SMS message type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em addressList} & List with the destination addresses \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a8d0809d986356afcbeea9516c18edcb1}{
+\index{com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}!Sms@{Sms}}
+\index{Sms@{Sms}!com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}}
+\subsubsection[{Sms}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.sms.data.Sms.Sms (
+\begin{DoxyParamCaption}
+\item[{ArrayList$<$ {\bf UserId} $>$}]{addressList, }
+\item[{String}]{endpoint, }
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a8d0809d986356afcbeea9516c18edcb1}
+Instantiates a new SMS message type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em addressList} & List with the destination addresses \\
+\hline
+{\em endpoint} & Endpoint \\
+\hline
+{\em correlator} & Correlator \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a0358ec0edbe7b82978d2bd49a8c96022}{
+\index{com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::messagery::mt::sms::data::Sms@{com::bluevia::messagery::mt::sms::data::Sms}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}abstract boolean com.bluevia.messagery.mt.sms.data.Sms.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a0358ec0edbe7b82978d2bd49a8c96022}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ad5a798b37381c48c1653200114a70c85}{com.bluevia.messagery.data.AbstractMessage}.
+
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1SmsMessageReq_a446f7c2f9be9fcdcb72fa896a40983cb}{com.bluevia.messagery.mt.sms.data.SmsMessageReq}.
+

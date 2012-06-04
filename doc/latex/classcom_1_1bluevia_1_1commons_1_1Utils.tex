@@ -1,0 +1,107 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1Utils}{
+\section{com.bluevia.commons.Utils Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1Utils}\index{com::bluevia::commons::Utils@{com::bluevia::commons::Utils}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classcom_1_1bluevia_1_1commons_1_1Utils_a914bf735971f2c15f6c86840e95ddaa2}{isEmpty} (String value)
+\item 
+static boolean \hyperlink{classcom_1_1bluevia_1_1commons_1_1Utils_a8862c4dfdddb4f207d917f240c38def0}{isValid} (\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} entity)
+\item 
+static boolean \hyperlink{classcom_1_1bluevia_1_1commons_1_1Utils_ab09cd8f4f2e575c705ea4face12dcc3b}{isPhoneNumber} (String value)
+\item 
+static String \hyperlink{classcom_1_1bluevia_1_1commons_1_1Utils_a9f29228ea98ee7623fa7afa5a791bc45}{convertStreamToString} (InputStream is)  throws IOException 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1Utils}{Utils} class
+
+\begin{DoxyAuthor}{Author}
+Telefonica I+D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1Utils_a9f29228ea98ee7623fa7afa5a791bc45}{
+\index{com::bluevia::commons::Utils@{com::bluevia::commons::Utils}!convertStreamToString@{convertStreamToString}}
+\index{convertStreamToString@{convertStreamToString}!com::bluevia::commons::Utils@{com::bluevia::commons::Utils}}
+\subsubsection[{convertStreamToString}]{\setlength{\rightskip}{0pt plus 5cm}static String com.bluevia.commons.Utils.convertStreamToString (
+\begin{DoxyParamCaption}
+\item[{InputStream}]{is}
+\end{DoxyParamCaption}
+)  throws IOException \hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1Utils_a9f29228ea98ee7623fa7afa5a791bc45}
+Converts the InputStream to a String Assumes UTF-\/8 encoding
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1Utils_a914bf735971f2c15f6c86840e95ddaa2}{
+\index{com::bluevia::commons::Utils@{com::bluevia::commons::Utils}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!com::bluevia::commons::Utils@{com::bluevia::commons::Utils}}
+\subsubsection[{isEmpty}]{\setlength{\rightskip}{0pt plus 5cm}static boolean com.bluevia.commons.Utils.isEmpty (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1Utils_a914bf735971f2c15f6c86840e95ddaa2}
+Checks if the parameter is an empty String
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the String to validate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the String is null or empty, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1Utils_ab09cd8f4f2e575c705ea4face12dcc3b}{
+\index{com::bluevia::commons::Utils@{com::bluevia::commons::Utils}!isPhoneNumber@{isPhoneNumber}}
+\index{isPhoneNumber@{isPhoneNumber}!com::bluevia::commons::Utils@{com::bluevia::commons::Utils}}
+\subsubsection[{isPhoneNumber}]{\setlength{\rightskip}{0pt plus 5cm}static boolean com.bluevia.commons.Utils.isPhoneNumber (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1Utils_ab09cd8f4f2e575c705ea4face12dcc3b}
+Checks if the parameter is a phone number (E164 format)
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the phone number to validate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value is a valid phone number, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1Utils_a8862c4dfdddb4f207d917f240c38def0}{
+\index{com::bluevia::commons::Utils@{com::bluevia::commons::Utils}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::commons::Utils@{com::bluevia::commons::Utils}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}static boolean com.bluevia.commons.Utils.isValid (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity}}]{entity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1Utils_a8862c4dfdddb4f207d917f240c38def0}
+Checks if a \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} is valid
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & the \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} is valid, false otherwise 
+\end{DoxyReturn}

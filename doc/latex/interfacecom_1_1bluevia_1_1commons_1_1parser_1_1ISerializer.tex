@@ -1,0 +1,49 @@
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer}{
+\section{com.bluevia.commons.parser.ISerializer Interface Reference}
+\label{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer}\index{com::bluevia::commons::parser::ISerializer@{com::bluevia::commons::parser::ISerializer}}
+}
+Inheritance diagram for com.bluevia.commons.parser.ISerializer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.657277cm]{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer}
+\end{center}
+\end{figure}
+\subsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+ByteArrayOutputStream \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer_ad5554da8b85ab32d46d60e46bc563349}{serialize} (\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} entity)  throws SerializeException
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface that represents the serializer object for an entity. Object implementing this interface will be able to serialize an entity object into an HTTP body request containing a representation of this entity object of this entity 
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer_ad5554da8b85ab32d46d60e46bc563349}{
+\index{com::bluevia::commons::parser::ISerializer@{com::bluevia::commons::parser::ISerializer}!serialize@{serialize}}
+\index{serialize@{serialize}!com::bluevia::commons::parser::ISerializer@{com::bluevia::commons::parser::ISerializer}}
+\subsubsection[{serialize}]{\setlength{\rightskip}{0pt plus 5cm}ByteArrayOutputStream com.bluevia.commons.parser.ISerializer.serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity}}]{entity}
+\end{DoxyParamCaption}
+)  throws {\bf SerializeException}\hspace{0.3cm}{\ttfamily  \mbox{[}package\mbox{]}}}}
+\label{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer_ad5554da8b85ab32d46d60e46bc563349}
+Class to serialize an entity into an OutputStream 
+\begin{DoxyParams}{Parameters}
+{\em entity} & \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OutputStream containing the serialized content 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & thrown in the event of an I/O error during serialization \\
+\hline
+{\em \hyperlink{classcom_1_1bluevia_1_1commons_1_1parser_1_1SerializeException}{SerializeException}} & thrown if the entity or output stream are unfit for serialization or in the event of any other serialization error \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1ad_1_1parser_1_1url_1_1UrlEncodedAdSerializer_ac97bc95270a35997207d9f4dcbd9b7b8}{com.bluevia.ad.parser.url.UrlEncodedAdSerializer}, \hyperlink{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlSerializer_a2898b6d631c008447f1e06253e61ea66}{com.bluevia.commons.parser.xml.XmlSerializer}, \hyperlink{classcom_1_1bluevia_1_1payment_1_1parser_1_1PaymentSerializer_ab1f15847cca41f48841e3f2175a552b3}{com.bluevia.payment.parser.PaymentSerializer}, and \hyperlink{classcom_1_1bluevia_1_1payment_1_1parser_1_1url_1_1UrlEncodedPaymentReqTokenSerializer_a38390faff29944a93d8c852c0753778b}{com.bluevia.payment.parser.url.UrlEncodedPaymentReqTokenSerializer}.
+

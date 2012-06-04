@@ -1,0 +1,47 @@
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1IParser}{
+\section{com.bluevia.commons.parser.IParser Interface Reference}
+\label{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1IParser}\index{com::bluevia::commons::parser::IParser@{com::bluevia::commons::parser::IParser}}
+}
+Inheritance diagram for com.bluevia.commons.parser.IParser:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1IParser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1IParser_a671ee122b6c20cc9869a74ce9074065c}{parse} (InputStream is)  throws ParseException
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface that represents the parser object for an entity. Object implementing this interface will be able to parse HTTP body responses containing an representation of an entity into an instance object of this entity 
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1IParser_a671ee122b6c20cc9869a74ce9074065c}{
+\index{com::bluevia::commons::parser::IParser@{com::bluevia::commons::parser::IParser}!parse@{parse}}
+\index{parse@{parse}!com::bluevia::commons::parser::IParser@{com::bluevia::commons::parser::IParser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} com.bluevia.commons.parser.IParser.parse (
+\begin{DoxyParamCaption}
+\item[{InputStream}]{is}
+\end{DoxyParamCaption}
+)  throws {\bf ParseException}}}
+\label{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1IParser_a671ee122b6c20cc9869a74ce9074065c}
+
+\begin{DoxyParams}{Parameters}
+{\em is} & the InputStream containing the stream with the entity information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classcom_1_1bluevia_1_1commons_1_1parser_1_1ParseException}{ParseException}} & when an error occurs converting the stream into an object \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1commons_1_1parser_1_1xml_1_1XmlParser_a40b67f6e8d70d841ee3a07e0d41c5050}{com.bluevia.commons.parser.xml.XmlParser}.
+

@@ -1,0 +1,151 @@
+\hypertarget{blv_sms_mt_guide_sms_mt_abstract_sec}{}\section{Abstract}\label{blv_sms_mt_guide_sms_mt_abstract_sec}
+The Bluevia SMS API is a set of functions which allows users to send SMS messages and to request the status of those previously sent SMS messages. This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia SMS functionality.\hypertarget{blv_sms_mt_guide_blv_sms_mt_api_sending_sms_messages_sec}{}\section{Bluevia SMS MT API: Sending SMS messages}\label{blv_sms_mt_guide_blv_sms_mt_api_sending_sms_messages_sec}
+The Bluevia SMS API is a set of functions which allows users to send SMS messages and to request the status of those previously sent SMS messages. This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia SMS functionality.\hypertarget{blv_sms_mt_guide_sms_mt_client_basics_sec}{}\subsection{SMS MT client basics}\label{blv_sms_mt_guide_sms_mt_client_basics_sec}
+A SMS client represents the client side in a classic client-\/server schema. This object wraps up the underlying REST client side functionality needed to perform requests against a REST server.
+
+Any Bluevia client performs requests and receives responses in a secure mode. Clients are authorized following the OAuth protocol. This security protocol enables users to grant third-\/party access to their resources without sharing their passwords. So clients store the authorization data -\/called security credentials-\/ to grant access to the server. Following sections describe what security credentials we are talking about.\hypertarget{blv_sms_mt_guide_creating_a_sms_mt_client_sec}{}\subsection{Creating a SMS MT client: BVMtSms class}\label{blv_sms_mt_guide_creating_a_sms_mt_client_sec}
+The first step in using the SMS client is to create a BVMtSms object. As we mentioned earlier this object could have three different working modes: i) as a client which sends requests to a real server, ii) a client working with a real server in testing mode, or iii) as a client which sends requests and receives responses to/from a sandbox server.\hypertarget{blv_sms_mt_guide_sms_mt_client_features_working_modes_sec}{}\subsubsection{SMS MT client features: working modes}\label{blv_sms_mt_guide_sms_mt_client_features_working_modes_sec}
+When you create the client, you can specify various working modes: 
+\begin{DoxyItemize}
+\item BVBaseClient.Mode.LIVE \par
+In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country.
+
+
+\item BVBaseClient.Mode.TEST \par
+The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits.
+
+
+\item BVBaseClient.Mode.SANDBOX \par
+The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
+\end{DoxyItemize}\hypertarget{blv_sms_mt_guide_sms_mt_client_features_security_credentials}{}\subsubsection{SMS MT client features: security credentials}\label{blv_sms_mt_guide_sms_mt_client_features_security_credentials}
+Bluevia uses OAuth as its authentication mechanism which enables websites and applications to access the Bluevia API's without end users disclosing their personal credentials. In order to grant access to the server any client has to be created passing the security credential as parameter in its constructor. These security credentials are managed internally and added as a HTTP header in every request sent to the server. Such Oauth security credentials are: 
+\begin{DoxyItemize}
+\item {\bfseries Consumer key} \par
+The string identifying the application-\/ you obtained when you registered your application within the provisioning portal.
+
+
+\item {\bfseries Consumer secret} \par
+A secret -\/a string-\/ used by the consumer to establish ownership of the consumer key.
+
+
+\item {\bfseries Access token} \par
+The token -\/a string-\/ used by the client for granting access permissions to the server.
+
+
+\item {\bfseries Access token secret} \par
+The secret of the access token. 
+\end{DoxyItemize}\hypertarget{blv_sms_mt_guide_sms_mt_client_features_code_examples_sec}{}\subsubsection{SMS MT client features: code examples}\label{blv_sms_mt_guide_sms_mt_client_features_code_examples_sec}
+Find below an example about how to create a Sms client object taking into account all information previously given. This snippet shows how to access a Bluevia server using OAuth security credentials
+
+
+\begin{DoxyCode}
+// Mode.LIVE indicating the client works against a real Bluevia server.
+try {
+        BVMtSms smsClient = new BVMtSms(Mode.LIVE, "consumer_key", "consumer_secr
+      et", "access_token", "access_token_secret");
+} catch (BlueviaException e){
+        log.error(e.getMessage());
+}
+\end{DoxyCode}
+\hypertarget{blv_sms_mt_guide_sms_mt_client_features_freeing_resources_sec}{}\subsubsection{SMS MT client features: freeing resources}\label{blv_sms_mt_guide_sms_mt_client_features_freeing_resources_sec}
+It is very important to free the resources that the client instantiates to work. To do this call the close method after finishing using the client:
+
+
+\begin{DoxyCode}
+smsClient.close();
+\end{DoxyCode}
+\hypertarget{blv_sms_mt_guide_sending_smsmessages_sec}{}\subsection{Sending SMS messages}\label{blv_sms_mt_guide_sending_smsmessages_sec}
+The BVMtSms object has several versions of the function for sending SMS messages. This function allows an user to send to one or more phone numbers, and to include an endpoint to receive delivery status notifications.
+
+Take a look at this function:
+
+
+\begin{DoxyCode}
+String send(ArrayList<String> destination, String text, String endpoint, String c
+      orrelator) throws BlueviaException, IOException 
+\end{DoxyCode}
+
+
+It sends a text message to a list of destinations. The endpoint and correlator optional parameters are included to receive status notifications. This function returns the SMS Id which indentifies that sending operation. This identification is useful to retrieve the delivery status of that SMS message using a polling method.
+
+For a more detailed description see the API Reference.\hypertarget{blv_sms_mt_guide_sms_sending_notification}{}\subsection{Sending SMS with status notification}\label{blv_sms_mt_guide_sms_sending_notification}
+It is possible to receive status notifications by providing BlueVia with an URI where notifications must be sent. This URI is provided during the SMS sending, including the optional parameters endpoint and correlator: 
+\begin{DoxyCode}
+try {
+        // 1. Configure data
+        String phoneNumber = "123456789";
+        String endpoint= "https://www.myendpoint.com";
+        String criteria= "criteria";
+
+        // 2. Create the client
+        BVMoSms smsClient = new BVMoSms(mode, token, secret);
+        
+        // 3. Subscribe to notifications with configured data
+        String correlator= smsClient.startNotification(phoneNumber, endpoint, cri
+      teria);
+        System.out.println("Correlator: ["+ correlator +"]");
+
+        /* ... */
+        // 4. Unsubscribe from notification
+        smsClient.stopNotification(correlator);
+                                          
+} catch (BlueviaException e) {
+        log.error(e.getMessage());
+}
+\end{DoxyCode}
+ Note that although your are requesting delivery status notifications, you still are able to use the Location header to ask for delivery status following the polling strategy. Your application must reply with a 204 No Content HTTP status and no body.
+
+For a more detailed description see the API Reference.\hypertarget{blv_sms_mt_guide_requesting_the_status_of_a_previously_sent_SMS_messages}{}\subsection{Requesting the status of a previously sent SMS messages}\label{blv_sms_mt_guide_requesting_the_status_of_a_previously_sent_SMS_messages}
+Once the SMS message is sent successfully the user may want to know the delivery status of that SMS message. The Sms client allows an user to determine if the SMS message reaches the destination or not. For this matter we use the getDeliveryStatus function. Just pass the SMS Id -\/returned by the send function-\/ and retrieve the delivery status of that message, so easy!.
+
+Take a look at this function: 
+\begin{DoxyCode}
+ArrayList<DeliveryInfo> getDeliveryStatus(String messageId) throws BlueviaExcepti
+      on, IOException 
+\end{DoxyCode}
+ It obtains the delivery status of a previously sent SMS message.
+
+Possible delivery statuses are: 
+\begin{DoxyItemize}
+\item DeliveredToNetwork. 
+\item DeliveryUncertain. 
+\item DeliveryImpossible. 
+\item MessageWaiting. 
+\item DeliveredToTerminal. 
+\item DeliveryNotificationNotSupported. 
+\end{DoxyItemize}
+
+For a more detailed description see the API Reference.\hypertarget{blv_sms_mo_guide_blv_sms_api_code_example}{}\subsection{Bluevia SMS MT API: code example}\label{blv_sms_mo_guide_blv_sms_api_code_example}
+
+\begin{DoxyCode}
+// Sending a SMS
+
+BVMtSms smsClient = null;
+
+try {
+
+        // 1. Create the client (you have to choose the mode and include the OAut
+      h authorization values)
+        smsClient = new BVMtSms(Mode.LIVE, "consumer_key", "consumer_secret", "ac
+      cess_token", "access_token_secret");
+
+        // 2. Send the message.
+        String smsId = smsClient.send("600010101", "This is the text to be sent u
+      sing Bluevia API");
+
+        // 3. Retrieve the delivery status of the sent SMS.
+        ArrayList<DeliveryInfo> statusList = smsClient.getDeliveryStatus(smsId);
+    for (DeliveryInfo status : statusList) {
+        System.out.println("Delivery status: " + status.getStatus());
+    }
+
+} catch (BlueviaException e) {
+        log.error("BlueviaException: " + e.getMessage());
+} catch (IOException ex) {
+        log.error("IOException: " + ex);
+} finally {
+        // 4. Close the client
+        if (client != null)     client.close();                 
+}
+\end{DoxyCode}
+ 

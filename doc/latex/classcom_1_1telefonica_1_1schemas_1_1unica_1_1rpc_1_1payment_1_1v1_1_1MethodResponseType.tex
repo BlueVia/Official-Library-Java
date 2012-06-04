@@ -1,0 +1,95 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType}{
+\section{com.telefonica.schemas.unica.rpc.payment.v1.MethodResponseType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType}\index{com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType}}
+}
+Inheritance diagram for com.telefonica.schemas.unica.rpc.payment.v1.MethodResponseType:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Result}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+MethodResponseType.Result \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType_a6a9554ea07ab3bc0e5dfc1511478ab09}{getResult} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType_a87c6c2098eeef522405f940ae30785a2}{setResult} (MethodResponseType.Result value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType_afae0dad420c70537c7b44af9bfc5afed}{
+MethodResponseType.Result {\bfseries result}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType_afae0dad420c70537c7b44af9bfc5afed}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+extends RPC Definition \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType}{MethodResponseType}
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType}{MethodResponseType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="MethodResponseType">
+   <complexContent>
+     <extension base="\{http://www.telefonica.com/schemas/UNICA/RPC/definition/v1\}MethodResponseType">
+       <sequence>
+         <element name="result" minOccurs="0">
+           <complexType>
+             <complexContent>
+               <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+                 <choice>
+                   <element name="paymentResult" type="\{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}PaymentResultType"/>
+                   <element name="getPaymentStatusResult" type="\{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}GetPaymentStatusResultType"/>
+                 </choice>
+               </restriction>
+             </complexContent>
+           </complexType>
+         </element>
+       </sequence>
+     </extension>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType_a6a9554ea07ab3bc0e5dfc1511478ab09}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType}!getResult@{getResult}}
+\index{getResult@{getResult}!com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType}}
+\subsubsection[{getResult}]{\setlength{\rightskip}{0pt plus 5cm}MethodResponseType.Result com.telefonica.schemas.unica.rpc.payment.v1.MethodResponseType.getResult (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType_a6a9554ea07ab3bc0e5dfc1511478ab09}
+Gets the value of the result property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{MethodResponseType.Result} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType_a87c6c2098eeef522405f940ae30785a2}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType}!setResult@{setResult}}
+\index{setResult@{setResult}!com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodResponseType}}
+\subsubsection[{setResult}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.MethodResponseType.setResult (
+\begin{DoxyParamCaption}
+\item[{MethodResponseType.Result}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType_a87c6c2098eeef522405f940ae30785a2}
+Sets the value of the result property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{MethodResponseType.Result} \\
+\hline
+\end{DoxyParams}

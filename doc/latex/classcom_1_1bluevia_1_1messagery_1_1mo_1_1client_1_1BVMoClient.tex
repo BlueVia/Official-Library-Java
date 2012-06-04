@@ -1,0 +1,129 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient}{
+\section{com.bluevia.messagery.mo.client.BVMoClient Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient}\index{com::bluevia::messagery::mo::client::BVMoClient@{com::bluevia::messagery::mo::client::BVMoClient}}
+}
+Inheritance diagram for com.bluevia.messagery.mo.client.BVMoClient:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.373494cm]{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a712a1f4d4f298fb7b2951e7e6aa3e412}{
+abstract String {\bfseries startNotification} (String phoneNumber, String endpoint, String criteria)  throws IOException, BlueviaException}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a712a1f4d4f298fb7b2951e7e6aa3e412}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a7d631aa926d99ddad88aa6a00c224c7e}{
+abstract String {\bfseries startNotification} (String phoneNumber, String endpoint, String criteria, String correlator)  throws IOException, BlueviaException}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a7d631aa926d99ddad88aa6a00c224c7e}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a2636897d575bdd0e2b4d4ab8dc261069}{
+abstract boolean {\bfseries stopNotification} (String correlator)  throws BlueviaException, IOException}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a2636897d575bdd0e2b4d4ab8dc261069}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a83d2e113d3573437e80cadf8a1ac961d}{
+String {\bfseries generateCorrelator} (String criteria)}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a83d2e113d3573437e80cadf8a1ac961d}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a2677c61987a0d6fc9c58655d05b5b4ef}{checkRegistrationId} (String id)  throws BlueviaException 
+\item 
+static String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a1a3ff8e37aa8f250121e76e99d44b400}{getMesageIdFromResponse} (HashMap$<$ String, String $>$ responseHeaders, String feed)  throws BlueviaException
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_adadbc1742813d784ae4baba346ff3bb6}{
+static final String {\bfseries FEED\_\-INBOUND\_\-REQUESTS} = \char`\"{}/inbound\char`\"{}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_adadbc1742813d784ae4baba346ff3bb6}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a6c0a1e064c1b717a0459e1269f4ef681}{
+static final String {\bfseries RECEIVED\_\-MESSAGES} = \char`\"{}/messages\char`\"{}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a6c0a1e064c1b717a0459e1269f4ef681}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_aafa6b8a73c7de1c4ffeaa4d540f4c738}{
+static final String {\bfseries SUBSCRIPTION\_\-PATH} = \char`\"{}/subscriptions\char`\"{}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_aafa6b8a73c7de1c4ffeaa4d540f4c738}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a76ef248ac11ac6b7ab019cf259b03128}{
+static final String {\bfseries MESSAGEID\_\-LOCATION\_\-HEADER} = \char`\"{}Location\char`\"{}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a76ef248ac11ac6b7ab019cf259b03128}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract client interface for the REST binding of the Bluevia Messagery MO Service.
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a2677c61987a0d6fc9c58655d05b5b4ef}{
+\index{com::bluevia::messagery::mo::client::BVMoClient@{com::bluevia::messagery::mo::client::BVMoClient}!checkRegistrationId@{checkRegistrationId}}
+\index{checkRegistrationId@{checkRegistrationId}!com::bluevia::messagery::mo::client::BVMoClient@{com::bluevia::messagery::mo::client::BVMoClient}}
+\subsubsection[{checkRegistrationId}]{\setlength{\rightskip}{0pt plus 5cm}static void com.bluevia.messagery.mo.client.BVMoClient.checkRegistrationId (
+\begin{DoxyParamCaption}
+\item[{String}]{id}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} \hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a2677c61987a0d6fc9c58655d05b5b4ef}
+Check if the registrationId passed as parameter is valid.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & registrationId to check. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & if the id is not valid. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a1a3ff8e37aa8f250121e76e99d44b400}{
+\index{com::bluevia::messagery::mo::client::BVMoClient@{com::bluevia::messagery::mo::client::BVMoClient}!getMesageIdFromResponse@{getMesageIdFromResponse}}
+\index{getMesageIdFromResponse@{getMesageIdFromResponse}!com::bluevia::messagery::mo::client::BVMoClient@{com::bluevia::messagery::mo::client::BVMoClient}}
+\subsubsection[{getMesageIdFromResponse}]{\setlength{\rightskip}{0pt plus 5cm}static String com.bluevia.messagery.mo.client.BVMoClient.getMesageIdFromResponse (
+\begin{DoxyParamCaption}
+\item[{HashMap$<$ String, String $>$}]{responseHeaders, }
+\item[{String}]{feed}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mo_1_1client_1_1BVMoClient_a1a3ff8e37aa8f250121e76e99d44b400}
+Gets the messageId from the response headers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em responseHeaders} & headers containing the messageId. \\
+\hline
+{\em feed} & field of the uri to distinguish SMS and MMS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the messageId from the response. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & if the response or the result are not valid. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mo_1_1sms_1_1client_1_1BVMoSmsClient_a0d299eda99452f1ddf51e235cf7d9bce}{com.bluevia.messagery.mo.sms.client.BVMoSmsClient}.
+

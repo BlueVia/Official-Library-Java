@@ -1,0 +1,262 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo}{
+\section{com.bluevia.messagery.mt.data.DeliveryInfo Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo}\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+}
+Inheritance diagram for com.bluevia.messagery.mt.data.DeliveryInfo:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a37e8b97cdabdb2ac55c095e44cd8e32f}{Status} \{ \par
+{\bfseries DELIVERED\_\-TO\_\-NETWORK}, 
+{\bfseries DELIVERY\_\-UNCERTAIN}, 
+{\bfseries DELIVERY\_\-IMPOSSIBLE}, 
+{\bfseries MESSAGE\_\-WAITING}, 
+\par
+{\bfseries DELIVERED\_\-TO\_\-TERMINAL}, 
+{\bfseries DELIVERY\_\-NOTIFICATION\_\-NOT\_\-SUPPORTED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a802eab022a200ca5a34f4384149b29e1}{DeliveryInfo} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a823b0a686c30a2a4370ebf2c48917204}{DeliveryInfo} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address, \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a37e8b97cdabdb2ac55c095e44cd8e32f}{Status} status)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a7e06b8ee6a8c4108a4db5c83dece1dff}{DeliveryInfo} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address, \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a37e8b97cdabdb2ac55c095e44cd8e32f}{Status} status, String description)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_aa5a5dc9217232e671de794e320c1f639}{getAddress} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a17318aed4cd299cf2ffd41dde841b81a}{getUserIdAddress} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a37e8b97cdabdb2ac55c095e44cd8e32f}{Status} \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_acd23497dd99294230157ba2bca926029}{getStatus} ()
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a7aacf398a91b1fcf29714e9a33564afc}{getDescription} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a8780a98a5c19cb5f87968b35379574d9}{setStatus} (\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a37e8b97cdabdb2ac55c095e44cd8e32f}{Status} status)
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a481b62f362b18fb47e662a50e23295ae}{setUserIdAddress} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address)
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_ade8639c5b730a6b0c179fe3dd99efea1}{setDescription} (String description)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_ac18f88370fb0e88829f50b39862515b5}{isValid} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a37e8b97cdabdb2ac55c095e44cd8e32f}{Status} \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_afee1bb9b2ced854cf641e18a7c3eb7f0}{translate} (String raw)  throws BlueviaException 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing the delivery status of a previous sent message either for SMS or MMS
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a37e8b97cdabdb2ac55c095e44cd8e32f}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!Status@{Status}}
+\index{Status@{Status}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf com::bluevia::messagery::mt::data::DeliveryInfo::Status}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a37e8b97cdabdb2ac55c095e44cd8e32f}
+Enum representing the values of the status of a particular SMS sent Possible values are: 
+\begin{DoxyItemize}
+\item DELIVERED\_\-TO\_\-NETWORK: The message was delivered to network 
+\item DELIVERY\_\-UNCERTAIN: It is not possible to ascertain whether the message was delivered 
+\item DELIVERY\_\-IMPOSSIBLE: It is not possible to deliver the message 
+\item MESSAGE\_\-WAITING: The message is waiting to be delivered 
+\item DELIVERED\_\-TO\_\-TERMINAL: The message was successfully delivered to the recipient terminal 
+\item DELIVERY\_\-NOTIFICATION\_\-NOT\_\-SUPPORTED: Delivery notification is not supported by the network 
+\end{DoxyItemize}\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a802eab022a200ca5a34f4384149b29e1}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!DeliveryInfo@{DeliveryInfo}}
+\index{DeliveryInfo@{DeliveryInfo}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{DeliveryInfo}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.data.DeliveryInfo.DeliveryInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a802eab022a200ca5a34f4384149b29e1}
+Instantiates a new SMS status single type. \hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a823b0a686c30a2a4370ebf2c48917204}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!DeliveryInfo@{DeliveryInfo}}
+\index{DeliveryInfo@{DeliveryInfo}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{DeliveryInfo}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.data.DeliveryInfo.DeliveryInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address, }
+\item[{{\bf Status}}]{status}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a823b0a686c30a2a4370ebf2c48917204}
+Instantiates a new SMS status single type. 
+\begin{DoxyParams}{Parameters}
+{\em address} & the address of the sender \\
+\hline
+{\em status} & the status of the message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a7e06b8ee6a8c4108a4db5c83dece1dff}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!DeliveryInfo@{DeliveryInfo}}
+\index{DeliveryInfo@{DeliveryInfo}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{DeliveryInfo}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.mt.data.DeliveryInfo.DeliveryInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address, }
+\item[{{\bf Status}}]{status, }
+\item[{String}]{description}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a7e06b8ee6a8c4108a4db5c83dece1dff}
+Instantiates a new SMS status single type. 
+\begin{DoxyParams}{Parameters}
+{\em address} & the address of the sender \\
+\hline
+{\em status} & the status of the message \\
+\hline
+{\em description} & description of the status \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_aa5a5dc9217232e671de794e320c1f639}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{getAddress}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mt.data.DeliveryInfo.getAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_aa5a5dc9217232e671de794e320c1f639}
+Gets the address associated to the status \begin{DoxyReturn}{Returns}
+the address 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a7aacf398a91b1fcf29714e9a33564afc}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{getDescription}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mt.data.DeliveryInfo.getDescription (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a7aacf398a91b1fcf29714e9a33564afc}
+Gets the delivery status description of the SMS sent to the address part of the object \begin{DoxyReturn}{Returns}
+the description 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_acd23497dd99294230157ba2bca926029}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{getStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} com.bluevia.messagery.mt.data.DeliveryInfo.getStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_acd23497dd99294230157ba2bca926029}
+Gets the delivery status of the SMS sent to the address part of the object \begin{DoxyReturn}{Returns}
+the status 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a17318aed4cd299cf2ffd41dde841b81a}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!getUserIdAddress@{getUserIdAddress}}
+\index{getUserIdAddress@{getUserIdAddress}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{getUserIdAddress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UserId} com.bluevia.messagery.mt.data.DeliveryInfo.getUserIdAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a17318aed4cd299cf2ffd41dde841b81a}
+Gets the address associated to the status \begin{DoxyReturn}{Returns}
+the address 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_ac18f88370fb0e88829f50b39862515b5}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.messagery.mt.data.DeliveryInfo.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_ac18f88370fb0e88829f50b39862515b5}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_ade8639c5b730a6b0c179fe3dd99efea1}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{setDescription}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mt.data.DeliveryInfo.setDescription (
+\begin{DoxyParamCaption}
+\item[{String}]{description}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_ade8639c5b730a6b0c179fe3dd99efea1}
+Sets the description of the delivery status 
+\begin{DoxyParams}{Parameters}
+{\em description} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a8780a98a5c19cb5f87968b35379574d9}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{setStatus}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mt.data.DeliveryInfo.setStatus (
+\begin{DoxyParamCaption}
+\item[{{\bf Status}}]{status}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a8780a98a5c19cb5f87968b35379574d9}
+Sets the status of the delivery 
+\begin{DoxyParams}{Parameters}
+{\em status} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a481b62f362b18fb47e662a50e23295ae}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!setUserIdAddress@{setUserIdAddress}}
+\index{setUserIdAddress@{setUserIdAddress}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{setUserIdAddress}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mt.data.DeliveryInfo.setUserIdAddress (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_a481b62f362b18fb47e662a50e23295ae}
+Sets the address of the delivery status 
+\begin{DoxyParams}{Parameters}
+{\em address} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_afee1bb9b2ced854cf641e18a7c3eb7f0}{
+\index{com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}!translate@{translate}}
+\index{translate@{translate}!com::bluevia::messagery::mt::data::DeliveryInfo@{com::bluevia::messagery::mt::data::DeliveryInfo}}
+\subsubsection[{translate}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Status} com.bluevia.messagery.mt.data.DeliveryInfo.translate (
+\begin{DoxyParamCaption}
+\item[{String}]{raw}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} \hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo_afee1bb9b2ced854cf641e18a7c3eb7f0}
+Translates a string into the corresponding enumerated type 
+\begin{DoxyParams}{Parameters}
+{\em raw} & A string with the human readable representation of the enumerated type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding enumerated type 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaClientException} & Thrown when the raw parameter does not correspond to any enumerated type \\
+\hline
+\end{DoxyExceptions}

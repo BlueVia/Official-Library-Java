@@ -1,0 +1,355 @@
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile}{
+\section{com.bluevia.directory.data.Profile Class Reference}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile}\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+}
+Inheritance diagram for com.bluevia.directory.data.Profile:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Fields} \{ \par
+{\bfseries USER\_\-TYPE}, 
+{\bfseries ICB}, 
+{\bfseries OCB}, 
+{\bfseries LANGUAGE}, 
+\par
+{\bfseries PARENTAL\_\-CONTROL}, 
+{\bfseries OPERATOR\_\-ID}, 
+{\bfseries MMS\_\-STATUS}, 
+{\bfseries SEGMENT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a55b5ad87816e0f8e15f322343bf3b1c1}{getUserType} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a1669c04a634627871ec1abbab3e20191}{setUserType} (String userType)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a28c0530d8f7b8f9d244b490adb303599}{getICB} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a20b6e69cc8fe64474e30b681604e528b}{setICB} (String iCB)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a9caff56e6a17452bfe6187c61f177035}{getOCB} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a393a1d991b214606f276cfd16d9c61b9}{setOCB} (String oCB)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a5d97bbe673f7efb069a26a9d97547dac}{getLang} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a7f4b65b049dce486538a00051b320c31}{setLang} (String lang)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a2219c0908e25850742efbe1f8fa08bd0}{getParentalControl} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a7a9f48e7070254a2346af781a61d9feb}{setParentalControl} (String parentalControl)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_abd0cb37755e6ef70d5f2d18c8e1d08a6}{getOperatorId} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a72169953ffc03079b5cc03af4e107da6}{setOperatorId} (String operatorId)
+\item 
+Boolean \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_ae2919fe0bfcabc37713b8b8f7adc16a5}{getMmsStatus} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a2b8934128fc1715eb69948929c39f2e5}{setMmsStatus} (boolean mmsStatus)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a51c7d159f411b65e66857ee6e3c320e9}{getSegment} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a1d602d051ffcfb94a79d24eed08b0d6a}{setSegment} (String segment)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a1efb43a459704f936735d032014e57db}{isValid} ()
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_ac3a496aeeefa604a7a21ac44e5838718}{toString} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to hold the information of the User \hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile}{Profile} block resource from the gSDP 
+\begin{DoxyItemize}
+\item User Type: it indicates the billing conditions of the user (pre-\/paid, post-\/paid, corporate, etc.) 
+\item ICB: Incoming Communication Barring 
+\item OCB: Outgoing Communication Barring 
+\item Language: language, provisioned in the HLR (Home Location Register) 
+\item Parental Control: it indicates if the parental control is activated and the associated control level. If it is activated, it will be necessary to check the age (e.g. using the information from user profile or through other mean), but it is out of scope for this API interface. 
+\item Operator ID: It indicates the operator the user belongs to. The list of possible Operator IDs is offered in described in \mbox{[}5\mbox{]}. 
+\item MMS Status: it indicates if the reception of MMS messages is activated or not. 
+\item Segment: Class the user belongs to in a social/age/geographical classification. 
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a28c0530d8f7b8f9d244b490adb303599}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!getICB@{getICB}}
+\index{getICB@{getICB}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{getICB}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.directory.data.Profile.getICB (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a28c0530d8f7b8f9d244b490adb303599}
+Gets the iCB property
+
+\begin{DoxyReturn}{Returns}
+the iCB property 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a5d97bbe673f7efb069a26a9d97547dac}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!getLang@{getLang}}
+\index{getLang@{getLang}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{getLang}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.directory.data.Profile.getLang (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a5d97bbe673f7efb069a26a9d97547dac}
+Gets the lang property
+
+\begin{DoxyReturn}{Returns}
+the lang property 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_ae2919fe0bfcabc37713b8b8f7adc16a5}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!getMmsStatus@{getMmsStatus}}
+\index{getMmsStatus@{getMmsStatus}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{getMmsStatus}]{\setlength{\rightskip}{0pt plus 5cm}Boolean com.bluevia.directory.data.Profile.getMmsStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_ae2919fe0bfcabc37713b8b8f7adc16a5}
+Gets the mms status property
+
+\begin{DoxyReturn}{Returns}
+the mmsStatus property 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a9caff56e6a17452bfe6187c61f177035}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!getOCB@{getOCB}}
+\index{getOCB@{getOCB}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{getOCB}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.directory.data.Profile.getOCB (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a9caff56e6a17452bfe6187c61f177035}
+Gets the oCB property
+
+\begin{DoxyReturn}{Returns}
+the oCB property 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_abd0cb37755e6ef70d5f2d18c8e1d08a6}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!getOperatorId@{getOperatorId}}
+\index{getOperatorId@{getOperatorId}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{getOperatorId}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.directory.data.Profile.getOperatorId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_abd0cb37755e6ef70d5f2d18c8e1d08a6}
+Gets the operator Id property
+
+\begin{DoxyReturn}{Returns}
+the operatorId property 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a2219c0908e25850742efbe1f8fa08bd0}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!getParentalControl@{getParentalControl}}
+\index{getParentalControl@{getParentalControl}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{getParentalControl}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.directory.data.Profile.getParentalControl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a2219c0908e25850742efbe1f8fa08bd0}
+Gets the parental control property
+
+\begin{DoxyReturn}{Returns}
+the parentalControl property 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a51c7d159f411b65e66857ee6e3c320e9}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!getSegment@{getSegment}}
+\index{getSegment@{getSegment}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{getSegment}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.directory.data.Profile.getSegment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a51c7d159f411b65e66857ee6e3c320e9}
+Gets the segment property
+
+\begin{DoxyReturn}{Returns}
+the segment property 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a55b5ad87816e0f8e15f322343bf3b1c1}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!getUserType@{getUserType}}
+\index{getUserType@{getUserType}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{getUserType}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.directory.data.Profile.getUserType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a55b5ad87816e0f8e15f322343bf3b1c1}
+Gets the user type property
+
+\begin{DoxyReturn}{Returns}
+the mUserType property 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a1efb43a459704f936735d032014e57db}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.directory.data.Profile.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a1efb43a459704f936735d032014e57db}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a20b6e69cc8fe64474e30b681604e528b}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!setICB@{setICB}}
+\index{setICB@{setICB}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{setICB}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.directory.data.Profile.setICB (
+\begin{DoxyParamCaption}
+\item[{String}]{iCB}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a20b6e69cc8fe64474e30b681604e528b}
+Sets the iCB property
+
+
+\begin{DoxyParams}{Parameters}
+{\em iCB} & the iCB property value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a7f4b65b049dce486538a00051b320c31}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!setLang@{setLang}}
+\index{setLang@{setLang}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{setLang}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.directory.data.Profile.setLang (
+\begin{DoxyParamCaption}
+\item[{String}]{lang}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a7f4b65b049dce486538a00051b320c31}
+Sets the lang property
+
+
+\begin{DoxyParams}{Parameters}
+{\em lang} & the lang property value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a2b8934128fc1715eb69948929c39f2e5}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!setMmsStatus@{setMmsStatus}}
+\index{setMmsStatus@{setMmsStatus}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{setMmsStatus}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.directory.data.Profile.setMmsStatus (
+\begin{DoxyParamCaption}
+\item[{boolean}]{mmsStatus}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a2b8934128fc1715eb69948929c39f2e5}
+Sets the mms status property
+
+
+\begin{DoxyParams}{Parameters}
+{\em mmsStatus} & the mmsStatus property value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a393a1d991b214606f276cfd16d9c61b9}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!setOCB@{setOCB}}
+\index{setOCB@{setOCB}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{setOCB}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.directory.data.Profile.setOCB (
+\begin{DoxyParamCaption}
+\item[{String}]{oCB}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a393a1d991b214606f276cfd16d9c61b9}
+Sets the oCB property
+
+
+\begin{DoxyParams}{Parameters}
+{\em oCB} & the oCB property value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a72169953ffc03079b5cc03af4e107da6}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!setOperatorId@{setOperatorId}}
+\index{setOperatorId@{setOperatorId}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{setOperatorId}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.directory.data.Profile.setOperatorId (
+\begin{DoxyParamCaption}
+\item[{String}]{operatorId}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a72169953ffc03079b5cc03af4e107da6}
+Sets the operator Id property
+
+
+\begin{DoxyParams}{Parameters}
+{\em operatorId} & the operatorId property value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a7a9f48e7070254a2346af781a61d9feb}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!setParentalControl@{setParentalControl}}
+\index{setParentalControl@{setParentalControl}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{setParentalControl}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.directory.data.Profile.setParentalControl (
+\begin{DoxyParamCaption}
+\item[{String}]{parentalControl}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a7a9f48e7070254a2346af781a61d9feb}
+Sets the parental control property
+
+
+\begin{DoxyParams}{Parameters}
+{\em parentalControl} & the parentalControl property value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a1d602d051ffcfb94a79d24eed08b0d6a}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!setSegment@{setSegment}}
+\index{setSegment@{setSegment}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{setSegment}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.directory.data.Profile.setSegment (
+\begin{DoxyParamCaption}
+\item[{String}]{segment}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a1d602d051ffcfb94a79d24eed08b0d6a}
+Sets the segment property
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & the segment property value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a1669c04a634627871ec1abbab3e20191}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!setUserType@{setUserType}}
+\index{setUserType@{setUserType}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{setUserType}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.directory.data.Profile.setUserType (
+\begin{DoxyParamCaption}
+\item[{String}]{userType}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_a1669c04a634627871ec1abbab3e20191}
+Sets the user type property
+
+
+\begin{DoxyParams}{Parameters}
+{\em userType} & the mUserType property value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_ac3a496aeeefa604a7a21ac44e5838718}{
+\index{com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}!toString@{toString}}
+\index{toString@{toString}!com::bluevia::directory::data::Profile@{com::bluevia::directory::data::Profile}}
+\subsubsection[{toString}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.directory.data.Profile.toString (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile_ac3a496aeeefa604a7a21ac44e5838718}
+Returns a string representation of the values in this class \begin{DoxyReturn}{Returns}
+a comma-\/separated list of the values of the fields in this class 
+\end{DoxyReturn}

@@ -1,0 +1,156 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType}{
+\section{com.telefonica.schemas.unica.rest.sms.v1.SMSNotificationType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType}\index{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1SimpleReferenceType}{SimpleReferenceType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_af181e2de6f1a5d42775cf504e011a833}{getReference} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a8725a0794af6494bb613eb854ce80e11}{setReference} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1SimpleReferenceType}{SimpleReferenceType} value)
+\item 
+List$<$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} $>$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a57c006b8a367525e5f268d6eef034bcf}{getDestinationAddress} ()
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a6be5e62eeb97eabd7270dac1003ad075}{getCriteria} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_ac4598d4f761e5a337f0ab4b478288668}{setCriteria} (String value)
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a5dfd67e67ebe5072e3a56b951105411f}{setDestinationAddress} (List$<$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} $>$ destinationAddress)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a4dfc890bb54ba5f0c277f4ae4f58c6e5}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1SimpleReferenceType}{SimpleReferenceType} {\bfseries reference}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a4dfc890bb54ba5f0c277f4ae4f58c6e5}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a78283a6642546f8981b90a3c583aa567}{
+List$<$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} $>$ {\bfseries destinationAddress}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a78283a6642546f8981b90a3c583aa567}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_ac5f82f239332c7223fb2eff2014bd345}{
+String {\bfseries criteria}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_ac5f82f239332c7223fb2eff2014bd345}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType}{SMSNotificationType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="SMSNotificationType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="reference" type="\{http://www.telefonica.com/schemas/UNICA/REST/common/v1\}SimpleReferenceType"/>
+         <element name="destinationAddress" type="\{http://www.telefonica.com/schemas/UNICA/REST/common/v1\}UserIdType" maxOccurs="unbounded"/>
+         <element name="criteria" type="\{http://www.w3.org/2001/XMLSchema\}string" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a6be5e62eeb97eabd7270dac1003ad075}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}!getCriteria@{getCriteria}}
+\index{getCriteria@{getCriteria}!com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}}
+\subsubsection[{getCriteria}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rest.sms.v1.SMSNotificationType.getCriteria (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a6be5e62eeb97eabd7270dac1003ad075}
+Gets the value of the criteria property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a57c006b8a367525e5f268d6eef034bcf}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}!getDestinationAddress@{getDestinationAddress}}
+\index{getDestinationAddress@{getDestinationAddress}!com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}}
+\subsubsection[{getDestinationAddress}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf UserIdType}$>$ com.telefonica.schemas.unica.rest.sms.v1.SMSNotificationType.getDestinationAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a57c006b8a367525e5f268d6eef034bcf}
+Gets the value of the destinationAddress property.
+
+This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a {\ttfamily set} method for the destinationAddress property.
+
+For example, to add a new item, do as follows: 
+\begin{DoxyPre}
+    \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a57c006b8a367525e5f268d6eef034bcf}{getDestinationAddress()}.add(newItem);
+ \end{DoxyPre}
+
+
+Objects of the following type(s) are allowed in the list \hyperlink{}{UserIdType} \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_af181e2de6f1a5d42775cf504e011a833}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}!getReference@{getReference}}
+\index{getReference@{getReference}!com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}}
+\subsubsection[{getReference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SimpleReferenceType} com.telefonica.schemas.unica.rest.sms.v1.SMSNotificationType.getReference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_af181e2de6f1a5d42775cf504e011a833}
+Gets the value of the reference property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{SimpleReferenceType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_ac4598d4f761e5a337f0ab4b478288668}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}!setCriteria@{setCriteria}}
+\index{setCriteria@{setCriteria}!com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}}
+\subsubsection[{setCriteria}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.sms.v1.SMSNotificationType.setCriteria (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_ac4598d4f761e5a337f0ab4b478288668}
+Sets the value of the criteria property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a5dfd67e67ebe5072e3a56b951105411f}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}!setDestinationAddress@{setDestinationAddress}}
+\index{setDestinationAddress@{setDestinationAddress}!com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}}
+\subsubsection[{setDestinationAddress}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.sms.v1.SMSNotificationType.setDestinationAddress (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf UserIdType} $>$}]{destinationAddress}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a5dfd67e67ebe5072e3a56b951105411f}
+Sets the value of the destinationAddress property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em destinationAddress} & allowed object is \hyperlink{}{UserIdType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a8725a0794af6494bb613eb854ce80e11}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}!setReference@{setReference}}
+\index{setReference@{setReference}!com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::SMSNotificationType}}
+\subsubsection[{setReference}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.sms.v1.SMSNotificationType.setReference (
+\begin{DoxyParamCaption}
+\item[{{\bf SimpleReferenceType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1SMSNotificationType_a8725a0794af6494bb613eb854ce80e11}
+Sets the value of the reference property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{SimpleReferenceType} \\
+\hline
+\end{DoxyParams}

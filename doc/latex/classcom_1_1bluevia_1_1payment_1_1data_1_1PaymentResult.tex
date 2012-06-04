@@ -1,0 +1,96 @@
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult}{
+\section{com.bluevia.payment.data.PaymentResult Class Reference}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult}\index{com::bluevia::payment::data::PaymentResult@{com::bluevia::payment::data::PaymentResult}}
+}
+Inheritance diagram for com.bluevia.payment.data.PaymentResult:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a264be51dd6af73d54a5ddcd4e66fee32}{getTransactionId} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult}{PaymentResult} \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a94b7de727a64360c113d6a4970829a85}{setTransactionId} (String transactionId)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a67f3366d48600309719377e0e3b98cb6}{isValid} ()
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a4cab529a9f8a29c2c3ad05c685395dba}{
+{\bfseries PaymentResult} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodResponseType}{MethodResponseType} response)}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a4cab529a9f8a29c2c3ad05c685395dba}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_ad0a22d4ba51ee610ba719b805c4e2f82}{
+String {\bfseries mTransactionId}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_ad0a22d4ba51ee610ba719b805c4e2f82}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing the \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult}{PaymentResult} type
+
+This type is composed of the following fields: 
+\begin{DoxyItemize}
+\item trasanctionId; mandatory: String 
+\item transactionStatus; mandatory: TransactionEnumerationType 
+\item transactionStatusDescription; mandatory: String 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a264be51dd6af73d54a5ddcd4e66fee32}{
+\index{com::bluevia::payment::data::PaymentResult@{com::bluevia::payment::data::PaymentResult}!getTransactionId@{getTransactionId}}
+\index{getTransactionId@{getTransactionId}!com::bluevia::payment::data::PaymentResult@{com::bluevia::payment::data::PaymentResult}}
+\subsubsection[{getTransactionId}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.payment.data.PaymentResult.getTransactionId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a264be51dd6af73d54a5ddcd4e66fee32}
+Gets the mandatory transaction identifier of the payment result
+
+\begin{DoxyReturn}{Returns}
+the mandatory transaction identifier of the payment result 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a67f3366d48600309719377e0e3b98cb6}{
+\index{com::bluevia::payment::data::PaymentResult@{com::bluevia::payment::data::PaymentResult}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::payment::data::PaymentResult@{com::bluevia::payment::data::PaymentResult}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.payment.data.PaymentResult.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a67f3366d48600309719377e0e3b98cb6}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_acf7b890f0100827e6bebfe2f6f53e6a8}{com.bluevia.payment.data.PaymentStatus}.
+
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a94b7de727a64360c113d6a4970829a85}{
+\index{com::bluevia::payment::data::PaymentResult@{com::bluevia::payment::data::PaymentResult}!setTransactionId@{setTransactionId}}
+\index{setTransactionId@{setTransactionId}!com::bluevia::payment::data::PaymentResult@{com::bluevia::payment::data::PaymentResult}}
+\subsubsection[{setTransactionId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PaymentResult} com.bluevia.payment.data.PaymentResult.setTransactionId (
+\begin{DoxyParamCaption}
+\item[{String}]{transactionId}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a94b7de727a64360c113d6a4970829a85}
+Sets the mandatory transaction identifier of the payment result
+
+
+\begin{DoxyParams}{Parameters}
+{\em transactionId} & transaction identifier of the payment result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this 
+\end{DoxyReturn}

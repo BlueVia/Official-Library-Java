@@ -1,0 +1,151 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType}{
+\section{com.telefonica.schemas.unica.rest.location.v1.LocationDataType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType}\index{com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a4a59273cff65ae79c10ec009cc1a0446}{getLocatedParty} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a00f137b19a27a92d12575f19b4fa1298}{setLocatedParty} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} value)
+\item 
+RetrievalStatusType \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a671258162e5b8fe1e41d9bde8b22841e}{getReportStatus} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a7f0fdc64ce38888b3bd2b27585153675}{setReportStatus} (RetrievalStatusType value)
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType}{LocationInfoType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a06cd4c39bc5b6aca406d67c9b629a605}{getCurrentLocation} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_aa11c28aa5134251d7e2e5d669e371de9}{setCurrentLocation} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType}{LocationInfoType} value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_aded987d6357a1425335af4c4dde9fd99}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} {\bfseries locatedParty}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_aded987d6357a1425335af4c4dde9fd99}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a4dd285e65fd95046a018abf1e55a214c}{
+RetrievalStatusType {\bfseries reportStatus}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a4dd285e65fd95046a018abf1e55a214c}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a9e8738f28e646cdaf3c44a8a340de3de}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType}{LocationInfoType} {\bfseries currentLocation}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a9e8738f28e646cdaf3c44a8a340de3de}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType}{LocationDataType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="LocationDataType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="locatedParty" type="\{http://www.telefonica.com/schemas/UNICA/REST/common/v1\}UserIdType"/>
+         <element name="reportStatus" type="\{http://www.telefonica.com/schemas/UNICA/REST/location/v1/\}RetrievalStatusType"/>
+         <element name="currentLocation" type="\{http://www.telefonica.com/schemas/UNICA/REST/location/v1/\}LocationInfoType" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a06cd4c39bc5b6aca406d67c9b629a605}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}!getCurrentLocation@{getCurrentLocation}}
+\index{getCurrentLocation@{getCurrentLocation}!com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}}
+\subsubsection[{getCurrentLocation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LocationInfoType} com.telefonica.schemas.unica.rest.location.v1.LocationDataType.getCurrentLocation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a06cd4c39bc5b6aca406d67c9b629a605}
+Gets the value of the currentLocation property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType}{LocationInfoType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a4a59273cff65ae79c10ec009cc1a0446}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}!getLocatedParty@{getLocatedParty}}
+\index{getLocatedParty@{getLocatedParty}!com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}}
+\subsubsection[{getLocatedParty}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UserIdType} com.telefonica.schemas.unica.rest.location.v1.LocationDataType.getLocatedParty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a4a59273cff65ae79c10ec009cc1a0446}
+Gets the value of the locatedParty property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{UserIdType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a671258162e5b8fe1e41d9bde8b22841e}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}!getReportStatus@{getReportStatus}}
+\index{getReportStatus@{getReportStatus}!com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}}
+\subsubsection[{getReportStatus}]{\setlength{\rightskip}{0pt plus 5cm}RetrievalStatusType com.telefonica.schemas.unica.rest.location.v1.LocationDataType.getReportStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a671258162e5b8fe1e41d9bde8b22841e}
+Gets the value of the reportStatus property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{RetrievalStatusType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_aa11c28aa5134251d7e2e5d669e371de9}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}!setCurrentLocation@{setCurrentLocation}}
+\index{setCurrentLocation@{setCurrentLocation}!com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}}
+\subsubsection[{setCurrentLocation}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.location.v1.LocationDataType.setCurrentLocation (
+\begin{DoxyParamCaption}
+\item[{{\bf LocationInfoType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_aa11c28aa5134251d7e2e5d669e371de9}
+Sets the value of the currentLocation property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType}{LocationInfoType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a00f137b19a27a92d12575f19b4fa1298}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}!setLocatedParty@{setLocatedParty}}
+\index{setLocatedParty@{setLocatedParty}!com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}}
+\subsubsection[{setLocatedParty}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.location.v1.LocationDataType.setLocatedParty (
+\begin{DoxyParamCaption}
+\item[{{\bf UserIdType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a00f137b19a27a92d12575f19b4fa1298}
+Sets the value of the locatedParty property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{UserIdType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a7f0fdc64ce38888b3bd2b27585153675}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}!setReportStatus@{setReportStatus}}
+\index{setReportStatus@{setReportStatus}!com::telefonica::schemas::unica::rest::location::v1::LocationDataType@{com::telefonica::schemas::unica::rest::location::v1::LocationDataType}}
+\subsubsection[{setReportStatus}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.location.v1.LocationDataType.setReportStatus (
+\begin{DoxyParamCaption}
+\item[{RetrievalStatusType}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType_a7f0fdc64ce38888b3bd2b27585153675}
+Sets the value of the reportStatus property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{RetrievalStatusType} \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,203 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType}{
+\section{com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType}\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_ac2f1c09f2ff8970e29bf1bd825a6731a}{getTransactionId} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a589a11a0894943371284a07836005f68}{setTransactionId} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a94e4a269a3d8be354509b26552043179}{getTransactionStatus} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a3fe47874f0fbb307280e53b7afb21a7e}{setTransactionStatus} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a1c865964a22cb1ae2a809137022b9dfd}{getTransactionStatusDescription} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_ac56a8e1a299e77e75cc65d1df5a8f144}{setTransactionStatusDescription} (String value)
+\item 
+List$<$ Object $>$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a188cbbf8172a515400402a659f1698ef}{getAny} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_ab2d9e791cce66876b9c349fec15d9609}{setAny} (List$<$ Object $>$ any)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a11bf8e4d386094437da515f496e586b3}{
+String {\bfseries transactionId}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a11bf8e4d386094437da515f496e586b3}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a526bf3f49d492f07545aa996a3befc0b}{
+String {\bfseries transactionStatus}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a526bf3f49d492f07545aa996a3befc0b}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a23b5dadd2ec1133c308994b610068578}{
+String {\bfseries transactionStatusDescription}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a23b5dadd2ec1133c308994b610068578}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a837ace9f170b5b34e9f162e42dcc1d2a}{
+List$<$ Object $>$ {\bfseries any}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a837ace9f170b5b34e9f162e42dcc1d2a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+output parameters for Payment operation
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType}{PaymentResultType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="PaymentResultType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="transactionId" type="\{http://www.w3.org/2001/XMLSchema\}string"/>
+         <element name="transactionStatus">
+           <simpleType>
+             <union memberTypes=" \{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}TransactionEnumerationType \{http://www.w3.org/2001/XMLSchema\}string">
+             </union>
+           </simpleType>
+         </element>
+         <element name="transactionStatusDescription" type="\{http://www.w3.org/2001/XMLSchema\}string"/>
+         <any processContents='lax' namespace='\##other' maxOccurs="unbounded" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a188cbbf8172a515400402a659f1698ef}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}!getAny@{getAny}}
+\index{getAny@{getAny}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}}
+\subsubsection[{getAny}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Object$>$ com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType.getAny (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a188cbbf8172a515400402a659f1698ef}
+Gets the value of the any property.
+
+This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a {\ttfamily set} method for the any property.
+
+For example, to add a new item, do as follows: 
+\begin{DoxyPre}
+    \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a188cbbf8172a515400402a659f1698ef}{getAny()}.add(newItem);
+ \end{DoxyPre}
+
+
+Objects of the following type(s) are allowed in the list \hyperlink{}{Element} \hyperlink{}{Object} \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_ac2f1c09f2ff8970e29bf1bd825a6731a}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}!getTransactionId@{getTransactionId}}
+\index{getTransactionId@{getTransactionId}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}}
+\subsubsection[{getTransactionId}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType.getTransactionId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_ac2f1c09f2ff8970e29bf1bd825a6731a}
+Gets the value of the transactionId property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a94e4a269a3d8be354509b26552043179}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}!getTransactionStatus@{getTransactionStatus}}
+\index{getTransactionStatus@{getTransactionStatus}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}}
+\subsubsection[{getTransactionStatus}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType.getTransactionStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a94e4a269a3d8be354509b26552043179}
+Gets the value of the transactionStatus property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a1c865964a22cb1ae2a809137022b9dfd}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}!getTransactionStatusDescription@{getTransactionStatusDescription}}
+\index{getTransactionStatusDescription@{getTransactionStatusDescription}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}}
+\subsubsection[{getTransactionStatusDescription}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType.getTransactionStatusDescription (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a1c865964a22cb1ae2a809137022b9dfd}
+Gets the value of the transactionStatusDescription property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_ab2d9e791cce66876b9c349fec15d9609}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}!setAny@{setAny}}
+\index{setAny@{setAny}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}}
+\subsubsection[{setAny}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType.setAny (
+\begin{DoxyParamCaption}
+\item[{List$<$ Object $>$}]{any}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_ab2d9e791cce66876b9c349fec15d9609}
+Sets the value of the any property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & allowed object is \hyperlink{}{Element} \hyperlink{}{Object} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a589a11a0894943371284a07836005f68}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}!setTransactionId@{setTransactionId}}
+\index{setTransactionId@{setTransactionId}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}}
+\subsubsection[{setTransactionId}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType.setTransactionId (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a589a11a0894943371284a07836005f68}
+Sets the value of the transactionId property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a3fe47874f0fbb307280e53b7afb21a7e}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}!setTransactionStatus@{setTransactionStatus}}
+\index{setTransactionStatus@{setTransactionStatus}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}}
+\subsubsection[{setTransactionStatus}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType.setTransactionStatus (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_a3fe47874f0fbb307280e53b7afb21a7e}
+Sets the value of the transactionStatus property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_ac56a8e1a299e77e75cc65d1df5a8f144}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}!setTransactionStatusDescription@{setTransactionStatusDescription}}
+\index{setTransactionStatusDescription@{setTransactionStatusDescription}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentResultType}}
+\subsubsection[{setTransactionStatusDescription}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.PaymentResultType.setTransactionStatusDescription (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentResultType_ac56a8e1a299e77e75cc65d1df5a8f144}
+Sets the value of the transactionStatusDescription property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}

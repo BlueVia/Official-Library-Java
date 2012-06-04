@@ -1,0 +1,139 @@
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute}{
+\section{com.bluevia.ad.data.AdsAttribute Class Reference}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute}\index{com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}}
+}
+Inheritance diagram for com.bluevia.ad.data.AdsAttribute:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a91897d047ee70ae0e123b6adc73973cc}{Type} \{ {\bfseries ADTEXT}, 
+{\bfseries LOCATOR}, 
+{\bfseries URL}, 
+{\bfseries CODEC}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a91897d047ee70ae0e123b6adc73973cc}{Type} \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a813841993f26179769b15f2d80d09b61}{getType} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a647756d0a814193b9d847f1050c4f9ba}{setType} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a91897d047ee70ae0e123b6adc73973cc}{Type} type)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_acefb4aa19ac588f2c0b4496ffa7dddcf}{getValue} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a290f3ef6f06ac18f6cd084863fc4a7d6}{setValue} (String mValue)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_adda7ab450d108a61cea41f5e58b07f15}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+$\ast$ Object that describes an attribute of a Creative Element or an \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction}{Interaction} 
+\begin{DoxyItemize}
+\item Type: Type of the attribute of the ad object or of interaction attribute. Possible values include: adtext, locator, url. 
+\item Value: Value of the attribute of the ad object or of interaction attribute. adtext, locator or url value. 
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a91897d047ee70ae0e123b6adc73973cc}{
+\index{com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}!Type@{Type}}
+\index{Type@{Type}!com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf com::bluevia::ad::data::AdsAttribute::Type}}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a91897d047ee70ae0e123b6adc73973cc}
+Type that contains the possible attributes type elements that can be received. Values includes: 
+\begin{DoxyItemize}
+\item Adtext: used for example as an attribute of a Text Creative Element, to set the text value of the ad 
+\item Codec: used for example as an attribute of a Text Creative Element, to set the encoding of the text value of the ad 
+\item Locator: used for example as an attribute of an Image Creative Element, to set the url to be able to get the image of the ad 
+\item Url: used for example as an attribute of an ClickToWap interaction, to set the url to be lauch when the user clicks over the ad. 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a813841993f26179769b15f2d80d09b61}{
+\index{com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}!getType@{getType}}
+\index{getType@{getType}!com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} com.bluevia.ad.data.AdsAttribute.getType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a813841993f26179769b15f2d80d09b61}
+Gets the attribute Type
+
+\begin{DoxyReturn}{Returns}
+the attribute type 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_acefb4aa19ac588f2c0b4496ffa7dddcf}{
+\index{com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}!getValue@{getValue}}
+\index{getValue@{getValue}!com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}}
+\subsubsection[{getValue}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.ad.data.AdsAttribute.getValue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_acefb4aa19ac588f2c0b4496ffa7dddcf}
+Gets attribute value
+
+\begin{DoxyReturn}{Returns}
+the attribute value 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_adda7ab450d108a61cea41f5e58b07f15}{
+\index{com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.ad.data.AdsAttribute.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_adda7ab450d108a61cea41f5e58b07f15}
+check if the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute}{AdsAttribute} entity is valid
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a647756d0a814193b9d847f1050c4f9ba}{
+\index{com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}!setType@{setType}}
+\index{setType@{setType}!com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}}
+\subsubsection[{setType}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.AdsAttribute.setType (
+\begin{DoxyParamCaption}
+\item[{{\bf Type}}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a647756d0a814193b9d847f1050c4f9ba}
+Sets the attribute type
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a290f3ef6f06ac18f6cd084863fc4a7d6}{
+\index{com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}!setValue@{setValue}}
+\index{setValue@{setValue}!com::bluevia::ad::data::AdsAttribute@{com::bluevia::ad::data::AdsAttribute}}
+\subsubsection[{setValue}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.AdsAttribute.setValue (
+\begin{DoxyParamCaption}
+\item[{String}]{mValue}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute_a290f3ef6f06ac18f6cd084863fc4a7d6}
+Sets the attribute value
+
+
+\begin{DoxyParams}{Parameters}
+{\em mValue} & the attribute value \\
+\hline
+\end{DoxyParams}

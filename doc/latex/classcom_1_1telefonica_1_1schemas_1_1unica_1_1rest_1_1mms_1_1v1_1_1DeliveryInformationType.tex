@@ -1,0 +1,156 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType}{
+\section{com.telefonica.schemas.unica.rest.mms.v1.DeliveryInformationType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType}\index{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a61ec6151ae7ef884101ff3be0ed49742}{getAddress} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a28d578669e6da21acaa61ebe492499a4}{setAddress} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a349c98421d85a7bf5b6eb8eb4404bb6c}{getDeliveryStatus} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a24f2e3c46f593ea350c3b30271403b48}{setDeliveryStatus} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_ab942e690dbc385db6a2c0d8c81986a34}{getDescription} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a9d8c69236b35c0b173b4f2e07edf07c5}{setDescription} (String value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_aa6e20f57793be0134a8222019bd5fb16}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} {\bfseries address}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_aa6e20f57793be0134a8222019bd5fb16}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_aff165eac0663b31a382f1ec9eb248ca8}{
+String {\bfseries deliveryStatus}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_aff165eac0663b31a382f1ec9eb248ca8}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a9457b405149c7d8fd911476ab4a2048b}{
+String {\bfseries description}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a9457b405149c7d8fd911476ab4a2048b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType}{DeliveryInformationType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="DeliveryInformationType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="address" type="\{http://www.telefonica.com/schemas/UNICA/REST/common/v1\}UserIdType"/>
+         <element name="deliveryStatus">
+           <simpleType>
+             <union memberTypes=" \{http://www.telefonica.com/schemas/UNICA/REST/mms/v1/\}DeliveryStatusType \{http://www.w3.org/2001/XMLSchema\}string">
+             </union>
+           </simpleType>
+         </element>
+         <element name="description" type="\{http://www.w3.org/2001/XMLSchema\}string" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a61ec6151ae7ef884101ff3be0ed49742}{
+\index{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}}
+\subsubsection[{getAddress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UserIdType} com.telefonica.schemas.unica.rest.mms.v1.DeliveryInformationType.getAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a61ec6151ae7ef884101ff3be0ed49742}
+Gets the value of the address property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{UserIdType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a349c98421d85a7bf5b6eb8eb4404bb6c}{
+\index{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}!getDeliveryStatus@{getDeliveryStatus}}
+\index{getDeliveryStatus@{getDeliveryStatus}!com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}}
+\subsubsection[{getDeliveryStatus}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rest.mms.v1.DeliveryInformationType.getDeliveryStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a349c98421d85a7bf5b6eb8eb4404bb6c}
+Gets the value of the deliveryStatus property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_ab942e690dbc385db6a2c0d8c81986a34}{
+\index{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}}
+\subsubsection[{getDescription}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rest.mms.v1.DeliveryInformationType.getDescription (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_ab942e690dbc385db6a2c0d8c81986a34}
+Gets the value of the description property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a28d578669e6da21acaa61ebe492499a4}{
+\index{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}}
+\subsubsection[{setAddress}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.mms.v1.DeliveryInformationType.setAddress (
+\begin{DoxyParamCaption}
+\item[{{\bf UserIdType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a28d578669e6da21acaa61ebe492499a4}
+Sets the value of the address property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{UserIdType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a24f2e3c46f593ea350c3b30271403b48}{
+\index{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}!setDeliveryStatus@{setDeliveryStatus}}
+\index{setDeliveryStatus@{setDeliveryStatus}!com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}}
+\subsubsection[{setDeliveryStatus}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.mms.v1.DeliveryInformationType.setDeliveryStatus (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a24f2e3c46f593ea350c3b30271403b48}
+Sets the value of the deliveryStatus property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a9d8c69236b35c0b173b4f2e07edf07c5}{
+\index{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType@{com::telefonica::schemas::unica::rest::mms::v1::DeliveryInformationType}}
+\subsubsection[{setDescription}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.mms.v1.DeliveryInformationType.setDescription (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1mms_1_1v1_1_1DeliveryInformationType_a9d8c69236b35c0b173b4f2e07edf07c5}
+Sets the value of the description property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}

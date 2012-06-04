@@ -1,0 +1,125 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient}{
+\section{com.bluevia.messagery.mt.mms.client.BVMtMmsClient Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient}\index{com::bluevia::messagery::mt::mms::client::BVMtMmsClient@{com::bluevia::messagery::mt::mms::client::BVMtMmsClient}}
+}
+Inheritance diagram for com.bluevia.messagery.mt.mms.client.BVMtMmsClient:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1data_1_1DeliveryInfo}{DeliveryInfo} $>$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_aa57d8a5c364299801600dc7f09ed84e7}{getDeliveryStatus} (String messageId)  throws BlueviaException, IOException 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_a5269e29d42fae3d08159cc84902385d7}{init} ()
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_a0afa0bbcf8db2ffcd12b84729a97772a}{sendMms} (\hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1MmsMessageReq}{MmsMessageReq} mmsMessage, String payer)  throws BlueviaException, IOException 
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_a44458b910b1c64864ed84aaa18df4cf1}{addMessageToAttachments} (String message, ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1Attachment}{Attachment} $>$ attachmentList)  throws IOException
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract client interface for the REST binding of the Bluevia MMS MT Service.
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_a44458b910b1c64864ed84aaa18df4cf1}{
+\index{com::bluevia::messagery::mt::mms::client::BVMtMmsClient@{com::bluevia::messagery::mt::mms::client::BVMtMmsClient}!addMessageToAttachments@{addMessageToAttachments}}
+\index{addMessageToAttachments@{addMessageToAttachments}!com::bluevia::messagery::mt::mms::client::BVMtMmsClient@{com::bluevia::messagery::mt::mms::client::BVMtMmsClient}}
+\subsubsection[{addMessageToAttachments}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mt.mms.client.BVMtMmsClient.addMessageToAttachments (
+\begin{DoxyParamCaption}
+\item[{String}]{message, }
+\item[{ArrayList$<$ {\bf Attachment} $>$}]{attachmentList}
+\end{DoxyParamCaption}
+)  throws IOException\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_a44458b910b1c64864ed84aaa18df4cf1}
+Adds the message parameter as a string attachment
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+{\em attachmentList} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_aa57d8a5c364299801600dc7f09ed84e7}{
+\index{com::bluevia::messagery::mt::mms::client::BVMtMmsClient@{com::bluevia::messagery::mt::mms::client::BVMtMmsClient}!getDeliveryStatus@{getDeliveryStatus}}
+\index{getDeliveryStatus@{getDeliveryStatus}!com::bluevia::messagery::mt::mms::client::BVMtMmsClient@{com::bluevia::messagery::mt::mms::client::BVMtMmsClient}}
+\subsubsection[{getDeliveryStatus}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf DeliveryInfo}$>$ com.bluevia.messagery.mt.mms.client.BVMtMmsClient.getDeliveryStatus (
+\begin{DoxyParamCaption}
+\item[{String}]{messageId}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_aa57d8a5c364299801600dc7f09ed84e7}
+Allows to know the delivery status of a previous sent message using Bluevia API
+
+
+\begin{DoxyParams}{Parameters}
+{\em messageId} & the id of the message previously sent using this API \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an arrayList containing the DeliveryInfo for each destination address from the sent message. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1client_1_1BVMtClient_a8f6f5161ebda540dd0d5e6b47951f6b5}{com.bluevia.messagery.mt.client.BVMtClient}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_a5269e29d42fae3d08159cc84902385d7}{
+\index{com::bluevia::messagery::mt::mms::client::BVMtMmsClient@{com::bluevia::messagery::mt::mms::client::BVMtMmsClient}!init@{init}}
+\index{init@{init}!com::bluevia::messagery::mt::mms::client::BVMtMmsClient@{com::bluevia::messagery::mt::mms::client::BVMtMmsClient}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.mt.mms.client.BVMtMmsClient.init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_a5269e29d42fae3d08159cc84902385d7}
+Initializer for common attributes \hypertarget{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_a0afa0bbcf8db2ffcd12b84729a97772a}{
+\index{com::bluevia::messagery::mt::mms::client::BVMtMmsClient@{com::bluevia::messagery::mt::mms::client::BVMtMmsClient}!sendMms@{sendMms}}
+\index{sendMms@{sendMms}!com::bluevia::messagery::mt::mms::client::BVMtMmsClient@{com::bluevia::messagery::mt::mms::client::BVMtMmsClient}}
+\subsubsection[{sendMms}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.mt.mms.client.BVMtMmsClient.sendMms (
+\begin{DoxyParamCaption}
+\item[{{\bf MmsMessageReq}}]{mmsMessage, }
+\item[{String}]{payer}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1client_1_1BVMtMmsClient_a0afa0bbcf8db2ffcd12b84729a97772a}
+Allows to know the delivery status of a previous sent MMS using Bluevia API 
+\begin{DoxyParams}{Parameters}
+{\em mmsId} & the id of the mms previously sent using this API \\
+\hline
+{\em payer} & the payer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the delivery status of the MMS message id 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}

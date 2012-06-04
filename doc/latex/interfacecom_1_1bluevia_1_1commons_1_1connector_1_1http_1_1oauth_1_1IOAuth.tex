@@ -1,0 +1,157 @@
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth}{
+\section{com.bluevia.commons.connector.http.oauth.IOAuth Interface Reference}
+\label{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth}\index{com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}}
+}
+Inheritance diagram for com.bluevia.commons.connector.http.oauth.IOAuth:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken}{RequestToken} \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a5fcc08723e76b277b54777f94031b507}{getRequestToken} (String callback, byte\mbox{[}$\,$\mbox{]} data, OAuthProviderListener listener)  throws BlueviaException
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken}{OAuthToken} \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a781f46d7787b9b2ccd5aba9d19b5bb54}{getAccessToken} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken}{OAuthToken} requestToken, String oauthVerifier)  throws BlueviaException
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken}{OAuthToken} \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a30759302a10a85ddec505fa376bea649}{getOauthToken} ()
+\item 
+void \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a27725eabc503c62859b46a7cc9093a24}{setOauthToken} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken}{OAuthToken} token)
+\item 
+void \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_ad58d6b47d9b204d0dd2efee3d74d6cb1}{setAdditionalParameters} (HashMap$<$ String, String $>$ params)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to include the functions to implement the complete OAuth workflow
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a781f46d7787b9b2ccd5aba9d19b5bb54}{
+\index{com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}!getAccessToken@{getAccessToken}}
+\index{getAccessToken@{getAccessToken}!com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}}
+\subsubsection[{getAccessToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf OAuthToken} com.bluevia.commons.connector.http.oauth.IOAuth.getAccessToken (
+\begin{DoxyParamCaption}
+\item[{{\bf OAuthToken}}]{requestToken, }
+\item[{String}]{oauthVerifier}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}}}
+\label{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a781f46d7787b9b2ccd5aba9d19b5bb54}
+Retrieves an access token
+
+
+\begin{DoxyParams}{Parameters}
+{\em requestToken} & the request token previously obtained \\
+\hline
+{\em oauthVerifier} & the oauth verifier to the token \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the resulting access token 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OauthHttpConnector_a7f0f187330bd1ebf661124f82de22a9b}{com.bluevia.commons.connector.http.oauth.OauthHttpConnector}.
+
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a30759302a10a85ddec505fa376bea649}{
+\index{com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}!getOauthToken@{getOauthToken}}
+\index{getOauthToken@{getOauthToken}!com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}}
+\subsubsection[{getOauthToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf OAuthToken} com.bluevia.commons.connector.http.oauth.IOAuth.getOauthToken (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a30759302a10a85ddec505fa376bea649}
+Returns the stored oauth token
+
+\begin{DoxyReturn}{Returns}
+the stored oauth token 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OauthHttpConnector_a123bfc9cd1f46d517dac019d380a25f6}{com.bluevia.commons.connector.http.oauth.OauthHttpConnector}.
+
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a5fcc08723e76b277b54777f94031b507}{
+\index{com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}!getRequestToken@{getRequestToken}}
+\index{getRequestToken@{getRequestToken}!com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}}
+\subsubsection[{getRequestToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RequestToken} com.bluevia.commons.connector.http.oauth.IOAuth.getRequestToken (
+\begin{DoxyParamCaption}
+\item[{String}]{callback, }
+\item[{byte\mbox{[}$\,$\mbox{]}}]{data, }
+\item[{OAuthProviderListener}]{listener}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}}}
+\label{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a5fcc08723e76b277b54777f94031b507}
+Retrieves a request token
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & \\
+\hline
+{\em data} & \\
+\hline
+{\em listener} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OauthHttpConnector_aa02bfcf6f64218b4d86869dedad95da5}{com.bluevia.commons.connector.http.oauth.OauthHttpConnector}.
+
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_ad58d6b47d9b204d0dd2efee3d74d6cb1}{
+\index{com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}!setAdditionalParameters@{setAdditionalParameters}}
+\index{setAdditionalParameters@{setAdditionalParameters}!com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}}
+\subsubsection[{setAdditionalParameters}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.oauth.IOAuth.setAdditionalParameters (
+\begin{DoxyParamCaption}
+\item[{HashMap$<$ String, String $>$}]{params}
+\end{DoxyParamCaption}
+)}}
+\label{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_ad58d6b47d9b204d0dd2efee3d74d6cb1}
+Sets the Oauth additional parameters
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & Oauth additional parameters \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OauthHttpConnector_a015368087e1b0779ce58902593ba6668}{com.bluevia.commons.connector.http.oauth.OauthHttpConnector}.
+
+\hypertarget{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a27725eabc503c62859b46a7cc9093a24}{
+\index{com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}!setOauthToken@{setOauthToken}}
+\index{setOauthToken@{setOauthToken}!com::bluevia::commons::connector::http::oauth::IOAuth@{com::bluevia::commons::connector::http::oauth::IOAuth}}
+\subsubsection[{setOauthToken}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.oauth.IOAuth.setOauthToken (
+\begin{DoxyParamCaption}
+\item[{{\bf OAuthToken}}]{token}
+\end{DoxyParamCaption}
+)}}
+\label{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1IOAuth_a27725eabc503c62859b46a7cc9093a24}
+Sets the oauth token
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & oauth token \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OauthHttpConnector_ab301141b15ea7a1ec5b8c543e2eff1c0}{com.bluevia.commons.connector.http.oauth.OauthHttpConnector}.
+

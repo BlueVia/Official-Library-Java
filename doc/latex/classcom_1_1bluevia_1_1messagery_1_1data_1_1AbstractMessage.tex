@@ -1,0 +1,415 @@
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage}{
+\section{com.bluevia.messagery.data.AbstractMessage Class Reference}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage}\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+}
+Inheritance diagram for com.bluevia.messagery.data.AbstractMessage:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.425076cm]{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a1598e1153610850f90cf7d07b72a61ab}{AbstractMessage} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ad0f90083f88b60b5e1b523a4e979aff0}{AbstractMessage} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a1386cc45fcd89cd8029496b1cabd62c0}{AbstractMessage} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address, String endpoint, String correlator)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ae4349a37ea10f8f6400582e9ab08a2a4}{AbstractMessage} (ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} $>$ addressList)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a3719657309f77bacd7ca0a9e35f8d34c}{AbstractMessage} (ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} $>$ addressList, String endpoint, String correlator)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_aad2c0bf5753d2f9d63cd8d08e0830a22}{AbstractMessage} (ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} $>$ addressList, String senderName, String endpoint, String correlator)
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a923fff0e55d3f85fd0e215c860e31f85}{addAddress} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a761ad2ca7e97e9471d7d6f56c979e693}{removeAddress} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} address)
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a0d5e116d8dabbd7bce62340fef3c0ca5}{clearAddressList} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_af4faeaeb18693a3e493db36a410e858f}{setOriginAddress} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} originAddress)
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} $>$ \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a9a2222b7e241c88a1c1e97e2f97d9dd6}{getAddressList} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a8a61594a470cd37c09ed7a7338bdaba6}{getOriginAddress} ()
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_aff7e290c0156638cef389e91e9e0c48e}{getSenderName} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a9e3e273703847b15215dd05a8408d3f3}{setSenderName} (String senderName)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a7b941130c6a9d8f14829b6a0df330836}{getEndpoint} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a7c155b001fd9cd24f79f99bed7e9b9ef}{setEndpoint} (String endpoint)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a7574b981b037c3a33888dd305663c6b9}{getCorrelator} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a29653e45e258735ab83311a0077c8755}{setCorrelator} (String correlator)
+\item 
+abstract boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ad5a798b37381c48c1653200114a70c85}{isValid} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_aa51463cf7df5be4f94c427f899d13a7b}{validateOriginAddress} ()
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ada3913e7bb6fc59e1179916a2decfd3a}{validateReceivedOriginAddress} ()
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a9b6fcb706957798bd9408d26df5dc8fb}{validateAddressList} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing the abstract SMS class that represents the different messages that will be sent using the SMS/MMS Client API This type is composed of the following fields: 
+\begin{DoxyItemize}
+\item addressList: mandatory; max occurrences: minimum 1. 
+\item originAddress: mandatory; UserId 
+\item senderName: optional; String
+
+
+\item endpoint: optional; String 
+\item correlator: optional; String 
+\end{DoxyItemize}
+
+This implementation is not synchronized
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a1598e1153610850f90cf7d07b72a61ab}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!AbstractMessage@{AbstractMessage}}
+\index{AbstractMessage@{AbstractMessage}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{AbstractMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.data.AbstractMessage.AbstractMessage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a1598e1153610850f90cf7d07b72a61ab}
+Instantiates a new SMS message type. \hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ad0f90083f88b60b5e1b523a4e979aff0}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!AbstractMessage@{AbstractMessage}}
+\index{AbstractMessage@{AbstractMessage}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{AbstractMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.data.AbstractMessage.AbstractMessage (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ad0f90083f88b60b5e1b523a4e979aff0}
+Instantiates a new message with a destination address, and origin address 
+\begin{DoxyParams}{Parameters}
+{\em address} & Destination address \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a1386cc45fcd89cd8029496b1cabd62c0}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!AbstractMessage@{AbstractMessage}}
+\index{AbstractMessage@{AbstractMessage}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{AbstractMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.data.AbstractMessage.AbstractMessage (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address, }
+\item[{String}]{endpoint, }
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a1386cc45fcd89cd8029496b1cabd62c0}
+Instantiates a new message with a destination address, and origin address 
+\begin{DoxyParams}{Parameters}
+{\em address} & Destination address \\
+\hline
+{\em endpoint} & Endpoint \\
+\hline
+{\em correlator} & Correlator \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ae4349a37ea10f8f6400582e9ab08a2a4}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!AbstractMessage@{AbstractMessage}}
+\index{AbstractMessage@{AbstractMessage}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{AbstractMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.data.AbstractMessage.AbstractMessage (
+\begin{DoxyParamCaption}
+\item[{ArrayList$<$ {\bf UserId} $>$}]{addressList}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ae4349a37ea10f8f6400582e9ab08a2a4}
+Instantiates a new message 
+\begin{DoxyParams}{Parameters}
+{\em addressList} & List with the destination addresses \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a3719657309f77bacd7ca0a9e35f8d34c}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!AbstractMessage@{AbstractMessage}}
+\index{AbstractMessage@{AbstractMessage}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{AbstractMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.data.AbstractMessage.AbstractMessage (
+\begin{DoxyParamCaption}
+\item[{ArrayList$<$ {\bf UserId} $>$}]{addressList, }
+\item[{String}]{endpoint, }
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a3719657309f77bacd7ca0a9e35f8d34c}
+Instantiates a new message 
+\begin{DoxyParams}{Parameters}
+{\em addressList} & List with the destination addresses \\
+\hline
+{\em endpoint} & Endpoint \\
+\hline
+{\em correlator} & Correlator \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_aad2c0bf5753d2f9d63cd8d08e0830a22}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!AbstractMessage@{AbstractMessage}}
+\index{AbstractMessage@{AbstractMessage}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{AbstractMessage}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.messagery.data.AbstractMessage.AbstractMessage (
+\begin{DoxyParamCaption}
+\item[{ArrayList$<$ {\bf UserId} $>$}]{addressList, }
+\item[{String}]{senderName, }
+\item[{String}]{endpoint, }
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_aad2c0bf5753d2f9d63cd8d08e0830a22}
+Instantiates a new message 
+\begin{DoxyParams}{Parameters}
+{\em addressList} & List with the destination addresses \\
+\hline
+{\em senderName} & the senderName \\
+\hline
+{\em endpoint} & Endpoint \\
+\hline
+{\em correlator} & Correlator \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a923fff0e55d3f85fd0e215c860e31f85}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!addAddress@{addAddress}}
+\index{addAddress@{addAddress}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{addAddress}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.data.AbstractMessage.addAddress (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a923fff0e55d3f85fd0e215c860e31f85}
+Adds the address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the address for this message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a0d5e116d8dabbd7bce62340fef3c0ca5}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!clearAddressList@{clearAddressList}}
+\index{clearAddressList@{clearAddressList}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{clearAddressList}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.data.AbstractMessage.clearAddressList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a0d5e116d8dabbd7bce62340fef3c0ca5}
+Clear addresses. \hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a9a2222b7e241c88a1c1e97e2f97d9dd6}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!getAddressList@{getAddressList}}
+\index{getAddressList@{getAddressList}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{getAddressList}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf UserId}$>$ com.bluevia.messagery.data.AbstractMessage.getAddressList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a9a2222b7e241c88a1c1e97e2f97d9dd6}
+Gets the addresses.
+
+\begin{DoxyReturn}{Returns}
+the address list 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a7574b981b037c3a33888dd305663c6b9}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!getCorrelator@{getCorrelator}}
+\index{getCorrelator@{getCorrelator}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{getCorrelator}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.data.AbstractMessage.getCorrelator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a7574b981b037c3a33888dd305663c6b9}
+\begin{DoxyReturn}{Returns}
+the correlator 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a7b941130c6a9d8f14829b6a0df330836}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{getEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.data.AbstractMessage.getEndpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a7b941130c6a9d8f14829b6a0df330836}
+\begin{DoxyReturn}{Returns}
+the endpoint 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a8a61594a470cd37c09ed7a7338bdaba6}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!getOriginAddress@{getOriginAddress}}
+\index{getOriginAddress@{getOriginAddress}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{getOriginAddress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UserId} com.bluevia.messagery.data.AbstractMessage.getOriginAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a8a61594a470cd37c09ed7a7338bdaba6}
+Gets the origin address.
+
+\begin{DoxyReturn}{Returns}
+the origin address 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_aff7e290c0156638cef389e91e9e0c48e}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!getSenderName@{getSenderName}}
+\index{getSenderName@{getSenderName}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{getSenderName}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.messagery.data.AbstractMessage.getSenderName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_aff7e290c0156638cef389e91e9e0c48e}
+\begin{DoxyReturn}{Returns}
+the senderName 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ad5a798b37381c48c1653200114a70c85}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}abstract boolean com.bluevia.messagery.data.AbstractMessage.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ad5a798b37381c48c1653200114a70c85}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+
+
+Implemented in \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1mms_1_1data_1_1MmsMessageReq_af0a26f8cfca4b73120dd968c35d96fb9}{com.bluevia.messagery.mt.mms.data.MmsMessageReq}, \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1Sms_a0358ec0edbe7b82978d2bd49a8c96022}{com.bluevia.messagery.mt.sms.data.Sms}, and \hyperlink{classcom_1_1bluevia_1_1messagery_1_1mt_1_1sms_1_1data_1_1SmsMessageReq_a446f7c2f9be9fcdcb72fa896a40983cb}{com.bluevia.messagery.mt.sms.data.SmsMessageReq}.
+
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a761ad2ca7e97e9471d7d6f56c979e693}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!removeAddress@{removeAddress}}
+\index{removeAddress@{removeAddress}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{removeAddress}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.messagery.data.AbstractMessage.removeAddress (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{address}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a761ad2ca7e97e9471d7d6f56c979e693}
+Removes the address
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the address for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a29653e45e258735ab83311a0077c8755}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!setCorrelator@{setCorrelator}}
+\index{setCorrelator@{setCorrelator}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{setCorrelator}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.data.AbstractMessage.setCorrelator (
+\begin{DoxyParamCaption}
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a29653e45e258735ab83311a0077c8755}
+
+\begin{DoxyParams}{Parameters}
+{\em correlator} & the correlator to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a7c155b001fd9cd24f79f99bed7e9b9ef}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!setEndpoint@{setEndpoint}}
+\index{setEndpoint@{setEndpoint}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{setEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.data.AbstractMessage.setEndpoint (
+\begin{DoxyParamCaption}
+\item[{String}]{endpoint}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a7c155b001fd9cd24f79f99bed7e9b9ef}
+
+\begin{DoxyParams}{Parameters}
+{\em endpoint} & the endpoint to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_af4faeaeb18693a3e493db36a410e858f}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!setOriginAddress@{setOriginAddress}}
+\index{setOriginAddress@{setOriginAddress}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{setOriginAddress}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.data.AbstractMessage.setOriginAddress (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{originAddress}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_af4faeaeb18693a3e493db36a410e858f}
+Sets the origin address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em originAddress} & the origin address to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a9e3e273703847b15215dd05a8408d3f3}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!setSenderName@{setSenderName}}
+\index{setSenderName@{setSenderName}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{setSenderName}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.messagery.data.AbstractMessage.setSenderName (
+\begin{DoxyParamCaption}
+\item[{String}]{senderName}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a9e3e273703847b15215dd05a8408d3f3}
+
+\begin{DoxyParams}{Parameters}
+{\em endpoint} & the senderName to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a9b6fcb706957798bd9408d26df5dc8fb}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!validateAddressList@{validateAddressList}}
+\index{validateAddressList@{validateAddressList}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{validateAddressList}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.messagery.data.AbstractMessage.validateAddressList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_a9b6fcb706957798bd9408d26df5dc8fb}
+Validates the destination address list
+
+\begin{DoxyReturn}{Returns}
+the result of the validation 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_aa51463cf7df5be4f94c427f899d13a7b}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!validateOriginAddress@{validateOriginAddress}}
+\index{validateOriginAddress@{validateOriginAddress}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{validateOriginAddress}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.messagery.data.AbstractMessage.validateOriginAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_aa51463cf7df5be4f94c427f899d13a7b}
+Validates the origin address
+
+\begin{DoxyReturn}{Returns}
+the result of the validation 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ada3913e7bb6fc59e1179916a2decfd3a}{
+\index{com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}!validateReceivedOriginAddress@{validateReceivedOriginAddress}}
+\index{validateReceivedOriginAddress@{validateReceivedOriginAddress}!com::bluevia::messagery::data::AbstractMessage@{com::bluevia::messagery::data::AbstractMessage}}
+\subsubsection[{validateReceivedOriginAddress}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.messagery.data.AbstractMessage.validateReceivedOriginAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1messagery_1_1data_1_1AbstractMessage_ada3913e7bb6fc59e1179916a2decfd3a}
+Validates the origin address for received sms (ALIAS and PHONENUMBER allowed)
+
+\begin{DoxyReturn}{Returns}
+the result of the validation 
+\end{DoxyReturn}

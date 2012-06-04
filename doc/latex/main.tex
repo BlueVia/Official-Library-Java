@@ -1,0 +1,197 @@
+\hypertarget{main_developer_guide_abstract_sec}{}\section{Abstract}\label{main_developer_guide_abstract_sec}
+Bluevia is the global developer platform from Telefonica that helps developers take apps, web services and ideas to market. Bluevia makes it easy for your application to access our network APIs. This includes payments, communications and much more, available using web technologies like RESTful API's and OAuth. Java SDK for BlueVia allows you to use the BueVia public API from your java application using just few lines of code. You can learn more about Bluevia \href{www.bluevia.com}{\tt here}.\hypertarget{main_getting_started_sec}{}\section{Getting started}\label{main_getting_started_sec}
+This section explains how to prepare your development environment to start working with the Bluevia Java SDK. First check out the system requirements that your computer must meet, and then follow the installation steps. Once you have finished you will be able to develop your first Java application using the functionality provided by Bluevia APIs.
+
+System requeriments
+
+Supported Operating Systems
+
+
+\begin{DoxyItemize}
+\item Windows XP (32-\/bit) or Vista (32-\/ or 64-\/bit) or Windows 7 
+\item Mac OS X 10.5.8 or later (x86 only) 
+\item Linux (tested on Linux Ubuntu Hardy Heron) 
+\end{DoxyItemize}
+
+{\bfseries Minimun system requeriments:}
+
+
+\begin{DoxyItemize}
+\item \href{http://www.oracle.com/technetwork/java/javase/downloads/index.html}{\tt Java 1.6} 
+\end{DoxyItemize}
+
+{\bfseries Recommended system requeriments:}
+
+
+\begin{DoxyItemize}
+\item \href{http://www.eclipse.org/}{\tt Eclipse IDE (3.4 or greater)} 
+\item \href{http://maven.apache.org/}{\tt Maven 2} 
+\item \href{http://maven.apache.org/eclipse-plugin.html}{\tt Maven plugin for Eclipse} 
+\end{DoxyItemize}
+
+It is not strictly necessary to use Eclipse and Maven as your development environment, but it is recommended to manage dependencies in your projects.\hypertarget{main_getting_started_library_sec}{}\subsection{Using Bluevia Java SDK in your applications}\label{main_getting_started_library_sec}
+Depending on whether or not you are using Maven, you will have to add library dependencies to the project classpath or just edit your pom.xml to enable Maven to manage them:\hypertarget{main_getting_started_library_sec_eclipse}{}\subsubsection{Eclipse standalone project}\label{main_getting_started_library_sec_eclipse}
+You have to include the library in your Eclipse project and configure the dependencies:
+
+
+\begin{DoxyEnumerate}
+\item Download Bluevia Library and save it in your hard disk:
+
+\href{http://bluevia.com/#}{\tt Bluevia Java SDK}
+
+
+\item Create your Project in Eclipse: select {\bfseries File} $>$ {\bfseries New} $>$ {\bfseries Java Project}.
+
+
+\item Include the Bluevia Library into the Java build path: 
+\begin{DoxyItemize}
+\item As JAR \href{file:}{\tt file:} 
+\begin{DoxyEnumerate}
+\item Select {\bfseries Project} $>$ {\bfseries Properties}. 
+\item In {\bfseries Java Build Path} section, click on {\bfseries Libraries} tab. 
+\end{DoxyEnumerate}
+\item As source code: 
+\begin{DoxyEnumerate}
+\item Select {\bfseries Project} $>$ {\bfseries Properties}. 
+\item In {\bfseries Java Build Path} section, click on {\bfseries Source} tab. 
+\item Click on {\bfseries Add folder} and select the path of the source. 
+\end{DoxyEnumerate}
+\end{DoxyItemize}
+\item Finally, include the JAR dependencies of Bluevia SDK in {\bfseries Libraries} tab clicking on {\bfseries Add External JARs} (The JAR files are included in \char`\"{}dependency\char`\"{} folder). 
+\end{DoxyEnumerate}\hypertarget{main_getting_started_library_sec_maven}{}\subsubsection{Maven project}\label{main_getting_started_library_sec_maven}
+
+\begin{DoxyEnumerate}
+\item Download Bluevia Library and save it in your hard disk:
+
+\href{http://bluevia.com/#}{\tt Bluevia Java SDK}
+
+
+\item Create your Project in Eclipse: select {\bfseries File} $>$ {\bfseries New} $>$ {\bfseries Maven Project}.
+
+
+\item Include the Bluevia Library into the Java build path: 
+\begin{DoxyItemize}
+\item As JAR \href{file:}{\tt file:} 
+\begin{DoxyEnumerate}
+\item Select {\bfseries Project} $>$ {\bfseries Properties}. 
+\item In {\bfseries Java Build Path} section, click on {\bfseries Libraries} tab. 
+\end{DoxyEnumerate}
+\item As source code: 
+\begin{DoxyEnumerate}
+\item Select {\bfseries Project} $>$ {\bfseries Properties}. 
+\item In {\bfseries Java Build Path} section, click on {\bfseries Source} tab. 
+\item Click on {\bfseries Add folder} and select the path of the source. 
+\end{DoxyEnumerate}
+\end{DoxyItemize}
+\item Finally, edit the {\bfseries pom.xml} file adding the following lines to include the library dependencies:
+
+
+\begin{DoxyCode}
+<dependencies>
+..............
+        <dependency>    
+                <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpclient</artifactId>
+                        <version>4.0.1</version>
+                </dependency>
+                <dependency>    
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpcore</artifactId>
+                        <version>4.0.1</version>
+                </dependency>
+                <dependency>
+                    <groupId>commons-codec</groupId>
+                    <artifactId>commons-codec</artifactId>
+                    <version>1.3</version>
+                </dependency>
+                <dependency>
+                        <groupId>oauth.signpost</groupId>
+                        <artifactId>signpost-core</artifactId>
+                        <version>1.2.1.1</version>
+                </dependency>
+                <dependency>
+                        <groupId>oauth.signpost</groupId>
+                        <artifactId>signpost-commonshttp4</artifactId>
+                        <version>1.2.1.1</version>
+                </dependency>
+                <dependency>
+                        <groupId>oauth.signpost</groupId>
+                        <artifactId>signpost-jetty6</artifactId>
+                        <version>1.2.1.1</version>
+                </dependency>
+                <dependency>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                        <version>1.1</version>
+                </dependency>
+                <dependency>
+                        <groupId>javax.mail</groupId>
+                        <artifactId>mail</artifactId>
+                        <version>1.4</version>
+                </dependency>
+..............
+</dependencies>
+\end{DoxyCode}
+  
+\end{DoxyEnumerate}\hypertarget{main_programming_guidelines_sec}{}\section{Programming guidelines}\label{main_programming_guidelines_sec}
+This section is a basic introduction to the Bluevia framework. This guide explains the library behavior and architecture, its working modes and the security model, based in OAuth, and how to start developing and testing Java applications using the Bluevia APIs. In the API guides section several complete code examples for each API will be provided.
+
+In order to complete the documentation of the Bluevia library, you should check the Reference section for API specifications.\hypertarget{main_programming_guidelines_framework_sec}{}\subsection{Bluevia library framework}\label{main_programming_guidelines_framework_sec}
+The Bluevia library for Java architecture is mainly composed of three modules:
+
+
+\begin{DoxyItemize}
+\item An abstract data client, or connector, that performs the low level operations required to retrieve data from the remote servers. This layer is responsible for generating and propagating exceptions or error codes to the upper levels, were they needed.
+
+
+\item A client interface layer. This layer provides the interfaces, abstract classes and generic classes needed to implement specific clients for the different APIs. Every API in Bluevia inherits from the same abstract class, implementing the particular logic for each of the APIs in the final, non-\/abstract class that is also the interface to the user of the API.
+
+
+\item A parsing and serializing layer. This layer is responsible for parsing any data received from the remote end and populate the data model objects in the library with any data received, as well as for generating output streams that can be sent to the remote end from data contained in the library data model objects whenever it is necessary to send information to the server.
+
+
+\end{DoxyItemize}\hypertarget{main_programming_guidelines_clients_basics_sec}{}\subsection{Clients basics}\label{main_programming_guidelines_clients_basics_sec}
+The main component of the Bluevia library is the Client, which represents the client side in a classic client-\/server schema. The library specify a REST/RPC Client for each one of the supported APIs (i.e. BVDirectory, BVMtSms), and defines the operations provided by their respective Bluevia APIs, using a Java based data model according to the XML data type definitions of Bluevia.
+
+According to this, the Bluevia library presents an easy programming model, concealing the communication mechanism from the developer. The way to work is:
+
+
+\begin{DoxyItemize}
+\item First, instantiate the corresponding client. You must provide the communication mechanism (as will be seen below) and the authorization information. 
+\item Now use the operations defined by the client. 
+\end{DoxyItemize}\hypertarget{main_programming_guidelines_working_modes_sec}{}\subsection{Working modes}\label{main_programming_guidelines_working_modes_sec}
+The Bluevia library provides several modes for each client. LIVE, TEST and SANDBOX are the actual communication mechanism with BlueVia, which provides the functionality described by the APIs.
+
+These are the available working modes, defined in the BVBaseClient class. The working mode must be selected in the instantiation of the client:
+
+
+\begin{DoxyItemize}
+\item BVBaseClient.Mode.LIVE \par
+In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country.
+
+
+\item BVBaseClient.Mode.TEST \par
+The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits.
+
+
+\item BVBaseClient.Mode.SANDBOX \par
+The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
+\end{DoxyItemize}
+
+For more information visit the \href{https://bluevia.com/en/knowledge/getStarted.Sandbox-and-Live-environments}{\tt Live, Test and Sandbox} section of BlueVia reference.\hypertarget{main_programming_guidelines_authentication}{}\subsection{API Authentication}\label{main_programming_guidelines_authentication}
+BlueVia requires both the user and your application to be identified and authenticated to allow applications use its APIs. BlueVia supports OAuth Protocol, a token-\/passing mechanims where users never have to reveal their passwords or credentials to the application. Bluevia library implements an OAuth client to supply developers an easy access to authentication procedure: \hyperlink{blv_oauth_guide}{Oauth reference}.
+
+For more information visit the \href{https://bluevia.com/en/knowledge/getStarted.Authentication}{\tt API authentication} section of BlueVia reference.\hypertarget{main_api_guides_sec}{}\subsection{API guides}\label{main_api_guides_sec}
+The following guides explain the behavior of each Bluevia API, including code samples to start developing a simple application in an easy way:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{blv_sms_mt_guide}{SMS MT API} 
+\item \hyperlink{blv_sms_mo_guide}{SMS MO API} 
+\item \hyperlink{blv_mms_mt_guide}{MMS MT API} 
+\item \hyperlink{blv_mms_mo_guide}{MMS MO API} 
+\item \hyperlink{blv_directory_guide}{Directory API} 
+\item \hyperlink{blv_ad_guide}{Advertising API} 
+\item \hyperlink{blv_location_guide}{Location API} 
+\item \hyperlink{blv_payment_guide}{Payment API} 
+\end{DoxyItemize}

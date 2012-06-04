@@ -1,0 +1,201 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType}{
+\section{com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType}\index{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a080e9267ee45f96e44cdcc72539134e6}{getExceptionCategory} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a4fb947134f067d1465b38a00ebea5489}{setExceptionCategory} (String value)
+\item 
+int \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aafee7baf429d75c2ad554dc646965a44}{getExceptionId} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a5579468b22daa6ea4c2addfe0c53cc5f}{setExceptionId} (int value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a22041bfb5e376af51c8d84e3605bee63}{getText} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_ab31df0248f55d91ec2fc21250ecfb6d1}{setText} (String value)
+\item 
+List$<$ String $>$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a3702a26de9781e65a55d94776be7aabb}{getVariables} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aff7b9748d1619634288036b699afb7ea}{setVariables} (List$<$ String $>$ variables)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aa0fd50d113eac43ded47a38aaa1ee8b4}{
+String {\bfseries exceptionCategory}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aa0fd50d113eac43ded47a38aaa1ee8b4}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_abbca764f1b460986afd2d38935185db6}{
+int {\bfseries exceptionId}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_abbca764f1b460986afd2d38935185db6}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aa6a6937b0c21189dd95b1e940fa9ef17}{
+String {\bfseries text}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aa6a6937b0c21189dd95b1e940fa9ef17}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a91caace9593f52ad239741156027fad5}{
+List$<$ String $>$ {\bfseries variables}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a91caace9593f52ad239741156027fad5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Object returned by server in case of Client related faults
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType}{ClientExceptionType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="ClientExceptionType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="exceptionCategory">
+           <simpleType>
+             <restriction base="\{http://www.w3.org/2001/XMLSchema\}string">
+               <enumeration value="SVC"/>
+               <enumeration value="POL"/>
+               <enumeration value="SEC"/>
+             </restriction>
+           </simpleType>
+         </element>
+         <element name="exceptionId">
+           <simpleType>
+             <restriction base="\{http://www.w3.org/2001/XMLSchema\}int">
+               <minInclusive value="0000"/>
+               <maxInclusive value="9999"/>
+             </restriction>
+           </simpleType>
+         </element>
+         <element name="text" type="\{http://www.w3.org/2001/XMLSchema\}string"/>
+         <element name="variables" type="\{http://www.w3.org/2001/XMLSchema\}string" maxOccurs="unbounded" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a080e9267ee45f96e44cdcc72539134e6}{
+\index{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}!getExceptionCategory@{getExceptionCategory}}
+\index{getExceptionCategory@{getExceptionCategory}!com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}}
+\subsubsection[{getExceptionCategory}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType.getExceptionCategory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a080e9267ee45f96e44cdcc72539134e6}
+Gets the value of the exceptionCategory property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aafee7baf429d75c2ad554dc646965a44}{
+\index{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}!getExceptionId@{getExceptionId}}
+\index{getExceptionId@{getExceptionId}!com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}}
+\subsubsection[{getExceptionId}]{\setlength{\rightskip}{0pt plus 5cm}int com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType.getExceptionId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aafee7baf429d75c2ad554dc646965a44}
+Gets the value of the exceptionId property. \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a22041bfb5e376af51c8d84e3605bee63}{
+\index{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}!getText@{getText}}
+\index{getText@{getText}!com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}}
+\subsubsection[{getText}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType.getText (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a22041bfb5e376af51c8d84e3605bee63}
+Gets the value of the text property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a3702a26de9781e65a55d94776be7aabb}{
+\index{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}!getVariables@{getVariables}}
+\index{getVariables@{getVariables}!com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}}
+\subsubsection[{getVariables}]{\setlength{\rightskip}{0pt plus 5cm}List$<$String$>$ com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType.getVariables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a3702a26de9781e65a55d94776be7aabb}
+Gets the value of the variables property.
+
+This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a {\ttfamily set} method for the variables property.
+
+For example, to add a new item, do as follows: 
+\begin{DoxyPre}
+    \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a3702a26de9781e65a55d94776be7aabb}{getVariables()}.add(newItem);
+ \end{DoxyPre}
+
+
+Objects of the following type(s) are allowed in the list \hyperlink{}{String} \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a4fb947134f067d1465b38a00ebea5489}{
+\index{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}!setExceptionCategory@{setExceptionCategory}}
+\index{setExceptionCategory@{setExceptionCategory}!com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}}
+\subsubsection[{setExceptionCategory}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType.setExceptionCategory (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a4fb947134f067d1465b38a00ebea5489}
+Sets the value of the exceptionCategory property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a5579468b22daa6ea4c2addfe0c53cc5f}{
+\index{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}!setExceptionId@{setExceptionId}}
+\index{setExceptionId@{setExceptionId}!com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}}
+\subsubsection[{setExceptionId}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType.setExceptionId (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_a5579468b22daa6ea4c2addfe0c53cc5f}
+Sets the value of the exceptionId property. \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_ab31df0248f55d91ec2fc21250ecfb6d1}{
+\index{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}!setText@{setText}}
+\index{setText@{setText}!com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}}
+\subsubsection[{setText}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType.setText (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_ab31df0248f55d91ec2fc21250ecfb6d1}
+Sets the value of the text property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aff7b9748d1619634288036b699afb7ea}{
+\index{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}!setVariables@{setVariables}}
+\index{setVariables@{setVariables}!com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType@{com::telefonica::schemas::unica::rest::common::v1::ClientExceptionType}}
+\subsubsection[{setVariables}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.common.v1.ClientExceptionType.setVariables (
+\begin{DoxyParamCaption}
+\item[{List$<$ String $>$}]{variables}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1ClientExceptionType_aff7b9748d1619634288036b699afb7ea}
+Sets the value of the variables property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em variables} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}

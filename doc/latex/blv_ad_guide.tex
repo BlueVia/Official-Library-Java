@@ -1,0 +1,147 @@
+\hypertarget{blv_ad_guide_ad_abstract_sec}{}\section{Abstract}\label{blv_ad_guide_ad_abstract_sec}
+The Bluevia Advertising API is a set of functions which allows users to provide advertising -\/based on different advertisement types such as images or texts or similar elements-\/ within their applications. This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia Advertising functionality.\hypertarget{blv_ad_guide_blv_ad_api_retrievings_ads_sec}{}\section{Bluevia Advertising API: Retrieving advertisements}\label{blv_ad_guide_blv_ad_api_retrievings_ads_sec}
+The Bluevia Advertising API is a set of functions which allows users to provide advertising -\/based on different advertisement types such as images or texts or similar elements-\/ within their applications. This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia Advertising functionality.\hypertarget{blv_ad_guide_ad_client_basics_sec}{}\subsection{Advertising client basics}\label{blv_ad_guide_ad_client_basics_sec}
+An Advertising client represents the client side in a classic client-\/server schema. This object wraps up the underlying REST client side functionality needed to perform requests against a REST server.
+
+Any Bluevia client performs requests and receives responses in a secure mode. Clients are authorized following the OAuth protocol. This security protocol enables users to grant third-\/party access to their resources without sharing their passwords. So clients store the authorization data -\/called security credentials-\/ to grant access to the server. The following sections describe what security credentials we are talking about.\hypertarget{blv_ad_guide_creating_ad_client_sec}{}\subsection{Creating an Advertising client: BVAdvertising class}\label{blv_ad_guide_creating_ad_client_sec}
+The first step in using the Advertising client is to create an BVAdvertising object. As we mentioned earlier this object could have three different working modes: i) as a client which sends requests to a real server, ii) a client working with a real server in testing mode, or iii) as a client which sends requests and receives responses to/from a sandbox server.\hypertarget{blv_ad_guide_adclient_features_working_modes_sec}{}\subsubsection{Advertising client features: working modes}\label{blv_ad_guide_adclient_features_working_modes_sec}
+When you create the client, you can specify various working modes: 
+\begin{DoxyItemize}
+\item BVBaseClient.Mode.LIVE \par
+In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country.
+
+
+\item BVBaseClient.Mode.TEST \par
+The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits.
+
+
+\item BVBaseClient.Mode.SANDBOX \par
+The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
+\end{DoxyItemize}\hypertarget{blv_ad_guide_adclient_features_security_credentials}{}\subsubsection{Advertising client features: security credentials}\label{blv_ad_guide_adclient_features_security_credentials}
+Bluevia uses OAuth as its authentication mechanism which enables websites and applications to access the Bluevia API's without end users disclosing their personal credentials. In order to grant access to the server any client has to be created passing the security credential as parameter in its constructor. These security credentials are managed internally and added as a HTTP header in every request sent to the server. Such Oauth security credentials are: 
+\begin{DoxyItemize}
+\item {\bfseries Consumer key} \par
+The string identifying the application-\/ you obtained when you registered your application within the provisioning portal.
+
+
+\item {\bfseries Consumer secret} \par
+A secret -\/a string-\/ used by the consumer to establish ownership of the consumer key.
+
+
+\item {\bfseries Access token} \par
+The token -\/a string-\/ used by the client for granting access permissions to the server.
+
+
+\item {\bfseries Access token secret} \par
+The secret of the access token. 
+\end{DoxyItemize}\hypertarget{blv_ad_guide_adclient_features_security_credentials_2l}{}\subsubsection{Advertising client features: Oauth 2-\/legged}\label{blv_ad_guide_adclient_features_security_credentials_2l}
+Some applications will only use the Advertising API, which does not need to be given permissions by the final user. Bluevia supports Oauth authentication without oauth token, which is called 2-\/legged mode. In this case the client just need the {\bfseries Consumer key} and {\bfseries Consumer secret} credentials.\hypertarget{blv_ad_guide_adclient_features_code_examples_sec}{}\subsubsection{Advertising client features: code example}\label{blv_ad_guide_adclient_features_code_examples_sec}
+Find below an example on how to create an Oauth 3-\/legged Advertising client taking into account all the information previously given.
+
+
+\begin{DoxyCode}
+// Mode.LIVE indicating the client works against a real Bluevia server.
+try {
+        BVAdvertising adClient = new BVAdvertising(Mode.LIVE, "consumer_key", "co
+      nsumer_secret", "access_token", "access_token_secret");
+} catch (BlueviaException e){
+        log.error(e.getMessage());
+}
+\end{DoxyCode}
+
+
+And Oauth 2-\/legged Advertising client
+
+
+\begin{DoxyCode}
+// Mode.LIVE indicating the client works against a real Bluevia server.
+try {
+        BVAdvertising adClient = new BVAdvertising(Mode.LIVE, "consumer_key", "co
+      nsumer_secret");
+} catch (BlueviaException e){
+        log.error(e.getMessage());
+}
+\end{DoxyCode}
+\hypertarget{blv_ad_guide_adclient_features_freeing_resources_sec}{}\subsubsection{Advertising client features: freeing resources}\label{blv_ad_guide_adclient_features_freeing_resources_sec}
+It is very important to free the resources that the client instantiates to work. To do this call the close method after finishing using the client:
+
+
+\begin{DoxyCode}
+adClient.close();
+\end{DoxyCode}
+\hypertarget{blv_ad_guide_retrieving_simple_ad_sec}{}\subsection{Retrieving an advertisement}\label{blv_ad_guide_retrieving_simple_ad_sec}
+The Bluevia Advertising API can provide two different kinds of advertisements: text and images. When retrieving a simple advertisement the user could to specify a set of request parameters such as keywords, protection policy, etc.
+
+Once you have instantiated a BVAdvertising object, you can start using the getAdvertising methods. Depending on the authentication you are using (3-\/legged or 2-\/legged) you should use one of the two different versions of the function::
+
+
+\begin{DoxyCode}
+SimpleAdResponse getAdvertising3l(String adSpace, String country, String adReques
+      tId, AdRequest.Type adPresentation, String[] keywords, AdRequest.ProtectionPolicy
+      Type protectionPolicy, String userAgent) throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+SimpleAdResponse getAdvertising2l(String adSpace, String country, String targetUs
+      erId, String adRequestId, AdRequest.Type adPresentation, String[] keywords, AdReq
+      uest.ProtectionPolicyType protectionPolicy, String userAgent) throws BlueviaExcep
+      tion, IOException
+\end{DoxyCode}
+
+
+The {\bfseries adSpace} parameter -\/that is the identifier you obtained when you registered your application within the Bluevia portal-\/ is mandatory.\par
+ The {\bfseries country} parameter indicates the country where the target user is located. Must follow ISO-\/3166. (optional). \par
+ The {\bfseries targetUserId} is a string to identify the target user. (optional, and only available in 3-\/legged mode). \par
+ The {\bfseries adRequestId} an unique id for the request (optional: if it is not set, the SDK will generate it automatically).\par
+ The {\bfseries adPresentation} parameter is optional. It specifies what type of advertisement the user wants to retrieve.\par
+ The {\bfseries keywords} parameter provides the key words the advertisement is related to. This parameter is optional too. \par
+ The {\bfseries protectionPolicy} allows an user to apply the desired the adult control policy. ProtectionPolicy is optional.\par
+ The {\bfseries user agent} parameter specifies the user agent of the client to show the advertisement.\par
+
+
+For a more detailed description please see the API Reference.\hypertarget{blv_ad_guide_processing_ad_response_sec}{}\subsubsection{Retrieving an advertisement: processing the response}\label{blv_ad_guide_processing_ad_response_sec}
+The SimpleAdResponse object contains, among other members, an ArrayList of CreativeElement's, which are the objects that represent the advertisement.The Creative Element stores a string containing the representation of the advertisement (text or an URL of an image); and other string corresponding to the URL for a 'click2wap' interaction.\hypertarget{blv_ad_guide_advertising_code_example_sec}{}\subsection{Bluevia Advertising API: code example}\label{blv_ad_guide_advertising_code_example_sec}
+
+\begin{DoxyCode}
+// Get a simple Ad using the Ad API
+
+BVAdvertising adClient = null;
+
+try {
+
+        // 1. Create the client (you have to choose the mode and include the OAut
+      h authorization values. No access token is needed)
+        adClient = new BVAdvertising(Mode.LIVE, "consumer_key", "consumer_secret"
+      );
+
+        // 2. Request an advertisement. We need at least the mandatory parameter 
+      adSpace (ie, 12921).
+        SimpleResponse response = adClient.getAdvertising2l("12921", "UK", null, 
+      String adRequestId, 
+                Type.IMAGE, null, ProtectionPolicyType.SAFE, null);
+
+        // 3. Process the response
+        if (response != null && response.getAdvertisingList() != null &&
+                !response.getAdvertisingList().isEmpty()){
+
+                CreativeElement ad = response.getAdvertisingList().get(0);
+                String imageUrl = ad.getValue();
+                String interactionUrl = ad.getInteraction();
+                
+                // Do stuff
+        }
+
+} catch (BlueviaException e) {
+        log.error("Error getting advertising", e);
+} catch (IOException e) {
+        log.error("Error getting advertising", e);
+} finally {
+
+        // 3. Remember to close the client to free resources
+        if (adClient != null)
+                adClient.close();
+} 
+\end{DoxyCode}
+ 

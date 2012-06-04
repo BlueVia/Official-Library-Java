@@ -1,0 +1,203 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType}{
+\section{com.telefonica.schemas.unica.rpc.payment.v1.NotifyPaymentFinalStatusParamsType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType}\index{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a0b189189c4e10d25affeb7c1fffdad89}{getTransactionId} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a0c3cc61b77fc27eef3d0441cfd5d4720}{setTransactionId} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_aa5103cc2bbdc3d1f6f9e3080b5ca3666}{getTransactionStatus} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a40d8f0cb87dc61c19494d4d639966313}{setTransactionStatus} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ae49fd8b46704c3250fb645b54544c029}{getTransactionStatusDescription} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ad84512c02da7d2a2e09aed035b8b8114}{setTransactionStatusDescription} (String value)
+\item 
+List$<$ Object $>$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a9d6c0050b1abd06c1b8533c0b531ac60}{getAny} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ae5038ef3f8bc5d871a1ff5e19be5bcf5}{setAny} (List$<$ Object $>$ any)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ac2a61115c75222e751c03b0f9711fe7e}{
+String {\bfseries transactionId}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ac2a61115c75222e751c03b0f9711fe7e}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a2f72ac3bd012ca295a476d61efb43e7a}{
+String {\bfseries transactionStatus}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a2f72ac3bd012ca295a476d61efb43e7a}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a5dd0dc23d441f5e3bbf1c863432a69bf}{
+String {\bfseries transactionStatusDescription}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a5dd0dc23d441f5e3bbf1c863432a69bf}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a7e52107b663df2feec68ff964e542d78}{
+List$<$ Object $>$ {\bfseries any}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a7e52107b663df2feec68ff964e542d78}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+input parameters for NotifyPaymentFinalStatus operation
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType}{NotifyPaymentFinalStatusParamsType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="NotifyPaymentFinalStatusParamsType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="transactionId" type="\{http://www.w3.org/2001/XMLSchema\}string"/>
+         <element name="transactionStatus">
+           <simpleType>
+             <union memberTypes=" \{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}TransactionEnumerationType \{http://www.w3.org/2001/XMLSchema\}string">
+             </union>
+           </simpleType>
+         </element>
+         <element name="transactionStatusDescription" type="\{http://www.w3.org/2001/XMLSchema\}string"/>
+         <any processContents='lax' namespace='\##other' maxOccurs="unbounded" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a9d6c0050b1abd06c1b8533c0b531ac60}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}!getAny@{getAny}}
+\index{getAny@{getAny}!com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}}
+\subsubsection[{getAny}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Object$>$ com.telefonica.schemas.unica.rpc.payment.v1.NotifyPaymentFinalStatusParamsType.getAny (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a9d6c0050b1abd06c1b8533c0b531ac60}
+Gets the value of the any property.
+
+This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a {\ttfamily set} method for the any property.
+
+For example, to add a new item, do as follows: 
+\begin{DoxyPre}
+    \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a9d6c0050b1abd06c1b8533c0b531ac60}{getAny()}.add(newItem);
+ \end{DoxyPre}
+
+
+Objects of the following type(s) are allowed in the list \hyperlink{}{Element} \hyperlink{}{Object} \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a0b189189c4e10d25affeb7c1fffdad89}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}!getTransactionId@{getTransactionId}}
+\index{getTransactionId@{getTransactionId}!com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}}
+\subsubsection[{getTransactionId}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.payment.v1.NotifyPaymentFinalStatusParamsType.getTransactionId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a0b189189c4e10d25affeb7c1fffdad89}
+Gets the value of the transactionId property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_aa5103cc2bbdc3d1f6f9e3080b5ca3666}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}!getTransactionStatus@{getTransactionStatus}}
+\index{getTransactionStatus@{getTransactionStatus}!com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}}
+\subsubsection[{getTransactionStatus}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.payment.v1.NotifyPaymentFinalStatusParamsType.getTransactionStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_aa5103cc2bbdc3d1f6f9e3080b5ca3666}
+Gets the value of the transactionStatus property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ae49fd8b46704c3250fb645b54544c029}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}!getTransactionStatusDescription@{getTransactionStatusDescription}}
+\index{getTransactionStatusDescription@{getTransactionStatusDescription}!com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}}
+\subsubsection[{getTransactionStatusDescription}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.payment.v1.NotifyPaymentFinalStatusParamsType.getTransactionStatusDescription (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ae49fd8b46704c3250fb645b54544c029}
+Gets the value of the transactionStatusDescription property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ae5038ef3f8bc5d871a1ff5e19be5bcf5}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}!setAny@{setAny}}
+\index{setAny@{setAny}!com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}}
+\subsubsection[{setAny}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.NotifyPaymentFinalStatusParamsType.setAny (
+\begin{DoxyParamCaption}
+\item[{List$<$ Object $>$}]{any}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ae5038ef3f8bc5d871a1ff5e19be5bcf5}
+Sets the value of the any property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & allowed object is \hyperlink{}{Element} \hyperlink{}{Object} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a0c3cc61b77fc27eef3d0441cfd5d4720}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}!setTransactionId@{setTransactionId}}
+\index{setTransactionId@{setTransactionId}!com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}}
+\subsubsection[{setTransactionId}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.NotifyPaymentFinalStatusParamsType.setTransactionId (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a0c3cc61b77fc27eef3d0441cfd5d4720}
+Sets the value of the transactionId property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a40d8f0cb87dc61c19494d4d639966313}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}!setTransactionStatus@{setTransactionStatus}}
+\index{setTransactionStatus@{setTransactionStatus}!com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}}
+\subsubsection[{setTransactionStatus}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.NotifyPaymentFinalStatusParamsType.setTransactionStatus (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_a40d8f0cb87dc61c19494d4d639966313}
+Sets the value of the transactionStatus property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ad84512c02da7d2a2e09aed035b8b8114}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}!setTransactionStatusDescription@{setTransactionStatusDescription}}
+\index{setTransactionStatusDescription@{setTransactionStatusDescription}!com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::NotifyPaymentFinalStatusParamsType}}
+\subsubsection[{setTransactionStatusDescription}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.NotifyPaymentFinalStatusParamsType.setTransactionStatusDescription (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1NotifyPaymentFinalStatusParamsType_ad84512c02da7d2a2e09aed035b8b8114}
+Sets the value of the transactionStatusDescription property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}

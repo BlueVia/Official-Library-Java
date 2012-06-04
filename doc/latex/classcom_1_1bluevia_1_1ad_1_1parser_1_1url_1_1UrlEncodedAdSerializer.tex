@@ -1,0 +1,54 @@
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1parser_1_1url_1_1UrlEncodedAdSerializer}{
+\section{com.bluevia.ad.parser.url.UrlEncodedAdSerializer Class Reference}
+\label{classcom_1_1bluevia_1_1ad_1_1parser_1_1url_1_1UrlEncodedAdSerializer}\index{com::bluevia::ad::parser::url::UrlEncodedAdSerializer@{com::bluevia::ad::parser::url::UrlEncodedAdSerializer}}
+}
+Inheritance diagram for com.bluevia.ad.parser.url.UrlEncodedAdSerializer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1ad_1_1parser_1_1url_1_1UrlEncodedAdSerializer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+ByteArrayOutputStream \hyperlink{classcom_1_1bluevia_1_1ad_1_1parser_1_1url_1_1UrlEncodedAdSerializer_ac97bc95270a35997207d9f4dcbd9b7b8}{serialize} (\hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity}{Entity} entity)  throws SerializeException 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+URL encoded implementation of \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer}{ISerializer} Class that represents the parser object for any Ad entity. Using this class you will be able to serialize and AdRequet entity into a URL encoded body to send to the gSDP via a HTTP request.
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1parser_1_1url_1_1UrlEncodedAdSerializer_ac97bc95270a35997207d9f4dcbd9b7b8}{
+\index{com::bluevia::ad::parser::url::UrlEncodedAdSerializer@{com::bluevia::ad::parser::url::UrlEncodedAdSerializer}!serialize@{serialize}}
+\index{serialize@{serialize}!com::bluevia::ad::parser::url::UrlEncodedAdSerializer@{com::bluevia::ad::parser::url::UrlEncodedAdSerializer}}
+\subsubsection[{serialize}]{\setlength{\rightskip}{0pt plus 5cm}ByteArrayOutputStream com.bluevia.ad.parser.url.UrlEncodedAdSerializer.serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity}}]{entity}
+\end{DoxyParamCaption}
+)  throws {\bf SerializeException} }}
+\label{classcom_1_1bluevia_1_1ad_1_1parser_1_1url_1_1UrlEncodedAdSerializer_ac97bc95270a35997207d9f4dcbd9b7b8}
+This function serializes an entity into an OutputStream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & the entity to serialize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the outputstream to write the serialization result to 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em SerializeException} & thrown if the entity or output stream are unfit for serialization \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1parser_1_1ISerializer_ad5554da8b85ab32d46d60e46bc563349}{com.bluevia.commons.parser.ISerializer}.
+

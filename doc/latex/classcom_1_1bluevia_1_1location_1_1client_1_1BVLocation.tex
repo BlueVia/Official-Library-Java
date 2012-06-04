@@ -1,0 +1,98 @@
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation}{
+\section{com.bluevia.location.client.BVLocation Class Reference}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation}\index{com::bluevia::location::client::BVLocation@{com::bluevia::location::client::BVLocation}}
+}
+Inheritance diagram for com.bluevia.location.client.BVLocation:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation_ace28a9b6673be8e4eeee9541d9b1c8fe}{BVLocation} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} mode, String consumerKey, String consumerSecret, String token, String tokenSecret)  throws BlueviaException
+\item 
+\hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo}{LocationInfo} \hyperlink{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation_ab139fabcad3b9a50a07c54e90ddbe23e}{getLocation} (Integer accuracy)  throws BlueviaException, IOException 
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation_a0f846e6fe9e607b75febd9ca0309d7b3}{
+static final String {\bfseries FEED\_\-LOCATION\_\-BASE\_\-URI} = \char`\"{}/REST/Location\char`\"{}}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation_a0f846e6fe9e607b75febd9ca0309d7b3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Client interface for the REST binding of the Bluevia Location Service.
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation_ace28a9b6673be8e4eeee9541d9b1c8fe}{
+\index{com::bluevia::location::client::BVLocation@{com::bluevia::location::client::BVLocation}!BVLocation@{BVLocation}}
+\index{BVLocation@{BVLocation}!com::bluevia::location::client::BVLocation@{com::bluevia::location::client::BVLocation}}
+\subsubsection[{BVLocation}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.location.client.BVLocation.BVLocation (
+\begin{DoxyParamCaption}
+\item[{{\bf Mode}}]{mode, }
+\item[{String}]{consumerKey, }
+\item[{String}]{consumerSecret, }
+\item[{String}]{token, }
+\item[{String}]{tokenSecret}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}}}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation_ace28a9b6673be8e4eeee9541d9b1c8fe}
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+{\em consumerKey} & \\
+\hline
+{\em consumerSecret} & \\
+\hline
+{\em token} & \\
+\hline
+{\em tokenSecret} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation_ab139fabcad3b9a50a07c54e90ddbe23e}{
+\index{com::bluevia::location::client::BVLocation@{com::bluevia::location::client::BVLocation}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!com::bluevia::location::client::BVLocation@{com::bluevia::location::client::BVLocation}}
+\subsubsection[{getLocation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LocationInfo} com.bluevia.location.client.BVLocation.getLocation (
+\begin{DoxyParamCaption}
+\item[{Integer}]{accuracy}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocation_ab139fabcad3b9a50a07c54e90ddbe23e}
+Retrieves the location of the terminal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em accuracy} & Accuracy, in meters, that is acceptable for a response (optional). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An entity object containing the Location Data. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}

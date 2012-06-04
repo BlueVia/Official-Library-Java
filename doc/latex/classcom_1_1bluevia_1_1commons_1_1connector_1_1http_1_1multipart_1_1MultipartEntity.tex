@@ -1,0 +1,148 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity}{
+\section{com.bluevia.commons.connector.http.multipart.MultipartEntity Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity}\index{com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}}
+}
+
+
+Inherits AbstractHttpEntity.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a91f08fa3362a713fb96df1ed8c59c101}{MultipartEntity} (Part\mbox{[}$\,$\mbox{]} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a57c7f88c9eb78f75b17addf1aa7fa891}{parts}, HttpParams params)
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a18ee991c6df1cdd65ed176da25e330ef}{
+{\bfseries MultipartEntity} (Part\mbox{[}$\,$\mbox{]} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a57c7f88c9eb78f75b17addf1aa7fa891}{parts})}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a18ee991c6df1cdd65ed176da25e330ef}
+
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_abfa07efd8191809d73c4d08e7351710f}{isRepeatable} ()
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_aebeeb43c7973a56cfed31b932ea01e4c}{
+void {\bfseries writeTo} (OutputStream out)  throws IOException }
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_aebeeb43c7973a56cfed31b932ea01e4c}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_ac195858ec3a9a54301c219411e2155a1}{
+Header {\bfseries getContentType} ()}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_ac195858ec3a9a54301c219411e2155a1}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_ac1e40cd73be59ae7f0849fbae88a8747}{
+long {\bfseries getContentLength} ()}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_ac1e40cd73be59ae7f0849fbae88a8747}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a1ab477a82da5b282d1ecf44777acf6ef}{
+InputStream {\bfseries getContent} ()  throws IOException, IllegalStateException }
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a1ab477a82da5b282d1ecf44777acf6ef}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a280df5961bcae7fba0ffac8c2801a550}{
+boolean {\bfseries isStreaming} ()}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a280df5961bcae7fba0ffac8c2801a550}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a333f6a62bf491dff95937cd562a25cd4}{MULTIPART\_\-BOUNDARY} = \char`\"{}http.method.multipart.boundary\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+byte\mbox{[}$\,$\mbox{]} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_afe91439ac03108baaf8aadebd8337ad1}{getMultipartBoundary} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Part\mbox{[}$\,$\mbox{]} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a57c7f88c9eb78f75b17addf1aa7fa891}{parts}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a request entity suitable for an HTTP multipart POST method. 
+
+The HTTP multipart POST method is defined in section 3.3 of \href{http://www.ietf.org/rfc/rfc1867.txt}{\tt RFC1867}: $<$blockquote$>$ The media-\/type multipart/form-\/data follows the rules of all multipart MIME data streams as outlined in RFC 1521. The multipart/form-\/data contains a series of parts. Each part is expected to contain a content-\/disposition header where the value is \char`\"{}form-\/data\char`\"{} and a name attribute specifies the field name within the form, e.g., 'content-\/disposition: form-\/data; name=\char`\"{}xxxxx\char`\"{}', where xxxxx is the field name corresponding to that field. Field names originally in non-\/ASCII character sets may be encoded using the method outlined in RFC 1522. $<$/blockquote$>$  
+
+This entity is designed to be used in conjunction with the \hyperlink{}{org.apache.http.HttpRequest} to provide multipart posts. Example usage: 
+\begin{DoxyPre}
+  File f = new File("/path/fileToUpload.txt");
+  HttpRequest request = new HttpRequest("http://host/some\_path");
+  Part[] parts = \{
+      new \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart}{StringPart}("param\_name", "value"),
+      new \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1FilePart}{FilePart}(f.getName(), f)
+  \};
+  filePost.setEntity(
+      new MultipartRequestEntity(parts, filePost.getParams())
+      );
+  HttpClient client = new HttpClient();
+  int status = client.executeMethod(filePost);
+ \end{DoxyPre}
+
+
+\begin{DoxySince}{Since}
+3.0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a91f08fa3362a713fb96df1ed8c59c101}{
+\index{com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}!MultipartEntity@{MultipartEntity}}
+\index{MultipartEntity@{MultipartEntity}!com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}}
+\subsubsection[{MultipartEntity}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.multipart.MultipartEntity.MultipartEntity (
+\begin{DoxyParamCaption}
+\item[{Part\mbox{[}$\,$\mbox{]}}]{parts, }
+\item[{HttpParams}]{params}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a91f08fa3362a713fb96df1ed8c59c101}
+Creates a new multipart entity containing the given parts. 
+\begin{DoxyParams}{Parameters}
+{\em parts} & The parts to include. \\
+\hline
+{\em params} & The params of the HttpMethod using this entity. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_afe91439ac03108baaf8aadebd8337ad1}{
+\index{com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}!getMultipartBoundary@{getMultipartBoundary}}
+\index{getMultipartBoundary@{getMultipartBoundary}!com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}}
+\subsubsection[{getMultipartBoundary}]{\setlength{\rightskip}{0pt plus 5cm}byte \mbox{[}$\,$\mbox{]} com.bluevia.commons.connector.http.multipart.MultipartEntity.getMultipartBoundary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_afe91439ac03108baaf8aadebd8337ad1}
+Returns the MIME boundary string that is used to demarcate boundaries of this part. The first call to this method will implicitly create a new boundary string. To create a boundary string first the HttpMethodParams.MULTIPART\_\-BOUNDARY parameter is considered. Otherwise a random one is generated.
+
+\begin{DoxyReturn}{Returns}
+The boundary string of this entity in ASCII encoding. 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_abfa07efd8191809d73c4d08e7351710f}{
+\index{com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}!isRepeatable@{isRepeatable}}
+\index{isRepeatable@{isRepeatable}!com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}}
+\subsubsection[{isRepeatable}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.commons.connector.http.multipart.MultipartEntity.isRepeatable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_abfa07efd8191809d73c4d08e7351710f}
+Returns {\ttfamily true} if all parts are repeatable, {\ttfamily false} otherwise. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a333f6a62bf491dff95937cd562a25cd4}{
+\index{com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}!MULTIPART\_\-BOUNDARY@{MULTIPART\_\-BOUNDARY}}
+\index{MULTIPART\_\-BOUNDARY@{MULTIPART\_\-BOUNDARY}!com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}}
+\subsubsection[{MULTIPART\_\-BOUNDARY}]{\setlength{\rightskip}{0pt plus 5cm}final String {\bf com.bluevia.commons.connector.http.multipart.MultipartEntity.MULTIPART\_\-BOUNDARY} = \char`\"{}http.method.multipart.boundary\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a333f6a62bf491dff95937cd562a25cd4}
+Sets the value to use as the multipart boundary. 
+
+This parameter expects a value if type \hyperlink{}{String}.  \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a57c7f88c9eb78f75b17addf1aa7fa891}{
+\index{com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}!parts@{parts}}
+\index{parts@{parts}!com::bluevia::commons::connector::http::multipart::MultipartEntity@{com::bluevia::commons::connector::http::multipart::MultipartEntity}}
+\subsubsection[{parts}]{\setlength{\rightskip}{0pt plus 5cm}Part \mbox{[}$\,$\mbox{]} {\bf com.bluevia.commons.connector.http.multipart.MultipartEntity.parts}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1MultipartEntity_a57c7f88c9eb78f75b17addf1aa7fa891}
+The MIME parts as set by the constructor 

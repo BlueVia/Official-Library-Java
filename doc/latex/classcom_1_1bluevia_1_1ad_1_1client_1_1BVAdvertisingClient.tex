@@ -1,0 +1,110 @@
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient}{
+\section{com.bluevia.ad.client.BVAdvertisingClient Class Reference}
+\label{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient}\index{com::bluevia::ad::client::BVAdvertisingClient@{com::bluevia::ad::client::BVAdvertisingClient}}
+}
+Inheritance diagram for com.bluevia.ad.client.BVAdvertisingClient:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_a58e1ba1d7427ac1e2b6b7366ee8b45de}{
+void {\bfseries init} ()}
+\label{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_a58e1ba1d7427ac1e2b6b7366ee8b45de}
+
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse}{AdResponse} \hyperlink{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_a1f8fa5041487fbfc2c700b3125263f00}{getSimpleAd} (String adSpace, String phoneNumber, String country, String targetUserId, String adRequestId, \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdRequest_a09c6520d8fe767e50b3629a4a3583ef3}{AdRequest.Type} adPresentation, String\mbox{[}$\,$\mbox{]} keywords, \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdRequest_abd707475c19957f294689451d338c099}{AdRequest.ProtectionPolicyType} protectionPolicy, String userAgent)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1simple_1_1SimpleAdResponse}{SimpleAdResponse} \hyperlink{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_ae8aad0c316a0f71953e5ed19bde64888}{simplifyResponse} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse}{AdResponse} response)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_a1ff56612f9c03a129de69610391d07fe}{
+static final String {\bfseries FEED\_\-AD\_\-REQUESTS\_\-URI} = \char`\"{}/simple/requests\char`\"{}}
+\label{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_a1ff56612f9c03a129de69610391d07fe}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides access to the set of functions which any user could use to access the Advertising service functionality
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_a1f8fa5041487fbfc2c700b3125263f00}{
+\index{com::bluevia::ad::client::BVAdvertisingClient@{com::bluevia::ad::client::BVAdvertisingClient}!getSimpleAd@{getSimpleAd}}
+\index{getSimpleAd@{getSimpleAd}!com::bluevia::ad::client::BVAdvertisingClient@{com::bluevia::ad::client::BVAdvertisingClient}}
+\subsubsection[{getSimpleAd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AdResponse} com.bluevia.ad.client.BVAdvertisingClient.getSimpleAd (
+\begin{DoxyParamCaption}
+\item[{String}]{adSpace, }
+\item[{String}]{phoneNumber, }
+\item[{String}]{country, }
+\item[{String}]{targetUserId, }
+\item[{String}]{adRequestId, }
+\item[{{\bf AdRequest.Type}}]{adPresentation, }
+\item[{String\mbox{[}$\,$\mbox{]}}]{keywords, }
+\item[{{\bf AdRequest.ProtectionPolicyType}}]{protectionPolicy, }
+\item[{String}]{userAgent}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_a1f8fa5041487fbfc2c700b3125263f00}
+Requests the retrieving of an advertisement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adSpace} & the adSpace of the Bluevia application (mandatory) \\
+\hline
+{\em phoneNumber} & the phone number to whom the advertising is targeted \\
+\hline
+{\em country} & country where the target user is located. Must follow ISO-\/3166 (see \href{http://www.iso.org/iso/country_codes.htm}{\tt http://www.iso.org/iso/country\_\-codes.htm}). (Optional: the parameter should not be included if the target user can be deduced by other means, for example, Oauth 3-\/legged or Oauth 2-\/legged with requestorID). \\
+\hline
+{\em targetUserId} & Identifier of the Target User. (Optional: the parameter should not be included if the target user can be deduced by other means, for example, Oauth 3-\/legged or Oauth 2-\/legged with requestorID). \\
+\hline
+{\em adRequestId} & an unique id for the request. (optional: if it is not set, the SDK will generate it automatically) \\
+\hline
+{\em adPresentation} & the value is a code that represents the ad format type (optional) \\
+\hline
+{\em keywords} & the keywords the ads are related to (optional) \\
+\hline
+{\em protectionPolicy} & the adult control policy. It will be safe, low, high. It should be checked with the application SLA in the gSDP (optional) \\
+\hline
+{\em userAgent} & the user agent of the client (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result returned by the server that contains the ad meta-\/data 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_ae8aad0c316a0f71953e5ed19bde64888}{
+\index{com::bluevia::ad::client::BVAdvertisingClient@{com::bluevia::ad::client::BVAdvertisingClient}!simplifyResponse@{simplifyResponse}}
+\index{simplifyResponse@{simplifyResponse}!com::bluevia::ad::client::BVAdvertisingClient@{com::bluevia::ad::client::BVAdvertisingClient}}
+\subsubsection[{simplifyResponse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SimpleAdResponse} com.bluevia.ad.client.BVAdvertisingClient.simplifyResponse (
+\begin{DoxyParamCaption}
+\item[{{\bf AdResponse}}]{response}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1ad_1_1client_1_1BVAdvertisingClient_ae8aad0c316a0f71953e5ed19bde64888}
+Returns a simple ad response with the usefull information
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}

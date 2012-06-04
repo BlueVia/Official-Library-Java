@@ -1,0 +1,152 @@
+\hypertarget{blv_oauth_guide_oauth_abstract_sec}{}\section{Abstract}\label{blv_oauth_guide_oauth_abstract_sec}
+The Bluevia OAuth API is a set of functions which allows applications to retrieve request and access tokens to complete the OAuth authentication protocol, necessary to be able to get and send data to Bluevia APIs. This guide represents a practical introduction to include the OAuth protocol in Bluevia applications.\hypertarget{blv_oauth_guide_oauth_protocol_sec}{}\section{Bluevia OAuth protocol}\label{blv_oauth_guide_oauth_protocol_sec}
+The Bluevia OAuth API is a set of functions which allows applications to retrieve request and access tokens to complete the OAuth authentication protocol, necessary to be able to get and send data to Bluevia APIs. This guide represents a practical introduction to include the OAuth protocol in Bluevia applications.
+
+OAuth definitions:
+
+
+\begin{DoxyItemize}
+\item {\bfseries User:} Customer of Telefonica who has an account with Bluevia and can, therefore, use the underlying services via a Bluevia API. 
+\item {\bfseries Consumer:} An application that uses OAuth to access the Bluevia APIs on behalf of the User. 
+\item {\bfseries Consumer Key:} A value used by the Consumer to identify itself with Bluevia. 
+\item {\bfseries Consumer Secret:} Secret used by the Consumer to guarantee the ownership of the consumer key. 
+\item {\bfseries Request Token:} A value used by the Consumer to obtain authorization from the User. The Request Token is exchanged for an Access Token when permission is granted. 
+\item {\bfseries Access Token:} A value used by the Consumer to call Bluevia APIs on behalf of the User (instead of using the User’s credentials) 
+\end{DoxyItemize}
+
+The Consumer credentials are unique for each application registered in the Bluevia portal, and can be obtained by requesting an API key. Visit the API authentication reference for more information about \href{https://bluevia.com/en/knowledge/getStarted.Authentication#GetConsumerCredentials}{\tt getting Consumer credentials}.\hypertarget{blv_oauth_guide_oauth_client_basics_sec}{}\subsection{OAuth client basics}\label{blv_oauth_guide_oauth_client_basics_sec}
+An OAuth client represents the client side in a classic client-\/server schema. This object wraps up the underlying REST client side functionality needed to perform requests against a REST server.\hypertarget{blv_oauth_guide_creating_oauth_client_sec}{}\subsubsection{Creating an OAuth client: BVOauth class}\label{blv_oauth_guide_creating_oauth_client_sec}
+The first step in using the OAuth client is to create a BVOauth object. As we mentioned earlier this object could have three different working modes: i) as a client which sends requests to a real server, ii) a client working with a real server in testing mode, or iii) as a client which sends requests and receives responses to/from a sandbox server.\hypertarget{blv_oauth_guide_oauthclient_features_working_modes_sec}{}\subsubsection{OAuth client features: working modes}\label{blv_oauth_guide_oauthclient_features_working_modes_sec}
+When you create the client, you can specify various working modes: 
+\begin{DoxyItemize}
+\item BVBaseClient.Mode.LIVE \par
+In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country.
+
+
+\item BVBaseClient.Mode.TEST \par
+The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits.
+
+
+\item BVBaseClient.Mode.SANDBOX \par
+The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
+\end{DoxyItemize}\hypertarget{blv_oauth_guide_oauthclient_features_code_examples_sec}{}\subsubsection{OAuth client features: code example}\label{blv_oauth_guide_oauthclient_features_code_examples_sec}
+Find below an example on how to create an OauthClient taking into account all the information previously given.
+
+
+\begin{DoxyCode}
+// BVBaseClient.Mode.LIVE indicating the client works against a real server.
+try {
+        BVOauth oauthClient = new BVOauth(Mode.LIVE, "consumer_key", "consumer_se
+      cret");
+} catch (BlueviaException e){
+        log.error(e.getMessage());
+}
+\end{DoxyCode}
+\hypertarget{blv_oauth_guide_oauthclient_features_freeing_resources_sec}{}\subsubsection{OAuth client features: freeing resources}\label{blv_oauth_guide_oauthclient_features_freeing_resources_sec}
+It is very important to free the resources that the client instantiates to work. To do this call the close method after finishing using the client:
+
+
+\begin{DoxyCode}
+oauthClient.close();
+\end{DoxyCode}
+\hypertarget{blv_oauth_guide_oauth_process_sec}{}\subsection{OAuth process}\label{blv_oauth_guide_oauth_process_sec}
+OAuth process consist of three steps:
+
+
+\begin{DoxyItemize}
+\item Retrieve a request token. 
+\item Request user authorization by sending the user to Bluevia. 
+\item Exchange the request token for an access token. 
+\end{DoxyItemize}
+
+The Consumer credentials and the resulting Access Token will be supplied to the different clients to allow them to connect to the Bluevia APIs. The OAuth client contains the functions necessary to complete these operations:\hypertarget{blv_oauth_guide_retrieving_request_token_sec}{}\subsubsection{Step 1: retrieving a request token}\label{blv_oauth_guide_retrieving_request_token_sec}
+Once you have instantiated a BVOauth object, you have to retrieve a request token to be authorised by the user. Oauth\_\-callback is an important parameter and according to it, authorization progress shall be done in one of the two ways explained below.\hypertarget{blv_oauth_guide_retrieving_request_token_sec_oob}{}\subsubsection{OutOfBand Oauth}\label{blv_oauth_guide_retrieving_request_token_sec_oob}
+In this case, callback parameter is not defined. The user must be followed to Bluevia Portal to authorise the application.
+
+
+\begin{DoxyCode}
+public RequestToken getRequestToken() throws BlueviaException
+\end{DoxyCode}
+
+
+The getRequestToken operation needs too the Consumer credentials (token and secret) which have already been supplied in the construction of the BVOauth object. For a more detailed description please see the API Reference.
+
+The obtained request token contains the verification url to access to the Bluevia portal. Depending on the mode used, it will be available for final users (LIVE) or developers (TEST and SANDBOX). The application should enable the user (customer) to visit the url in any way, where he will have to introduce its credentials (user and password) to authorise the application to connect Bluevia APIs on his behalf. Once permission has been granted, the user will obtain a PIN code necessary to exchange the request token for the access token.
+
+
+\begin{DoxyCode}
+public String getVerificationUrl()
+\end{DoxyCode}
+\hypertarget{blv_oauth_guide_web_oauth}{}\subsection{WebOauth authorization}\label{blv_oauth_guide_web_oauth}
+Callback parameter is a defined callback URL. You will receive the oauth\_\-verifier as a request parameter at your callback.
+
+
+\begin{DoxyCode}
+response = oauthClient.getRequestToken("http://foo.bar/bluevia/get_access");
+\end{DoxyCode}
+
+
+The user will be redirect to the Bluevia's verification Url, so he can authorize the application. Once he has finished, he will be redirect again to the application so he can complete the oauth's proccess. Your application will recieve the oauth\_\-verifier as a request parameter at your callback.\hypertarget{blv_oauth_guide_retrieving_request_token_sec_sms}{}\subsubsection{SMS Oauth}\label{blv_oauth_guide_retrieving_request_token_sec_sms}
+Bluevia supports a variation of OAuth process where the user is not using the browser to authorize the application. Instead he will receive a SMS containing he PIN code (oauth\_\-verifier). To use SMS handshake getRequestToken request must pass the user's MSISDN (phone number) as parameter. After the user had received the PIN code, the application should allow him to enter it and request the access token.
+
+
+\begin{DoxyCode}
+public RequestToken getRequestTokenSmsHandshake(String phoneNumber) throws Bluevi
+      aException
+\end{DoxyCode}
+\hypertarget{blv_oauth_guide_retrieving_access_token_sec}{}\subsubsection{Step 2: retrieveing an access token}\label{blv_oauth_guide_retrieving_access_token_sec}
+The getAccessToken function has the following signature:
+
+
+\begin{DoxyCode}
+public OAuthToken getAccessToken(String oauthVerifier, String token, String secre
+      t) throws BlueviaException
+\end{DoxyCode}
+
+
+The oauthToken and oauthTokenSecret parameters refer to the request token previously retrieved. The oauthVerifier parameter corresponds to the PIN code obtained by the user in the Bluevia portal. 'OauthVerifier' is mandatory. If token and secret are not specified, the last request token stored in the client will be used.\hypertarget{blv_oauth_guide_oauth_store_tokens}{}\subsection{Storing the access token}\label{blv_oauth_guide_oauth_store_tokens}
+Each application only has to go through the OAuth process one for each user (customer) and the resulting access token is valid for any subsequent call to the Bluevia APIs. Because of this the access token is required to be stored persistently in any way. Android provides several options for saving persistent application data, such as SharedPreferences, SQLite databases, etc. Visit Android Developers for futher information about \href{http://developer.android.com/guide/topics/data/data-storage.html}{\tt data storage}.\hypertarget{blv_oauth_guide_oauth_code_example_sec}{}\subsection{Bluevia Oauth API: Code example}\label{blv_oauth_guide_oauth_code_example_sec}
+
+\begin{DoxyCode}
+//-----------------------------------------------
+// Get permission to access Bluevia APIs using the OAuth API
+BVOauth oauthClient = null;
+
+try {
+
+        // 1. Create the client (you have to choose the mode and include the Cons
+      umer credentials)
+        oauthClient = new BVOauth(Mode.LIVE, "consumer_key", "consumer_secret");
+
+        // 2. Retrieve the request token
+        RequestToken requestToken = oauthClient.getRequestToken();
+        String token = requestToken.getToken();
+        String secret = requestToken.getSecret();
+
+        /*  
+  3. redirect to portal
+  4. get response and get oauth_verifier from url response
+  
+        */      
+        System.out.println("Url to get verifier code: " + requestToken.getVerific
+      ationUrl());
+        /* ... */
+        String oauth_verifier = "000000"; /* Get verifier from GUI */
+
+        //  5. use oauth_verifier & requestToken to call getAccessToken to retrie
+      ve an access token
+        OAuthToken accessToken = client.getAccessToken(oauth_verifier, token, sec
+      ret);
+        // Do something with access token...
+        System.out.println("Access Token:" + accessToken.getToken());
+        System.out.println("Access Token Secret:" + accessToken.getSecret());
+
+
+} catch (BlueviaException e){
+        log.error(e.getMessage());
+} finally {
+        // 6. Close the client
+        if (oauthClient != null) oauthClient.close();
+} 
+\end{DoxyCode}
+ 

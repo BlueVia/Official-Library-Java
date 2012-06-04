@@ -1,0 +1,183 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart}{
+\section{com.bluevia.commons.connector.http.multipart.StringPart Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart}\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+}
+Inheritance diagram for com.bluevia.commons.connector.http.multipart.StringPart:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_afbbba3250cd6017270c7891017f2d918}{StringPart} (String name, String value)
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a75f594f5a698474a83f945c189d35bc9}{setFilename} (String filename)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_abea015ba8c5e272b143b0314071b998f}{getFilename} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a8b6049a4dbe20fbc395328e4a7682407}{DEFAULT\_\-CONTENT\_\-TYPE} = TEXT\_\-PLAIN
+\item 
+static final String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_aa64e5f2887780dfa70466cffc3511603}{DEFAULT\_\-CHARSET} = UTF8\_\-CHARSET
+\item 
+static final String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a02fd67cc9c716ff16f09275b087205c3}{DEFAULT\_\-TRANSFER\_\-ENCODING} = \_\-8BIT\_\-CONTENT\_\-TRANSFER\_\-ENCODING
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_ae55280faffff566f9b35c6847d3f3ceb}{sendData} (OutputStream out)  throws IOException 
+\item 
+long \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a0cc77402946180db0552180a4cc8a29f}{lengthOfData} ()  throws IOException 
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_ab1e500ad3f3b3670f206104fca796fc9}{sendDispositionHeader} (OutputStream out)  throws IOException 
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a75442e4228ebe966e5279c71f28fb11e}{FILE\_\-NAME} = \char`\"{}; filename=\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple string part for a multipart post. It uses as default \char`\"{}UTF-\/8\char`\"{} as charset and \char`\"{}8bit\char`\"{} as content transfer encoding. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_afbbba3250cd6017270c7891017f2d918}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!StringPart@{StringPart}}
+\index{StringPart@{StringPart}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{StringPart}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.multipart.StringPart.StringPart (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_afbbba3250cd6017270c7891017f2d918}
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the part \\
+\hline
+{\em value} & the string to post the \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_aa64e5f2887780dfa70466cffc3511603}{default} is used \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_abea015ba8c5e272b143b0314071b998f}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!getFilename@{getFilename}}
+\index{getFilename@{getFilename}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{getFilename}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.commons.connector.http.multipart.StringPart.getFilename (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_abea015ba8c5e272b143b0314071b998f}
+Gets the filename \begin{DoxyReturn}{Returns}
+the filenam for the string 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a0cc77402946180db0552180a4cc8a29f}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!lengthOfData@{lengthOfData}}
+\index{lengthOfData@{lengthOfData}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{lengthOfData}]{\setlength{\rightskip}{0pt plus 5cm}long com.bluevia.commons.connector.http.multipart.StringPart.lengthOfData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a0cc77402946180db0552180a4cc8a29f}
+Return the length of the data. \begin{DoxyReturn}{Returns}
+The length of the data. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & If an IO problem occurs \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+org.apache.commons.httpclient.methods.multipart.Part.lengthOfData() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1BlueviaPartBase}{com.bluevia.commons.connector.http.multipart.BlueviaPartBase}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_ae55280faffff566f9b35c6847d3f3ceb}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!sendData@{sendData}}
+\index{sendData@{sendData}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{sendData}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.multipart.StringPart.sendData (
+\begin{DoxyParamCaption}
+\item[{OutputStream}]{out}
+\end{DoxyParamCaption}
+)  throws IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_ae55280faffff566f9b35c6847d3f3ceb}
+Writes the data to the given OutputStream. 
+\begin{DoxyParams}{Parameters}
+{\em out} & the OutputStream to write to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & if there is a write error \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1BlueviaPartBase}{com.bluevia.commons.connector.http.multipart.BlueviaPartBase}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_ab1e500ad3f3b3670f206104fca796fc9}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!sendDispositionHeader@{sendDispositionHeader}}
+\index{sendDispositionHeader@{sendDispositionHeader}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{sendDispositionHeader}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.multipart.StringPart.sendDispositionHeader (
+\begin{DoxyParamCaption}
+\item[{OutputStream}]{out}
+\end{DoxyParamCaption}
+)  throws IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_ab1e500ad3f3b3670f206104fca796fc9}
+\begin{DoxySeeAlso}{See also}
+BlueviaPartBase.android.rest.commons.connector.http.multipart.AndroidPartBase.sendDispositionHeader(java.io.OutputStream) 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1BlueviaPartBase}{com.bluevia.commons.connector.http.multipart.BlueviaPartBase}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a75f594f5a698474a83f945c189d35bc9}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!setFilename@{setFilename}}
+\index{setFilename@{setFilename}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{setFilename}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.multipart.StringPart.setFilename (
+\begin{DoxyParamCaption}
+\item[{String}]{filename}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a75f594f5a698474a83f945c189d35bc9}
+Sets the filename 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the filename for the String \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_aa64e5f2887780dfa70466cffc3511603}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!DEFAULT\_\-CHARSET@{DEFAULT\_\-CHARSET}}
+\index{DEFAULT\_\-CHARSET@{DEFAULT\_\-CHARSET}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{DEFAULT\_\-CHARSET}]{\setlength{\rightskip}{0pt plus 5cm}final String {\bf com.bluevia.commons.connector.http.multipart.StringPart.DEFAULT\_\-CHARSET} = UTF8\_\-CHARSET\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_aa64e5f2887780dfa70466cffc3511603}
+Default charset of string parameters. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a8b6049a4dbe20fbc395328e4a7682407}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!DEFAULT\_\-CONTENT\_\-TYPE@{DEFAULT\_\-CONTENT\_\-TYPE}}
+\index{DEFAULT\_\-CONTENT\_\-TYPE@{DEFAULT\_\-CONTENT\_\-TYPE}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{DEFAULT\_\-CONTENT\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}final String {\bf com.bluevia.commons.connector.http.multipart.StringPart.DEFAULT\_\-CONTENT\_\-TYPE} = TEXT\_\-PLAIN\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a8b6049a4dbe20fbc395328e4a7682407}
+Default content encoding of string parameters. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a02fd67cc9c716ff16f09275b087205c3}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!DEFAULT\_\-TRANSFER\_\-ENCODING@{DEFAULT\_\-TRANSFER\_\-ENCODING}}
+\index{DEFAULT\_\-TRANSFER\_\-ENCODING@{DEFAULT\_\-TRANSFER\_\-ENCODING}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{DEFAULT\_\-TRANSFER\_\-ENCODING}]{\setlength{\rightskip}{0pt plus 5cm}final String {\bf com.bluevia.commons.connector.http.multipart.StringPart.DEFAULT\_\-TRANSFER\_\-ENCODING} = \_\-8BIT\_\-CONTENT\_\-TRANSFER\_\-ENCODING\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a02fd67cc9c716ff16f09275b087205c3}
+Default transfer encoding of string parameters \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a75442e4228ebe966e5279c71f28fb11e}{
+\index{com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}!FILE\_\-NAME@{FILE\_\-NAME}}
+\index{FILE\_\-NAME@{FILE\_\-NAME}!com::bluevia::commons::connector::http::multipart::StringPart@{com::bluevia::commons::connector::http::multipart::StringPart}}
+\subsubsection[{FILE\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}final String {\bf com.bluevia.commons.connector.http.multipart.StringPart.FILE\_\-NAME} = \char`\"{}; filename=\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1StringPart_a75442e4228ebe966e5279c71f28fb11e}
+Attachment's file name. 

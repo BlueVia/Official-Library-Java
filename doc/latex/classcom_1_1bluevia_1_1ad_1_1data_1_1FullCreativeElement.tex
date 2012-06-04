@@ -1,0 +1,192 @@
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement}{
+\section{com.bluevia.ad.data.FullCreativeElement Class Reference}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement}\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+}
+Inheritance diagram for com.bluevia.ad.data.FullCreativeElement:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1a64b29ff50d01119bbaf6fee4e3f4f4}{Type} \{ \par
+{\bfseries IMAGE}, 
+{\bfseries TEXT}, 
+{\bfseries SOUND}, 
+{\bfseries ZIP}, 
+\par
+{\bfseries PAGE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_adbe8c49ecb21ec3abbd5a30f70a9a4b9}{FullCreativeElement} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1a64b29ff50d01119bbaf6fee4e3f4f4}{Type} \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1c4543e596d652971f2bf31fc482b4e1}{getType} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_aba6a3d0889a0e187982bce2600005c60}{setType} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1a64b29ff50d01119bbaf6fee4e3f4f4}{Type} type)
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute}{AdsAttribute} $>$ \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_ae411bfae3ef1a85df83a7bfe4a211cbf}{getAdsAttribute} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a0e23e5a1b3298bc394725921122833d3}{addAdsAttribute} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdsAttribute}{AdsAttribute} a)
+\item 
+ArrayList$<$ \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction}{Interaction} $>$ \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a4b33064243547e50de60f472c216c4b4}{getInteraction} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1e06225436849bfd704f81745a13ec30}{addInteraction} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction}{Interaction} i)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a38b2b48d346232b3a8736e31a980ef36}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Object that describes the different elements that shape the adsource. For instance an small banner link in line, could have two objects (image \& text). It includes the following attributes: 
+\begin{DoxyItemize}
+\item Type: Category of the ad. Object. Values include image, text, sound, zip, page. 
+\item Attribute: An ad object may have different attributes for example the location. 
+\item \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Interaction}{Interaction}: Tag used to invoke events, e.g: it contains the locator of click through URI. When using isOfflineClient, there would be as many interaction elements as needed in order to receive all the information the offline client will need (without ad-\/server connectivity) for performing the interaction. 
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1a64b29ff50d01119bbaf6fee4e3f4f4}{
+\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}!Type@{Type}}
+\index{Type@{Type}!com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf com::bluevia::ad::data::FullCreativeElement::Type}}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1a64b29ff50d01119bbaf6fee4e3f4f4}
+Type that contains the possible Creative Elements that can be received. Values includes: 
+\begin{DoxyItemize}
+\item Image: Contains the information about the image of the ad. This information should contain an url locator attribute (to be able to get the image) and maybe some \char`\"{}click\char`\"{} interactions  
+\item Text: Contains information about the text of the ad. This information should contain the text value and maybe some \char`\"{}click\char`\"{} interactions  
+\item Sound: Contains information about the audio of the ad. This information should contain an url locator attribute and maybe some \char`\"{}click\char`\"{} interactions  
+\item Zip: Contains information about the zip of the ad. This information should contain an url locator attribute and maybe some \char`\"{}click\char`\"{} interactions  
+\item Page: Contains information about the page of the ad. This information should contain an url locator attribute and maybe some \char`\"{}click\char`\"{} interactions  
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_adbe8c49ecb21ec3abbd5a30f70a9a4b9}{
+\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}!FullCreativeElement@{FullCreativeElement}}
+\index{FullCreativeElement@{FullCreativeElement}!com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+\subsubsection[{FullCreativeElement}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.ad.data.FullCreativeElement.FullCreativeElement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_adbe8c49ecb21ec3abbd5a30f70a9a4b9}
+Instantiates a new empty \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement}{FullCreativeElement} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a0e23e5a1b3298bc394725921122833d3}{
+\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}!addAdsAttribute@{addAdsAttribute}}
+\index{addAdsAttribute@{addAdsAttribute}!com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+\subsubsection[{addAdsAttribute}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.FullCreativeElement.addAdsAttribute (
+\begin{DoxyParamCaption}
+\item[{{\bf AdsAttribute}}]{a}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a0e23e5a1b3298bc394725921122833d3}
+Sets an attribute for the ad creative element
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the attribute to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1e06225436849bfd704f81745a13ec30}{
+\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}!addInteraction@{addInteraction}}
+\index{addInteraction@{addInteraction}!com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+\subsubsection[{addInteraction}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.FullCreativeElement.addInteraction (
+\begin{DoxyParamCaption}
+\item[{{\bf Interaction}}]{i}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1e06225436849bfd704f81745a13ec30}
+Sets an interaction for the ad creative element
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the interaction to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_ae411bfae3ef1a85df83a7bfe4a211cbf}{
+\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}!getAdsAttribute@{getAdsAttribute}}
+\index{getAdsAttribute@{getAdsAttribute}!com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+\subsubsection[{getAdsAttribute}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf AdsAttribute}$>$ com.bluevia.ad.data.FullCreativeElement.getAdsAttribute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_ae411bfae3ef1a85df83a7bfe4a211cbf}
+Gets the ad creative element attribute list
+
+\begin{DoxyReturn}{Returns}
+the ad creative element attribute list 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a4b33064243547e50de60f472c216c4b4}{
+\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}!getInteraction@{getInteraction}}
+\index{getInteraction@{getInteraction}!com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+\subsubsection[{getInteraction}]{\setlength{\rightskip}{0pt plus 5cm}ArrayList$<${\bf Interaction}$>$ com.bluevia.ad.data.FullCreativeElement.getInteraction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a4b33064243547e50de60f472c216c4b4}
+Gets the ad creative element interaction list
+
+\begin{DoxyReturn}{Returns}
+the ad creative element interaction list 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1c4543e596d652971f2bf31fc482b4e1}{
+\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}!getType@{getType}}
+\index{getType@{getType}!com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} com.bluevia.ad.data.FullCreativeElement.getType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a1c4543e596d652971f2bf31fc482b4e1}
+Gets the Creative Element type. Values include image, text, sound, zip, page
+
+\begin{DoxyReturn}{Returns}
+the creative element type 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a38b2b48d346232b3a8736e31a980ef36}{
+\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.ad.data.FullCreativeElement.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_a38b2b48d346232b3a8736e31a980ef36}
+check if the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement}{FullCreativeElement} entity is valid
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_aba6a3d0889a0e187982bce2600005c60}{
+\index{com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}!setType@{setType}}
+\index{setType@{setType}!com::bluevia::ad::data::FullCreativeElement@{com::bluevia::ad::data::FullCreativeElement}}
+\subsubsection[{setType}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.FullCreativeElement.setType (
+\begin{DoxyParamCaption}
+\item[{{\bf Type}}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1FullCreativeElement_aba6a3d0889a0e187982bce2600005c60}
+Sets the Creative Element type. Values include image, text, sound, zip, page
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the creative element type \\
+\hline
+\end{DoxyParams}

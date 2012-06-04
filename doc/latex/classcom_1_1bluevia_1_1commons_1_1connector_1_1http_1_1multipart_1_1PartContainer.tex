@@ -1,0 +1,98 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer}{
+\section{com.bluevia.commons.connector.http.multipart.PartContainer Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer}\index{com::bluevia::commons::connector::http::multipart::PartContainer@{com::bluevia::commons::connector::http::multipart::PartContainer}}
+}
+Inheritance diagram for com.bluevia.commons.connector.http.multipart.PartContainer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer_ac59d3287385c28433404480c8e435458}{PartContainer} (String name, PartBase parts\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer_aa953eafc21e332d8fd4248d8495a03dd}{lengthOfData} ()  throws IOException 
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer_a1b53871b587fa90a7786e2f6bdb890c3}{sendData} (OutputStream out)  throws IOException 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a part of a Multipart post object that consists of a multipart part. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer_ac59d3287385c28433404480c8e435458}{
+\index{com::bluevia::commons::connector::http::multipart::PartContainer@{com::bluevia::commons::connector::http::multipart::PartContainer}!PartContainer@{PartContainer}}
+\index{PartContainer@{PartContainer}!com::bluevia::commons::connector::http::multipart::PartContainer@{com::bluevia::commons::connector::http::multipart::PartContainer}}
+\subsubsection[{PartContainer}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.multipart.PartContainer.PartContainer (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{PartBase}]{parts\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer_ac59d3287385c28433404480c8e435458}
+Main constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the part. \\
+\hline
+{\em parts} & the different PartBase parts that will include the container. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer_aa953eafc21e332d8fd4248d8495a03dd}{
+\index{com::bluevia::commons::connector::http::multipart::PartContainer@{com::bluevia::commons::connector::http::multipart::PartContainer}!lengthOfData@{lengthOfData}}
+\index{lengthOfData@{lengthOfData}!com::bluevia::commons::connector::http::multipart::PartContainer@{com::bluevia::commons::connector::http::multipart::PartContainer}}
+\subsubsection[{lengthOfData}]{\setlength{\rightskip}{0pt plus 5cm}long com.bluevia.commons.connector.http.multipart.PartContainer.lengthOfData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer_aa953eafc21e332d8fd4248d8495a03dd}
+Return the length of the data.
+
+\begin{DoxyReturn}{Returns}
+The length. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & if an IO problem occurs \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1BlueviaPartBase}{com.bluevia.commons.connector.http.multipart.BlueviaPartBase}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer_a1b53871b587fa90a7786e2f6bdb890c3}{
+\index{com::bluevia::commons::connector::http::multipart::PartContainer@{com::bluevia::commons::connector::http::multipart::PartContainer}!sendData@{sendData}}
+\index{sendData@{sendData}!com::bluevia::commons::connector::http::multipart::PartContainer@{com::bluevia::commons::connector::http::multipart::PartContainer}}
+\subsubsection[{sendData}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.multipart.PartContainer.sendData (
+\begin{DoxyParamCaption}
+\item[{OutputStream}]{out}
+\end{DoxyParamCaption}
+)  throws IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1PartContainer_a1b53871b587fa90a7786e2f6bdb890c3}
+Write the data in \char`\"{}source\char`\"{} to the specified stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & The output stream. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & if an IO problem occurs. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1BlueviaPartBase}{com.bluevia.commons.connector.http.multipart.BlueviaPartBase}.
+

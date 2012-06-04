@@ -1,0 +1,164 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType}{
+\section{com.telefonica.schemas.unica.rpc.definition.v1.ErrorType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType}\index{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a1a5251bdee57caa557cdb5b05af42114}{getCode} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a086ab2207da47f736395e2e21b31a54d}{setCode} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_abc3db4b21c3b2ee64d9341714a813cda}{getMessage} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a292d9a93654b66ca34e485a453f663eb}{setMessage} (String value)
+\item 
+List$<$ String $>$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a51b15462df050a27e3bb25b6eec42659}{getData} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_ac7cc841328b6d513f7379581c53cd658}{setData} (List$<$ String $>$ data)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_aaac394ab29d184b0f9f05d4ac331c285}{
+String {\bfseries code}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_aaac394ab29d184b0f9f05d4ac331c285}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_ad0f86e52fcdc64a5090aef79bf90b335}{
+String {\bfseries message}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_ad0f86e52fcdc64a5090aef79bf90b335}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_ae92d3dcc97b38b7b09c2bdf5df52a1d3}{
+List$<$ String $>$ {\bfseries data}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_ae92d3dcc97b38b7b09c2bdf5df52a1d3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure to hold fault information returned in RPC operations.
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType}{ErrorType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="ErrorType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="code">
+           <simpleType>
+             <restriction base="\{http://www.w3.org/2001/XMLSchema\}string">
+               <pattern value="(SVC|POL|SEC|SVR)([0-9])\{4\}"/>
+             </restriction>
+           </simpleType>
+         </element>
+         <element name="message" type="\{http://www.w3.org/2001/XMLSchema\}string"/>
+         <element name="data" type="\{http://www.w3.org/2001/XMLSchema\}string" maxOccurs="unbounded" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a1a5251bdee57caa557cdb5b05af42114}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}!getCode@{getCode}}
+\index{getCode@{getCode}!com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}}
+\subsubsection[{getCode}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.definition.v1.ErrorType.getCode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a1a5251bdee57caa557cdb5b05af42114}
+Gets the value of the code property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a51b15462df050a27e3bb25b6eec42659}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}!getData@{getData}}
+\index{getData@{getData}!com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}}
+\subsubsection[{getData}]{\setlength{\rightskip}{0pt plus 5cm}List$<$String$>$ com.telefonica.schemas.unica.rpc.definition.v1.ErrorType.getData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a51b15462df050a27e3bb25b6eec42659}
+Gets the value of the data property.
+
+This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a {\ttfamily set} method for the data property.
+
+For example, to add a new item, do as follows: 
+\begin{DoxyPre}
+    \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a51b15462df050a27e3bb25b6eec42659}{getData()}.add(newItem);
+ \end{DoxyPre}
+
+
+Objects of the following type(s) are allowed in the list \hyperlink{}{String} \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_abc3db4b21c3b2ee64d9341714a813cda}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}}
+\subsubsection[{getMessage}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.definition.v1.ErrorType.getMessage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_abc3db4b21c3b2ee64d9341714a813cda}
+Gets the value of the message property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a086ab2207da47f736395e2e21b31a54d}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}!setCode@{setCode}}
+\index{setCode@{setCode}!com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}}
+\subsubsection[{setCode}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.definition.v1.ErrorType.setCode (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a086ab2207da47f736395e2e21b31a54d}
+Sets the value of the code property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_ac7cc841328b6d513f7379581c53cd658}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}!setData@{setData}}
+\index{setData@{setData}!com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}}
+\subsubsection[{setData}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.definition.v1.ErrorType.setData (
+\begin{DoxyParamCaption}
+\item[{List$<$ String $>$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_ac7cc841328b6d513f7379581c53cd658}
+Sets the value of the data property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a292d9a93654b66ca34e485a453f663eb}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}!setMessage@{setMessage}}
+\index{setMessage@{setMessage}!com::telefonica::schemas::unica::rpc::definition::v1::ErrorType@{com::telefonica::schemas::unica::rpc::definition::v1::ErrorType}}
+\subsubsection[{setMessage}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.definition.v1.ErrorType.setMessage (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType_a292d9a93654b66ca34e485a453f663eb}
+Sets the value of the message property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}

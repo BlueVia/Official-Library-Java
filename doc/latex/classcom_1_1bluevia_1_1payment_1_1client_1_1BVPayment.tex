@@ -1,0 +1,293 @@
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment}{
+\section{com.bluevia.payment.client.BVPayment Class Reference}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment}\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+}
+Inheritance diagram for com.bluevia.payment.client.BVPayment:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries BVPayentOauthProviderListener}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a5a68583aad1f3173b22441b5e3b976b4}{BVPayment} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient_a5f4a4a27d73a8ddd0ce450a6c7a4d1b7}{Mode} mode, String consumerToken, String consumerSecret)  throws BlueviaException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken}{RequestToken} \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a461ecfef018815ed3436c16c68852ec7}{getPaymentRequestToken} (int amount, String currency, String name, String serviceId)  throws BlueviaException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken}{OAuthToken} \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a40a262c6f375755dcb52f9bd2831ed98}{getPaymentAccessToken} (String oauthVerifier, String token, String secret)  throws BlueviaException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult}{PaymentResult} \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abfca5647bbeffcb9b48b32917dfd41f3}{payment} (int amount, String currency)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult}{PaymentResult} \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_ae5e9baccc8f7a9a4a441b701e456a092}{payment} (int amount, String currency, String endpoint, String correlator)  throws BlueviaException, IOException 
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a246785149105de4acdb6903491dbc623}{cancelAuthorization} ()  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus}{PaymentStatus} \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a7938eb7923f88c81622f95ec64ad8a78}{getPaymentStatus} (String transactionId)  throws BlueviaException, IOException
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a6e9d873055043c197ff745f468efe8f5}{setAccessToken} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken}{OAuthToken} accessToken)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abf13a7aa4f932106de52a628137052ad}{
+static final String {\bfseries FEED\_\-PAYMENT} = \char`\"{}/payment\char`\"{}}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abf13a7aa4f932106de52a628137052ad}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_acdf07bba0148a883926a73931856f378}{
+static final String {\bfseries FEED\_\-CANCEL\_\-AUTHORIZATION} = \char`\"{}/cancelAuthorization\char`\"{}}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_acdf07bba0148a883926a73931856f378}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a5dca445ac6d4affbf361e35e7a9ccd39}{
+static final String {\bfseries FEED\_\-GET\_\-PAYMENT\_\-STATUS} = \char`\"{}/getPaymentStatus\char`\"{}}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a5dca445ac6d4affbf361e35e7a9ccd39}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a21fbd5dff69354fe0a5fcdf30096db5f}{
+static final String {\bfseries OAUTH\_\-API\_\-NAME} = \char`\"{}Payment\char`\"{}}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a21fbd5dff69354fe0a5fcdf30096db5f}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_afa86fc78527840b86b4afb9950c1a27c}{
+static final String {\bfseries OAUTH\_\-API\_\-NAME\_\-SANDBOX} = \char`\"{}Payment\_\-Sandbox\char`\"{}}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_afa86fc78527840b86b4afb9950c1a27c}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a91a2f50f227084a08e131d0c41167537}{
+static final String {\bfseries HEADER\_\-TIMESTAMP} = \char`\"{}oauth\_\-timestamp\char`\"{}}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a91a2f50f227084a08e131d0c41167537}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides access to the set of functions which any user could use to access the Payment service functionality
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a5a68583aad1f3173b22441b5e3b976b4}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!BVPayment@{BVPayment}}
+\index{BVPayment@{BVPayment}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{BVPayment}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.payment.client.BVPayment.BVPayment (
+\begin{DoxyParamCaption}
+\item[{{\bf Mode}}]{mode, }
+\item[{String}]{consumerToken, }
+\item[{String}]{consumerSecret}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a5a68583aad1f3173b22441b5e3b976b4}
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+{\em consumerToken} & \\
+\hline
+{\em consumerSecret} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a246785149105de4acdb6903491dbc623}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!cancelAuthorization@{cancelAuthorization}}
+\index{cancelAuthorization@{cancelAuthorization}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{cancelAuthorization}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.payment.client.BVPayment.cancelAuthorization (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a246785149105de4acdb6903491dbc623}
+Merchant can use this operation to invalidate the access token of the session. If the payment has been made before, it remains valid, but no more getPaymentStatus operations will be enabled.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & \\
+\hline
+{\em BlueviaException} & An exception informing about errors encountered in the request/response. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a40a262c6f375755dcb52f9bd2831ed98}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!getPaymentAccessToken@{getPaymentAccessToken}}
+\index{getPaymentAccessToken@{getPaymentAccessToken}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{getPaymentAccessToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf OAuthToken} com.bluevia.payment.client.BVPayment.getPaymentAccessToken (
+\begin{DoxyParamCaption}
+\item[{String}]{oauthVerifier, }
+\item[{String}]{token, }
+\item[{String}]{secret}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a40a262c6f375755dcb52f9bd2831ed98}
+Gets an access token for a Payment operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em oauthVerifier} & the OAuth verifier for the token \\
+\hline
+{\em token} & the request token previously obtained \\
+\hline
+{\em secret} & request token secret \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the access token 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a461ecfef018815ed3436c16c68852ec7}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!getPaymentRequestToken@{getPaymentRequestToken}}
+\index{getPaymentRequestToken@{getPaymentRequestToken}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{getPaymentRequestToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RequestToken} com.bluevia.payment.client.BVPayment.getPaymentRequestToken (
+\begin{DoxyParamCaption}
+\item[{int}]{amount, }
+\item[{String}]{currency, }
+\item[{String}]{name, }
+\item[{String}]{serviceId}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a461ecfef018815ed3436c16c68852ec7}
+Gets a RequestToken for a Payment operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). \\
+\hline
+{\em currency} & the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.). \\
+\hline
+{\em name} & the name of the service for the payment \\
+\hline
+{\em serviceId} & the id of the service for the payment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the request token 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a7938eb7923f88c81622f95ec64ad8a78}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!getPaymentStatus@{getPaymentStatus}}
+\index{getPaymentStatus@{getPaymentStatus}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{getPaymentStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PaymentStatus} com.bluevia.payment.client.BVPayment.getPaymentStatus (
+\begin{DoxyParamCaption}
+\item[{String}]{transactionId}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException}}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a7938eb7923f88c81622f95ec64ad8a78}
+Retrieves the status of a previous payment operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em transactionId} & the id of the transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the status of the payment 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_ae5e9baccc8f7a9a4a441b701e456a092}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!payment@{payment}}
+\index{payment@{payment}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{payment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PaymentResult} com.bluevia.payment.client.BVPayment.payment (
+\begin{DoxyParamCaption}
+\item[{int}]{amount, }
+\item[{String}]{currency, }
+\item[{String}]{endpoint, }
+\item[{String}]{correlator}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_ae5e9baccc8f7a9a4a441b701e456a092}
+Orders an economic charge on the user's operator account. 
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount to be charged, it may be an economic amount or a number of 'virtual units' (points, tickets, etc) (mandatory). \\
+\hline
+{\em currency} & Type of currency which corresponds with the amount above, following ISO 4217 (mandatory). \\
+\hline
+{\em endpoint} & the endpoint to receive notifications of the payment operation \\
+\hline
+{\em correlator} & the correlator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of the payment operation. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & An exception informing about errors encountered in the request/response. \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abfca5647bbeffcb9b48b32917dfd41f3}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!payment@{payment}}
+\index{payment@{payment}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{payment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PaymentResult} com.bluevia.payment.client.BVPayment.payment (
+\begin{DoxyParamCaption}
+\item[{int}]{amount, }
+\item[{String}]{currency}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abfca5647bbeffcb9b48b32917dfd41f3}
+Orders an economic charge on the user's operator account.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount to be charged, it may be an economic amount or a number of 'virtual units' (points, tickets, etc) (mandatory). \\
+\hline
+{\em currency} & Type of currency which corresponds with the amount above, following ISO 4217 (mandatory). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of the payment operation. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & An exception informing about errors encountered in the request/response. \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a6e9d873055043c197ff745f468efe8f5}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!setAccessToken@{setAccessToken}}
+\index{setAccessToken@{setAccessToken}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{setAccessToken}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.payment.client.BVPayment.setAccessToken (
+\begin{DoxyParamCaption}
+\item[{{\bf OAuthToken}}]{accessToken}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a6e9d873055043c197ff745f468efe8f5}
+Sets the access token of the session This functions is used to change the token of the session to be able to get the payment status of an old operation, or cancel the authorization of a token.
+
+
+\begin{DoxyParams}{Parameters}
+{\em accessToken} & \\
+\hline
+\end{DoxyParams}

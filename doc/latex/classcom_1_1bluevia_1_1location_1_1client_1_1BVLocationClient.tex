@@ -1,0 +1,105 @@
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient}{
+\section{com.bluevia.location.client.BVLocationClient Class Reference}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient}\index{com::bluevia::location::client::BVLocationClient@{com::bluevia::location::client::BVLocationClient}}
+}
+Inheritance diagram for com.bluevia.location.client.BVLocationClient:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_af3ded8f66c1e7361ac434da71b467cb5}{init} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo}{LocationInfo} \hyperlink{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a29a4c3b6f3799e10f74deaed3f0a8d53}{getLocation} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} user, Integer acceptableAccuracy)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo}{LocationInfo} \hyperlink{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a0d7777cb2271b905320439aa9cbed940}{simplifyResponse} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationDataType}{LocationDataType} data)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a4841e861d437e3bacdc21bc92b8469b7}{
+static final String {\bfseries GET\_\-LOCATION\_\-FEED\_\-PATH} = \char`\"{}/TerminalLocation\char`\"{}}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a4841e861d437e3bacdc21bc92b8469b7}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a9b7c8a9ebb7640efa01dc8d4998ada0e}{
+static final String {\bfseries LOCATED\_\-PARTY\_\-KEY} = \char`\"{}locatedParty\char`\"{}}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a9b7c8a9ebb7640efa01dc8d4998ada0e}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a40f2d10c9d9d8fe95530b9e152bb2de7}{
+static final String {\bfseries ACCEPTABLE\_\-ACCURACY\_\-KEY} = \char`\"{}acceptableAccuracy\char`\"{}}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a40f2d10c9d9d8fe95530b9e152bb2de7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Client interface for the REST binding of the Bluevia Location Service.
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a29a4c3b6f3799e10f74deaed3f0a8d53}{
+\index{com::bluevia::location::client::BVLocationClient@{com::bluevia::location::client::BVLocationClient}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!com::bluevia::location::client::BVLocationClient@{com::bluevia::location::client::BVLocationClient}}
+\subsubsection[{getLocation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LocationInfo} com.bluevia.location.client.BVLocationClient.getLocation (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{user, }
+\item[{Integer}]{acceptableAccuracy}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a29a4c3b6f3799e10f74deaed3f0a8d53}
+Retrieves the location of the terminal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the user to be located \\
+\hline
+{\em acceptableAccuracy} & Accuracy, in meters, that is acceptable for a response (optional). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An entity object containing the Location Data. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_af3ded8f66c1e7361ac434da71b467cb5}{
+\index{com::bluevia::location::client::BVLocationClient@{com::bluevia::location::client::BVLocationClient}!init@{init}}
+\index{init@{init}!com::bluevia::location::client::BVLocationClient@{com::bluevia::location::client::BVLocationClient}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.location.client.BVLocationClient.init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_af3ded8f66c1e7361ac434da71b467cb5}
+Initializer for common attributes \hypertarget{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a0d7777cb2271b905320439aa9cbed940}{
+\index{com::bluevia::location::client::BVLocationClient@{com::bluevia::location::client::BVLocationClient}!simplifyResponse@{simplifyResponse}}
+\index{simplifyResponse@{simplifyResponse}!com::bluevia::location::client::BVLocationClient@{com::bluevia::location::client::BVLocationClient}}
+\subsubsection[{simplifyResponse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LocationInfo} com.bluevia.location.client.BVLocationClient.simplifyResponse (
+\begin{DoxyParamCaption}
+\item[{{\bf LocationDataType}}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1location_1_1client_1_1BVLocationClient_a0d7777cb2271b905320439aa9cbed940}
+Transforms the response received from the server in a simple response object
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the complete response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a simple LocationInfo object 
+\end{DoxyReturn}

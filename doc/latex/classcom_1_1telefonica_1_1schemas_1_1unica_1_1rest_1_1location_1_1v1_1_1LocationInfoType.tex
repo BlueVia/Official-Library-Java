@@ -1,0 +1,179 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType}{
+\section{com.telefonica.schemas.unica.rest.location.v1.LocationInfoType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType}\index{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1CoordinatesType}{CoordinatesType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a8f7577699679abb75a3cca9c8cd0bf41}{getCoordinates} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a000212a59c9aca1a3f0d3628ce5e13b9}{setCoordinates} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1CoordinatesType}{CoordinatesType} value)
+\item 
+Float \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a5c2785c53f43dce8dc66245ca8e57595}{getAltitude} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a345f279296dbf4b8fa14f1fc9b086e1e}{setAltitude} (Float value)
+\item 
+int \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a6d839a94865e01922819a85b904011a2}{getAccuracy} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a3bb5a35c2f8603070f1e347b9acf49ee}{setAccuracy} (int value)
+\item 
+XMLGregorianCalendar \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a25282785b8cc0d48a73243aced258000}{getTimestamp} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a08aa648b29fd4b2ce8933d614f706409}{setTimestamp} (XMLGregorianCalendar value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a6703564f24000b51176d2a0675f86173}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1CoordinatesType}{CoordinatesType} {\bfseries coordinates}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a6703564f24000b51176d2a0675f86173}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a2205abd0547b3cd5b7002d9c3ac668c8}{
+Float {\bfseries altitude}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a2205abd0547b3cd5b7002d9c3ac668c8}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a90e29268af6621ab09d76b3da5d60eb2}{
+int {\bfseries accuracy}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a90e29268af6621ab09d76b3da5d60eb2}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a55ad5c7c118fad22dd4990016f3f1a71}{
+XMLGregorianCalendar {\bfseries timestamp}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a55ad5c7c118fad22dd4990016f3f1a71}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType}{LocationInfoType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="LocationInfoType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="coordinates" type="\{http://www.telefonica.com/schemas/UNICA/REST/location/v1/\}CoordinatesType"/>
+         <element name="altitude" type="\{http://www.w3.org/2001/XMLSchema\}float" minOccurs="0"/>
+         <element name="accuracy" type="\{http://www.w3.org/2001/XMLSchema\}int"/>
+         <element name="timestamp" type="\{http://www.w3.org/2001/XMLSchema\}dateTime"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a6d839a94865e01922819a85b904011a2}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}!getAccuracy@{getAccuracy}}
+\index{getAccuracy@{getAccuracy}!com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}}
+\subsubsection[{getAccuracy}]{\setlength{\rightskip}{0pt plus 5cm}int com.telefonica.schemas.unica.rest.location.v1.LocationInfoType.getAccuracy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a6d839a94865e01922819a85b904011a2}
+Gets the value of the accuracy property. \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a5c2785c53f43dce8dc66245ca8e57595}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}!getAltitude@{getAltitude}}
+\index{getAltitude@{getAltitude}!com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}}
+\subsubsection[{getAltitude}]{\setlength{\rightskip}{0pt plus 5cm}Float com.telefonica.schemas.unica.rest.location.v1.LocationInfoType.getAltitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a5c2785c53f43dce8dc66245ca8e57595}
+Gets the value of the altitude property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{Float} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a8f7577699679abb75a3cca9c8cd0bf41}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}!getCoordinates@{getCoordinates}}
+\index{getCoordinates@{getCoordinates}!com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}}
+\subsubsection[{getCoordinates}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CoordinatesType} com.telefonica.schemas.unica.rest.location.v1.LocationInfoType.getCoordinates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a8f7577699679abb75a3cca9c8cd0bf41}
+Gets the value of the coordinates property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1CoordinatesType}{CoordinatesType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a25282785b8cc0d48a73243aced258000}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}}
+\subsubsection[{getTimestamp}]{\setlength{\rightskip}{0pt plus 5cm}XMLGregorianCalendar com.telefonica.schemas.unica.rest.location.v1.LocationInfoType.getTimestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a25282785b8cc0d48a73243aced258000}
+Gets the value of the timestamp property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{XMLGregorianCalendar} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a3bb5a35c2f8603070f1e347b9acf49ee}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}!setAccuracy@{setAccuracy}}
+\index{setAccuracy@{setAccuracy}!com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}}
+\subsubsection[{setAccuracy}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.location.v1.LocationInfoType.setAccuracy (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a3bb5a35c2f8603070f1e347b9acf49ee}
+Sets the value of the accuracy property. \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a345f279296dbf4b8fa14f1fc9b086e1e}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}!setAltitude@{setAltitude}}
+\index{setAltitude@{setAltitude}!com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}}
+\subsubsection[{setAltitude}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.location.v1.LocationInfoType.setAltitude (
+\begin{DoxyParamCaption}
+\item[{Float}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a345f279296dbf4b8fa14f1fc9b086e1e}
+Sets the value of the altitude property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{Float} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a000212a59c9aca1a3f0d3628ce5e13b9}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}!setCoordinates@{setCoordinates}}
+\index{setCoordinates@{setCoordinates}!com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}}
+\subsubsection[{setCoordinates}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.location.v1.LocationInfoType.setCoordinates (
+\begin{DoxyParamCaption}
+\item[{{\bf CoordinatesType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a000212a59c9aca1a3f0d3628ce5e13b9}
+Sets the value of the coordinates property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1CoordinatesType}{CoordinatesType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a08aa648b29fd4b2ce8933d614f706409}{
+\index{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}!setTimestamp@{setTimestamp}}
+\index{setTimestamp@{setTimestamp}!com::telefonica::schemas::unica::rest::location::v1::LocationInfoType@{com::telefonica::schemas::unica::rest::location::v1::LocationInfoType}}
+\subsubsection[{setTimestamp}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.location.v1.LocationInfoType.setTimestamp (
+\begin{DoxyParamCaption}
+\item[{XMLGregorianCalendar}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1location_1_1v1_1_1LocationInfoType_a08aa648b29fd4b2ce8933d614f706409}
+Sets the value of the timestamp property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{XMLGregorianCalendar} \\
+\hline
+\end{DoxyParams}

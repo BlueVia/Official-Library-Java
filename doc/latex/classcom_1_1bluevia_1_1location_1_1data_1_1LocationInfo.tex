@@ -1,0 +1,262 @@
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo}{
+\section{com.bluevia.location.data.LocationInfo Class Reference}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo}\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+}
+Inheritance diagram for com.bluevia.location.data.LocationInfo:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aab9819d3c89265c055e64b69da1bab9e}{ReportStatus} \{ {\bfseries RETRIEVED}, 
+{\bfseries NON\_\-RETRIEVED}, 
+{\bfseries ERROR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a6e3cd2a5f533d4eeb4977a9746d18b6f}{LocationInfo} (\hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aab9819d3c89265c055e64b69da1bab9e}{ReportStatus} status)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aa754d6e636b8fdef8f1d3174c89fb8fd}{LocationInfo} (\hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aab9819d3c89265c055e64b69da1bab9e}{ReportStatus} status, String timestamp, float latitude, float longitude, int accuracy)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aab9819d3c89265c055e64b69da1bab9e}{ReportStatus} \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_ab92e9150dbd2a6aff848a086ddd49426}{getReportStatus} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a486a44ad76aa9812f0132c57ac089e1a}{setReportStatus} (\hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aab9819d3c89265c055e64b69da1bab9e}{ReportStatus} reportStatus)
+\item 
+float \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a2377eda77a9936d4658ee6821fb1a868}{getLatitude} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a24b9b8e62e5e3d78c87e40e1f126b709}{setLatitude} (float latitude)
+\item 
+float \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_ab6403be15860f9b83988589ada93ab1a}{getLongitude} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a9dc4145afc3a4922b35347474daf5c88}{setLongitude} (float longitude)
+\item 
+int \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a07de3a65b84ea5f927420bda7953729d}{getAccuracy} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_ad485b24867086c7a5f72a042e6387c8c}{setAccuracy} (int accuracy)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_afce05c11665e558e21ad86a58a721349}{getTimestamp} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a6a4f95e5ac1095ce27684a305842fcec}{setTimestamp} (String timestamp)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a19ebaf31f854011a7bcf8aeba79ede9d}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing the info of the location
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aab9819d3c89265c055e64b69da1bab9e}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!ReportStatus@{ReportStatus}}
+\index{ReportStatus@{ReportStatus}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{ReportStatus}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf com::bluevia::location::data::LocationInfo::ReportStatus}}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aab9819d3c89265c055e64b69da1bab9e}
+Enum representing the values of the status of a location retrieval. Possible values are: 
+\begin{DoxyItemize}
+\item RETRIEVED: The location has been retrieved  
+\item NON\_\-RETRIEVED: The location has not been retrieved  
+\item ERROR: There was an error retrieving the location  
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a6e3cd2a5f533d4eeb4977a9746d18b6f}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!LocationInfo@{LocationInfo}}
+\index{LocationInfo@{LocationInfo}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{LocationInfo}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.location.data.LocationInfo.LocationInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf ReportStatus}}]{status}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a6e3cd2a5f533d4eeb4977a9746d18b6f}
+
+\begin{DoxyParams}{Parameters}
+{\em status} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aa754d6e636b8fdef8f1d3174c89fb8fd}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!LocationInfo@{LocationInfo}}
+\index{LocationInfo@{LocationInfo}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{LocationInfo}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.location.data.LocationInfo.LocationInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf ReportStatus}}]{status, }
+\item[{String}]{timestamp, }
+\item[{float}]{latitude, }
+\item[{float}]{longitude, }
+\item[{int}]{accuracy}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_aa754d6e636b8fdef8f1d3174c89fb8fd}
+
+\begin{DoxyParams}{Parameters}
+{\em status} & \\
+\hline
+{\em timestamp} & \\
+\hline
+{\em latitude} & \\
+\hline
+{\em longitude} & \\
+\hline
+{\em accuracy} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a07de3a65b84ea5f927420bda7953729d}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!getAccuracy@{getAccuracy}}
+\index{getAccuracy@{getAccuracy}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{getAccuracy}]{\setlength{\rightskip}{0pt plus 5cm}int com.bluevia.location.data.LocationInfo.getAccuracy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a07de3a65b84ea5f927420bda7953729d}
+\begin{DoxyReturn}{Returns}
+the accuracy 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a2377eda77a9936d4658ee6821fb1a868}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!getLatitude@{getLatitude}}
+\index{getLatitude@{getLatitude}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{getLatitude}]{\setlength{\rightskip}{0pt plus 5cm}float com.bluevia.location.data.LocationInfo.getLatitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a2377eda77a9936d4658ee6821fb1a868}
+\begin{DoxyReturn}{Returns}
+the latitude 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_ab6403be15860f9b83988589ada93ab1a}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!getLongitude@{getLongitude}}
+\index{getLongitude@{getLongitude}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{getLongitude}]{\setlength{\rightskip}{0pt plus 5cm}float com.bluevia.location.data.LocationInfo.getLongitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_ab6403be15860f9b83988589ada93ab1a}
+\begin{DoxyReturn}{Returns}
+the longitude 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_ab92e9150dbd2a6aff848a086ddd49426}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!getReportStatus@{getReportStatus}}
+\index{getReportStatus@{getReportStatus}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{getReportStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ReportStatus} com.bluevia.location.data.LocationInfo.getReportStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_ab92e9150dbd2a6aff848a086ddd49426}
+\begin{DoxyReturn}{Returns}
+the reportStatus 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_afce05c11665e558e21ad86a58a721349}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{getTimestamp}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.location.data.LocationInfo.getTimestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_afce05c11665e558e21ad86a58a721349}
+\begin{DoxyReturn}{Returns}
+the timestamp 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a19ebaf31f854011a7bcf8aeba79ede9d}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.location.data.LocationInfo.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a19ebaf31f854011a7bcf8aeba79ede9d}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_ad485b24867086c7a5f72a042e6387c8c}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!setAccuracy@{setAccuracy}}
+\index{setAccuracy@{setAccuracy}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{setAccuracy}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.location.data.LocationInfo.setAccuracy (
+\begin{DoxyParamCaption}
+\item[{int}]{accuracy}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_ad485b24867086c7a5f72a042e6387c8c}
+
+\begin{DoxyParams}{Parameters}
+{\em accuracy} & the accuracy to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a24b9b8e62e5e3d78c87e40e1f126b709}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!setLatitude@{setLatitude}}
+\index{setLatitude@{setLatitude}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{setLatitude}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.location.data.LocationInfo.setLatitude (
+\begin{DoxyParamCaption}
+\item[{float}]{latitude}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a24b9b8e62e5e3d78c87e40e1f126b709}
+
+\begin{DoxyParams}{Parameters}
+{\em latitude} & the latitude to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a9dc4145afc3a4922b35347474daf5c88}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!setLongitude@{setLongitude}}
+\index{setLongitude@{setLongitude}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{setLongitude}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.location.data.LocationInfo.setLongitude (
+\begin{DoxyParamCaption}
+\item[{float}]{longitude}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a9dc4145afc3a4922b35347474daf5c88}
+
+\begin{DoxyParams}{Parameters}
+{\em longitude} & the longitude to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a486a44ad76aa9812f0132c57ac089e1a}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!setReportStatus@{setReportStatus}}
+\index{setReportStatus@{setReportStatus}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{setReportStatus}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.location.data.LocationInfo.setReportStatus (
+\begin{DoxyParamCaption}
+\item[{{\bf ReportStatus}}]{reportStatus}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a486a44ad76aa9812f0132c57ac089e1a}
+
+\begin{DoxyParams}{Parameters}
+{\em reportStatus} & the reportStatus to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a6a4f95e5ac1095ce27684a305842fcec}{
+\index{com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}!setTimestamp@{setTimestamp}}
+\index{setTimestamp@{setTimestamp}!com::bluevia::location::data::LocationInfo@{com::bluevia::location::data::LocationInfo}}
+\subsubsection[{setTimestamp}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.location.data.LocationInfo.setTimestamp (
+\begin{DoxyParamCaption}
+\item[{String}]{timestamp}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1location_1_1data_1_1LocationInfo_a6a4f95e5ac1095ce27684a305842fcec}
+
+\begin{DoxyParams}{Parameters}
+{\em timestamp} & the timestamp to set \\
+\hline
+\end{DoxyParams}

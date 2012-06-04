@@ -1,0 +1,243 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{
+\section{com.bluevia.commons.data.UserId Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+}
+Inheritance diagram for com.bluevia.commons.data.UserId:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a159e600181e6a14e769bb0a86f2c981a}{Type} \{ \par
+{\bfseries PHONE\_\-NUMBER}, 
+{\bfseries ANY\_\-URI}, 
+{\bfseries IPV4\_\-ADDRESS}, 
+{\bfseries IPV6\_\-ADDRESS}, 
+\par
+{\bfseries ALIAS}, 
+{\bfseries OTHER\_\-ID}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a941c38ebd2a6e3131b69bfc0ab7eb470}{UserId} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a1bb60926236af2cbd614be93e2e3556c}{UserId} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a159e600181e6a14e769bb0a86f2c981a}{Type} mType, String mUserIdValue)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a200115037c93a83939fe040c8356b6d5}{UserId} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} userIdType)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a159e600181e6a14e769bb0a86f2c981a}{Type} \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a73c4b64dde9ecec53b38600752e8e76a}{getType} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_ac70064b93362d98e0c3fcef5d9a95fe3}{setType} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a159e600181e6a14e769bb0a86f2c981a}{Type} type)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a3e06d48570c63a349aeec71d9254eb2b}{getUserIdValue} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a6680f85f1d57fd7ef1351f74c15d5359}{setUserIdValue} (String userIdValue)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_af62000c371d9a7db040848064acecc5a}{getOtherType} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a4ec27e1344089289395c29131d0db2ad}{setOtherType} (String otherType)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a07a36a539a751ffadf0a820f66c5a2d0}{isValid} ()
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a626ae0ff173431dbdac3940f2ef676b1}{
+boolean {\bfseries equals} (Object o)}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a626ae0ff173431dbdac3940f2ef676b1}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_ab63aba816ebea823174a452671bc47d6}{
+int {\bfseries hashCode} ()}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_ab63aba816ebea823174a452671bc47d6}
+
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_ab511177fa1287da43488e8e7e7fcfdb7}{getStringType} ()
+\item 
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a7ae6ad6a7d5f08435f1e39e64ccae97f}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} {\bfseries toUserIdType} ()}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a7ae6ad6a7d5f08435f1e39e64ccae97f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} identification This class may be used to identify the user on the request. For example, when sending an SMS, the recipient of the SMS may be identified using this class There are 6 types of UserIds types: 
+\begin{DoxyItemize}
+\item PhoneNumber. Phone Number value must be set in mUserIdValue 
+\item Any Uri. URI value must be set in mUserIdValue 
+\item IPV4. IPV4 value must be set in mUserIdValue 
+\item IPV6. IPV6 value must be set in mUserIdValue 
+\item Alias. Alias value must be set in mUserIdValue 
+\item Other Id. Id name must be set at mOtherType and Id value value must be set in mUserIdValue 
+\end{DoxyItemize}
+
+This implementation is not synchronized
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a159e600181e6a14e769bb0a86f2c981a}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!Type@{Type}}
+\index{Type@{Type}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf com::bluevia::commons::data::UserId::Type}}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a159e600181e6a14e769bb0a86f2c981a}
+Enum Type to indicate the type of the value that identifies the user. Available types are: 
+\begin{DoxyItemize}
+\item PHONE\_\-NUMBER: a Telephone number. 
+\item ANY\_\-URI: a Uri 
+\item IPV4\_\-ADDRESS: an IP 4 address 
+\item IPV6\_\-ADDRESS: an IP 6 address 
+\item ALIAS: an arbitrary alias 
+\item OTHER\_\-ID: another identity 
+\begin{DoxyItemize}
+\end{DoxyItemize}Telefonica R\&D 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a941c38ebd2a6e3131b69bfc0ab7eb470}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!UserId@{UserId}}
+\index{UserId@{UserId}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{UserId}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.data.UserId.UserId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a941c38ebd2a6e3131b69bfc0ab7eb470}
+Instantiates a new \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} type. \hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a1bb60926236af2cbd614be93e2e3556c}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!UserId@{UserId}}
+\index{UserId@{UserId}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{UserId}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.data.UserId.UserId (
+\begin{DoxyParamCaption}
+\item[{{\bf Type}}]{mType, }
+\item[{String}]{mUserIdValue}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a1bb60926236af2cbd614be93e2e3556c}
+Instantiates a new \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} type. \hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a200115037c93a83939fe040c8356b6d5}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!UserId@{UserId}}
+\index{UserId@{UserId}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{UserId}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.data.UserId.UserId (
+\begin{DoxyParamCaption}
+\item[{{\bf UserIdType}}]{userIdType}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a200115037c93a83939fe040c8356b6d5}
+Instantiates a new \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} type. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_af62000c371d9a7db040848064acecc5a}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!getOtherType@{getOtherType}}
+\index{getOtherType@{getOtherType}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{getOtherType}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.commons.data.UserId.getOtherType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_af62000c371d9a7db040848064acecc5a}
+When the type use id \char`\"{}Other Type\char`\"{}, The Type value must be set using this method This method gets the value of the other type name. \begin{DoxyReturn}{Returns}
+the Other Type name 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_ab511177fa1287da43488e8e7e7fcfdb7}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!getStringType@{getStringType}}
+\index{getStringType@{getStringType}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{getStringType}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.commons.data.UserId.getStringType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_ab511177fa1287da43488e8e7e7fcfdb7}
+Returns the corresponding String representation for each \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} type.
+
+\begin{DoxyReturn}{Returns}
+the corresponding String representation for each \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} type. 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a73c4b64dde9ecec53b38600752e8e76a}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!getType@{getType}}
+\index{getType@{getType}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} com.bluevia.commons.data.UserId.getType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a73c4b64dde9ecec53b38600752e8e76a}
+Gets the \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} Type \begin{DoxyReturn}{Returns}
+the \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} type 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a3e06d48570c63a349aeec71d9254eb2b}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!getUserIdValue@{getUserIdValue}}
+\index{getUserIdValue@{getUserIdValue}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{getUserIdValue}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.commons.data.UserId.getUserIdValue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a3e06d48570c63a349aeec71d9254eb2b}
+Gets the \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} value for the type set \begin{DoxyReturn}{Returns}
+the \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} value 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a07a36a539a751ffadf0a820f66c5a2d0}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.commons.data.UserId.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a07a36a539a751ffadf0a820f66c5a2d0}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a4ec27e1344089289395c29131d0db2ad}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!setOtherType@{setOtherType}}
+\index{setOtherType@{setOtherType}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{setOtherType}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.data.UserId.setOtherType (
+\begin{DoxyParamCaption}
+\item[{String}]{otherType}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a4ec27e1344089289395c29131d0db2ad}
+When the type use id \char`\"{}Other Type\char`\"{}, The Type value must be set using this method $\ast$ This method sets the other type name. 
+\begin{DoxyParams}{Parameters}
+{\em otherType} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_ac70064b93362d98e0c3fcef5d9a95fe3}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!setType@{setType}}
+\index{setType@{setType}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{setType}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.data.UserId.setType (
+\begin{DoxyParamCaption}
+\item[{{\bf Type}}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_ac70064b93362d98e0c3fcef5d9a95fe3}
+Sets the Userid type 
+\begin{DoxyParams}{Parameters}
+{\em type} & the type of the \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a6680f85f1d57fd7ef1351f74c15d5359}{
+\index{com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}!setUserIdValue@{setUserIdValue}}
+\index{setUserIdValue@{setUserIdValue}!com::bluevia::commons::data::UserId@{com::bluevia::commons::data::UserId}}
+\subsubsection[{setUserIdValue}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.data.UserId.setUserIdValue (
+\begin{DoxyParamCaption}
+\item[{String}]{userIdValue}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId_a6680f85f1d57fd7ef1351f74c15d5359}
+Sets the \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} value for the type set 
+\begin{DoxyParams}{Parameters}
+{\em userIdValue} & the \hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} value \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,153 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType}{
+\section{com.telefonica.schemas.unica.rpc.payment.v1.RefundParamsType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType}\index{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1common_1_1v1_1_1UserIdType}{UserIdType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_aeda55dbf68874554a3ee39de9d0dfad2}{getEndUserIdentifier} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_a5317a70f8dc4a6b39960b2d2063d0dab}{setEndUserIdentifier} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1common_1_1v1_1_1UserIdType}{UserIdType} value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ad0cdb84f57737326189a09c00a8d7367}{getTransactionId} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ac6c072a02ddeaf5315ad4669ae19fd90}{setTransactionId} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ad1729fd53e01b67d126bd5a8b8461885}{getReason} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ae7f404fd59479a77f8a4e804306996f6}{setReason} (String value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_aa71cf92dd0cffbb7f30ad929a1b690b3}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1common_1_1v1_1_1UserIdType}{UserIdType} {\bfseries endUserIdentifier}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_aa71cf92dd0cffbb7f30ad929a1b690b3}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ade6d8494d545bcc49fc57369f02e0904}{
+String {\bfseries transactionId}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ade6d8494d545bcc49fc57369f02e0904}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_a94138990c243a60dc3ddc2baa5dc3586}{
+String {\bfseries reason}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_a94138990c243a60dc3ddc2baa5dc3586}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+input parameters for Refund operation
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType}{RefundParamsType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="RefundParamsType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="endUserIdentifier" type="\{http://www.telefonica.com/schemas/UNICA/RPC/common/v1\}UserIdType" minOccurs="0"/>
+         <element name="transactionId" type="\{http://www.w3.org/2001/XMLSchema\}string"/>
+         <element name="reason" type="\{http://www.w3.org/2001/XMLSchema\}string" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_aeda55dbf68874554a3ee39de9d0dfad2}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}!getEndUserIdentifier@{getEndUserIdentifier}}
+\index{getEndUserIdentifier@{getEndUserIdentifier}!com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}}
+\subsubsection[{getEndUserIdentifier}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UserIdType} com.telefonica.schemas.unica.rpc.payment.v1.RefundParamsType.getEndUserIdentifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_aeda55dbf68874554a3ee39de9d0dfad2}
+Gets the value of the endUserIdentifier property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{UserIdType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ad1729fd53e01b67d126bd5a8b8461885}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}!getReason@{getReason}}
+\index{getReason@{getReason}!com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}}
+\subsubsection[{getReason}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.payment.v1.RefundParamsType.getReason (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ad1729fd53e01b67d126bd5a8b8461885}
+Gets the value of the reason property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ad0cdb84f57737326189a09c00a8d7367}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}!getTransactionId@{getTransactionId}}
+\index{getTransactionId@{getTransactionId}!com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}}
+\subsubsection[{getTransactionId}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.payment.v1.RefundParamsType.getTransactionId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ad0cdb84f57737326189a09c00a8d7367}
+Gets the value of the transactionId property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_a5317a70f8dc4a6b39960b2d2063d0dab}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}!setEndUserIdentifier@{setEndUserIdentifier}}
+\index{setEndUserIdentifier@{setEndUserIdentifier}!com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}}
+\subsubsection[{setEndUserIdentifier}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.RefundParamsType.setEndUserIdentifier (
+\begin{DoxyParamCaption}
+\item[{{\bf UserIdType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_a5317a70f8dc4a6b39960b2d2063d0dab}
+Sets the value of the endUserIdentifier property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{UserIdType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ae7f404fd59479a77f8a4e804306996f6}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}!setReason@{setReason}}
+\index{setReason@{setReason}!com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}}
+\subsubsection[{setReason}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.RefundParamsType.setReason (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ae7f404fd59479a77f8a4e804306996f6}
+Sets the value of the reason property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ac6c072a02ddeaf5315ad4669ae19fd90}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}!setTransactionId@{setTransactionId}}
+\index{setTransactionId@{setTransactionId}!com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::RefundParamsType}}
+\subsubsection[{setTransactionId}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.RefundParamsType.setTransactionId (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1RefundParamsType_ac6c072a02ddeaf5315ad4669ae19fd90}
+Sets the value of the transactionId property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}

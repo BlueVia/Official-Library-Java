@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- September 13, 2011 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			xmlns:tns="http://www.telefonica.com/schemas/UNICA/REST/sms/v1/" 
+			xmlns:uctr="http://www.telefonica.com/schemas/UNICA/REST/common/v1"
+			targetNamespace="http://www.telefonica.com/schemas/UNICA/REST/sms/v1/" 
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xsd:import namespace="http://www.telefonica.com/schemas/UNICA/REST/common/v1" schemaLocation="UNICA_API_REST_common_types_v1_0.xsd"/>
+
+
+<xsd:annotation>
+	<xsd:documentation>The following are the resources to be included in HTTP requests or responses</xsd:documentation>
+</xsd:annotation>		
+
+	<xsd:element name="smsText" type="tns:SMSTextType"/>
+	<xsd:element name="smsLogo" type="tns:SMSLogoType"/>
+	<xsd:element name="smsRingTone" type="tns:SMSRingToneType"/>
+	<xsd:element name="smsDeliveryStatus" type="tns:SMSDeliveryStatusType"/>
+	<xsd:element name="smsDeliveryStatusUpdate" type="tns:SMSDeliveryStatusUpdateType"/>
+	<xsd:element name="deliveryReceiptNotification" type="tns:DeliveryReceiptNotificationType"/>
+	<xsd:element name="receivedSMS" type="tns:ReceivedSMSType"/>
+	<xsd:element name="receivedSMSAsync" type="tns:ReceivedSMSAsyncType"/>
+	<xsd:element name="smsNotification" type="tns:SMSNotificationType"/>
+	
+<xsd:annotation>
+	<xsd:documentation>The following are the types defined for each used resource</xsd:documentation>
+</xsd:annotation>	
+
+	<xsd:complexType name="SMSTextType">
+		<xsd:sequence>
+			<xsd:element name="address" type="uctr:UserIdType" maxOccurs="unbounded"/>
+			<xsd:element name="message" type="xsd:string" />
+			<xsd:element name="receiptRequest" type="uctr:SimpleReferenceType" minOccurs="0"/>
+			<xsd:element name="senderName" type="xsd:string"  minOccurs="0"/>
+			<xsd:element name="originAddress" type="uctr:UserIdType"/>					
+			<xsd:element name="encode" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="sourceport" type="xsd:int" minOccurs="0"/>
+			<xsd:element name="destinationport" type="xsd:int" minOccurs="0"/>
+			<xsd:element name="esm_class" type="xsd:int" minOccurs="0"/>
+			<xsd:element name="data_coding" type="xsd:int" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="SMSLogoType">
+		<xsd:sequence>
+			<xsd:element name="address" type="uctr:UserIdType" maxOccurs="unbounded"/>
+			<xsd:element name="image" type="xsd:base64Binary" />
+			<xsd:element name="smsFormat">
+                <xsd:simpleType>
+                    <xsd:union memberTypes="tns:SMSFormat xsd:string"/>
+                </xsd:simpleType>
+       		</xsd:element>
+			<xsd:element name="receiptRequest" type="uctr:SimpleReferenceType" minOccurs="0"/>
+			<xsd:element name="senderName" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="originAddress" type="uctr:UserIdType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="SMSRingToneType">
+		<xsd:sequence>
+			<xsd:element name="address" type="uctr:UserIdType"  maxOccurs="unbounded"/>
+			<xsd:element name="ringtone" type="xsd:string" />
+			<xsd:element name="smsFormat">
+                <xsd:simpleType>
+                    <xsd:union memberTypes="tns:SMSFormat xsd:string"/>
+                </xsd:simpleType>
+       		</xsd:element>			
+			<xsd:element name="receiptRequest" type="uctr:SimpleReferenceType" minOccurs="0"/>
+			<xsd:element name="senderName" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="originAddress" type="uctr:UserIdType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SMSDeliveryStatusType">
+		<xsd:sequence>
+		<xsd:element name="smsDeliveryStatus" type="tns:DeliveryInformationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SMSDeliveryStatusUpdateType">
+		<xsd:sequence>
+		<xsd:element name="correlator" type="xsd:string" />
+		<xsd:element name="deliveryStatus" type="tns:DeliveryInformationType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+		
+	<xsd:complexType name="DeliveryReceiptNotificationType">
+		<xsd:sequence>
+		<xsd:element name="reference" type="uctr:SimpleReferenceType"/>
+		<xsd:element name="originAddress" type="uctr:UserIdType" maxOccurs="unbounded"/>
+		<xsd:element name="filterCriteria" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+		<xsd:complexType name="ReceivedSMSType">
+		<xsd:sequence>
+		<xsd:element name="receivedSMS" type="tns:SMSMessageType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ReceivedSMSAsyncType">
+		<xsd:sequence>
+		<xsd:element name="correlator" type="xsd:string"/>
+		<xsd:element name="message" type="tns:SMSMessageType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+		<xsd:complexType name="SMSNotificationType">
+		<xsd:sequence>
+		<xsd:element name="reference" type="uctr:SimpleReferenceType"/>
+		<xsd:element name="destinationAddress" type="uctr:UserIdType" maxOccurs="unbounded"/>
+		<xsd:element name="criteria" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+<xsd:annotation>
+	<xsd:documentation>The following are the rest of types used in the API</xsd:documentation>
+</xsd:annotation>
+	
+	<xsd:complexType name="DeliveryInformationType">
+		<xsd:sequence>
+		<xsd:element name="address" type="uctr:UserIdType"/>
+		<xsd:element name="deliveryStatus">
+                <xsd:simpleType>
+                    <xsd:union memberTypes="tns:DeliveryStatusType xsd:string"/>
+                </xsd:simpleType>
+       </xsd:element>
+		
+		<xsd:element name="description" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="DeliveryStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="DeliveredToNetwork" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Successful delivery to network
+    				</xsd:documentation>
+				</xsd:annotation>	
+			</xsd:enumeration>	
+			<xsd:enumeration value="DeliveryUncertain" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Delivery Status unknown: e.g. because it was handed off to another network.
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+			<xsd:enumeration value="DeliveryImpossible" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Unsuccessful delivery; the message could not be delivered before it expired.
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+			<xsd:enumeration value="MessageWaiting" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					The message is still queued for delivery. This is a temporary state, pending transition to one of the preceding states.
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+			<xsd:enumeration value="DeliveredToTerminal" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Successful delivered to Terminal
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+			<xsd:enumeration value="DeliveryNotificationNotSupported" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Unable to provide delivery receipt notification. NotifySMSDeliveryReceipt function will provide “DeliveryNotificationNotSupported” to indicate that delivery receipt for the specified address in a SendSMSRequest is not supported. 
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+		
+	<xsd:complexType name="SMSMessageType">
+		<xsd:sequence>
+		<xsd:element name="message" type="xsd:string"/>
+		<xsd:element name="originAddress" type="uctr:UserIdType"/>
+		<xsd:element name="destinationAddress" type="uctr:UserIdType"/>
+		<xsd:element name="dateTime" type="xsd:dateTime" minOccurs="0"/>
+		<xsd:element name="locationAdditionalInfo" type="tns:LocationInfoType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="LocationInfoType">
+		<xsd:sequence>
+			<xsd:element name="reportStatus" type="tns:RetrievalStatusType"/>
+			<xsd:element name="coordinates" type="tns:CoordinatesType"/>
+			<xsd:element name="altitude" type="xsd:float" minOccurs="0"/>
+			<xsd:element name="accuracy" type="xsd:int" minOccurs="0"/>
+			<xsd:element name="timestamp" type="xsd:dateTime"/>
+		</xsd:sequence>
+	</xsd:complexType>	
+
+<xsd:simpleType name="RetrievalStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Retrieved" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Item retrieved successfully
+    				</xsd:documentation>
+				</xsd:annotation>	
+			</xsd:enumeration>	
+			<xsd:enumeration value="NonAuthorized" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Location non authorized by the sender
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+			<xsd:enumeration value="NonRegistered" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					User not registered into gSDP
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+			<xsd:enumeration value="LocationNonAvailable" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Location capability is not supported in the OB
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+			<xsd:enumeration value="Error" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Error retrieving item.
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>	
+	
+<xsd:complexType name="CoordinatesType">
+		<xsd:sequence>
+				<xsd:element name="latitude" type="xsd:float"/>
+				<xsd:element name="longitude" type="xsd:float"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="SMSFormat">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Ems" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Enhanced Messaging Service, standardized in TS 23.040 [7xxx], which defines a logo/ringtone format
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+			<xsd:enumeration value="SmartMessaging" >
+				<xsd:annotation>
+					<xsd:documentation>
+    					Defines a logo/ringtone format
+    				</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

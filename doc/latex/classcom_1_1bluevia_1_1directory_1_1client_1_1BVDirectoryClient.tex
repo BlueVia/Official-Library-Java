@@ -1,0 +1,180 @@
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient}{
+\section{com.bluevia.directory.client.BVDirectoryClient Class Reference}
+\label{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient}\index{com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}}
+}
+Inheritance diagram for com.bluevia.directory.client.BVDirectoryClient:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_abc58c3287886b7d70038b8271996e055}{
+void {\bfseries init} ()}
+\label{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_abc58c3287886b7d70038b8271996e055}
+
+\item 
+\hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1UserInfo}{UserInfo} \hyperlink{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_ade6e58c1a32eef2aa8ee436906ce0088}{getUserInfo} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} user, UserInfo.DataSet\mbox{[}$\,$\mbox{]} dataSet)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1Profile}{Profile} \hyperlink{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a065ca71748fbd119dc7146c0f0cf9829}{getProfile} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} user, Profile.Fields\mbox{[}$\,$\mbox{]} fields)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1AccessInfo}{AccessInfo} \hyperlink{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a4545f012209fb596bb241861088f8711}{getAccessInfo} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} user, AccessInfo.Fields\mbox{[}$\,$\mbox{]} fields)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1TerminalInfo}{TerminalInfo} \hyperlink{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a7ff68bbe5063eeeb40bb9e7adc16b39c}{getTerminalInfo} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} user, TerminalInfo.Fields\mbox{[}$\,$\mbox{]} fields)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1directory_1_1data_1_1PersonalInfo}{PersonalInfo} \hyperlink{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a3b93ca7c130614d56d9657a4ec28d752}{getPersonalInfo} (\hyperlink{classcom_1_1bluevia_1_1commons_1_1data_1_1UserId}{UserId} user, PersonalInfo.Fields\mbox{[}$\,$\mbox{]} fields)  throws BlueviaException, IOException 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Client interface for the REST binding of the Bluevia Directory Service.
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a4545f012209fb596bb241861088f8711}{
+\index{com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}!getAccessInfo@{getAccessInfo}}
+\index{getAccessInfo@{getAccessInfo}!com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}}
+\subsubsection[{getAccessInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AccessInfo} com.bluevia.directory.client.BVDirectoryClient.getAccessInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{user, }
+\item[{AccessInfo.Fields\mbox{[}$\,$\mbox{]}}]{fields}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a4545f012209fb596bb241861088f8711}
+Retrieves a subset of the User Access Information resource block from the directory. 
+\begin{DoxyParams}{Parameters}
+{\em user} & the user whose information is going to be retrieved \\
+\hline
+{\em fields} & a filter object to specify which information fields are required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an entity object containing the user access information 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a3b93ca7c130614d56d9657a4ec28d752}{
+\index{com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}!getPersonalInfo@{getPersonalInfo}}
+\index{getPersonalInfo@{getPersonalInfo}!com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}}
+\subsubsection[{getPersonalInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PersonalInfo} com.bluevia.directory.client.BVDirectoryClient.getPersonalInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{user, }
+\item[{PersonalInfo.Fields\mbox{[}$\,$\mbox{]}}]{fields}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a3b93ca7c130614d56d9657a4ec28d752}
+Retrieves a subset of the User Personal Information resource block from the directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the user whose information is going to be retrieved \\
+\hline
+{\em filter} & a filter object to specify which information fields are required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an entity object containing the user terminal information 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a065ca71748fbd119dc7146c0f0cf9829}{
+\index{com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}!getProfile@{getProfile}}
+\index{getProfile@{getProfile}!com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}}
+\subsubsection[{getProfile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Profile} com.bluevia.directory.client.BVDirectoryClient.getProfile (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{user, }
+\item[{Profile.Fields\mbox{[}$\,$\mbox{]}}]{fields}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a065ca71748fbd119dc7146c0f0cf9829}
+Retrieves a subset of the User Profile resource block from the directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the user whose information is going to be retrieved \\
+\hline
+{\em fields} & a filter object to specify which information fields are required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an entity object containing the user personal information 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a7ff68bbe5063eeeb40bb9e7adc16b39c}{
+\index{com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}!getTerminalInfo@{getTerminalInfo}}
+\index{getTerminalInfo@{getTerminalInfo}!com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}}
+\subsubsection[{getTerminalInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TerminalInfo} com.bluevia.directory.client.BVDirectoryClient.getTerminalInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{user, }
+\item[{TerminalInfo.Fields\mbox{[}$\,$\mbox{]}}]{fields}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_a7ff68bbe5063eeeb40bb9e7adc16b39c}
+Retrieves a subset of the User Terminal Information resource block from the directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the user whose information is going to be retrieved \\
+\hline
+{\em fields} & a filter object to specify which information fields are required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an entity object containing the user terminal information 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_ade6e58c1a32eef2aa8ee436906ce0088}{
+\index{com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}!getUserInfo@{getUserInfo}}
+\index{getUserInfo@{getUserInfo}!com::bluevia::directory::client::BVDirectoryClient@{com::bluevia::directory::client::BVDirectoryClient}}
+\subsubsection[{getUserInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UserInfo} com.bluevia.directory.client.BVDirectoryClient.getUserInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf UserId}}]{user, }
+\item[{UserInfo.DataSet\mbox{[}$\,$\mbox{]}}]{dataSet}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1directory_1_1client_1_1BVDirectoryClient_ade6e58c1a32eef2aa8ee436906ce0088}
+Allows an application to get all the user context information. 
+\begin{DoxyParams}{Parameters}
+{\em user} & the user whose information is going to be retrieved \\
+\hline
+{\em dataSet} & an array of the blocks to be retrieved\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an entity containing all blocks of user context information. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}

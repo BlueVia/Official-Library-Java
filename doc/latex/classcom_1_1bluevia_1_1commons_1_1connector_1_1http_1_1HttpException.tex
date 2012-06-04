@@ -1,0 +1,142 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException}{
+\section{com.bluevia.commons.connector.http.HttpException Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException}\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+}
+Inheritance diagram for com.bluevia.commons.connector.http.HttpException:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a778505bb6b94f776acea2af629144d5a}{HttpException} (String message, int statusCode)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a087b26899e5fd631bb2c9202ea836b2e}{HttpException} (String message, int statusCode, InputStream responseStream, HashMap$<$ String, String $>$ headers)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a5a5077553b197a59d17ca46203035f49}{HttpException} (int statusCode, InputStream responseStream, HashMap$<$ String, String $>$ headers)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a183e17c60fa71ff15840ce5c9c5b4ef6}{BAD\_\-REQUEST} = 400
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a2e17d92c739069403b02bb64bb1b5db3}{UNAUTHORIZED} = 401
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_aa886f0a05f07ada39b08f71ab03295a3}{FORBIDDEN} = 403
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a3a00e30288263a38733c41145867be6d}{NOT\_\-FOUND} = 404
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a03f7ad83a523e45f27f95a168ecebab6}{REQUEST\_\-TIME\_\-OUT} = 408
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a80c07de62eb765d21a9b7624109e79ec}{CONFLICT} = 409
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_ad597734c6450e38ef231c40202db56c0}{GONE} = 410
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_aaf8b36a8e3c30a77eba0827d33ceadf7}{REQUEST\_\-ENTITY\_\-TOO\_\-LARGE} = 413
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_ae1de92d4e1fa1bbd5213b84e1f1c3224}{UNSUPORTED\_\-MEDIA\_\-TYPE} = 415
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a71ba76dcf56764f785ae1e0d3287711e}{INTERNAL\_\-SERVER\_\-ERROR} = 500
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a0deb5ee8bce98bd280111e01c0ba79f6}{NOT\_\-IMPLEMENTED} = 501
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class encapsulates HTTP errors returned by the REST server 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a778505bb6b94f776acea2af629144d5a}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!HttpException@{HttpException}}
+\index{HttpException@{HttpException}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{HttpException}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.HttpException.HttpException (
+\begin{DoxyParamCaption}
+\item[{String}]{message, }
+\item[{int}]{statusCode}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a778505bb6b94f776acea2af629144d5a}
+Creates an \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException}{HttpException} with the given message and statusCode \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a087b26899e5fd631bb2c9202ea836b2e}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!HttpException@{HttpException}}
+\index{HttpException@{HttpException}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{HttpException}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.HttpException.HttpException (
+\begin{DoxyParamCaption}
+\item[{String}]{message, }
+\item[{int}]{statusCode, }
+\item[{InputStream}]{responseStream, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a087b26899e5fd631bb2c9202ea836b2e}
+Creates an \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException}{HttpException} with the given message, statusCode and responseStream. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a5a5077553b197a59d17ca46203035f49}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!HttpException@{HttpException}}
+\index{HttpException@{HttpException}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{HttpException}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.HttpException.HttpException (
+\begin{DoxyParamCaption}
+\item[{int}]{statusCode, }
+\item[{InputStream}]{responseStream, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a5a5077553b197a59d17ca46203035f49}
+Creates an \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException}{HttpException} with the given statusCode and responseStream. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a183e17c60fa71ff15840ce5c9c5b4ef6}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!BAD\_\-REQUEST@{BAD\_\-REQUEST}}
+\index{BAD\_\-REQUEST@{BAD\_\-REQUEST}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{BAD\_\-REQUEST}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.BAD\_\-REQUEST} = 400\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a183e17c60fa71ff15840ce5c9c5b4ef6}
+Error code for a BAD REQUEST. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a80c07de62eb765d21a9b7624109e79ec}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!CONFLICT@{CONFLICT}}
+\index{CONFLICT@{CONFLICT}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{CONFLICT}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.CONFLICT} = 409\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a80c07de62eb765d21a9b7624109e79ec}
+Error code for a CONFLICT. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_aa886f0a05f07ada39b08f71ab03295a3}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!FORBIDDEN@{FORBIDDEN}}
+\index{FORBIDDEN@{FORBIDDEN}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{FORBIDDEN}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.FORBIDDEN} = 403\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_aa886f0a05f07ada39b08f71ab03295a3}
+Error code for a FORBIDDEN. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_ad597734c6450e38ef231c40202db56c0}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!GONE@{GONE}}
+\index{GONE@{GONE}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{GONE}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.GONE} = 410\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_ad597734c6450e38ef231c40202db56c0}
+Error code for a GONE. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a71ba76dcf56764f785ae1e0d3287711e}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!INTERNAL\_\-SERVER\_\-ERROR@{INTERNAL\_\-SERVER\_\-ERROR}}
+\index{INTERNAL\_\-SERVER\_\-ERROR@{INTERNAL\_\-SERVER\_\-ERROR}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{INTERNAL\_\-SERVER\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.INTERNAL\_\-SERVER\_\-ERROR} = 500\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a71ba76dcf56764f785ae1e0d3287711e}
+Error code for a INTERNAL SERVER ERROR. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a3a00e30288263a38733c41145867be6d}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!NOT\_\-FOUND@{NOT\_\-FOUND}}
+\index{NOT\_\-FOUND@{NOT\_\-FOUND}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{NOT\_\-FOUND}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.NOT\_\-FOUND} = 404\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a3a00e30288263a38733c41145867be6d}
+Error code for a NOT FOUND. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a0deb5ee8bce98bd280111e01c0ba79f6}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!NOT\_\-IMPLEMENTED@{NOT\_\-IMPLEMENTED}}
+\index{NOT\_\-IMPLEMENTED@{NOT\_\-IMPLEMENTED}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{NOT\_\-IMPLEMENTED}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.NOT\_\-IMPLEMENTED} = 501\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a0deb5ee8bce98bd280111e01c0ba79f6}
+Error code for a NOT IMPLEMENTED. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_aaf8b36a8e3c30a77eba0827d33ceadf7}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!REQUEST\_\-ENTITY\_\-TOO\_\-LARGE@{REQUEST\_\-ENTITY\_\-TOO\_\-LARGE}}
+\index{REQUEST\_\-ENTITY\_\-TOO\_\-LARGE@{REQUEST\_\-ENTITY\_\-TOO\_\-LARGE}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{REQUEST\_\-ENTITY\_\-TOO\_\-LARGE}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.REQUEST\_\-ENTITY\_\-TOO\_\-LARGE} = 413\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_aaf8b36a8e3c30a77eba0827d33ceadf7}
+Error code for a REQUEST ENTITY TOO LARGE. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a03f7ad83a523e45f27f95a168ecebab6}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!REQUEST\_\-TIME\_\-OUT@{REQUEST\_\-TIME\_\-OUT}}
+\index{REQUEST\_\-TIME\_\-OUT@{REQUEST\_\-TIME\_\-OUT}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{REQUEST\_\-TIME\_\-OUT}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.REQUEST\_\-TIME\_\-OUT} = 408\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a03f7ad83a523e45f27f95a168ecebab6}
+Error code for a REQUEST TIME OUT. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a2e17d92c739069403b02bb64bb1b5db3}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!UNAUTHORIZED@{UNAUTHORIZED}}
+\index{UNAUTHORIZED@{UNAUTHORIZED}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{UNAUTHORIZED}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.UNAUTHORIZED} = 401\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_a2e17d92c739069403b02bb64bb1b5db3}
+Error code for a UNAUTHORIZED. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_ae1de92d4e1fa1bbd5213b84e1f1c3224}{
+\index{com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}!UNSUPORTED\_\-MEDIA\_\-TYPE@{UNSUPORTED\_\-MEDIA\_\-TYPE}}
+\index{UNSUPORTED\_\-MEDIA\_\-TYPE@{UNSUPORTED\_\-MEDIA\_\-TYPE}!com::bluevia::commons::connector::http::HttpException@{com::bluevia::commons::connector::http::HttpException}}
+\subsubsection[{UNSUPORTED\_\-MEDIA\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.HttpException.UNSUPORTED\_\-MEDIA\_\-TYPE} = 415\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpException_ae1de92d4e1fa1bbd5213b84e1f1c3224}
+Error code for a UNSUPORTED MEDIA TYPE. 

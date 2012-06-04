@@ -1,0 +1,165 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType}{
+\section{com.telefonica.schemas.unica.rpc.definition.v1.MethodResponseType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType}\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}}
+}
+Inheritance diagram for com.telefonica.schemas.unica.rpc.definition.v1.MethodResponseType:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a5a78bf663c4b645394d4918abad4be6a}{getId} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_af8b56cc6d81c307e01d7f712519a7504}{setId} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a39ce69779059d746aa4f0fcf90d098c5}{getVersion} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_af189bebd044de1d4e377b30d85eb9093}{setVersion} (String value)
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType}{ErrorType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_ad6fae7ed55272b6995299ee073219836}{getError} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a7d6a82268f846b8c203830738943dc40}{setError} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType}{ErrorType} value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_acaefe6b176554e06209b41dd3848f49c}{
+String {\bfseries id}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_acaefe6b176554e06209b41dd3848f49c}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a454d61c96770dc5e8054e872806ebb25}{
+String {\bfseries version}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a454d61c96770dc5e8054e872806ebb25}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a76626625fe7b7e50de3dd0b98fada908}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType}{ErrorType} {\bfseries error}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a76626625fe7b7e50de3dd0b98fada908}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic Call Object structure for responses. Either result or error element must be present. To be extended by RPC APIs.
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType}{MethodResponseType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="MethodResponseType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="id" type="\{http://www.w3.org/2001/XMLSchema\}string" minOccurs="0"/>
+         <element name="version">
+           <simpleType>
+             <restriction base="\{http://www.w3.org/2001/XMLSchema\}string">
+               <pattern value="v([0-9])\{1\}"/>
+             </restriction>
+           </simpleType>
+         </element>
+         <element name="error" type="\{http://www.telefonica.com/schemas/UNICA/RPC/definition/v1\}ErrorType" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_ad6fae7ed55272b6995299ee073219836}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}!getError@{getError}}
+\index{getError@{getError}!com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}}
+\subsubsection[{getError}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ErrorType} com.telefonica.schemas.unica.rpc.definition.v1.MethodResponseType.getError (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_ad6fae7ed55272b6995299ee073219836}
+Gets the value of the error property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType}{ErrorType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a5a78bf663c4b645394d4918abad4be6a}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}!getId@{getId}}
+\index{getId@{getId}!com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}}
+\subsubsection[{getId}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.definition.v1.MethodResponseType.getId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a5a78bf663c4b645394d4918abad4be6a}
+Gets the value of the id property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a39ce69779059d746aa4f0fcf90d098c5}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}!getVersion@{getVersion}}
+\index{getVersion@{getVersion}!com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}}
+\subsubsection[{getVersion}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.definition.v1.MethodResponseType.getVersion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a39ce69779059d746aa4f0fcf90d098c5}
+Gets the value of the version property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a7d6a82268f846b8c203830738943dc40}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}!setError@{setError}}
+\index{setError@{setError}!com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}}
+\subsubsection[{setError}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.definition.v1.MethodResponseType.setError (
+\begin{DoxyParamCaption}
+\item[{{\bf ErrorType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_a7d6a82268f846b8c203830738943dc40}
+Sets the value of the error property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1ErrorType}{ErrorType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_af8b56cc6d81c307e01d7f712519a7504}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}!setId@{setId}}
+\index{setId@{setId}!com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}}
+\subsubsection[{setId}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.definition.v1.MethodResponseType.setId (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_af8b56cc6d81c307e01d7f712519a7504}
+Sets the value of the id property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_af189bebd044de1d4e377b30d85eb9093}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}!setVersion@{setVersion}}
+\index{setVersion@{setVersion}!com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodResponseType}}
+\subsubsection[{setVersion}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.definition.v1.MethodResponseType.setVersion (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodResponseType_af189bebd044de1d4e377b30d85eb9093}
+Sets the value of the version property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}

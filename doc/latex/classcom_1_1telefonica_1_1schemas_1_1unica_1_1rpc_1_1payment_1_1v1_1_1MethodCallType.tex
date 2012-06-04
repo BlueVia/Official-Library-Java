@@ -1,0 +1,137 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType}{
+\section{com.telefonica.schemas.unica.rpc.payment.v1.MethodCallType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType}\index{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType}}
+}
+Inheritance diagram for com.telefonica.schemas.unica.rpc.payment.v1.MethodCallType:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Params}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+MethodType \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_aef44db8ba0c9bab233b06574f79d0394}{getMethod} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a10d59031555a12400befd0407dac67ec}{setMethod} (MethodType value)
+\item 
+MethodCallType.Params \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a011d77711ab18ba4d97eee0d02d6cf02}{getParams} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a67402b2a3bc0e318f97518f64327a46a}{setParams} (MethodCallType.Params value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a5c47c028b342693e9e5853c1d6d6e02e}{
+MethodType {\bfseries method}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a5c47c028b342693e9e5853c1d6d6e02e}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a168dc83e0d3577b45e66765c333119e8}{
+MethodCallType.Params {\bfseries params}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a168dc83e0d3577b45e66765c333119e8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+extends RPC Definition \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType}{MethodCallType}
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType}{MethodCallType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="MethodCallType">
+   <complexContent>
+     <extension base="\{http://www.telefonica.com/schemas/UNICA/RPC/definition/v1\}MethodCallType">
+       <sequence>
+         <element name="method" type="\{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}MethodType"/>
+         <element name="params" minOccurs="0">
+           <complexType>
+             <complexContent>
+               <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+                 <choice>
+                   <element name="paymentParams" type="\{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}PaymentParamsType"/>
+                   <element name="refundParams" type="\{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}RefundParamsType"/>
+                   <element name="getPaymentStatusParams" type="\{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}GetPaymentStatusParamsType"/>
+                   <element name="notifyPaymentFinalStatusParams" type="\{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}NotifyPaymentFinalStatusParamsType"/>
+                 </choice>
+               </restriction>
+             </complexContent>
+           </complexType>
+         </element>
+       </sequence>
+     </extension>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_aef44db8ba0c9bab233b06574f79d0394}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType}!getMethod@{getMethod}}
+\index{getMethod@{getMethod}!com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType}}
+\subsubsection[{getMethod}]{\setlength{\rightskip}{0pt plus 5cm}MethodType com.telefonica.schemas.unica.rpc.payment.v1.MethodCallType.getMethod (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_aef44db8ba0c9bab233b06574f79d0394}
+Gets the value of the method property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{MethodType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a011d77711ab18ba4d97eee0d02d6cf02}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType}!getParams@{getParams}}
+\index{getParams@{getParams}!com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType}}
+\subsubsection[{getParams}]{\setlength{\rightskip}{0pt plus 5cm}MethodCallType.Params com.telefonica.schemas.unica.rpc.payment.v1.MethodCallType.getParams (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a011d77711ab18ba4d97eee0d02d6cf02}
+Gets the value of the params property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{MethodCallType.Params} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a10d59031555a12400befd0407dac67ec}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType}!setMethod@{setMethod}}
+\index{setMethod@{setMethod}!com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType}}
+\subsubsection[{setMethod}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.MethodCallType.setMethod (
+\begin{DoxyParamCaption}
+\item[{MethodType}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a10d59031555a12400befd0407dac67ec}
+Sets the value of the method property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{MethodType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a67402b2a3bc0e318f97518f64327a46a}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType}!setParams@{setParams}}
+\index{setParams@{setParams}!com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::payment::v1::MethodCallType}}
+\subsubsection[{setParams}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.MethodCallType.setParams (
+\begin{DoxyParamCaption}
+\item[{MethodCallType.Params}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1MethodCallType_a67402b2a3bc0e318f97518f64327a46a}
+Sets the value of the params property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{MethodCallType.Params} \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,125 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType}{
+\section{com.telefonica.schemas.unica.rpc.definition.v1.MethodCallType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType}\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType}}
+}
+Inheritance diagram for com.telefonica.schemas.unica.rpc.definition.v1.MethodCallType:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a90b56ebd4398358b4239954b7152ca41}{getId} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a03168e2bfb21ab1bd6168dd9de4d961c}{setId} (String value)
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a89ada399dbf83ef01045fb37b2d9551e}{getVersion} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_ab7ad6864eb8cf3698555019f765e4e54}{setVersion} (String value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a479b376eb213dabf0d6968105deedf48}{
+String {\bfseries id}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a479b376eb213dabf0d6968105deedf48}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_ad7725a8bb566b73048963faa8d4dce27}{
+String {\bfseries version}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_ad7725a8bb566b73048963faa8d4dce27}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic Call Object structure for requests. To be extended by RPC APIs
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType}{MethodCallType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="MethodCallType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="id" type="\{http://www.w3.org/2001/XMLSchema\}string" minOccurs="0"/>
+         <element name="version">
+           <simpleType>
+             <restriction base="\{http://www.w3.org/2001/XMLSchema\}string">
+               <pattern value="v([0-9])\{1\}"/>
+             </restriction>
+           </simpleType>
+         </element>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a90b56ebd4398358b4239954b7152ca41}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType}!getId@{getId}}
+\index{getId@{getId}!com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType}}
+\subsubsection[{getId}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.definition.v1.MethodCallType.getId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a90b56ebd4398358b4239954b7152ca41}
+Gets the value of the id property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a89ada399dbf83ef01045fb37b2d9551e}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType}!getVersion@{getVersion}}
+\index{getVersion@{getVersion}!com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType}}
+\subsubsection[{getVersion}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rpc.definition.v1.MethodCallType.getVersion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a89ada399dbf83ef01045fb37b2d9551e}
+Gets the value of the version property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a03168e2bfb21ab1bd6168dd9de4d961c}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType}!setId@{setId}}
+\index{setId@{setId}!com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType}}
+\subsubsection[{setId}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.definition.v1.MethodCallType.setId (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_a03168e2bfb21ab1bd6168dd9de4d961c}
+Sets the value of the id property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_ab7ad6864eb8cf3698555019f765e4e54}{
+\index{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType}!setVersion@{setVersion}}
+\index{setVersion@{setVersion}!com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType@{com::telefonica::schemas::unica::rpc::definition::v1::MethodCallType}}
+\subsubsection[{setVersion}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.definition.v1.MethodCallType.setVersion (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1definition_1_1v1_1_1MethodCallType_ab7ad6864eb8cf3698555019f765e4e54}
+Sets the value of the version property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,153 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType}{
+\section{com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType}\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+XMLGregorianCalendar \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_ac4b9663437269b33c95864837ce4425c}{getTimestamp} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_aeed7f66a1cf885efb634f76b1763ec77}{setTimestamp} (XMLGregorianCalendar value)
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentInfoType}{PaymentInfoType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a8501ea0def1769046a90e1f3d1ac8e5f}{getPaymentInfo} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_ae38b5e11eb284fe15c1f92edd06dfff9}{setPaymentInfo} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentInfoType}{PaymentInfoType} value)
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1common_1_1v1_1_1SimpleReferenceType}{SimpleReferenceType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a267ee0d6bea0a6ca04783491ef4f6d1b}{getReceiptRequest} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a391944aac55063ebbf16777c12ae31a7}{setReceiptRequest} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1common_1_1v1_1_1SimpleReferenceType}{SimpleReferenceType} value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_aa6dd1ec8eb05e99cd90b7ed800968989}{
+XMLGregorianCalendar {\bfseries timestamp}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_aa6dd1ec8eb05e99cd90b7ed800968989}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a3c410aff4f65995bdff26762d3be6ad6}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentInfoType}{PaymentInfoType} {\bfseries paymentInfo}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a3c410aff4f65995bdff26762d3be6ad6}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a0b2cda82cb34e1b688c908aa256e2db4}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1common_1_1v1_1_1SimpleReferenceType}{SimpleReferenceType} {\bfseries receiptRequest}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a0b2cda82cb34e1b688c908aa256e2db4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+input parameters for Payment operation
+
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType}{PaymentParamsType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="PaymentParamsType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="timestamp" type="\{http://www.w3.org/2001/XMLSchema\}dateTime"/>
+         <element name="paymentInfo" type="\{http://www.telefonica.com/schemas/UNICA/RPC/payment/v1\}PaymentInfoType"/>
+         <element name="receiptRequest" type="\{http://www.telefonica.com/schemas/UNICA/RPC/common/v1\}SimpleReferenceType" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a8501ea0def1769046a90e1f3d1ac8e5f}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}!getPaymentInfo@{getPaymentInfo}}
+\index{getPaymentInfo@{getPaymentInfo}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}}
+\subsubsection[{getPaymentInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PaymentInfoType} com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType.getPaymentInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a8501ea0def1769046a90e1f3d1ac8e5f}
+Gets the value of the paymentInfo property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentInfoType}{PaymentInfoType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a267ee0d6bea0a6ca04783491ef4f6d1b}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}!getReceiptRequest@{getReceiptRequest}}
+\index{getReceiptRequest@{getReceiptRequest}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}}
+\subsubsection[{getReceiptRequest}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SimpleReferenceType} com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType.getReceiptRequest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a267ee0d6bea0a6ca04783491ef4f6d1b}
+Gets the value of the receiptRequest property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{SimpleReferenceType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_ac4b9663437269b33c95864837ce4425c}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}}
+\subsubsection[{getTimestamp}]{\setlength{\rightskip}{0pt plus 5cm}XMLGregorianCalendar com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType.getTimestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_ac4b9663437269b33c95864837ce4425c}
+Gets the value of the timestamp property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{XMLGregorianCalendar} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_ae38b5e11eb284fe15c1f92edd06dfff9}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}!setPaymentInfo@{setPaymentInfo}}
+\index{setPaymentInfo@{setPaymentInfo}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}}
+\subsubsection[{setPaymentInfo}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType.setPaymentInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf PaymentInfoType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_ae38b5e11eb284fe15c1f92edd06dfff9}
+Sets the value of the paymentInfo property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentInfoType}{PaymentInfoType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a391944aac55063ebbf16777c12ae31a7}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}!setReceiptRequest@{setReceiptRequest}}
+\index{setReceiptRequest@{setReceiptRequest}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}}
+\subsubsection[{setReceiptRequest}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType.setReceiptRequest (
+\begin{DoxyParamCaption}
+\item[{{\bf SimpleReferenceType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_a391944aac55063ebbf16777c12ae31a7}
+Sets the value of the receiptRequest property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{SimpleReferenceType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_aeed7f66a1cf885efb634f76b1763ec77}{
+\index{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}!setTimestamp@{setTimestamp}}
+\index{setTimestamp@{setTimestamp}!com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType@{com::telefonica::schemas::unica::rpc::payment::v1::PaymentParamsType}}
+\subsubsection[{setTimestamp}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rpc.payment.v1.PaymentParamsType.setTimestamp (
+\begin{DoxyParamCaption}
+\item[{XMLGregorianCalendar}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rpc_1_1payment_1_1v1_1_1PaymentParamsType_aeed7f66a1cf885efb634f76b1763ec77}
+Sets the value of the timestamp property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{XMLGregorianCalendar} \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Release Date: August 25, 2011 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.telefonica.com/schemas/UNICA/RPC/payment/v1" xmlns:rpc="http://www.telefonica.com/schemas/UNICA/RPC/definition/v1" xmlns:uctrpc="http://www.telefonica.com/schemas/UNICA/RPC/common/v1" targetNamespace="http://www.telefonica.com/schemas/UNICA/RPC/payment/v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xsd:import namespace="http://www.telefonica.com/schemas/UNICA/RPC/common/v1" schemaLocation="UNICA_API_RPC_common_types_v1_3.xsd"/>
+    <xsd:import namespace="http://www.telefonica.com/schemas/UNICA/RPC/definition/v1" schemaLocation="UNICA_API_RPC_definition_v1_0.xsd"/>
+    
+    <xsd:element name="methodCall" type="tns:MethodCallType">
+        <xsd:annotation>
+            <xsd:documentation>instance which wraps remote call requests</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:element name="methodResponse" type="tns:MethodResponseType">
+        <xsd:annotation>
+            <xsd:documentation>instace which wraps remote call responses</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="MethodCallType">
+        <xsd:annotation>
+            <xsd:documentation>extends RPC Definition  MethodCallType</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="rpc:MethodCallType">
+                <xsd:sequence>
+                    <xsd:element name="method" type="tns:MethodType"/>
+                    <xsd:element name="params" minOccurs="0">
+                        <xsd:complexType>
+                            <xsd:choice>
+                                <xsd:element name="paymentParams" type="tns:PaymentParamsType"/>
+                                <xsd:element name="refundParams" type="tns:RefundParamsType"/>
+                                <xsd:element name="getPaymentStatusParams" type="tns:GetPaymentStatusParamsType"/>
+                                <xsd:element name="notifyPaymentFinalStatusParams" type="tns:NotifyPaymentFinalStatusParamsType"/>
+                            </xsd:choice>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="MethodResponseType">
+        <xsd:annotation>
+            <xsd:documentation>extends RPC Definition MethodResponseType</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="rpc:MethodResponseType">
+                <xsd:sequence>
+                    <xsd:element name="result" minOccurs="0">
+                        <xsd:complexType>
+                            <xsd:choice>
+                                <xsd:element name="paymentResult" type="tns:PaymentResultType"/>
+                                <xsd:element name="getPaymentStatusResult" type="tns:GetPaymentStatusResultType"/>
+                            </xsd:choice>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:simpleType name="MethodType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="PAYMENT"/>
+            <xsd:enumeration value="CANCEL_AUTHORIZATION"/>
+            <xsd:enumeration value="REFUND"/>
+            <xsd:enumeration value="GET_PAYMENT_STATUS"/>
+            <xsd:enumeration value="NOTIFY_PAYMENT_FINAL_STATUS"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:complexType name="PaymentParamsType">
+        <xsd:annotation>
+            <xsd:documentation>input parameters for Payment operation</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="timestamp" type="xsd:dateTime"/>
+            <xsd:element name="paymentInfo" type="tns:PaymentInfoType"/>
+            <xsd:element name="receiptRequest" type="uctrpc:SimpleReferenceType" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="PaymentResultType">
+        <xsd:annotation>
+            <xsd:documentation>output parameters for Payment operation</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="transactionId" type="xsd:string"/>
+            <xsd:element name="transactionStatus">
+                <xsd:simpleType>
+                    <xsd:union memberTypes="tns:TransactionEnumerationType xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="transactionStatusDescription" type="xsd:string"/>
+            <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="RefundParamsType">
+        <xsd:annotation>
+            <xsd:documentation>input parameters for Refund operation</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+        	<xsd:element name="endUserIdentifier" type="uctrpc:UserIdType" minOccurs="0"/>
+            <xsd:element name="transactionId" type="xsd:string"/>
+             <xsd:element name="reason" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="GetPaymentStatusParamsType">
+        <xsd:annotation>
+            <xsd:documentation>input parameters for GetPaymentStatus operation</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="transactionId" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="GetPaymentStatusResultType">
+        <xsd:annotation>
+            <xsd:documentation>output parameters for GetPaymentStatus operation</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="transactionStatus">
+                <xsd:simpleType>
+                    <xsd:union memberTypes="tns:TransactionEnumerationType xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="transactionStatusDescription" type="xsd:string"/>
+            <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="NotifyPaymentFinalStatusParamsType">
+        <xsd:annotation>
+            <xsd:documentation>input parameters for NotifyPaymentFinalStatus operation</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="transactionId" type="xsd:string"/>
+            <xsd:element name="transactionStatus">
+                <xsd:simpleType>
+                    <xsd:union memberTypes="tns:TransactionEnumerationType xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="transactionStatusDescription" type="xsd:string"/>
+            <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="PaymentInfoType">
+        <xsd:annotation>
+            <xsd:documentation>information about purchase, extensible</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="endUserIdentifier" type="uctrpc:UserIdType" minOccurs="0"/>
+            <xsd:element name="amount" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="currency" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="taxes" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="code" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="referencecode" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="description" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:anyAttribute/>
+    </xsd:complexType>
+    
+    <xsd:simpleType name="TransactionEnumerationType">
+        <xsd:annotation>
+            <xsd:documentation>information about the final status of payment transaction</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="SUCCESS"/>
+            <xsd:enumeration value="FAILURE"/>
+            <xsd:enumeration value="PENDING"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

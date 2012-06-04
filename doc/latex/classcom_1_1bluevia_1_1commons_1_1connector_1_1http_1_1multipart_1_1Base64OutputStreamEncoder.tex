@@ -1,0 +1,145 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder}{
+\section{com.bluevia.commons.connector.http.multipart.Base64OutputStreamEncoder Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder}\index{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}}
+}
+
+
+Inherits OutputStream.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a6e9151f9ad39a429992d74940200ff3b}{write} (int b)  throws IOException 
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a7fc704a930fbe994f825094ca8a6347c}{flush} ()  throws IOException 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ac3843a2f83f242e73f0bc10263260213}{CHUNKSIZE\_\-DEFAULT} = 76
+\item 
+static final String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ac7ff94c6398398174d06a7c21f0ebf15}{LINE\_\-SEPARATOR\_\-DEFAULT} = \char`\"{}$\backslash$r$\backslash$n\char`\"{}
+\item 
+static final byte\mbox{[}$\,$\mbox{]} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ad4a7af84e77b356c32074b334a1ad277}{LINE\_\-SEPARATOR\_\-BYTES\_\-DEFAULT} = EncodingUtils.getAsciiBytes(\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ac7ff94c6398398174d06a7c21f0ebf15}{LINE\_\-SEPARATOR\_\-DEFAULT})
+\end{DoxyCompactItemize}
+\subsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a1c23e35daf6cda4bfb58506484d1d5dd}{Base64OutputStreamEncoder} (OutputStream out, boolean chunked)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a147f28283312328aeedb87fe7cd724bc}{Base64OutputStreamEncoder} (OutputStream out, boolean chunked, int chunksize, String lineSeparator)
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a85a3c9252b2f3dd518d9a3c1faedde43}{Base64OutputStreamEncoder} (OutputStream out)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base64 encoder. It allows an application to transparently encode a data stream into base64. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a1c23e35daf6cda4bfb58506484d1d5dd}{
+\index{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}!Base64OutputStreamEncoder@{Base64OutputStreamEncoder}}
+\index{Base64OutputStreamEncoder@{Base64OutputStreamEncoder}!com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}}
+\subsubsection[{Base64OutputStreamEncoder}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.multipart.Base64OutputStreamEncoder.Base64OutputStreamEncoder (
+\begin{DoxyParamCaption}
+\item[{OutputStream}]{out, }
+\item[{boolean}]{chunked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}package\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a1c23e35daf6cda4bfb58506484d1d5dd}
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & the output stream into which the encoded data is going to be written. \\
+\hline
+{\em chunked} & {\ttfamily true} if the encoded data should be chunk to different lines. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a147f28283312328aeedb87fe7cd724bc}{
+\index{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}!Base64OutputStreamEncoder@{Base64OutputStreamEncoder}}
+\index{Base64OutputStreamEncoder@{Base64OutputStreamEncoder}!com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}}
+\subsubsection[{Base64OutputStreamEncoder}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.multipart.Base64OutputStreamEncoder.Base64OutputStreamEncoder (
+\begin{DoxyParamCaption}
+\item[{OutputStream}]{out, }
+\item[{boolean}]{chunked, }
+\item[{int}]{chunksize, }
+\item[{String}]{lineSeparator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}package\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a147f28283312328aeedb87fe7cd724bc}
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & the output stream into which the encoded data is going to be written. \\
+\hline
+{\em chunked} & {\ttfamily true} if the encoded data should be chunk to different lines. \\
+\hline
+{\em chunksize} & the size of the lines into which the encoded data is going to be encoded. \\
+\hline
+{\em lineSeparator} & the sequence used to separate lines. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a85a3c9252b2f3dd518d9a3c1faedde43}{
+\index{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}!Base64OutputStreamEncoder@{Base64OutputStreamEncoder}}
+\index{Base64OutputStreamEncoder@{Base64OutputStreamEncoder}!com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}}
+\subsubsection[{Base64OutputStreamEncoder}]{\setlength{\rightskip}{0pt plus 5cm}com.bluevia.commons.connector.http.multipart.Base64OutputStreamEncoder.Base64OutputStreamEncoder (
+\begin{DoxyParamCaption}
+\item[{OutputStream}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}package\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a85a3c9252b2f3dd518d9a3c1faedde43}
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & the output stream into which the encoded data is going to be written. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a7fc704a930fbe994f825094ca8a6347c}{
+\index{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}!flush@{flush}}
+\index{flush@{flush}!com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}}
+\subsubsection[{flush}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.multipart.Base64OutputStreamEncoder.flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a7fc704a930fbe994f825094ca8a6347c}
+\begin{DoxySeeAlso}{See also}
+java.io.OutputStream.flush() 
+\end{DoxySeeAlso}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a6e9151f9ad39a429992d74940200ff3b}{
+\index{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}!write@{write}}
+\index{write@{write}!com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.multipart.Base64OutputStreamEncoder.write (
+\begin{DoxyParamCaption}
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)  throws IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_a6e9151f9ad39a429992d74940200ff3b}
+\begin{DoxySeeAlso}{See also}
+java.io.OutputStream.write(int) 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ac3843a2f83f242e73f0bc10263260213}{
+\index{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}!CHUNKSIZE\_\-DEFAULT@{CHUNKSIZE\_\-DEFAULT}}
+\index{CHUNKSIZE\_\-DEFAULT@{CHUNKSIZE\_\-DEFAULT}!com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}}
+\subsubsection[{CHUNKSIZE\_\-DEFAULT}]{\setlength{\rightskip}{0pt plus 5cm}final int {\bf com.bluevia.commons.connector.http.multipart.Base64OutputStreamEncoder.CHUNKSIZE\_\-DEFAULT} = 76\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ac3843a2f83f242e73f0bc10263260213}
+Chunk Size default \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ad4a7af84e77b356c32074b334a1ad277}{
+\index{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}!LINE\_\-SEPARATOR\_\-BYTES\_\-DEFAULT@{LINE\_\-SEPARATOR\_\-BYTES\_\-DEFAULT}}
+\index{LINE\_\-SEPARATOR\_\-BYTES\_\-DEFAULT@{LINE\_\-SEPARATOR\_\-BYTES\_\-DEFAULT}!com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}}
+\subsubsection[{LINE\_\-SEPARATOR\_\-BYTES\_\-DEFAULT}]{\setlength{\rightskip}{0pt plus 5cm}final byte \mbox{[}$\,$\mbox{]} {\bf com.bluevia.commons.connector.http.multipart.Base64OutputStreamEncoder.LINE\_\-SEPARATOR\_\-BYTES\_\-DEFAULT} = EncodingUtils.getAsciiBytes({\bf LINE\_\-SEPARATOR\_\-DEFAULT})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ad4a7af84e77b356c32074b334a1ad277}
+Line separator default in bytes \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ac7ff94c6398398174d06a7c21f0ebf15}{
+\index{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}!LINE\_\-SEPARATOR\_\-DEFAULT@{LINE\_\-SEPARATOR\_\-DEFAULT}}
+\index{LINE\_\-SEPARATOR\_\-DEFAULT@{LINE\_\-SEPARATOR\_\-DEFAULT}!com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder@{com::bluevia::commons::connector::http::multipart::Base64OutputStreamEncoder}}
+\subsubsection[{LINE\_\-SEPARATOR\_\-DEFAULT}]{\setlength{\rightskip}{0pt plus 5cm}final String {\bf com.bluevia.commons.connector.http.multipart.Base64OutputStreamEncoder.LINE\_\-SEPARATOR\_\-DEFAULT} = \char`\"{}$\backslash$r$\backslash$n\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1Base64OutputStreamEncoder_ac7ff94c6398398174d06a7c21f0ebf15}
+Line separator default 

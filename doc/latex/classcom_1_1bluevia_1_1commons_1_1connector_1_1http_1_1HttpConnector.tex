@@ -1,0 +1,450 @@
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector}{
+\section{com.bluevia.commons.connector.http.HttpConnector Class Reference}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector}\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+}
+Inheritance diagram for com.bluevia.commons.connector.http.HttpConnector:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.193212cm]{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries CurlLogger}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a18df8d3daff61d24f994114a8115fe05}{close} ()
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1GenericResponse}{GenericResponse} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_aee88afcd82a603dd62691cfff8adac5a}{create} (String address, HashMap$<$ String, String $>$ parameters, byte\mbox{[}$\,$\mbox{]} content, HashMap$<$ String, String $>$ headers)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1GenericResponse}{GenericResponse} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a867a506b38b2a30712795a84fbf6d47c}{create} (String address, HashMap$<$ String, String $>$ parameters, \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1multipart_1_1BlueviaPartBase}{BlueviaPartBase}\mbox{[}$\,$\mbox{]} parts, HashMap$<$ String, String $>$ headers)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1GenericResponse}{GenericResponse} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a249f56891c29f400de4f368ddd326049}{retrieve} (String feedUri)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1GenericResponse}{GenericResponse} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a58cd356baaa4e2631176728575fa6ec9}{retrieve} (String feedUri, HashMap$<$ String, String $>$ parameters)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1GenericResponse}{GenericResponse} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a90285648526b1fc9ca82eb3fb315ba55}{retrieve} (String feedUri, HashMap$<$ String, String $>$ parameters, HashMap$<$ String, String $>$ headers)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1GenericResponse}{GenericResponse} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_ab454a390faa34d755842f9d90f75d292}{update} (String feedUri, HashMap$<$ String, String $>$ parameters, byte\mbox{[}$\,$\mbox{]} body, HashMap$<$ String, String $>$ headers)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1GenericResponse}{GenericResponse} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_adfa48d184bcd477f8f59726b5353011d}{delete} (String feedUri)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1GenericResponse}{GenericResponse} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a8412605241cde6f85514389c3403aee5}{delete} (String feedUri, HashMap$<$ String, String $>$ parameters)  throws BlueviaException, IOException 
+\item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1GenericResponse}{GenericResponse} \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_af477b2e294c1ba02a3881855715be326}{delete} (String feedUri, HashMap$<$ String, String $>$ parameters, HashMap$<$ String, String $>$ headers)  throws BlueviaException, IOException 
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a6a3f418af48eb7df44ddef79763639bd}{authenticate} ()  throws BlueviaException 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+HttpClient \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a17ef811474aaf1187f879359377827fb}{lazyInitHttpClient} ()  throws BlueviaException, IOException 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+DefaultHttpClient \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a0d03c843267a80eeb2f3b86be29b1a97}{mHttpClient}
+\item 
+HttpUriRequest \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_ae32bdd8e1f3a245661b2388a85b024e4}{mRequest}
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a69806e8d34342d290c65d66ddd89f992}{mKeyStorePath}
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a9ebdd5dcdfcc73843812a33c07ef8b01}{mKeyStorePass}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector}{HttpConnector} that allows to send requests via HTTP REST
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a6a3f418af48eb7df44ddef79763639bd}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{authenticate}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.HttpConnector.authenticate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a6a3f418af48eb7df44ddef79763639bd}
+Authenticates the request 
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IAuth_ab31f55aa1f053f4ed9edc8bad4b52ee5}{com.bluevia.commons.connector.IAuth}.
+
+
+
+Reimplemented in \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OauthHttpConnector_a8e4bf0338b25e614868fe4603d6aab83}{com.bluevia.commons.connector.http.oauth.OauthHttpConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a18df8d3daff61d24f994114a8115fe05}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!close@{close}}
+\index{close@{close}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.commons.connector.http.HttpConnector.close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a18df8d3daff61d24f994114a8115fe05}
+Close the HTTP connections 
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_aa0cfba46a06b13b7b314fab495173b9f}{com.bluevia.commons.connector.IConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_aee88afcd82a603dd62691cfff8adac5a}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!create@{create}}
+\index{create@{create}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenericResponse} com.bluevia.commons.connector.http.HttpConnector.create (
+\begin{DoxyParamCaption}
+\item[{String}]{address, }
+\item[{HashMap$<$ String, String $>$}]{parameters, }
+\item[{byte\mbox{[}$\,$\mbox{]}}]{content, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_aee88afcd82a603dd62691cfff8adac5a}
+Creates a request using REST to the gSDP server in order to create an entity using POST method
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the uri to create the entity remotely via REST \\
+\hline
+{\em parameters} & The query parameters for the request \\
+\hline
+{\em content} & the body of the request \\
+\hline
+{\em headers} & headers of the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_a69caf7d9808244faa2996b7e2d23b306}{com.bluevia.commons.connector.IConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a867a506b38b2a30712795a84fbf6d47c}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!create@{create}}
+\index{create@{create}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenericResponse} com.bluevia.commons.connector.http.HttpConnector.create (
+\begin{DoxyParamCaption}
+\item[{String}]{address, }
+\item[{HashMap$<$ String, String $>$}]{parameters, }
+\item[{{\bf BlueviaPartBase}\mbox{[}$\,$\mbox{]}}]{parts, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a867a506b38b2a30712795a84fbf6d47c}
+Creates a request using HTTP REST to the server in order to create a multipart entity
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the uri to create the entity remotely via REST \\
+\hline
+{\em parameters} & the query parameters for the request \\
+\hline
+{\em parts} & the multiparts \\
+\hline
+{\em headers} & headers of the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_a4340bf82569b7bc27785452df03c38f3}{com.bluevia.commons.connector.IConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_adfa48d184bcd477f8f59726b5353011d}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!delete@{delete}}
+\index{delete@{delete}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenericResponse} com.bluevia.commons.connector.http.HttpConnector.delete (
+\begin{DoxyParamCaption}
+\item[{String}]{address}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_adfa48d184bcd477f8f59726b5353011d}
+Creates a request using REST to the gSDP server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the uri to create the entity remotely via REST \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_a74ae628874cf0b5254b37cf7126e4ac8}{com.bluevia.commons.connector.IConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a8412605241cde6f85514389c3403aee5}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!delete@{delete}}
+\index{delete@{delete}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenericResponse} com.bluevia.commons.connector.http.HttpConnector.delete (
+\begin{DoxyParamCaption}
+\item[{String}]{address, }
+\item[{HashMap$<$ String, String $>$}]{parameters}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a8412605241cde6f85514389c3403aee5}
+Creates a request using REST to the gSDP server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the uri to create the entity remotely via REST \\
+\hline
+{\em parameters} & the parameters in order to do the filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_a6269266e465f45cf0e1e023dd14187e6}{com.bluevia.commons.connector.IConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_af477b2e294c1ba02a3881855715be326}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!delete@{delete}}
+\index{delete@{delete}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenericResponse} com.bluevia.commons.connector.http.HttpConnector.delete (
+\begin{DoxyParamCaption}
+\item[{String}]{address, }
+\item[{HashMap$<$ String, String $>$}]{parameters, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_af477b2e294c1ba02a3881855715be326}
+Creates a request using REST to the gSDP server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the uri to create the entity remotely via REST \\
+\hline
+{\em parameters} & the parameters in order to do the filtering \\
+\hline
+{\em headers} & headers of the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_aa076c1a3c20ef256eebd72071d840cc0}{com.bluevia.commons.connector.IConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a17ef811474aaf1187f879359377827fb}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!lazyInitHttpClient@{lazyInitHttpClient}}
+\index{lazyInitHttpClient@{lazyInitHttpClient}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{lazyInitHttpClient}]{\setlength{\rightskip}{0pt plus 5cm}HttpClient com.bluevia.commons.connector.http.HttpConnector.lazyInitHttpClient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException \hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a17ef811474aaf1187f879359377827fb}
+Creates an HttpClient
+
+\begin{DoxyReturn}{Returns}
+the created HTTP Client 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a249f56891c29f400de4f368ddd326049}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenericResponse} com.bluevia.commons.connector.http.HttpConnector.retrieve (
+\begin{DoxyParamCaption}
+\item[{String}]{address}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a249f56891c29f400de4f368ddd326049}
+Creates a request using REST to the gSDP server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the uri to create the entity remotely via REST \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_abc00fc6740197ca7ffe1943842dd3507}{com.bluevia.commons.connector.IConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a90285648526b1fc9ca82eb3fb315ba55}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenericResponse} com.bluevia.commons.connector.http.HttpConnector.retrieve (
+\begin{DoxyParamCaption}
+\item[{String}]{address, }
+\item[{HashMap$<$ String, String $>$}]{parameters, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a90285648526b1fc9ca82eb3fb315ba55}
+Creates a request using REST to the gSDP server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the uri to create the entity remotely via REST \\
+\hline
+{\em parameters} & the parameters in order to do the filtering \\
+\hline
+{\em headers} & headers of the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_ab1b1dbc83b44b3db70ce0a2ccee1e471}{com.bluevia.commons.connector.IConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a58cd356baaa4e2631176728575fa6ec9}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenericResponse} com.bluevia.commons.connector.http.HttpConnector.retrieve (
+\begin{DoxyParamCaption}
+\item[{String}]{address, }
+\item[{HashMap$<$ String, String $>$}]{parameters}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a58cd356baaa4e2631176728575fa6ec9}
+Creates a request using REST to the gSDP server in order to retrieve an entity from the server
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the uri to create the entity remotely via REST \\
+\hline
+{\em parameters} & the parameters in order to do the filtering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_adf31a6c7c534fcd1d9f629bc9b6b2a90}{com.bluevia.commons.connector.IConnector}.
+
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_ab454a390faa34d755842f9d90f75d292}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!update@{update}}
+\index{update@{update}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenericResponse} com.bluevia.commons.connector.http.HttpConnector.update (
+\begin{DoxyParamCaption}
+\item[{String}]{address, }
+\item[{HashMap$<$ String, String $>$}]{parameters, }
+\item[{byte\mbox{[}$\,$\mbox{]}}]{body, }
+\item[{HashMap$<$ String, String $>$}]{headers}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_ab454a390faa34d755842f9d90f75d292}
+Creates a request using REST to the gSDP server in order to create an entity
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & the uri to create the entity remotely via REST \\
+\hline
+{\em parameters} & The query parameters for the request \\
+\hline
+{\em body} & the body of the request \\
+\hline
+{\em headers} & headers of the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the response of the operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1connector_1_1IConnector_aa637a55439fe2d98df37a98608da31d4}{com.bluevia.commons.connector.IConnector}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a0d03c843267a80eeb2f3b86be29b1a97}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!mHttpClient@{mHttpClient}}
+\index{mHttpClient@{mHttpClient}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{mHttpClient}]{\setlength{\rightskip}{0pt plus 5cm}DefaultHttpClient {\bf com.bluevia.commons.connector.http.HttpConnector.mHttpClient}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a0d03c843267a80eeb2f3b86be29b1a97}
+Internal HTTP client. \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a9ebdd5dcdfcc73843812a33c07ef8b01}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!mKeyStorePass@{mKeyStorePass}}
+\index{mKeyStorePass@{mKeyStorePass}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{mKeyStorePass}]{\setlength{\rightskip}{0pt plus 5cm}String {\bf com.bluevia.commons.connector.http.HttpConnector.mKeyStorePass}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a9ebdd5dcdfcc73843812a33c07ef8b01}
+The password of client certificate \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a69806e8d34342d290c65d66ddd89f992}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!mKeyStorePath@{mKeyStorePath}}
+\index{mKeyStorePath@{mKeyStorePath}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{mKeyStorePath}]{\setlength{\rightskip}{0pt plus 5cm}String {\bf com.bluevia.commons.connector.http.HttpConnector.mKeyStorePath}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_a69806e8d34342d290c65d66ddd89f992}
+The path to client certificate \hypertarget{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_ae32bdd8e1f3a245661b2388a85b024e4}{
+\index{com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}!mRequest@{mRequest}}
+\index{mRequest@{mRequest}!com::bluevia::commons::connector::http::HttpConnector@{com::bluevia::commons::connector::http::HttpConnector}}
+\subsubsection[{mRequest}]{\setlength{\rightskip}{0pt plus 5cm}HttpUriRequest {\bf com.bluevia.commons.connector.http.HttpConnector.mRequest}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1HttpConnector_ae32bdd8e1f3a245661b2388a85b024e4}
+Internal HTTP Request. 

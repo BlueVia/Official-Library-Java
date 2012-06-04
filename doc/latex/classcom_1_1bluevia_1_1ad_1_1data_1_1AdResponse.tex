@@ -1,0 +1,151 @@
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse}{
+\section{com.bluevia.ad.data.AdResponse Class Reference}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse}\index{com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}}
+}
+Inheritance diagram for com.bluevia.ad.data.AdResponse:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}{Ad} \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a581d85bc918aabb337a6b876ddc7eacc}{getAd} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_aab9d148d07bca103b70dc4e492c46d57}{setAd} (\hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}{Ad} ad)
+\item 
+int \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a172d52c3592d57980bae31d24ef142e5}{getVersion} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a53d86b605fb08a1c92c2a1999284d303}{setVersion} (int version)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a799e62103cdd8fd42b5c997b6cbf2706}{getId} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a3278eb4bce1f55f2511bb58c2ba5b98f}{setId} (String id)
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a15abd5809fbfb5145b7b42d3804b9fae}{isValid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to hold information about the advertisement data received from the gSDP It includes 
+\begin{DoxyItemize}
+\item \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}{Ad}: Element that includes information for ad (one, for correct responses). Note: only one may be present in \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse}{AdResponse}. 
+\item Id: Unique request identification (BlueVia appID + timestamp). 
+\item Version: Current version of the advertising protocol. 
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Telefonica R\&D 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a581d85bc918aabb337a6b876ddc7eacc}{
+\index{com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}!getAd@{getAd}}
+\index{getAd@{getAd}!com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}}
+\subsubsection[{getAd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ad} com.bluevia.ad.data.AdResponse.getAd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a581d85bc918aabb337a6b876ddc7eacc}
+Gets the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}{Ad} object value
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}{Ad} object included in the response 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a799e62103cdd8fd42b5c997b6cbf2706}{
+\index{com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}!getId@{getId}}
+\index{getId@{getId}!com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}}
+\subsubsection[{getId}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.ad.data.AdResponse.getId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a799e62103cdd8fd42b5c997b6cbf2706}
+Gets the Unique request identification
+
+\begin{DoxyReturn}{Returns}
+the unique request identification 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a172d52c3592d57980bae31d24ef142e5}{
+\index{com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}!getVersion@{getVersion}}
+\index{getVersion@{getVersion}!com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}}
+\subsubsection[{getVersion}]{\setlength{\rightskip}{0pt plus 5cm}int com.bluevia.ad.data.AdResponse.getVersion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a172d52c3592d57980bae31d24ef142e5}
+Gets the advertising protocol version
+
+\begin{DoxyReturn}{Returns}
+the advertising protocol version 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a15abd5809fbfb5145b7b42d3804b9fae}{
+\index{com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.ad.data.AdResponse.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a15abd5809fbfb5145b7b42d3804b9fae}
+check if the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse}{AdResponse} entity is valid
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_aab9d148d07bca103b70dc4e492c46d57}{
+\index{com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}!setAd@{setAd}}
+\index{setAd@{setAd}!com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}}
+\subsubsection[{setAd}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.AdResponse.setAd (
+\begin{DoxyParamCaption}
+\item[{{\bf Ad}}]{ad}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_aab9d148d07bca103b70dc4e492c46d57}
+Sets the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}{Ad} object
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad} & the \hyperlink{classcom_1_1bluevia_1_1ad_1_1data_1_1Ad}{Ad} object \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a3278eb4bce1f55f2511bb58c2ba5b98f}{
+\index{com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}!setId@{setId}}
+\index{setId@{setId}!com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}}
+\subsubsection[{setId}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.AdResponse.setId (
+\begin{DoxyParamCaption}
+\item[{String}]{id}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a3278eb4bce1f55f2511bb58c2ba5b98f}
+Sets the unique request identification
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the unique request identification \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a53d86b605fb08a1c92c2a1999284d303}{
+\index{com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}!setVersion@{setVersion}}
+\index{setVersion@{setVersion}!com::bluevia::ad::data::AdResponse@{com::bluevia::ad::data::AdResponse}}
+\subsubsection[{setVersion}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.ad.data.AdResponse.setVersion (
+\begin{DoxyParamCaption}
+\item[{int}]{version}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1ad_1_1data_1_1AdResponse_a53d86b605fb08a1c92c2a1999284d303}
+Set the advertising protocol version
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & the advertising protocol version \\
+\hline
+\end{DoxyParams}

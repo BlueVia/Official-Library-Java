@@ -1,0 +1,156 @@
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType}{
+\section{com.telefonica.schemas.unica.rest.sms.v1.DeliveryReceiptNotificationType Class Reference}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType}\index{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1SimpleReferenceType}{SimpleReferenceType} \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a4c21bf3fd6a806b55d3122d93efc6df4}{getReference} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a9fc0396af5fa485ae372c31f151b932a}{setReference} (\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1SimpleReferenceType}{SimpleReferenceType} value)
+\item 
+List$<$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} $>$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_aec1d4f50dc6ada74da10631b18504460}{getOriginAddress} ()
+\item 
+String \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a7d51c98e0c93d868b70c0b5c6e70611c}{getFilterCriteria} ()
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_ac5d958536fa325c8e4059ab12826b8a6}{setFilterCriteria} (String value)
+\item 
+void \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a82a4ddaf6f8745c743b32006047725c4}{setOriginAddress} (List$<$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} $>$ originAddress)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_aff115c62c6a07ef325910b61657b5621}{
+\hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1SimpleReferenceType}{SimpleReferenceType} {\bfseries reference}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_aff115c62c6a07ef325910b61657b5621}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_aae09d245324260143d90bf3b64c6ce9f}{
+List$<$ \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1common_1_1v1_1_1UserIdType}{UserIdType} $>$ {\bfseries originAddress}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_aae09d245324260143d90bf3b64c6ce9f}
+
+\item 
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_ada9f18d935b02cc12183ab503e6a49ac}{
+String {\bfseries filterCriteria}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_ada9f18d935b02cc12183ab503e6a49ac}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Java class for \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType}{DeliveryReceiptNotificationType} complex type.
+
+The following schema fragment specifies the expected content contained within this class.
+
+
+\begin{DoxyPre}
+ <complexType name="DeliveryReceiptNotificationType">
+   <complexContent>
+     <restriction base="\{http://www.w3.org/2001/XMLSchema\}anyType">
+       <sequence>
+         <element name="reference" type="\{http://www.telefonica.com/schemas/UNICA/REST/common/v1\}SimpleReferenceType"/>
+         <element name="originAddress" type="\{http://www.telefonica.com/schemas/UNICA/REST/common/v1\}UserIdType" maxOccurs="unbounded"/>
+         <element name="filterCriteria" type="\{http://www.w3.org/2001/XMLSchema\}string" minOccurs="0"/>
+       </sequence>
+     </restriction>
+   </complexContent>
+ </complexType>
+ \end{DoxyPre}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a7d51c98e0c93d868b70c0b5c6e70611c}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}!getFilterCriteria@{getFilterCriteria}}
+\index{getFilterCriteria@{getFilterCriteria}!com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}}
+\subsubsection[{getFilterCriteria}]{\setlength{\rightskip}{0pt plus 5cm}String com.telefonica.schemas.unica.rest.sms.v1.DeliveryReceiptNotificationType.getFilterCriteria (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a7d51c98e0c93d868b70c0b5c6e70611c}
+Gets the value of the filterCriteria property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{String} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_aec1d4f50dc6ada74da10631b18504460}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}!getOriginAddress@{getOriginAddress}}
+\index{getOriginAddress@{getOriginAddress}!com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}}
+\subsubsection[{getOriginAddress}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf UserIdType}$>$ com.telefonica.schemas.unica.rest.sms.v1.DeliveryReceiptNotificationType.getOriginAddress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_aec1d4f50dc6ada74da10631b18504460}
+Gets the value of the originAddress property.
+
+This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object. This is why there is not a {\ttfamily set} method for the originAddress property.
+
+For example, to add a new item, do as follows: 
+\begin{DoxyPre}
+    \hyperlink{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_aec1d4f50dc6ada74da10631b18504460}{getOriginAddress()}.add(newItem);
+ \end{DoxyPre}
+
+
+Objects of the following type(s) are allowed in the list \hyperlink{}{UserIdType} \hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a4c21bf3fd6a806b55d3122d93efc6df4}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}!getReference@{getReference}}
+\index{getReference@{getReference}!com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}}
+\subsubsection[{getReference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SimpleReferenceType} com.telefonica.schemas.unica.rest.sms.v1.DeliveryReceiptNotificationType.getReference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a4c21bf3fd6a806b55d3122d93efc6df4}
+Gets the value of the reference property.
+
+\begin{DoxyReturn}{Returns}
+possible object is \hyperlink{}{SimpleReferenceType} 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_ac5d958536fa325c8e4059ab12826b8a6}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}!setFilterCriteria@{setFilterCriteria}}
+\index{setFilterCriteria@{setFilterCriteria}!com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}}
+\subsubsection[{setFilterCriteria}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.sms.v1.DeliveryReceiptNotificationType.setFilterCriteria (
+\begin{DoxyParamCaption}
+\item[{String}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_ac5d958536fa325c8e4059ab12826b8a6}
+Sets the value of the filterCriteria property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{String} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a82a4ddaf6f8745c743b32006047725c4}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}!setOriginAddress@{setOriginAddress}}
+\index{setOriginAddress@{setOriginAddress}!com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}}
+\subsubsection[{setOriginAddress}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.sms.v1.DeliveryReceiptNotificationType.setOriginAddress (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf UserIdType} $>$}]{originAddress}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a82a4ddaf6f8745c743b32006047725c4}
+Sets the value of the originAddress property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em originAddress} & allowed object is \hyperlink{}{UserIdType} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a9fc0396af5fa485ae372c31f151b932a}{
+\index{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}!setReference@{setReference}}
+\index{setReference@{setReference}!com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType@{com::telefonica::schemas::unica::rest::sms::v1::DeliveryReceiptNotificationType}}
+\subsubsection[{setReference}]{\setlength{\rightskip}{0pt plus 5cm}void com.telefonica.schemas.unica.rest.sms.v1.DeliveryReceiptNotificationType.setReference (
+\begin{DoxyParamCaption}
+\item[{{\bf SimpleReferenceType}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1telefonica_1_1schemas_1_1unica_1_1rest_1_1sms_1_1v1_1_1DeliveryReceiptNotificationType_a9fc0396af5fa485ae372c31f151b932a}
+Sets the value of the reference property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & allowed object is \hyperlink{}{SimpleReferenceType} \\
+\hline
+\end{DoxyParams}

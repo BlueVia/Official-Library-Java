@@ -1,0 +1,348 @@
+\hypertarget{blv_directory_guide_directory_abstract_sec}{}\section{Abstract}\label{blv_directory_guide_directory_abstract_sec}
+The Bluevia Directory API is a set of functions which allows users to retrieve user-\/related information, divided in four blocks (user profile, access information, personal information and terminal information). This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia Directory functionality.\hypertarget{blv_directory_guide_blv_directory_api_retrievings_ads_sec}{}\section{Bluevia Directory API: Accessing Directory information}\label{blv_directory_guide_blv_directory_api_retrievings_ads_sec}
+The Bluevia Directory API is a set of functions which allows users to retrieve user-\/related information, divided in four blocks (user profile, access information, personal information and terminal information). This guide represents a practical introduction to developing applications in which the user wants to provide the Bluevia Directory functionality.\hypertarget{blv_directory_guide_directory_client_basics_sec}{}\subsection{Directory client basics}\label{blv_directory_guide_directory_client_basics_sec}
+A Directory client represents the client side in a classic client-\/server schema. This object wraps up the underlying REST client side functionality needed to perform requests against a REST server.
+
+Any Bluevia client performs requests and receives responses in a secure mode. Clients are authorized following the OAuth protocol. This security protocol enables users to grant third-\/party access to their resources without sharing their passwords. So clients store the authorization data -\/called security credentials-\/ to grant access to the server. Following sections describe the security credentials we are talking about.\hypertarget{blv_directory_guide_creating_directory_client_sec}{}\subsection{Creating a Directory client: BVDirectory class}\label{blv_directory_guide_creating_directory_client_sec}
+The first step in using the Directory client is to create an BVDirectory object. As we mentioned earlier this object could have three different working modes: i) as a client which sends requests to a real server, ii) a client working with a real server in testing mode, or iii) as a client which sends requests and receives responses to/from a sandbox server.\hypertarget{blv_directory_guide_directoryclient_features_working_modes_sec}{}\subsubsection{DirectoryClient features: working modes}\label{blv_directory_guide_directoryclient_features_working_modes_sec}
+When you create the client, you can specify various working modes: 
+\begin{DoxyItemize}
+\item BVBaseClient.Mode.LIVE \par
+In the Live environment your application uses the real network, which means that you will be able to send real transactions to real Movistar, O2 and Vivo customers in the applicable country.
+
+
+\item BVBaseClient.Mode.TEST \par
+The Test mode behave exactly like the Live mode, but the API calls are free of chargue, using a credits system. You are required to have a Movistar, O2 or Vivo mobile number to get this monthly credits.
+
+
+\item BVBaseClient.Mode.SANDBOX \par
+The Sandbox environment offers you the exact same experience as the Live environment except that no traffic is generated on the live network, meaning you can experiment and play until your heart’s content. 
+\end{DoxyItemize}\hypertarget{blv_directory_guide_directoryclient_features_security_credentials}{}\subsubsection{Directory client features: security credentials}\label{blv_directory_guide_directoryclient_features_security_credentials}
+Bluevia uses OAuth as its authentication mechanism which enables websites and applications to access the Bluevia API's without end users disclosing their personal credentials. In order to grant access to the server any client has to be created passing the security credential as parameter in its constructor. These security credentials are managed internally and added as a HTTP header in every request sent to the server. Such Oauth security credentials are: 
+\begin{DoxyItemize}
+\item {\bfseries Consumer key} \par
+The string identifying the application-\/ you obtained when you registered your application within the provisioning portal.
+
+
+\item {\bfseries Consumer secret} \par
+A secret -\/a string-\/ used by the consumer to establish ownership of the consumer key.
+
+
+\item {\bfseries Access token} \par
+The token -\/a string-\/ used by the client for granting access permissions to the server.
+
+
+\item {\bfseries Access token secret} \par
+The secret of the access token. 
+\end{DoxyItemize}\hypertarget{blv_directory_guide_directoryclient_features_code_example}{}\subsubsection{Directory client features: code example}\label{blv_directory_guide_directoryclient_features_code_example}
+Find below an example on how to create an BVDirectory object taking into account all information previously given.
+
+
+\begin{DoxyCode}
+// Mode.LIVE indicating the client works against a real Bluevia server.
+try {
+        BVDirectory directoryClient = new BVDirectory(Mode.LIVE, "consumer_key", 
+      "consumer_secret", "access_token", "access_token_secret");
+} catch (BlueviaException e){
+        log.error(e.getMessage());
+}
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_directoryclient_features_freeing_resources_sec}{}\subsubsection{DirectoryClient features: freeing resources}\label{blv_directory_guide_directoryclient_features_freeing_resources_sec}
+It is very important to free the resources that the client instantiates to work. To do this call the close method after finishing using the client:
+
+
+\begin{DoxyCode}
+directoryClient.close();
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_retrieving_user_info_sec}{}\subsection{Retrieving User Info}\label{blv_directory_guide_retrieving_user_info_sec}
+This method retrieves the whole user info resource block from the directory. User profile includes user profile, access, personal and terminal info blocks. The signature of the method is:
+
+
+\begin{DoxyCode}
+UserInfo getUserInfo() throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+Check the API Reference to see the information that can be obtained from the UserProfile returned object, accessible using getter methods.\hypertarget{blv_directory_guide_retrieving_user_info_using_filters_sec}{}\subsubsection{Selecting blocks in requests}\label{blv_directory_guide_retrieving_user_info_using_filters_sec}
+In case the user doesn't want to retrieve all blocks, there is an option to retrieve only a subset of the available information, using filters. An array of UserInfo.DataSet can be included in the request selecting the desired info blocks:
+
+
+\begin{DoxyCode}
+UserInfo getUserInfo(UserInfo.DataSet[] dataSet) throws BlueviaException, IOExcep
+      tion
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_user_info_code_example_sec}{}\subsubsection{Code examples}\label{blv_directory_guide_user_info_code_example_sec}
+This is a example for retrieving the whole user info block:
+
+
+\begin{DoxyCode}
+try {
+        //Get the UserInfo response
+        UserInfo info = directoryClient.getUserInfo();
+
+        Profile profile = info.getProfile();
+        AccessInfo accessInfo = info.getAccessInfo();
+        PersonalInfo personalInfo = info.getPersonalInfo();
+        TerminalInfo terminalInfo = info.getTerminalInfo();     
+        
+        /* Get information and do stuff */
+          
+} catch (BlueviaException e) {
+        log.error("Error getting user info", e);
+} catch (IOException e) {
+        log.error("Error getting user info", e);
+}
+\end{DoxyCode}
+
+
+For filtering blocks, you have to include the data sets you want to retrieve. This is an example:
+
+
+\begin{DoxyCode}
+try {
+        //Select data sets
+        UserInfo.DataSet[] dataSet = {DataSet.ACCESS_INFO, DataSet.PERSONAL_INFO}
+      ;
+        
+        //Get the UserInfo response
+        UserInfo info = directoryClient.getUserInfo(dataSet);
+
+        AccessInfo accessInfo = info.getAccessInfo();
+        TerminalInfo terminalInfo = info.getTerminalInfo();     
+        
+        /* Get information and do stuff */
+          
+} catch (BlueviaException e) {
+        log.error("Error getting user info", e);
+} catch (IOException e) {
+        log.error("Error getting user info", e);
+}
+\end{DoxyCode}
+
+
+Individual blocks can be obtained through its own method, as can be seen below:\hypertarget{blv_directory_guide_retrieving_user_profile_sec}{}\subsection{Retrieving user profile}\label{blv_directory_guide_retrieving_user_profile_sec}
+This method retrieves the user profile resource block from the directory. User profile includes payment options, subscription to services, customer type and other operator related information. The signature of the method is:
+
+
+\begin{DoxyCode}
+Profile getProfile() throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+Check the API Reference to see the information that can be obtained from the UserProfile returned object, accessible using getter methods.\hypertarget{blv_directory_guide_retrieving_user_profile_using_filters_sec}{}\subsubsection{Using filters in requests}\label{blv_directory_guide_retrieving_user_profile_using_filters_sec}
+In case the user doesn't want to retrieve the whole block, there is an option to retrieve only a subset of the available information, using filters. An array of Profile.Fields can be included in the request selecting the desired info blocks:
+
+
+\begin{DoxyCode}
+Profile getProfile(Profile.Fields[] fields) throws BlueviaException, IOException
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_user_profile_code_example_sec}{}\subsubsection{Code examples}\label{blv_directory_guide_user_profile_code_example_sec}
+This is a example for retrieving the whole user profile block:
+
+
+\begin{DoxyCode}
+try {
+        //Get the Profile response
+        Profile profile = directoryClient.getProfile();
+
+        /* Get information and do stuff */
+          
+} catch (BlueviaException e) {
+        log.error("Error getting user profile", e);
+} catch (IOException e) {
+        log.error("Error getting user profile", e);
+}
+\end{DoxyCode}
+
+
+For filtering information, you have to include the fields you want to retrieve. This is an example:
+
+
+\begin{DoxyCode}
+try {
+        //Set the fields
+        Profile.Fields[] fields = {Fields.USER_TYPE, Fields.PARENTAL_CONTROL, Fie
+      lds.OPERATOR_ID};
+        
+        //Get the Profile response
+        Profile profile = directoryClient.getProfile(fields);
+
+        /* Get information and do stuff */
+        String userType = profile.getUserType();
+          
+} catch (BlueviaException e) {
+        log.error("Error getting user profile", e);
+} catch (IOException e) {
+        log.error("Error getting user profile", e);
+}
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_retrieving_user_access_info_sec}{}\subsection{Retrieving user access information}\label{blv_directory_guide_retrieving_user_access_info_sec}
+This method retrieves the whole user access information resource block from the directory. User access information correspond to the user connection profile and includes information like the access connection type, APN, roaming status, etc. The signature of the method is:
+
+
+\begin{DoxyCode}
+AccessInfo getAccessInfo() throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+Check the API Reference to see the information that can be obtained from the AccessInfo returned object, accessible by getters.\hypertarget{blv_directory_guide_user_access_info_using_filters_sec}{}\subsubsection{Using filters in requests}\label{blv_directory_guide_user_access_info_using_filters_sec}
+In case the user doesn't want to retrieve the whole block, there is an option to retrieve only a subset of the available information, using filters. An array of AccessInfo.Fields can be included in the request selecting the desired info blocks:
+
+
+\begin{DoxyCode}
+AccessInfo getAccessInfo(AccessInfo.Fields[] fields) throws BlueviaException, IOE
+      xception
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_user_access_info_code_example_sec}{}\subsubsection{Code examples}\label{blv_directory_guide_user_access_info_code_example_sec}
+This is a example for retrieving the whole user access information block:
+
+
+\begin{DoxyCode}
+try {
+        //Get the AccessInfo response
+        AccessInfo accessInfo = directoryClient.getAccessInfo();
+
+        /* Get information and do stuff */
+          
+} catch (BlueviaException e) {
+        log.error("Error getting access info", e);
+} catch (IOException e) {
+        log.error("Error getting access info", e);
+}
+\end{DoxyCode}
+
+
+For filtering information, you have to include the fields you want to retrieve. This is an example:
+
+
+\begin{DoxyCode}
+try {
+        //Set the fields
+        AccessInfo.Fields[] fields = {Fields.ACCESS_TYPE, Fields.APN};
+        
+        //Get the AccessInfo response
+        AccessInfo accessInfo = directoryClient.getAccessInfo(fields);
+
+        /* Get information and do stuff */
+        String accessType = accessInfo.getAccessType();
+          
+} catch (BlueviaException e) {
+        log.error("Error getting access info", e);
+} catch (IOException e) {
+        log.error("Error getting access info", e);
+}
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_retrieving_user_personal_info_sec}{}\subsection{Retrieving user personal information}\label{blv_directory_guide_retrieving_user_personal_info_sec}
+This method retrieves the whole user personal information resource block from the directory. This block includes personal information about the user, such as the gender. The signature of the method is:
+
+
+\begin{DoxyCode}
+PersonalInfo getPersonalInfo() throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+Check the API Reference to see the information that can be obtained from the PersonalInfo returned object, accessible by getter methods.\hypertarget{blv_directory_guide_user_personal_info_using_filters_sec}{}\subsubsection{Using filters in requests}\label{blv_directory_guide_user_personal_info_using_filters_sec}
+In case the user doesn't want to retrieve the whole block, there is an option to retrieve only a subset of the available information, using filters. An array of PersonalInfo.Fields can be included in the request selecting the desired info blocks:
+
+
+\begin{DoxyCode}
+PersonalInfo getPersonalInfo(PersonalInfo.Fields[] fields) throws BlueviaExceptio
+      n, IOException
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_user_personal_info_code_examples_sec}{}\subsubsection{Code examples}\label{blv_directory_guide_user_personal_info_code_examples_sec}
+This is a example for retrieving the user personal info:
+
+
+\begin{DoxyCode}
+try {
+        //Get the PersonalInfo response
+        PersonalInfo personalInfo = directoryClient.getPersonalInfo();
+
+        /* Get information and do stuff */
+          
+} catch (BlueviaException e) {
+        log.error("Error getting personal info", e);
+} catch (IOException e) {
+        log.error("Error getting personal info", e);
+}
+\end{DoxyCode}
+
+
+For filtering information, you have to include the fields you want to retrieve. This is an example:
+
+
+\begin{DoxyCode}
+try {
+        //Set the fields
+        PersonalInfo.Fields[] fields = {Fields.GENDER};
+        
+        //Get the PersonalInfo response
+        PersonalInfo personalInfo = directoryClient.getPersonalInfo(fields);
+
+        /* Get information and do stuff */
+        String gender = personalInfo.getGender();
+          
+} catch (BlueviaException e) {
+        log.error("Error getting personal info", e);
+} catch (IOException e) {
+        log.error("Error getting personal info", e);
+}
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_retrieving_user_terminal_info_sec}{}\subsection{Retrieving user terminal information}\label{blv_directory_guide_retrieving_user_terminal_info_sec}
+This method retrieves the whole user terminal information resource block from the directory. This block includes information about the terminal being used by the end-\/user. The signature of the method is:
+
+
+\begin{DoxyCode}
+TerminalInfo getTerminalInfo() throws BlueviaException, IOException
+\end{DoxyCode}
+
+
+Check the API Reference to see the information that can be obtained from the TerminalInfo returned object, accessible by getter methods.\hypertarget{blv_directory_guide_user_terminal_info_using_filters_sec}{}\subsubsection{Using filters in requests}\label{blv_directory_guide_user_terminal_info_using_filters_sec}
+In case the user doesn't want to retrieve the whole block, there is an option to retrieve only a subset of the available information, using filters. An array of TerminalInfo.Fields can be included in the request selecting the desired info blocks:
+
+
+\begin{DoxyCode}
+TerminalInfo getTerminalInfo(TerminalInfo.Fields[] fields) throws BlueviaExceptio
+      n, IOException
+\end{DoxyCode}
+\hypertarget{blv_directory_guide_user_terminal_info_code_examples_sec}{}\subsubsection{Code examples}\label{blv_directory_guide_user_terminal_info_code_examples_sec}
+This is a example for retrieving the user terminal info:
+
+
+\begin{DoxyCode}
+try {
+        //Get the TerminalInfo response
+        TerminalInfo terminalInfo = directoryClient.getTerminalInfo();
+
+        /* Get information and do stuff */
+          
+} catch (BlueviaException e) {
+        log.error("Error getting terminal info", e);
+} catch (IOException e) {
+        log.error("Error getting terminal info", e);
+}
+\end{DoxyCode}
+
+
+For filtering information, you have to include the fields you want to retrieve. This is an example:
+
+
+\begin{DoxyCode}
+try {
+        //Set the fields
+        TerminalInfo.Fields[] fields = {Fields.BRAND, Fields.MODEL, Fields.MMS, F
+      ields.WAP, Fields.SCREEN_RESOLUTION};
+        
+        //Get the TerminalInfo response
+        TerminalInfo terminalInfo = directoryClient.getTerminalInfo(fields);
+
+        /* Get information and do stuff */
+        String brand = terminalInfo.getBrand();
+          
+} catch (BlueviaException e) {
+        log.error("Error getting terminal info", e);
+} catch (IOException e) {
+        log.error("Error getting terminal info", e);
+}
+\end{DoxyCode}
+ 

@@ -1,0 +1,149 @@
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus}{
+\section{com.bluevia.payment.data.PaymentStatus Class Reference}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus}\index{com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}}
+}
+Inheritance diagram for com.bluevia.payment.data.PaymentStatus:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries TransactionStatusType} \{ {\bfseries SUCCESS}, 
+{\bfseries FAILURE}, 
+{\bfseries PENDING}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+TransactionStatusType \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a7fecbecfc30326e6193b21a34edf6256}{getTransactionStatus} ()
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a78ec9398e636b736bceaa59a44036295}{setTransactionStatus} (TransactionStatusType transactionStatus)
+\item 
+void \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a6b3e1b6c6bf95ba76cf898066dd1275d}{setTransactionStatusDescription} (String transactionStatusDescription)
+\item 
+String \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a24221d9c22c272938219ef108591e64d}{getTransactionStatusDescription} ()
+\item 
+boolean \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_acf7b890f0100827e6bebfe2f6f53e6a8}{isValid} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_abc30878251fc7b02570cecb76d190e7b}{
+static TransactionStatusType {\bfseries translateStatus} (String status)}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_abc30878251fc7b02570cecb76d190e7b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_ada38881f8abc1b2ba3c157bd0fa0afe8}{
+TransactionStatusType {\bfseries mTransactionStatus}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_ada38881f8abc1b2ba3c157bd0fa0afe8}
+
+\item 
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a874439515618a53ef47462c6764e3d17}{
+String {\bfseries mTransactionStatusDescription}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a874439515618a53ef47462c6764e3d17}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing the \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus}{PaymentStatus} type
+
+This type is composed of the following fields: 
+\begin{DoxyItemize}
+\item transactionStatus; mandatory: TransactionStatusType 
+\item transactionStatusDescription; mandatory: String 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a7fecbecfc30326e6193b21a34edf6256}{
+\index{com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}!getTransactionStatus@{getTransactionStatus}}
+\index{getTransactionStatus@{getTransactionStatus}!com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}}
+\subsubsection[{getTransactionStatus}]{\setlength{\rightskip}{0pt plus 5cm}TransactionStatusType com.bluevia.payment.data.PaymentStatus.getTransactionStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a7fecbecfc30326e6193b21a34edf6256}
+Gets the mandatory transaction status of the payment result
+
+\begin{DoxyReturn}{Returns}
+the transaction status of the payment session 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a24221d9c22c272938219ef108591e64d}{
+\index{com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}!getTransactionStatusDescription@{getTransactionStatusDescription}}
+\index{getTransactionStatusDescription@{getTransactionStatusDescription}!com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}}
+\subsubsection[{getTransactionStatusDescription}]{\setlength{\rightskip}{0pt plus 5cm}String com.bluevia.payment.data.PaymentStatus.getTransactionStatusDescription (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a24221d9c22c272938219ef108591e64d}
+Gets the mandatory transaction status description of the payment result
+
+\begin{DoxyReturn}{Returns}
+the transaction status description of the payment result 
+\end{DoxyReturn}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_acf7b890f0100827e6bebfe2f6f53e6a8}{
+\index{com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}!isValid@{isValid}}
+\index{isValid@{isValid}!com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.bluevia.payment.data.PaymentStatus.isValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_acf7b890f0100827e6bebfe2f6f53e6a8}
+Validates the entity data
+
+\begin{DoxyReturn}{Returns}
+boolean result of the check 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacecom_1_1bluevia_1_1commons_1_1Entity_a076c9080e842e43a871e97d1e5fa1187}{com.bluevia.commons.Entity}.
+
+
+
+Reimplemented in \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult_a67f3366d48600309719377e0e3b98cb6}{com.bluevia.payment.data.PaymentResult}.
+
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a78ec9398e636b736bceaa59a44036295}{
+\index{com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}!setTransactionStatus@{setTransactionStatus}}
+\index{setTransactionStatus@{setTransactionStatus}!com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}}
+\subsubsection[{setTransactionStatus}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.payment.data.PaymentStatus.setTransactionStatus (
+\begin{DoxyParamCaption}
+\item[{TransactionStatusType}]{transactionStatus}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a78ec9398e636b736bceaa59a44036295}
+Sets the mandatory transaction status of the payment result
+
+
+\begin{DoxyParams}{Parameters}
+{\em transactionStatus} & the mandatory transaction status of the payment result \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a6b3e1b6c6bf95ba76cf898066dd1275d}{
+\index{com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}!setTransactionStatusDescription@{setTransactionStatusDescription}}
+\index{setTransactionStatusDescription@{setTransactionStatusDescription}!com::bluevia::payment::data::PaymentStatus@{com::bluevia::payment::data::PaymentStatus}}
+\subsubsection[{setTransactionStatusDescription}]{\setlength{\rightskip}{0pt plus 5cm}void com.bluevia.payment.data.PaymentStatus.setTransactionStatusDescription (
+\begin{DoxyParamCaption}
+\item[{String}]{transactionStatusDescription}
+\end{DoxyParamCaption}
+)}}
+\label{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentStatus_a6b3e1b6c6bf95ba76cf898066dd1275d}
+Sets the mandatory transaction status description of the payment result
+
+
+\begin{DoxyParams}{Parameters}
+{\em transactionStatusDescription} & the transaction status description of the payment result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this 
+\end{DoxyReturn}
