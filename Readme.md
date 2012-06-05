@@ -58,71 +58,71 @@ Finally, include the JAR dependencies of Bluevia SDK in Libraries tab clicking o
        - Click on Add folder and select the path of the source.
 - Finally, edit the pom.xml file adding the following lines to include the library dependencies:
 
-    <dependencies>
-    ..............
-                    <dependency>
-                            <groupId>commons-httpclient</groupId>
-                            <artifactId>commons-httpclient</artifactId>
-                            <version>3.1</version>
-                    </dependency>
-                    <dependency>
-                            <groupId>org.apache.httpcomponents</groupId>
-                            <artifactId>httpclient</artifactId>
-                            <version>4.1.3</version>
-                    </dependency>
-                    <dependency>
-                            <groupId>org.apache.httpcomponents</groupId>
-                            <artifactId>httpmime</artifactId>
-                            <version>4.1.3</version>
-                    </dependency>
-                    <dependency>
-                            <groupId>org.apache.httpcomponents</groupId>
-                            <artifactId>httpclient-cache</artifactId>
-                            <version>4.1.3</version>
-                    </dependency>
-                    <dependency>
-                            <groupId>org.apache.httpcomponents</groupId>
-                            <artifactId>httpcore</artifactId>
-                            <version>4.1.3</version>
-                    </dependency>
-                    <dependency>
-                    <groupId>commons-lang</groupId>
-                    <artifactId>commons-lang</artifactId>
-                    <version>1.0</version>
-            </dependency>
-                    <dependency>
-                            <groupId>commons-codec</groupId>
-                            <artifactId>commons-codec</artifactId>
-                            <version>1.3</version>
-                    </dependency>
-                    <dependency>
-                            <groupId>junit</groupId>
-                            <artifactId>junit</artifactId>
-                            <version>3.8.1</version>
-                            <scope>test</scope>
-                    </dependency>
-                    <dependency>
-                            <groupId>oauth.signpost</groupId>
-                            <artifactId>signpost-core</artifactId>
-                            <version>1.2.1.1</version>
-                    </dependency>
-                    <dependency>
-                            <groupId>oauth.signpost</groupId>
-                            <artifactId>signpost-commonshttp4</artifactId>
-                            <version>1.2.1.1</version>
-                    </dependency>
-                    <dependency>
-                            <groupId>commons-logging</groupId>
-                            <artifactId>commons-logging</artifactId>
-                            <version>1.1</version>
-                    </dependency>
-                    <dependency>
-                            <groupId>javax.mail</groupId>
-                            <artifactId>mail</artifactId>
-                            <version>1.4</version>
-                    </dependency>
-    ..............
-    </dependencies>
+	<dependencies>
+	..............
+		<dependency>
+		        <groupId>commons-httpclient</groupId>
+		        <artifactId>commons-httpclient</artifactId>
+		        <version>3.1</version>
+		</dependency>
+		<dependency>
+		        <groupId>org.apache.httpcomponents</groupId>
+		        <artifactId>httpclient</artifactId>
+		        <version>4.1.3</version>
+		</dependency>
+		<dependency>
+		        <groupId>org.apache.httpcomponents</groupId>
+		        <artifactId>httpmime</artifactId>
+		        <version>4.1.3</version>
+		</dependency>
+		<dependency>
+		        <groupId>org.apache.httpcomponents</groupId>
+		        <artifactId>httpclient-cache</artifactId>
+		        <version>4.1.3</version>
+		</dependency>
+		<dependency>
+		        <groupId>org.apache.httpcomponents</groupId>
+		        <artifactId>httpcore</artifactId>
+		        <version>4.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>1.0</version>
+			</dependency>
+		<dependency>
+		        <groupId>commons-codec</groupId>
+		        <artifactId>commons-codec</artifactId>
+		        <version>1.3</version>
+		</dependency>
+		<dependency>
+		        <groupId>junit</groupId>
+		        <artifactId>junit</artifactId>
+		        <version>3.8.1</version>
+		        <scope>test</scope>
+		</dependency>
+		<dependency>
+		        <groupId>oauth.signpost</groupId>
+		        <artifactId>signpost-core</artifactId>
+		        <version>1.2.1.1</version>
+		</dependency>
+		<dependency>
+		        <groupId>oauth.signpost</groupId>
+		        <artifactId>signpost-commonshttp4</artifactId>
+		        <version>1.2.1.1</version>
+		</dependency>
+		<dependency>
+		        <groupId>commons-logging</groupId>
+		        <artifactId>commons-logging</artifactId>
+		        <version>1.1</version>
+		</dependency>
+		<dependency>
+		        <groupId>javax.mail</groupId>
+		        <artifactId>mail</artifactId>
+		        <version>1.4</version>
+		</dependency>
+ 	..............
+	</dependencies>
 
 
 ## Code samples 
@@ -318,7 +318,8 @@ Note that this is just an example and you should implement a more efficient poll
 ### User Context API
 User Context API enables your application to get information about the user's customer profile in order to know more about your users to targetize better your product.
 
-	BVDirectory directoryClient = new BVDirectory(Mode.LIVE, "consumer_key", "consumer_secret", "access_token", "access_token_secret");
+	BVDirectory directoryClient = new BVDirectory(
+		Mode.LIVE, "consumer_key", "consumer_secret", "access_token", "access_token_secret");
 
 #### Getting Profile Information
 
@@ -339,8 +340,8 @@ User Context API enables your application to get information about the user's cu
 #### Filters
 If you want to configure a filter on the information relevant for your application you can do it for any of the requests above:
 
-        TerminalInfo.Fields[] fields = {Fields.BRAND, Fields.MODEL, Fields.MMS, Fields.WAP, Fields.SCREEN_RESOLUTION};
-        TerminalInfo terminalInfo = directoryClient.getTerminalInfo(fields);
+	TerminalInfo.Fields[] fields = {Fields.BRAND, Fields.MODEL, Fields.MMS, Fields.WAP, Fields.SCREEN_RESOLUTION};
+	TerminalInfo terminalInfo = directoryClient.getTerminalInfo(fields);
 
 
 ### Location API
@@ -365,6 +366,6 @@ Once configured your client is ready to get advertisements. When retrieving a si
 
 Take into account that the Protection Policy sets the rules for adult advertising, please be careful.
   
-	ProtectionPolicyType.LOW 	Low, moderately explicit content (I am youth; you can show me moderately explicit content).
-	ProtectionPolicyType.SAFE 	Safe, not rated content (I am a kid, please, show me only safe content).
-	ProtectionPolicyType.HIGH 	High, explicit content (I am an adult; I am over 18 so you can show me any content including very explicit content).
+- ProtectionPolicyType.LOW : Low, moderately explicit content (I am youth; you can show me moderately explicit content).
+- ProtectionPolicyType.SAFE : Safe, not rated content (I am a kid, please, show me only safe content).
+- ProtectionPolicyType.HIGH : High, explicit content (I am an adult; I am over 18 so you can show me any content including very explicit content).
