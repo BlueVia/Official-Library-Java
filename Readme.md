@@ -31,7 +31,7 @@ Depending on whether or not you are using Maven, you will have to add library de
 
 You have to include the library in your Eclipse project and configure the dependencies:
 
-- Download Bluevia Library and save it in your hard disk: Bluevia Java SDK
+- Download Bluevia Library and save it in your hard disk
 - Create your Project in Eclipse: select File > New > Java Project.
 - Include the Bluevia Library into the Java build path:
     - As JAR file:
@@ -46,7 +46,7 @@ Finally, include the JAR dependencies of Bluevia SDK in Libraries tab clicking o
 
 #### Maven project
 
-- Download Bluevia Library and save it in your hard disk: Bluevia Java SDK
+- Download Bluevia Library and save it in your hard disk
 - Create your Project in Eclipse: select File > New > Maven Project.
 - Include the Bluevia Library into the Java build path:
    - As JAR file:
@@ -56,7 +56,9 @@ Finally, include the JAR dependencies of Bluevia SDK in Libraries tab clicking o
        - Select Project > Properties.
        - In Java Build Path section, click on Source tab.
        - Click on Add folder and select the path of the source.
-- Finally, edit the pom.xml file adding the following lines to include the library dependencies:
+
+Finally, edit the pom.xml file adding the following lines to include the library dependencies:
+
 
 	<dependencies>
 	..............
@@ -127,14 +129,14 @@ Finally, include the JAR dependencies of Bluevia SDK in Libraries tab clicking o
 
 ## Code samples 
 You can find a set of complete sample apps on this repository:
-- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/AdvertisingExample.java) : Gets advertising
-- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/DirectoryExample.java) : Gets user and user equipement information
-- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/LocationExample.java) : Gets the location of a user
-- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/mms/MmsExample.java) : Sends MMS and a Check Delivery Status (MMS MT). Receive MMS (MMS MO)
-- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/OAuthExample.java) : Demostrates OAuth process negotiation
-- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/PaymentExample.java) : Performs a Payment 
-- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/sms/SmsExample.java) : Sends SMS and a Check Delivery Status (SMS MT). Receive SMS (SMS MO)
 
+- [OAuth](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/OAuthExample.java) : Demostrates OAuth process negotiation
+- [SMS send and receive](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/sms/SmsExample.java) : Sends SMS and a Check Delivery Status (SMS MT). Receive SMS (SMS MO)
+- [MMS send and receive](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/mms/MmsExample.java) : Sends MMS and a Check Delivery Status (MMS MT). Receive MMS (MMS MO)
+- [Payment](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/PaymentExample.java) : Performs a Payment 
+- [Location](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/LocationExample.java) : Gets the location of a user
+- [User Context](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/DirectoryExample.java) : Gets user and user equipement information
+- [Advertising](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/AdvertisingExample.java) : Gets advertising
 
 Please find below also some quick snippets on how to use the library.
 
