@@ -31,112 +31,53 @@ Depending on whether or not you are using Maven, you will have to add library de
 
 You have to include the library in your Eclipse project and configure the dependencies:
 
-- Download Bluevia Library and save it in your hard disk
+- Download Bluevia Library and save it in your hard disk: Bluevia Java SDK
 - Create your Project in Eclipse: select File > New > Java Project.
-- Include the Bluevia Library into the Java build path:
+- Include the Bluevia SDK Library into the Java build path:
     - As JAR file:
         - Select Project > Properties.
         - In Java Build Path section, click on Libraries tab.
+        - Click on Add External JARs and select the path where you put the BlueVia Library JAR (The SDK Jar file is included in "target" folder)).
     - As source code:
         - Select Project > Properties.
         - In Java Build Path section, click on Source tab.
-        - Click on Add folder and select the path of the source.
+        - Click on Link Source and select the path where you put the Bluevia SDK source folder in /src/main/java as linked folder location
 
-Finally, include the JAR dependencies of Bluevia SDK in Libraries tab clicking on Add External JARs (The JAR files are included in "dependency" folder).
+Finally, include the JAR dependencies of Bluevia SDK in Libraries tab clicking on Add External JARs (The JAR files are included in "target/dependency" folder).
 
-#### Maven project
+#### Using Library in Maven project
 
-- Download Bluevia Library and save it in your hard disk
-- Create your Project in Eclipse: select File > New > Maven Project.
-- Include the Bluevia Library into the Java build path:
-   - As JAR file:
-       - Select Project > Properties.
-       - In Java Build Path section, click on Libraries tab.
-   - As source code:
-       - Select Project > Properties.
-       - In Java Build Path section, click on Source tab.
-       - Click on Add folder and select the path of the source.
+- Download Bluevia Library and save it in your hard disk: Bluevia Java SDK
+- Create your Project in Eclipse: select File > New > Maven Project
+- Install the Bluevia Library on your Maven Local Repository:
+	- Right click on Maven Dependencies in your maven project and select "install or deploy an artifact to a Maven Repository
+	- Select the SDK Bluevia Library Jar file (included in "target" folder of Bluevia Official Library Java) as artifact file and also select POM file (also included in Bluevia Library)
+	- Complete the fields for group Id (bluevia), artifact Id (sdk), version (1.6) and packaging (jar) and press Finish. The sdk java library is now installed on your local maven repository with the name and version mentioned.
 
-Finally, edit the pom.xml file adding the following lines to include the library dependencies:
+- Edit the pom.xml file adding the following lines to include the Bluevia library dependencies:
+	
+		<dependencies>
+		..............
+		<dependency>
+			<groupId>bluevia</groupId>
+			<artifactId>sdk</artifactId>
+			<version>1.6</version>
+		</dependency>
 
-
-	<dependencies>
-	..............
-		<dependency>
-		        <groupId>commons-httpclient</groupId>
-		        <artifactId>commons-httpclient</artifactId>
-		        <version>3.1</version>
-		</dependency>
-		<dependency>
-		        <groupId>org.apache.httpcomponents</groupId>
-		        <artifactId>httpclient</artifactId>
-		        <version>4.1.3</version>
-		</dependency>
-		<dependency>
-		        <groupId>org.apache.httpcomponents</groupId>
-		        <artifactId>httpmime</artifactId>
-		        <version>4.1.3</version>
-		</dependency>
-		<dependency>
-		        <groupId>org.apache.httpcomponents</groupId>
-		        <artifactId>httpclient-cache</artifactId>
-		        <version>4.1.3</version>
-		</dependency>
-		<dependency>
-		        <groupId>org.apache.httpcomponents</groupId>
-		        <artifactId>httpcore</artifactId>
-		        <version>4.1.3</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-			<version>1.0</version>
-			</dependency>
-		<dependency>
-		        <groupId>commons-codec</groupId>
-		        <artifactId>commons-codec</artifactId>
-		        <version>1.3</version>
-		</dependency>
-		<dependency>
-		        <groupId>junit</groupId>
-		        <artifactId>junit</artifactId>
-		        <version>3.8.1</version>
-		        <scope>test</scope>
-		</dependency>
-		<dependency>
-		        <groupId>oauth.signpost</groupId>
-		        <artifactId>signpost-core</artifactId>
-		        <version>1.2.1.1</version>
-		</dependency>
-		<dependency>
-		        <groupId>oauth.signpost</groupId>
-		        <artifactId>signpost-commonshttp4</artifactId>
-		        <version>1.2.1.1</version>
-		</dependency>
-		<dependency>
-		        <groupId>commons-logging</groupId>
-		        <artifactId>commons-logging</artifactId>
-		        <version>1.1</version>
-		</dependency>
-		<dependency>
-		        <groupId>javax.mail</groupId>
-		        <artifactId>mail</artifactId>
-		        <version>1.4</version>
-		</dependency>
- 	..............
-	</dependencies>
+	 	..............
+		</dependencies>
 
 
 ## Code samples 
 You can find a set of complete sample apps on this repository:
+- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/AdvertisingExample.java) : Gets advertising
+- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/DirectoryExample.java) : Gets user and user equipement information
+- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/LocationExample.java) : Gets the location of a user
+- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/mms/MmsExample.java) : Sends MMS and a Check Delivery Status (MMS MT). Receive MMS (MMS MO)
+- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/OAuthExample.java) : Demostrates OAuth process negotiation
+- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/PaymentExample.java) : Performs a Payment 
+- [/samples/sample](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/sms/SmsExample.java) : Sends SMS and a Check Delivery Status (SMS MT). Receive SMS (SMS MO)
 
-- [OAuth](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/OAuthExample.java) : Demostrates OAuth process negotiation
-- [SMS send and receive](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/sms/SmsExample.java) : Sends SMS and a Check Delivery Status (SMS MT). Receive SMS (SMS MO)
-- [MMS send and receive](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/mms/MmsExample.java) : Sends MMS and a Check Delivery Status (MMS MT). Receive MMS (MMS MO)
-- [Payment](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/PaymentExample.java) : Performs a Payment 
-- [Location](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/LocationExample.java) : Gets the location of a user
-- [User Context](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/DirectoryExample.java) : Gets user and user equipement information
-- [Advertising](https://github.com/BlueVia/Official-Library-Java/blob/master/samples/AdvertisingExample.java) : Gets advertising
 
 Please find below also some quick snippets on how to use the library.
 

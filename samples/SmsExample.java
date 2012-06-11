@@ -15,6 +15,7 @@
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import com.bluevia.commons.client.BVBaseClient.Mode;
@@ -48,6 +49,9 @@ public class SmsExample {
 	
 
     public static void main(String[] args) {
+    	// Logger
+    	BasicConfigurator.configure();
+
     	sendSms();
     	//getSms();
     	//notifications();

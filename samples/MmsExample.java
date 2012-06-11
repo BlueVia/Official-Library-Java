@@ -17,6 +17,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import com.bluevia.commons.client.BVBaseClient.Mode;
@@ -59,7 +60,10 @@ public class MmsExample {
 
 
 	public static void main(String[] args) {
-		
+
+    	// Logger
+    	BasicConfigurator.configure();
+
 		sendMms();
 		//getMessages(true);
 	}

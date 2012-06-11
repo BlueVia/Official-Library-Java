@@ -13,6 +13,7 @@
 
 import java.io.IOException;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import com.bluevia.commons.client.BVBaseClient.Mode;
@@ -44,7 +45,10 @@ public class LocationExample {
 
 	
     public static void main(String[] args) {
-        getLocation();
+    	// Logger
+    	BasicConfigurator.configure();
+
+    	getLocation();
     }
     
     /**

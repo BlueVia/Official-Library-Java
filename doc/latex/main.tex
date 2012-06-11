@@ -49,12 +49,13 @@ You have to include the library in your Eclipse project and configure the depend
 \begin{DoxyEnumerate}
 \item Select {\bfseries Project} $>$ {\bfseries Properties}. 
 \item In {\bfseries Java Build Path} section, click on {\bfseries Libraries} tab. 
+\item Click on Add External JARs and select the path where you put the BlueVia Library JAR (The SDK Jar file is included in \char`\"{}target\char`\"{} folder)). 
 \end{DoxyEnumerate}
 \item As source code: 
 \begin{DoxyEnumerate}
 \item Select {\bfseries Project} $>$ {\bfseries Properties}. 
 \item In {\bfseries Java Build Path} section, click on {\bfseries Source} tab. 
-\item Click on {\bfseries Add folder} and select the path of the source. 
+\item Click on Link Source and select the path where you put the Bluevia SDK source folder in /src/main/java as linked folder location 
 \end{DoxyEnumerate}
 \end{DoxyItemize}
 \item Finally, include the JAR dependencies of Bluevia SDK in {\bfseries Libraries} tab clicking on {\bfseries Add External JARs} (The JAR files are included in \char`\"{}dependency\char`\"{} folder). 
@@ -69,68 +70,29 @@ You have to include the library in your Eclipse project and configure the depend
 \item Create your Project in Eclipse: select {\bfseries File} $>$ {\bfseries New} $>$ {\bfseries Maven Project}.
 
 
-\item Include the Bluevia Library into the Java build path: 
+\item Install the Bluevia Library on your Maven Local Repository: 
 \begin{DoxyItemize}
 \item As JAR \href{file:}{\tt file:} 
 \begin{DoxyEnumerate}
-\item Select {\bfseries Project} $>$ {\bfseries Properties}. 
-\item In {\bfseries Java Build Path} section, click on {\bfseries Libraries} tab. 
-\end{DoxyEnumerate}
-\item As source code: 
-\begin{DoxyEnumerate}
-\item Select {\bfseries Project} $>$ {\bfseries Properties}. 
-\item In {\bfseries Java Build Path} section, click on {\bfseries Source} tab. 
-\item Click on {\bfseries Add folder} and select the path of the source. 
+\item Right click on Maven Dependencies in your maven project and select \char`\"{}install or deploy an artifact to a Maven Repository 
+            $<$li$>$ Select the SDK Bluevia Library Jar file (included in \char`\"{}target" folder of Bluevia Official Library Java) as artifact file and also select POM file (also included in Bluevia Library) 
+\item Complete the fields for group Id (bluevia), artifact Id (sdk), version (1.6) and packaging (jar) and press Finish. The sdk java library is now installed on your local maven repository with the name and version mentioned. 
 \end{DoxyEnumerate}
 \end{DoxyItemize}
 \item Finally, edit the {\bfseries pom.xml} file adding the following lines to include the library dependencies:
 
 
 \begin{DoxyCode}
-<dependencies>
-..............
-        <dependency>    
-                <groupId>org.apache.httpcomponents</groupId>
-                        <artifactId>httpclient</artifactId>
-                        <version>4.0.1</version>
-                </dependency>
-                <dependency>    
-                        <groupId>org.apache.httpcomponents</groupId>
-                        <artifactId>httpcore</artifactId>
-                        <version>4.0.1</version>
-                </dependency>
+                <dependencies>
+                ..............
                 <dependency>
-                    <groupId>commons-codec</groupId>
-                    <artifactId>commons-codec</artifactId>
-                    <version>1.3</version>
+                        <groupId>bluevia</groupId>
+                        <artifactId>sdk</artifactId>
+                        <version>1.6</version>
                 </dependency>
-                <dependency>
-                        <groupId>oauth.signpost</groupId>
-                        <artifactId>signpost-core</artifactId>
-                        <version>1.2.1.1</version>
-                </dependency>
-                <dependency>
-                        <groupId>oauth.signpost</groupId>
-                        <artifactId>signpost-commonshttp4</artifactId>
-                        <version>1.2.1.1</version>
-                </dependency>
-                <dependency>
-                        <groupId>oauth.signpost</groupId>
-                        <artifactId>signpost-jetty6</artifactId>
-                        <version>1.2.1.1</version>
-                </dependency>
-                <dependency>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                        <version>1.1</version>
-                </dependency>
-                <dependency>
-                        <groupId>javax.mail</groupId>
-                        <artifactId>mail</artifactId>
-                        <version>1.4</version>
-                </dependency>
-..............
-</dependencies>
+
+                ..............
+                </dependencies>
 \end{DoxyCode}
   
 \end{DoxyEnumerate}\hypertarget{main_programming_guidelines_sec}{}\section{Programming guidelines}\label{main_programming_guidelines_sec}
