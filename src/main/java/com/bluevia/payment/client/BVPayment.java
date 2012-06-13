@@ -103,6 +103,21 @@ public class BVPayment extends BVOauthClient {
 	 * @throws BlueviaException
 	 */
 	public RequestToken getPaymentRequestToken(int amount, String currency, String name, String serviceId) throws BlueviaException {
+		return getPaymentRequestToken(amount, currency, name, serviceId, null);
+	}
+
+	/**
+	 * Gets a RequestToken for a Payment operation with callback
+	 * 
+	 * @param amount  the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). 
+	 * @param currency the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.). 
+	 * @param name the name of the service for the payment
+	 * @param serviceId the id of the service for the payment
+	 * @param callback the uri for callback notification
+	 * @return the request token
+	 * @throws BlueviaException
+	 */
+	public RequestToken getPaymentRequestToken(int amount, String currency, String name, String serviceId, String callback) throws BlueviaException {
 
 		//Reset token 
 		((IOAuth)mConnector).setOauthToken(null);
@@ -120,7 +135,7 @@ public class BVPayment extends BVOauthClient {
 
 		OAuthProviderListener listener = new BVPayentOauthProviderListener();
 
-		return super.getRequestToken(null, data, listener);
+		return super.getRequestToken(callback, data, listener);
 	}
 
 	/**

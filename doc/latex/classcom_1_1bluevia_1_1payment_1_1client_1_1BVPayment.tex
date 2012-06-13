@@ -20,6 +20,8 @@ class {\bfseries BVPayentOauthProviderListener}
 \item 
 \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken}{RequestToken} \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a461ecfef018815ed3436c16c68852ec7}{getPaymentRequestToken} (int amount, String currency, String name, String serviceId)  throws BlueviaException 
 \item 
+\hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken}{RequestToken} \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_ac43958ebc6ff5145d3db8df79c2d999c}{getPaymentRequestToken} (int amount, String currency, String name, String serviceId, String callback)  throws BlueviaException 
+\item 
 \hyperlink{classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken}{OAuthToken} \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a40a262c6f375755dcb52f9bd2831ed98}{getPaymentAccessToken} (String oauthVerifier, String token, String secret)  throws BlueviaException 
 \item 
 \hyperlink{classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult}{PaymentResult} \hyperlink{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abfca5647bbeffcb9b48b32917dfd41f3}{payment} (int amount, String currency)  throws BlueviaException, IOException 
@@ -154,6 +156,42 @@ the access token
 {\em BlueviaException} & \\
 \hline
 \end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_ac43958ebc6ff5145d3db8df79c2d999c}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!getPaymentRequestToken@{getPaymentRequestToken}}
+\index{getPaymentRequestToken@{getPaymentRequestToken}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{getPaymentRequestToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RequestToken} com.bluevia.payment.client.BVPayment.getPaymentRequestToken (
+\begin{DoxyParamCaption}
+\item[{int}]{amount, }
+\item[{String}]{currency, }
+\item[{String}]{name, }
+\item[{String}]{serviceId, }
+\item[{String}]{callback}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException} }}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_ac43958ebc6ff5145d3db8df79c2d999c}
+Gets a RequestToken for a Payment operation with callback
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). \\
+\hline
+{\em currency} & the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.). \\
+\hline
+{\em name} & the name of the service for the payment \\
+\hline
+{\em serviceId} & the id of the service for the payment \\
+\hline
+{\em callback} & the uri for callback notification \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the request token 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & \\
+\hline
+\end{DoxyExceptions}
 \hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_a461ecfef018815ed3436c16c68852ec7}{
 \index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!getPaymentRequestToken@{getPaymentRequestToken}}
 \index{getPaymentRequestToken@{getPaymentRequestToken}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
@@ -213,6 +251,35 @@ the status of the payment
 {\em IOException} & \\
 \hline
 \end{DoxyExceptions}
+\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abfca5647bbeffcb9b48b32917dfd41f3}{
+\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!payment@{payment}}
+\index{payment@{payment}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
+\subsubsection[{payment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PaymentResult} com.bluevia.payment.client.BVPayment.payment (
+\begin{DoxyParamCaption}
+\item[{int}]{amount, }
+\item[{String}]{currency}
+\end{DoxyParamCaption}
+)  throws {\bf BlueviaException}, IOException }}
+\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abfca5647bbeffcb9b48b32917dfd41f3}
+Orders an economic charge on the user's operator account.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount to be charged, it may be an economic amount or a number of 'virtual units' (points, tickets, etc) (mandatory). \\
+\hline
+{\em currency} & Type of currency which corresponds with the amount above, following ISO 4217 (mandatory). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of the payment operation. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em BlueviaException} & An exception informing about errors encountered in the request/response. \\
+\hline
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
 \hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_ae5e9baccc8f7a9a4a441b701e456a092}{
 \index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!payment@{payment}}
 \index{payment@{payment}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
@@ -234,35 +301,6 @@ Orders an economic charge on the user's operator account.
 {\em endpoint} & the endpoint to receive notifications of the payment operation \\
 \hline
 {\em correlator} & the correlator \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Result of the payment operation. 
-\end{DoxyReturn}
-
-\begin{DoxyExceptions}{Exceptions}
-{\em BlueviaException} & An exception informing about errors encountered in the request/response. \\
-\hline
-{\em IOException} & \\
-\hline
-\end{DoxyExceptions}
-\hypertarget{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abfca5647bbeffcb9b48b32917dfd41f3}{
-\index{com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}!payment@{payment}}
-\index{payment@{payment}!com::bluevia::payment::client::BVPayment@{com::bluevia::payment::client::BVPayment}}
-\subsubsection[{payment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PaymentResult} com.bluevia.payment.client.BVPayment.payment (
-\begin{DoxyParamCaption}
-\item[{int}]{amount, }
-\item[{String}]{currency}
-\end{DoxyParamCaption}
-)  throws {\bf BlueviaException}, IOException }}
-\label{classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment_abfca5647bbeffcb9b48b32917dfd41f3}
-Orders an economic charge on the user's operator account.
-
-
-\begin{DoxyParams}{Parameters}
-{\em amount} & Amount to be charged, it may be an economic amount or a number of 'virtual units' (points, tickets, etc) (mandatory). \\
-\hline
-{\em currency} & Type of currency which corresponds with the amount above, following ISO 4217 (mandatory). \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

@@ -41,12 +41,10 @@ public class PaymentExample {
 	public static Mode mode = Mode.SANDBOX;
 
     // CREDENTIALS: 
-    // User must DEFINE VALID VALUES FOR consumer token & access token  
+    // User must DEFINE VALID VALUES FOR consumer token 
     // Consumer Key - Consumer Token
 	public static OAuthToken consumerToken = new OAuthToken("vw12012654505986", "WpOl66570544");	
-    // Access Key - Access Token
-	public static OAuthToken accessToken = new OAuthToken("ad3f0f598ffbc660fbad9035122eae74", "4340b28da39ec36acb4a205d3955a853");
-
+ 
 
 	public static void main(String[] args) {
     	// Logger
@@ -71,7 +69,8 @@ public class PaymentExample {
 			RequestToken response = null;
 			OAuthToken access = null;
 			String serviceName = "bluevia";
-			String serviceId = "";
+			String serviceId = "service_id";
+			String callback = "http://www.example.com";
 
 			int amount = 177;
 			String currency = "EUR";
@@ -80,7 +79,7 @@ public class PaymentExample {
 					consumerToken.getToken(), consumerToken.getSecret());
 
 			// Get credentials
-			response = client.getPaymentRequestToken(amount, currency, serviceName, serviceId);	
+			response = client.getPaymentRequestToken(amount, currency, serviceName, serviceId, callback);	
 			System.out.println("Token: " + response.getToken());
 			System.out.println("Secret: " + response.getSecret());
 			System.out.println("Url: " + response.getVerificationUrl());

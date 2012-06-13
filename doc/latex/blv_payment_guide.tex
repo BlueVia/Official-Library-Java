@@ -59,9 +59,11 @@ First, you have to retrieve a request token to be authorised by the user. In thi
 \begin{DoxyCode}
 RequestToken requestToken = getPaymentRequestToken(int amount, String currency, S
       tring name, String serviceId) throws BlueviaException
+RequestToken requestToken = getPaymentRequestToken(int amount, String currency, S
+      tring name, String serviceId, String callback) throws BlueviaException
 \end{DoxyCode}
 \hypertarget{blv_payment_guide_retrieving_payment_verification_sec}{}\subsection{Step 2: Take the user to Bluevia Connect}\label{blv_payment_guide_retrieving_payment_verification_sec}
-Take the user to Bluevia Connect to authorise the application as usual.\hypertarget{blv_payment_guide_retrieving_payment_access_token_sec}{}\subsection{Step 3: retrieveing an access token}\label{blv_payment_guide_retrieving_payment_access_token_sec}
+Take the user to Bluevia Connect to authorise the application as usual and get the oauth\_\-verifier. If you provided a callback url, when application has been authorized you will receive the verifier on the callback url.\hypertarget{blv_payment_guide_retrieving_payment_access_token_sec}{}\subsection{Step 3: retrieveing an access token}\label{blv_payment_guide_retrieving_payment_access_token_sec}
 With the obatined oauth\_\-verifier, you can now get the accessToken from the user using the function:
 
 

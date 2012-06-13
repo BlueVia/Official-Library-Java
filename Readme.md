@@ -138,6 +138,9 @@ Once you have obtained the oauth_verifier, you can now get the accessToken as fo
 
 	OAuthToken accessToken = paymentClient.getAccessToken(verifier, token, secret); /* Get verifier from GUI */
 
+You can also use a callback url to redirect the response with verifier from bluevia to a service on your calback url:
+	BVPayment paymentClient = new BVPayment(Mode.LIVE, "consumer_key", "consumer_secret");
+	RequestToken requestToken = paymentClient.getPaymentRequestToken(100, "GBP", "bluevia", "service_id", "https://www.example.com/");
 	
 ### Send SMS and get delivery status
 SMS API allows your app to send messages on behalf of the users, this means that their mobile number will be the text sender and they will pay for them.

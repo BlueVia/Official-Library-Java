@@ -105,6 +105,7 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment.html#a5a68583aad1f3173b22441b5e3b976b4">BVPayment</a> (<a class="el" href="classcom_1_1bluevia_1_1commons_1_1client_1_1BVBaseClient.html#a5f4a4a27d73a8ddd0ce450a6c7a4d1b7">Mode</a> mode, String consumerToken, String consumerSecret)  throws BlueviaException </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken.html">RequestToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment.html#a461ecfef018815ed3436c16c68852ec7">getPaymentRequestToken</a> (int amount, String currency, String name, String serviceId)  throws BlueviaException </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken.html">RequestToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment.html#ac43958ebc6ff5145d3db8df79c2d999c">getPaymentRequestToken</a> (int amount, String currency, String name, String serviceId, String callback)  throws BlueviaException </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1OAuthToken.html">OAuthToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment.html#a40a262c6f375755dcb52f9bd2831ed98">getPaymentAccessToken</a> (String oauthVerifier, String token, String secret)  throws BlueviaException </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult.html">PaymentResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment.html#abfca5647bbeffcb9b48b32917dfd41f3">payment</a> (int amount, String currency)  throws BlueviaException, IOException </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult.html">PaymentResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment.html#ae5e9baccc8f7a9a4a441b701e456a092">payment</a> (int amount, String currency, String endpoint, String correlator)  throws BlueviaException, IOException </td></tr>
@@ -252,6 +253,69 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>HEADER
 
 </div>
 </div>
+<a class="anchor" id="ac43958ebc6ff5145d3db8df79c2d999c"></a><!-- doxytag: member="com::bluevia::payment::client::BVPayment::getPaymentRequestToken" ref="ac43958ebc6ff5145d3db8df79c2d999c" args="(int amount, String currency, String name, String serviceId, String callback)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1bluevia_1_1commons_1_1connector_1_1http_1_1oauth_1_1RequestToken.html">RequestToken</a> com.bluevia.payment.client.BVPayment.getPaymentRequestToken </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>currency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>serviceId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throws <a class="el" href="classcom_1_1bluevia_1_1commons_1_1exception_1_1BlueviaException.html">BlueviaException</a> </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Gets a RequestToken for a Payment operation with callback</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>the cost of the digital good being sold, expressed in the minimum fractional monetary unit of the currency reflected in the next parameter (to avoid decimal digits). </td></tr>
+    <tr><td class="paramname">currency</td><td>the currency of the payment, following ISO 4217 (EUR, GBP, MXN, etc.). </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the service for the payment </td></tr>
+    <tr><td class="paramname">serviceId</td><td>the id of the service for the payment </td></tr>
+    <tr><td class="paramname">callback</td><td>the uri for callback notification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the request token </dd></dl>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">BlueviaException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a461ecfef018815ed3436c16c68852ec7"></a><!-- doxytag: member="com::bluevia::payment::client::BVPayment::getPaymentRequestToken" ref="a461ecfef018815ed3436c16c68852ec7" args="(int amount, String currency, String name, String serviceId)" -->
 <div class="memitem">
 <div class="memproto">
@@ -340,6 +404,49 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>HEADER
 
 </div>
 </div>
+<a class="anchor" id="abfca5647bbeffcb9b48b32917dfd41f3"></a><!-- doxytag: member="com::bluevia::payment::client::BVPayment::payment" ref="abfca5647bbeffcb9b48b32917dfd41f3" args="(int amount, String currency)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult.html">PaymentResult</a> com.bluevia.payment.client.BVPayment.payment </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>currency</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throws <a class="el" href="classcom_1_1bluevia_1_1commons_1_1exception_1_1BlueviaException.html">BlueviaException</a>, IOException </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Orders an economic charge on the user's operator account.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>Amount to be charged, it may be an economic amount or a number of 'virtual units' (points, tickets, etc) (mandatory). </td></tr>
+    <tr><td class="paramname">currency</td><td>Type of currency which corresponds with the amount above, following ISO 4217 (mandatory). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Result of the payment operation. </dd></dl>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">BlueviaException</td><td>An exception informing about errors encountered in the request/response. </td></tr>
+    <tr><td class="paramname">IOException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ae5e9baccc8f7a9a4a441b701e456a092"></a><!-- doxytag: member="com::bluevia::payment::client::BVPayment::payment" ref="ae5e9baccc8f7a9a4a441b701e456a092" args="(int amount, String currency, String endpoint, String correlator)" -->
 <div class="memitem">
 <div class="memproto">
@@ -397,49 +504,6 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>HEADER
 
 </div>
 </div>
-<a class="anchor" id="abfca5647bbeffcb9b48b32917dfd41f3"></a><!-- doxytag: member="com::bluevia::payment::client::BVPayment::payment" ref="abfca5647bbeffcb9b48b32917dfd41f3" args="(int amount, String currency)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1data_1_1PaymentResult.html">PaymentResult</a> com.bluevia.payment.client.BVPayment.payment </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>amount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>currency</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throws <a class="el" href="classcom_1_1bluevia_1_1commons_1_1exception_1_1BlueviaException.html">BlueviaException</a>, IOException </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Orders an economic charge on the user's operator account.</p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">amount</td><td>Amount to be charged, it may be an economic amount or a number of 'virtual units' (points, tickets, etc) (mandatory). </td></tr>
-    <tr><td class="paramname">currency</td><td>Type of currency which corresponds with the amount above, following ISO 4217 (mandatory). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Result of the payment operation. </dd></dl>
-<dl><dt><b>Exceptions:</b></dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">BlueviaException</td><td>An exception informing about errors encountered in the request/response. </td></tr>
-    <tr><td class="paramname">IOException</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a6e9d873055043c197ff745f468efe8f5"></a><!-- doxytag: member="com::bluevia::payment::client::BVPayment::setAccessToken" ref="a6e9d873055043c197ff745f468efe8f5" args="(OAuthToken accessToken)" -->
 <div class="memitem">
 <div class="memproto">
@@ -473,7 +537,7 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>HEADER
       <li class="navelem"><b>payment</b>      </li>
       <li class="navelem"><b>client</b>      </li>
       <li class="navelem"><a class="el" href="classcom_1_1bluevia_1_1payment_1_1client_1_1BVPayment.html">BVPayment</a>      </li>
-      <li class="footer">Generated on Fri Jun 8 2012 14:31:20 for SDK by&#160;
+      <li class="footer">Generated on Wed Jun 13 2012 12:40:49 for SDK by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
