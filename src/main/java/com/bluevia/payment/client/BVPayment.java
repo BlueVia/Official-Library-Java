@@ -389,7 +389,7 @@ public class BVPayment extends BVOauthClient {
 		Params params= new Params();
 		PaymentParamsType ppt= new PaymentParamsType();
 		PaymentInfoType pit= new PaymentInfoType();
-		pit.setAmount(new BigDecimal(Float.toString(amount)));
+		pit.setAmount(new BigDecimal(Integer.toString(amount)));
 		pit.setCurrency(currency);
 		ppt.setPaymentInfo(pit);
 		if (endpoint!=null && !(Utils.isEmpty(correlator))) {
